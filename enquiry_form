@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+          <meta charset="utf-8" />
+  <meta name="description" content="enquiry form for WikiPlantwwww" />
+  <meta name="keywords" content="enquiries" />
+  <meta name="author" content="Terry Lin Zhen Bin"  />
+  <title>WikiPlant enquiry form</title>
+    </head>
+    <body>
+	<header>
+
+    <h1>WikiPlant</h1>
+
+    <nav aria-label="Main navigation">
+
+        <a href="index.html">Home</a> |
+        <a href="explorer.html">Explore</a> |
+        <a href="contributor.html">Contributor</a> |
+        <a href="register.html">Register</a> |
+        <a href="contribute.html" aria-current="page">Contribute</a> |
+        <a href="enquiry.html">Enquiry</a> |
+        <a href="login.html">Login</a>
+
+    </nav>
+
+    <hr>
+
+</header>
+        <h1>WikiPlant Enquiry Form</h1>
+        <p>Ask any question you want about our website!</p>
+        <form method= "post" action="mailto:106757438@students.swinburne.edu.my">
+            <fieldset>
+                <legend>User Information</legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" pattern="[A-za-z]+" required="required">
+                <p>
+                    <label for="firstname">First name:</label>
+                    <input type="text" id="firstname" pattern="[A-Za-z]+" required="required">
+                    <label for="lastname">Last name:</label>
+                    <input type="text" id="lastname" pattern="[A-Za-z]+" required="required">
+                </p>
+            </fieldset>
+			<fieldset>
+			<legend>Questions</legend>
+			<label >Which category you have question?</label>
+			<select name="categories" required="required">
+			<option value="" disabled selected>Please Select</option>
+			<option>Families</option>
+			<option>Genus</option>
+			<option>Specis</option>
+			<option>Others</option>
+			</select>
+			<br><br>
+			<label for="description">Please write down your problem here:</label><br><br>
+			<textarea id="description" name="problem_review" rows="4" cols="100" placeholder="wirte down your questions here..."></textarea>
+			</fieldset>
+			<button type="submit" value="submit">Submit</button>
+			<button type="reset" value="reset">Clear Form </button>
+			<br><br>
+			<a href="">Back to home</a>
+		
+        </form>
+		
+		<footer>
+
+    <hr>
+
+    <p>
+        <strong>WikiPlant</strong>
+    </p>
+
+    <p>
+        &copy; 2026 WikiPlant. All rights reserved.
+    </p>
+
+    <p>
+        <a href="mailto:106757438@students.swinburne.edu.my">
+            Contact Us
+        </a>
+    </p>
+
+</footer>
+    </body>
+</html>
