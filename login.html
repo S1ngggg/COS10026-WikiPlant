@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+
+<h1>Login</h1>
+
+<form id="loginForm" method="post" action="login-process.php">
+
+  <fieldset>
+    <legend>Account Login</legend>
+
+    <p>
+      <label for="loginId">Email</label><br>
+      <input type="text" id="loginId" name="loginId"
+             placeholder="name@gmail.com"
+             maxlength="50" required="required">
+    </p>
+
+    <p>
+      <label for="loginPassword">Password</label><br>
+      <input type="password" id="loginPassword" name="loginPassword"
+             placeholder="enter your password"
+             minlength="6" required="required">
+    </p>
+
+    <p>
+      <label for="rememberMe">
+        <input type="checkbox" id="rememberMe" name="rememberMe" value="yes">
+        Remember me
+      </label>
+    </p>
+
+    <p>
+      <input type="submit" value="Login">
+      <input type="reset" value="Reset">
+    </p>
+
+  </fieldset>
+
+</form>
+
+<p>Don't have an account? <a href="register.html">Register here</a></p>
+
+</body>
+</html>

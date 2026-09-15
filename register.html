@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+
+<h1>Register</h1>
+
+<form id="registerForm" method="post" action="register-process.php">
+
+  <fieldset>
+    <legend>Personal Details</legend>
+
+    <table>
+      <tr>
+        <td>
+          <label for="firstName">First Name</label><br>
+          <input type="text" id="firstName" name="firstName"
+                 pattern="^[a-zA-Z ]+$"
+                 maxlength="30" required="required">
+        </td>
+        <td>
+          <label for="lastName">Last Name</label><br>
+          <input type="text" id="lastName" name="lastName"
+                 pattern="^[a-zA-Z ]+$"
+                 maxlength="30" required="required">
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      <label for="regEmail">Email</label><br>
+      <input type="email" id="regEmail" name="regEmail"
+             placeholder="name@domain.com" required="required">
+    </p>
+
+    <p>
+      <label for="dob">Date of Birth</label><br>
+      <input type="date" id="dob" name="dob" required="required">
+    </p>
+
+    <p>
+      Gender<br>
+      <label><input type="radio" name="gender" value="male" checked="checked"> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+    </p>
+
+  </fieldset>
+
+  <fieldset>
+    <legend>Account Security</legend>
+
+    <p>
+      <label for="regPassword">Password</label><br>
+      <input type="password" id="regPassword" name="regPassword"
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}"
+             title="8-15 characters, at least 1 uppercase, 1 lowercase, 1 digit"
+             minlength="8" maxlength="15" required="required">
+    </p>
+
+    <p>
+      <label for="confirmPassword">Confirm Password</label><br>
+      <input type="password" id="confirmPassword" name="confirmPassword"
+             minlength="8" maxlength="15" required="required">
+    </p>
+
+  </fieldset>
+
+  <p>
+    <input type="submit" value="Register">
+    <input type="reset" value="Reset">
+  </p>
+
+</form>
+
+<p>Already have an account? <a href="login.html">Login here</a></p>
+
+</body>
+</html>
