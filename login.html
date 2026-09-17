@@ -8,7 +8,27 @@
 <title>Login</title>
 </head>
 <body>
+<!-- ==================== HEADER ==================== -->
 
+<header>
+
+    <h1>WikiPlant</h1>
+
+    <nav aria-label="Main navigation">
+
+        <a href="index.html">Home</a> |
+        <a href="explorer.html">Explore</a> |
+        <a href="contributor.html">Contributor</a> |
+        <a href="register.html">Register</a> |
+        <a href="contribute.html" aria-current="page">Contribute</a> |
+        <a href="enquiry.html">Enquiry</a> |
+        <a href="login.html">Login</a>
+
+    </nav>
+
+    <hr>
+
+</header>
 <h1>Login</h1>
 
 <form id="loginForm">
@@ -17,10 +37,10 @@
     <legend>Account Login</legend>
 
     <p>
-      <label for="loginId">Email</label><br>
+      <label for="loginId">Login</label><br>
       <input type="text" id="loginId" name="loginId"
-             placeholder="name@gmail.com"
-             maxlength="50" required="required">
+             placeholder="enter your username" pattern="^[a-zA-Z ]+$"
+             maxlength="10" required="required">
     </p>
 
     <p>
@@ -49,4 +69,30 @@
 <p>Don't have an account? <a href="register.html">Register here</a></p>
 
 </body>
+</html>
+
+<!-- ==================== FOOTER ==================== -->
+
+<footer>
+
+    <hr>
+
+    <p>
+        <strong>WikiPlant</strong>
+    </p>
+
+    <p>
+        &copy; 2026 WikiPlant. All rights reserved.
+    </p>
+
+    <p>
+        <a href="mailto:YOUR_STUDENT_EMAIL">
+            Contact Us
+        </a>
+    </p>
+
+</footer>
+
+</body>
+
 </html>
