@@ -113,3 +113,45 @@ main {
 .quote_box p {
     text-align: right;
 }
+
+.categories_section {
+    margin: 0px 40px 50px 40px;
+    padding: 0 20px;
+}
+
+.categories_section h2 {
+    font-size: 24px;
+    color: #2A331B;
+    margin-bottom: 20px;
+}
+
+.category_grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.category_card {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.category_img_placeholder {
+    background-color: #F9F6F0;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #6B8E23;
+    font-weight: bold;
+}
+
+.category_card h3 {
+    color: #2A331B;
+    font-size: 22px;
+    margin: 0;
+}
