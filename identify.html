@@ -1,0 +1,162 @@
+<!-- identify.html - Plant's Notebook - Identify Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Learn how the Plant's Notebook photo identification feature works and what information it reveals about a plant.">
+    <meta name="keywords" content="plant identification, herbarium specimen, scientific name, common name, biodiversity">
+    <meta name="author" content="Your Name Here">
+    <title>Identify - Plant's Notebook</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="WikiPlant">
+        <h1>WikiPlant</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Classification</a></li>
+                <li><a href="identify.html">Identify</a></li>
+                <li><a href="contributor.html">Contribution</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="identifier-intro">
+            <h1>Upload a Photo to Identify a Plant</h1>
+            <p>Not sure what plant you're looking at? Simply upload a clear photo of the leaf, flower, or the whole plant, and here will match it against our reference database to suggest the most likely species.</p>
+        </div>
+
+        <section class="how-it-works card-container">
+            <div class="static-photo-container">
+                <label class="static-photo upload-box" for="plant-photo" aria-label="Upload a plant photo" title="Upload a plant photo">
+                    <img src="cloud-upload.png" alt="Upload icon" class="cloud-upload" id="upload-icon">
+                    <img class="upload-preview" id="upload-preview" alt="Selected plant photo preview" hidden>
+                    <input id="plant-photo" type="file" accept="image/*">
+                </label>
+                <div style="margin-top: 20px;">
+                    <button type="button" class="identify-btn" id="identify-btn">Identify plant</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Plant Information</h2>
+            <p>
+                Plant identification can help users learn more about unfamiliar plants by
+                connecting their appearance with useful botanical information. An identified
+                plant may have both a common name and a scientific name, allowing users to
+                understand how it is classified. For example, basil is commonly known as
+                Basil, while its scientific name is <em>Ocimum basilicum</em>. Learning the
+                scientific name can make it easier to distinguish a plant from other species
+                with similar common names.
+            </p>
+            <p>
+                Identification information can also help users recognise plants in gardens,
+                parks and other environments. Images provide a visual reference, while plant
+                details give users a clearer understanding of the species being presented. The
+                information on this page uses basil as an example of how plant identification
+                results can be organised in a clear and accessible way. The page also provides
+                basic growing instructions, useful tools and care information to help users
+                learn more about the identified plant.
+            </p>
+
+            <h3>Sample Images</h3>
+            <div class="figures-container">
+                <figure>
+                    <img src="ocimum-basilicum-le-kstarr3.jpg" alt="Close-up of green basil leaves">
+                </figure>
+                <figure>
+                    <img src="ocimumbasilicumthyrsiflora1.jpg" alt="Basil plant growing outdoors">
+                </figure>
+            </div>
+
+            <h3>Plant Details</h3>
+            <dl>
+                <dt>Name</dt>
+                <dd>Basil</dd>
+                <dt>Scientific Name</dt>
+                <dd><em>Ocimum basilicum</em></dd>
+            </dl>
+
+            <h3>Tutorial</h3>
+            <p>
+                The steps below describe how to grow basil from seed, shown in the order they
+                should be carried out.
+            </p>
+            <ol>
+                <li>Start seeds indoors 6-8 weeks before the last frost.</li>
+                <li>Plant in well-draining soil and water gently.</li>
+                <li>Keep the pot or tray in a sunny spot.</li>
+                <li>Wait for germination, which occurs in 5-10 days.</li>
+            </ol>
+
+            <h3>Tool</h3>
+            <ul>
+                <li>Pruning Shears: for trimming leaves and maintaining plant shape.</li>
+                <li>Potting Soil: rich, well-draining soil to support root growth.</li>
+                <li>Seed Tray: ideal for starting seeds indoors before transplanting.</li>
+            </ul>
+
+            <h3>Care</h3>
+            <ul>
+                <li>Water regularly, keeping the soil evenly moist but not soggy.</li>
+                <li>Provide 6-8 hours of full sunlight daily for optimal growth.</li>
+                <li>Pinch off top leaves regularly to promote bushy growth and prevent flowering.</li>
+                <li>Avoid overwatering, as it can lead to root rot.</li>
+            </ul>
+
+            <aside>
+                <h2>Plant Tip</h2>
+                <p>
+                    Basil grows well in warm conditions and needs plenty of sunlight. Regular
+                    trimming can encourage new growth and help the plant remain bushy.
+                </p>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Plant's Notebook. All rights reserved.</p>
+    </footer>
+
+
+
+    <script>
+        const photoInput = document.getElementById("plant-photo");
+        const uploadIcon = document.getElementById("upload-icon");
+        const uploadPreview = document.getElementById("upload-preview");
+        const identifyBtn = document.getElementById("identify-btn");
+        let previewUrl;
+
+        photoInput.addEventListener("change", () => {
+            const selectedPhoto = photoInput.files[0];
+
+            if (!selectedPhoto) {
+                return;
+            }
+
+            if (previewUrl) {
+                URL.revokeObjectURL(previewUrl);
+            }
+
+            previewUrl = URL.createObjectURL(selectedPhoto);
+            uploadPreview.src = previewUrl;
+            uploadPreview.hidden = false;
+            uploadIcon.hidden = true;
+        });
+
+        identifyBtn.addEventListener("click", () => {
+            if (!photoInput.files[0]) {
+                alert("Please select a photo first!");
+            } else {
+                alert("Identifying plant... (Mock Action)");
+            }
+        });
+    </script>
+</body>
+</html>
