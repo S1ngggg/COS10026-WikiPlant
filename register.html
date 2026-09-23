@@ -9,9 +9,11 @@
 </head>
 <body>
 
-  <header>
+<!-- ==================== HEADER ==================== -->
 
-    <img src="logo.png" alt="WikiPlant" width="231" height="203">
+<header>
+
+    <h1>WikiPlant</h1>
 
     <nav aria-label="Main navigation">
 
@@ -19,8 +21,8 @@
         <a href="explorer.html">Explore</a> |
         <a href="contributor.html">Contributor</a> |
         <a href="register.html">Register</a> |
-        <a href="contribute.html" aria-current="page">Contribute</a> |
-        <a href="enquiry.html">Enquiry</a> |
+        <a href="contribution.html">Contribute</a> |
+        <a href="enquiry_form.html">Enquiry</a> |
         <a href="login.html">Login</a>
 
     </nav>
@@ -42,16 +44,21 @@
           <label for="firstName">First Name</label><br>
           <input type="text" id="firstName" name="firstName"
                  pattern="^[a-zA-Z ]+$"
-                 maxlength="30" required="required">
+                 maxlength="25" required="required">
         </td>
         <td>
           <label for="lastName">Last Name</label><br>
           <input type="text" id="lastName" name="lastName"
                  pattern="^[a-zA-Z ]+$"
-                 maxlength="30" required="required">
+                 maxlength="25" required="required">
         </td>
       </tr>
     </table>
+
+    <p>
+      <label for="username">Username</label><br>
+      <input type="text" id="logUser" name="logUser" 
+             pattern="^[a-zA-Z ]+$" maxlength="10" required="required"> 
 
     <p>
       <label for="regEmail">Email</label><br>
@@ -59,66 +66,109 @@
              placeholder="name@domain.com" required="required">
     </p>
 
-    <p>
-      <label for="dob">Date of Birth</label><br>
-      <input type="date" id="dob" name="dob" required="required">
-    </p>
+    
 
     <p>
-      Gender<br>
-      <label><input type="radio" name="gender" value="male" checked="checked"> Male</label>
-      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label for="phoneNumber">Phone Number</label><br>
+      <input type="tel" id="phoneNumber" name="phoneNumber"
+             pattern="^\d{1,10}$"
+             maxlength="10" placeholder="e.g. 0123456789" required="required">
     </p>
 
-  </fieldset>
+    </fieldset>
 
-  <fieldset>
-    <legend>Account Security</legend>
+    <fieldset>
+      <legend>Address</legend>
+ 
+      <table>
+        <tr>
+          <td>
+            <label for="streetAddress">Street Address</label><br>
+            <input type="text" id="streetAddress" name="streetAddress"
+                   maxlength="40" required="required">
+          </td>
+          <td>
+            <label for="cityTown">City/Town</label><br>
+            <input type="text" id="cityTown" name="cityTown"
+                   maxlength="20" required="required">
+          </td>
+        </tr>
+      </table>
+ 
+      <p>
+        <label for="state">State</label><br>
+        <select id="state" name="state" required="required">
+          <option value="">-- Select State --</option>
+          <option value="Johor">Johor</option>
+          <option value="Kedah">Kedah</option>
+          <option value="Kelantan">Kelantan</option>
+          <option value="Melaka">Melaka</option>
+          <option value="Negeri Sembilan">Negeri Sembilan</option>
+          <option value="Pahang">Pahang</option>
+          <option value="Penang">Penang</option>
+          <option value="Perak">Perak</option>
+          <option value="Perlis">Perlis</option>
+          <option value="Sabah">Sabah</option>
+          <option value="Sarawak">Sarawak</option>
+          <option value="Selangor">Selangor</option>
+          <option value="Terengganu">Terengganu</option>
+          <option value="Kuala Lumpur">Kuala Lumpur (Federal Territory)</option>
+          <option value="Labuan">Labuan (Federal Territory)</option>
+          <option value="Putrajaya">Putrajaya (Federal Territory)</option>
+        </select>
+      </p>
+ 
+      <p>
+        <label for="postcode">Postcode</label><br>
+        <input type="text" id="postcode" name="postcode"
+               pattern="^\d{5}$"
+               maxlength="5" title="Enter exactly 5 digits" required="required">
+      </p>
+ 
+    </fieldset>
+    
+    <fieldset>
+      <legend>Account Security</legend>
+
+      <p>
+        <label for="regPassword">Password</label><br>
+        <input type="password" id="regPassword" name="regPassword"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}"
+              title="8-15 characters, at least 1 uppercase, 1 lowercase, 1 digit"
+              minlength="8" maxlength="15" required="required">
+      </p>
+
+      <p>
+        <label for="confirmPassword">Confirm Password</label><br>
+        <input type="password" id="confirmPassword" name="confirmPassword"
+              minlength="8" maxlength="15" required="required">
+      </p>
+
+    </fieldset>
 
     <p>
-      <label for="regPassword">Password</label><br>
-      <input type="password" id="regPassword" name="regPassword"
-             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}"
-             title="8-15 characters, at least 1 uppercase, 1 lowercase, 1 digit"
-             minlength="8" maxlength="15" required="required">
+      <input type="submit" value="Register">
+      <input type="reset" value="Reset">
     </p>
 
-    <p>
-      <label for="confirmPassword">Confirm Password</label><br>
-      <input type="password" id="confirmPassword" name="confirmPassword"
-             minlength="8" maxlength="15" required="required">
-    </p>
+  </form>
 
-  </fieldset>
+  <p>Already have an account? <a href="login.html">Login here</a></p>
 
-  <p>
-    <input type="submit" value="Register">
-    <input type="reset" value="Reset">
-  </p>
-
-</form>
-
-<p>Already have an account? <a href="login.html">Login here</a></p>
-
-<footer>
-
+  <footer>
     <hr>
-
-    <p>
-        <strong>WikiPlant</strong>
-    </p>
-
-    <p>
-        &copy; 2026 WikiPlant. All rights reserved.
-    </p>
-
-    <p>
-        <a href="mailto:106757438@students.swinburne.edu.my">
-            Contact Us
-        </a>
-    </p>
-
-</footer>
-
+    <p><strong>WikiPlant</strong></p>
+    <nav aria-label="Footer navigation">
+      <button type="button" onclick="location.href='index.html'">Home</button>
+      <button type="button" onclick="location.href='explorer.html'">Explore</button>
+      <button type="button" onclick="location.href='contributor.html'">Contributor</button>
+      <button type="button" onclick="location.href='register.html'">Register</button>
+      <button type="button" onclick="location.href='contribution.html'">Contribute</button>
+      <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
+      <button type="button" onclick="location.href='login.html'">Login</button>
+      <button type="button" onclick="location.href='mailto:106757438@students.swinburne.edu.my'">Contact Us</button>
+    </nav>
+    <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+  </footer>
 </body>
 </html>
