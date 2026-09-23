@@ -53,3 +53,63 @@ main {
     font-weight: bold;
     margin: 10px;
 }
+
+.card_container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0px;
+}
+
+.plant_card {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    width: 200px;
+    height: 260px;
+    padding: 20px;
+    text-align: center;
+}
+
+.plant_card h3 {
+    color: #6B8E23;
+    font-size: 24px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.about_section {
+    margin: 0px 40px 50px 40px;
+    padding: 0 20px;
+}
+
+.about_section h2 {
+    font-size: 24px;
+    color: #2A331B;
+    margin-bottom: 15px;
+}
+
+.text_box {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    padding: 25px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.text_box p {
+    margin: 0;
+    color: #2A331B;
+}
+
+.quote {
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2A331B;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.quote_box p {
+    text-align: right;
+}
