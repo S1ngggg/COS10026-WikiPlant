@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Species — WikiPlant</title>
+<link rel="stylesheet" href="css/explorerstyle.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="WikiPlant logo">
+      <span class="brand-motto">Herbarium ordinaria</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-drop">
+          <a href="explore.html" aria-current="page">Explore</a>
+          <ul class="drop-menu">
+            <li><a href="explore-family.html">By family</a></li>
+            <li><a href="explore-genus.html">By genus</a></li>
+            <li><a href="explore-species.html" aria-current="page">By species</a></li>
+          </ul>
+        </li>
+        <li><a href="identify.html">Identify</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="wrap">
+    <span class="kicker">Section A · Rank 3</span>
+    <h1>Species in the index</h1>
+    <p>The full specimen record — every plant logged individually, with its complete classification and an accession number. Filter by family, or follow a tag up to its genus or family record.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <nav class="view-tabs" aria-label="Explore by rank">
+    <a href="explore-family.html">Family</a>
+    <a href="explore-genus.html">Genus</a>
+    <a href="explore-species.html" aria-current="page">Species</a>
+  </nav>
+
+  <div class="filter-bar" role="group" aria-label="Filter specimens by family">
+    <input type="radio" name="family-filter" id="f-all" checked>
+    <label for="f-all">All families</label>
+
+    <input type="radio" name="family-filter" id="f-araceae">
+    <label for="f-araceae">Araceae</label>
+
+    <input type="radio" name="family-filter" id="f-rosaceae">
+    <label for="f-rosaceae">Rosaceae</label>
+
+    <input type="radio" name="family-filter" id="f-fabaceae">
+    <label for="f-fabaceae">Fabaceae</label>
+
+    <input type="radio" name="family-filter" id="f-asparagaceae">
+    <label for="f-asparagaceae">Asparagaceae</label>
+
+  <div class="groups specimen-grid">
+
+    <div class="group" data-family="araceae">
+      <div class="family-heading" id="araceae">
+        <h2 class="fam-latin sci">Araceae</h2>
+        <span class="fam-common">The arum family — leaves that shelter a spadix and spathe.</span>
+      </div>
+
+      <article class="specimen-card" id="monstera">
+        <span class="accession">No. 0142</span>
+        <div class="common-name">Swiss cheese plant</div>
+        <span class="sci">Monstera deliciosa</span>
+        <div class="rank-line">
+          <a class="tag" href="explore-family.html#araceae">Family: Araceae</a>
+          <a class="tag" href="explore-genus.html#monstera">Genus: Monstera</a>
+          <span class="tag">Species: deliciosa</span>
+        </div>
+        <p>Wide, glossy leaves that develop fenestrations as the plant matures. Climbs by aerial roots in its native range.</p>
+      </article>
+
+      <article class="specimen-card" id="spathiphyllum">
+        <span class="accession">No. 0143</span>
+        <div class="common-name">Peace lily</div>
+        <span class="sci">Spathiphyllum wallisii</span>
+        <div class="rank-line">
+          <a class="tag" href="explore-family.html#araceae">Family: Araceae</a>
+          <a class="tag" href="explore-genus.html#spathiphyllum">Genus: Spathiphyllum</a>
+          <span class="tag">Species: wallisii</span>
+        </div>
+        <p>Dark lance-shaped leaves and a single white spathe curling around a pale spadix. Tolerant of low light.</p>
+      </article>
+
+      <article class="specimen-card" id="epipremnum">
+        <span class="accession">No. 0144</span>
+        <div class="common-name">Devil's ivy</div>
+        <span class="sci">Epipremnum aureum</span>
+        <div class="rank-line">
+          <a class="tag" href="explore-family.html#araceae">Family: Araceae</a>
+          <a class="tag" href="explore-genus.html#epipremnum">Genus: Epipremnum</a>
+          <span class="tag">Species: aureum</span>
+        </div>
+        <p>Heart-shaped leaves marbled with yellow. A trailing vine that roots readily at each node.</p>
+      </article>
+    </div>
+
+    <div class="group" data-family="rosaceae">
+      <div class="family-heading" id="rosaceae">
+        <h2 class="fam-latin sci">Rosaceae</h2>
+        <span class="fam-common">The rose family — five-petalled flowers, often with thorns.</span>
+      </div>
+
+      <article class="specimen-card" id="rosa">
+        <span class="accession">No. 0091</span>
+        <div class="common-name">Dog rose</div>
+        <span class="sci">Rosa canina</span>
+        <div class="rank-line">
+          <a class="tag" href="explore-family.html#rosaceae">Family: Rosaceae</a>
+          <a class="tag" href="explore-genus.html#rosa">Genus: Rosa</a>
+          <span class="tag">Species: canina</span>
+        </div>
+        <p>A scrambling hedgerow rose with pale pink flowers and hooked thorns along an arching stem.</p>
+      </article>
+
+      <article class="specimen-card" id="fragaria">
+        <span class="accession">No. 0092</span>
+        <div class="common-name">Wild strawberry</div>
+        <span class="sci">Fragaria vesca</span>
+        <div class="rank-line">
+          <a class="tag" href="explore-family.html#rosaceae">Family: Rosaceae</a>
+          <a class="tag" href="explore-genus.html#fragaria">Genus: Fragaria</a>
+          <span class="tag">Species: vesca</span>
+        </div>
+        <p>Trifoliate leaves and small white flowers, followed by fruit far smaller than its cultivated relatives.</p>
+      </article>
+
+      <article class="specimen-card" id="sorbus">
+        <span class="accession">No. 0093</span>
+        <div class="common-name">Rowan</div>
+        <span class="sci">Sorbus aucuparia</span>
+        <div class="rank-line">
+          <a class="tag" href="explore-family.html#rosaceae">Family: Rosaceae</a>
+          <a class="tag" href="explore-genus.html#sorbus">Genus: Sorbus</a>
+          <span class="tag">Species: aucuparia</span>
+        </div>
+        <p>A slender tree with pinnate leaves and clusters of orange-red berries that persist into winter.</p>
+      </article>
+    </div>
+
+    <div class="group" data-family="fabaceae">
+      <div class="family-heading" id="fabaceae">
+        <h2 class="fam-latin sci">Fabaceae</h2>
+        <span class="fam-common">The legume family — pod fruits and nitrogen-fixing roots.</span>
+      </div>
+
+      <article class="specimen-card" id="pisum">
+        <span class="accession">No. 0210</span>
+        <div class="common-name">Garden pea</div>
+        <span class="sci">Pisum sativum</span>
+        <div class="rank-line">
+          <a class="tag" href="explore-family.html#fabaceae">Family: Fabaceae</a>
+          <a class="tag" href="explore-genus.html#pisum">Genus: Pisum</a>
+          <span class="tag">Species: sativum</span>
+        </div>
+        <p>A climbing annual with tendrilled compound leaves, grown for the seed pods it sets after flowering.</p>
+      </article>
+
+      <article class="specimen-card" id="laburnum">
+        <span class="accession">No. 0211</span>
+        <div class="common-name">Common laburnum</div>
+        <span class="sci">Laburnum anagyroides</span>
+        <div class="rank-line">
+          <a class="tag" href="explore-family.html#fabaceae">Family: Fabaceae</a>
+          <a class="tag" href="explore-genus.html#laburnum">Genus: Laburnum</a>
+          <span class="tag">Species: anagyroides</span>
+        </div>
+        <p>A small tree hung with long yellow flower chains in late spring, followed by slender seed pods.</p>
+      </article>
+    </div>
+
+    <div class="group" data-family="asparagaceae">
+      <div class="family-heading" id="asparagaceae">
+        <h2 class="fam-latin sci">Asparagaceae</h2>
+        <span class="fam-common">A family of strap-like leaves, redrawn by taxonomists more than once.</span>
+      </div>
+
+      <article class="specimen-card" id="dracaena">
+        <span class="accession">No. 0305</span>
+        <div class="common-name">Snake plant</div>
+        <span class="sci">Dracaena trifasciata</span>
+        <div class="rank-line">
+          <a class="tag" href="explore-family.html#asparagaceae">Family: Asparagaceae</a>
+          <a class="tag" href="explore-genus.html#dracaena">Genus: Dracaena</a>
+          <span class="tag">Species: trifasciata</span>
+        </div>
+        <p>Stiff, upright leaves banded in mottled green. Reclassified from Sansevieria in recent revisions.</p>
+      </article>
+
+      <article class="specimen-card" id="chlorophytum">
+        <span class="accession">No. 0306</span>
+        <div class="common-name">Spider plant</div>
+        <span class="sci">Chlorophytum comosum</span>
+        <div class="rank-line">
+          <a class="tag" href="explore-family.html#asparagaceae">Family: Asparagaceae</a>
+          <a class="tag" href="explore-genus.html#chlorophytum">Genus: Chlorophytum</a>
+          <span class="tag">Species: comosum</span>
+        </div>
+        <p>Arching grass-like leaves that send out long runners tipped with plantlets.</p>
+      </article>
+    </div>
+
+  </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>WikiPlant — a community field index.</span>
+    <span class="sci">Ordo naturae, sequor semper.</span>
+  </div>
+</footer>
+
+</body>
+</html>
