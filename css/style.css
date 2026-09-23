@@ -155,3 +155,283 @@ main {
     font-size: 22px;
     margin: 0;
 }
+
+/* ==========================================================
+   ADDED STYLES FOR CONTRIBUTOR & CONTRIBUTION PAGES
+   ================ ========================================== */
+
+/* 统一的主体与响应式两栏布局 */
+.page_main {
+    padding: 40px;
+}
+
+.content_grid {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.main_content_area {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1.2;
+    position: sticky;
+    top: 20px;
+}
+
+/* 导航栏当前选中状态高亮 */
+header nav a.active {
+    background-color: #6B8E23;
+    color: #FFFFFF;
+}
+
+/* 内容板块卡片化设计 (White Card Box) */
+.content_section {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.content_section h1, 
+.content_section h2 {
+    color: #2A331B;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.content_section p {
+    color: #2A331B;
+    line-height: 1.6;
+}
+
+/* 侧边栏卡片样式 */
+.sidebar_box {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.sidebar_box h2 {
+    color: #2A331B;
+    font-size: 20px;
+    margin-top: 0;
+    border-bottom: 2px solid #6B8E23;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.styled_sidebar_ol {
+    padding-left: 20px;
+    margin: 0;
+    color: #2A331B;
+    line-height: 1.5;
+}
+
+.styled_sidebar_ol li {
+    margin-bottom: 15px;
+}
+
+/* 列表与术语列表美化 */
+.styled_ol {
+    line-height: 1.8;
+    color: #2A331B;
+    padding-left: 20px;
+}
+
+.styled_dl dt {
+    color: #6B8E23;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.styled_dl dd {
+    margin-left: 0;
+    margin-bottom: 10px;
+    color: #2A331B;
+    line-height: 1.5;
+}
+
+/* 图片展示美化 */
+.plant_figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.plant_figure img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #2A331B;
+    border-radius: 4px;
+}
+
+.plant_figure figcaption {
+    font-style: italic;
+    color: #555;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* 表单整体样式优化 (Contribution Form) */
+.styled_form fieldset {
+    border: 2px solid #6B8E23;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #FAFAFA;
+}
+
+.styled_form legend {
+    font-weight: bold;
+    color: #2A331B;
+    background-color: #F9F6F0;
+    padding: 5px 15px;
+    border: 2px solid #6B8E23;
+    border-radius: 4px;
+}
+
+.styled_form label {
+    font-weight: bold;
+    color: #2A331B;
+}
+
+.styled_form input[type="text"],
+.styled_form select,
+.styled_form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #2A331B;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+}
+
+.styled_form input[type="file"] {
+    margin-top: 8px;
+}
+
+.form_hint {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.required_note {
+    font-size: 14px;
+    color: #b30000;
+}
+
+.checkbox_p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form_actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn_primary {
+    background-color: #6B8E23;
+    color: white;
+    border: 2px solid #2A331B;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.btn_primary:hover {
+    background-color: #55721a;
+}
+
+.btn_secondary {
+    background-color: #E0E0E0;
+    color: #2A331B;
+    border: 2px solid #2A331B;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.btn_secondary:hover {
+    background-color: #cccccc;
+}
+
+/* 原始风格 Footer 样式 */
+.site_footer {
+    background-color: #F9F6F0;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.footer_content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer_logo {
+    font-size: 16px;
+    color: #2A331B;
+    margin-bottom: 10px;
+}
+
+.footer_nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.footer_nav button {
+    background-color: #FFFFFF;
+    border: 1px solid #2A331B;
+    color: #2A331B;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.footer_nav button:hover {
+    background-color: #6B8E23;
+    color: #FFFFFF;
+}
+
+.copyright {
+    color: #555;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* 响应式适配：手机屏幕下转为单列布局 */
+@media (max-width: 768px) {
+    .content_grid {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: static;
+        width: 100%;
+    }
+    header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

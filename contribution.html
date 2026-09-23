@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,133 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Submit plant observations to support biodiversity monitoring and conservation research.">
     <title>WikiPlant | Contribute</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="WikiPlant" width="231" height="203">
+        <img src="logo.png" alt="WikiPlant" class="logo_img" width="231" height="203">
         <nav aria-label="Main navigation">
-            <a href="index.html">Home</a> |
-            <a href="explorer.html">Explore</a> |
-            <a href="contributor.html">Contributor</a> |
-            <a href="register.html">Register</a> |
-            <a href="contribution.html">Contribute</a> |
-            <a href="enquiry_form.html">Enquiry</a> |
+            <a href="index.html">Home</a>
+            <a href="explorer.html">Explore</a>
+            <a href="contributor.html">Contributor</a>
+            <a href="register.html">Register</a>
+            <a href="contribution.html" class="active">Contribute</a>
+            <a href="enquiry_form.html">Enquiry</a>
             <a href="login.html">Login</a>
         </nav>
-        <hr>
     </header>
 
-    <main>
-        <section>
-            <h2>Submit an Observation</h2>
-            <p>Share your plant observations with WikiPlant to help document plant biodiversity and support environmental research.</p>
-            <p>Fields marked with <strong>*</strong> are required.</p>
-        </section>
+    <main class="page_main">
+        <div class="content_grid">
+            <div class="main_content_area">
+                <section class="content_section">
+                    <h2>Submit an Observation</h2>
+                    <p>Share your plant observations with WikiPlant to help document plant biodiversity and support environmental research.</p>
+                    <p class="required_note">Fields marked with <strong>*</strong> are required.</p>
+                </section>
 
-        <section>
-            <h2>Contribution Form</h2>
-            <form action="YOUR_SERVER_SCRIPT_HERE" method="post" enctype="multipart/form-data">
-                <fieldset>
-                    <legend>1. Contributor Information</legend>
-                    <p>
-                        <label for="fullname">Name of the Contributor *</label><br>
-                        <input type="text" id="fullname" name="fullname" maxlength="25" pattern="[A-Za-z]+" title="Please enter alphabetical characters only. Maximum 25 characters." required>
-                    </p>
-                </fieldset>
+                <section class="content_section">
+                    <h2>Contribution Form</h2>
+                    <form action="YOUR_SERVER_SCRIPT_HERE" method="post" enctype="multipart/form-data" class="styled_form">
+                        <fieldset>
+                            <legend>1. Contributor Information</legend>
+                            <p>
+                                <label for="fullname">Name of the Contributor *</label><br>
+                                <input type="text" id="fullname" name="fullname" maxlength="25" pattern="[A-Za-z\s]+" title="Please enter alphabetical characters only. No numbers or symbols allowed. Maximum 25 characters." required>
+                            </p>
+                        </fieldset>
 
-                <fieldset>
-                    <legend>2. Plant Information</legend>
-                    <p>
-                        <label for="plantname">Plant's Name *</label><br>
-                        <input type="text" id="plantname" name="plantname" maxlength="25" pattern="[A-Za-z]+" title="Please enter alphabetical characters only. Maximum 25 characters." required>
-                    </p>
+                        <fieldset>
+                            <legend>2. Plant Information</legend>
+                            <p>
+                                <label for="plantname">Plant's Name *</label><br>
+                                <input type="text" id="plantname" name="plantname" maxlength="25" pattern="[A-Za-z\s]+" title="Please enter alphabetical characters only. No numbers or symbols allowed. Maximum 25 characters." required>
+                            </p>
 
-                    <p>
-                        <label for="plant-category">Plant Category *</label><br>
-                        <select id="plant-category" name="plant_category" required>
-                            <option value="" selected disabled>-- Select a category --</option>
-                            <option value="Species">Species</option>
-                            <option value="Families">Families</option>
-                            <option value="Genera">Genera</option>
-                        </select>
-                    </p>
+                            <p>
+                                <label for="plant-category">Plant Category *</label><br>
+                                <select id="plant-category" name="plant_category" required>
+                                    <option value="" selected disabled>-- Select a category --</option>
+                                    <option value="Species">Species</option>
+                                    <option value="Families">Families</option>
+                                    <option value="Genera">Genera</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </p>
 
-                    <p>
-                        <label for="other-category">If Other, please specify:</label><br>
-                        <input type="text" id="other-category" name="other_category" maxlength="25">
-                    </p>
-                </fieldset>
+                            <p>
+                                <label for="other-category">If Other, please specify:</label><br>
+                                <input type="text" id="other-category" name="other_category" maxlength="25" pattern="[A-Za-z\s]+" title="Please enter alphabetical characters only.">
+                            </p>
+                        </fieldset>
 
-                <fieldset>
-                    <legend>3. Plant Photo</legend>
-                    <p>
-                        <label for="photo">Photo *</label><br>
-                        <input type="file" id="photo" name="photo" accept="image/*" required>
-                    </p>
-                    <p>Please upload a clear photograph of the plant.</p>
-                </fieldset>
+                        <fieldset>
+                            <legend>3. Plant Photo</legend>
+                            <p>
+                                <label for="photo">Photo *</label><br>
+                                <input type="file" id="photo" name="photo" accept="image/*" required>
+                            </p>
+                            <p class="form_hint">Please upload a clear photograph of the plant.</p>
+                        </fieldset>
 
-                <fieldset>
-                    <legend>4. Comments</legend>
-                    <p>
-                        <label for="comments">Comments / Observations *</label><br>
-                        <textarea id="comments" name="comments" rows="6" cols="50" maxlength="500" placeholder="Enter your observations about the plant." required></textarea>
-                    </p>
-                    <p>Maximum 500 characters.</p>
-                </fieldset>
+                        <fieldset>
+                            <legend>4. Comments</legend>
+                            <p>
+                                <label for="comments">Comments / Observations *</label><br>
+                                <textarea id="comments" name="comments" rows="6" cols="50" maxlength="500" placeholder="Enter your observations about the plant." required></textarea>
+                            </p>
+                            <p class="form_hint">Maximum 500 characters.</p>
+                        </fieldset>
 
-                <fieldset>
-                    <legend>5. Submission</legend>
-                    <p>
-                        <input type="checkbox" id="accuracy" name="accuracy" value="confirmed" required>
-                        <label for="accuracy">I confirm that the information provided is accurate. *</label>
-                    </p>
+                        <fieldset>
+                            <legend>5. Submission</legend>
+                            <p class="checkbox_p">
+                                <input type="checkbox" id="accuracy" name="accuracy" value="confirmed" required>
+                                <label for="accuracy">I confirm that the information provided is accurate. *</label>
+                            </p>
 
-                    <p>
-                        <button type="submit">Submit Contribution</button>
-                        <button type="reset">Clear Form</button>
-                    </p>
-                </fieldset>
-            </form>
-        </section>
+                            <p class="form_actions">
+                                <button type="submit" class="btn_primary">Submit Contribution</button>
+                                <button type="reset" class="btn_secondary">Clear Form</button>
+                            </p>
+                        </fieldset>
+                    </form>
+                </section>
+            </div>
 
-        <aside>
-            <h2>Submission Guide</h2>
-            <ol>
-                <li>
-                    <h3>Take a Clear Photo</h3>
-                    <p>Make sure the plant is clearly visible and the photograph is not blurry.</p>
-                </li>
-                <li>
-                    <h3>Enter the Plant Name</h3>
-                    <p>Enter the common name of the plant using alphabetical characters only.</p>
-                </li>
-                <li>
-                    <h3>Add Your Observation</h3>
-                    <p>Use the comments section to describe any useful observations about the plant.</p>
-                </li>
-                <li>
-                    <h3>Check Your Information</h3>
-                    <p>Review your information before submitting your contribution.</p>
-                </li>
-            </ol>
-        </aside>
+            <aside class="sidebar">
+                <div class="sidebar_box">
+                    <h2>Submission Guide</h2>
+                    <ol class="styled_sidebar_ol">
+                        <li>
+                            <strong>Take a Clear Photo</strong>
+                            <p>Make sure the plant is clearly visible and the photograph is not blurry.</p>
+                        </li>
+                        <li>
+                            <strong>Enter the Plant Name</strong>
+                            <p>Enter the common name of the plant using alphabetical characters only.</p>
+                        </li>
+                        <li>
+                            <strong>Add Your Observation</strong>
+                            <p>Use the comments section to describe any useful observations about the plant.</p>
+                        </li>
+                        <li>
+                            <strong>Check Your Information</strong>
+                            <p>Review your information before submitting your contribution.</p>
+                        </li>
+                    </ol>
+                </div>
+            </aside>
+        </div>
     </main>
 
-    <footer>
-        <hr>
-        <p><strong>WikiPlant</strong></p>
-        <nav aria-label="Footer navigation">
-            <button type="button" onclick="location.href='index.html'">Home</button>
-            <button type="button" onclick="location.href='explorer.html'">Explore</button>
-            <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-            <button type="button" onclick="location.href='register.html'">Register</button>
-            <button type="button" onclick="location.href='contribution.html'">Contribute</button>
-            <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-            <button type="button" onclick="location.href='login.html'">Login</button>
-            <button type="button" onclick="location.href='mailto:106757438@students.swinburne.edu.my'">Contact Us</button>
-        </nav>
-        <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+    <footer class="site_footer">
+        <div class="footer_content">
+            <p class="footer_logo"><strong>WikiPlant</strong></p>
+            <nav aria-label="Footer navigation" class="footer_nav">
+                <button type="button" onclick="location.href='index.html'">Home</button>
+                <button type="button" onclick="location.href='explorer.html'">Explore</button>
+                <button type="button" onclick="location.href='contributor.html'">Contributor</button>
+                <button type="button" onclick="location.href='register.html'">Register</button>
+                <button type="button" onclick="location.href='contribution.html'">Contribute</button>
+                <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
+                <button type="button" onclick="location.href='login.html'">Login</button>
+                <button type="button" onclick="location.href='mailto:106757438@students.swinburne.edu.my'">Contact Us</button>
+            </nav>
+            <p class="copyright">&copy; 2026 WikiPlant. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
