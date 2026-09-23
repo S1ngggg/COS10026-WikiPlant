@@ -1,58 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Login of the Wikiplant website makers!" />
-        <meta name="keywords" content="login" />
-        <meta name="author" content="Terry Lin" />
-        <title>Explorer</title>
-    </head>
-    <body>
-        <header>
-            <a href="index.html"><img src="logo.png" alt="WikiPlant" width="231" height="203"></a>
-                <nav aria-label="Main navigation">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore — WikiPlant</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-                    <a href="index.html">Home</a> |
-                    <a href="explorer.html">Explore</a> |
-                    <a href="contributor.html">Contributor</a> |
-                    <a href="register.html">Register</a> |
-                    <a href="contribution.html">Contribute</a> |
-                    <a href="enquiry_form.html">Enquiry</a> |
-                    <a href="login.html">Login</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="WikiPlant logo">
+      <span class="brand-motto">Herbarium ordinaria</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-drop">
+          <a href="explore.html" aria-current="page">Explore</a>
+          <ul class="drop-menu">
+            <li><a href="explore-family.html">By family</a></li>
+            <li><a href="explore-genus.html">By genus</a></li>
+            <li><a href="explore-species.html">By species</a></li>
+          </ul>
+        </li>
+        <li><a href="identify.html">Identify</a></li>
+        <li><a href="contribute.html">Contribute</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-             </nav>
+<div class="page-header">
+  <div class="wrap">
+    <span class="kicker">Section A</span>
+    <h1>The index</h1>
+    <p>The collection is filed at three ranks, each on its own page. Start wherever makes sense for what you already know — a family name, a genus, or the plant you're looking for by species — and follow the links across to see how it sits with its relatives.</p>
+  </div>
+</div>
 
-             <hr>
-        </header>
+<div class="wrap">
+  <div class="index-grid">
+    <article class="index-card">
+      <span class="no">Rank 1</span>
+      <h3>By family</h3>
+      <p>The broadest shelf. Four families are logged so far, each with a short description of what sets it apart and a count of the genera filed underneath it.</p>
+      <a class="btn btn-outline" href="explore-family.html">Browse families</a>
+    </article>
+    <article class="index-card">
+      <span class="no">Rank 2</span>
+      <h3>By genus</h3>
+      <p>Genera grouped under their family, each with the species logged inside it. The middle shelf — narrower than a family, still holding more than one plant.</p>
+      <a class="btn btn-outline" href="explore-genus.html">Browse genera</a>
+    </article>
+    <article class="index-card">
+      <span class="no">Rank 3</span>
+      <h3>By species</h3>
+      <p>The full specimen record: every plant logged individually, with its complete classification, a description, and an accession number.</p>
+      <a class="btn btn-outline" href="explore-species.html">Browse species</a>
+    </article>
+  </div>
+</div>
 
-        <h1>Exploration</h1>
-        <p>
-            Welcome to WikiPlant's explorer page. At here, you can look for any plant you want,<br>
-            according to their Families, Genus or even specis.<br>
-            You can also search for plants you want through the search bar.
-        </p>
-        <img src="classification.png" alt="Plants' classification" width="250" height="625">
-        <br>
-        <a href="family.html">Families</a>
-        <p>Family (Latin: familia, pl.: familiae) is one of the eight major hierarchical taxonomic<br>
-            ranks in Linnaean taxonomy.It is also the biggest group you can search in this website.<br>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>WikiPlant — a community field index.</span>
+    <span class="sci">Ordo naturae, sequor semper.</span>
+  </div>
+</footer>
 
-        </p>
-
-        <footer>
-            <hr>
-            <p><strong>WikiPlant</strong></p>
-            <nav aria-label="Footer navigation">
-                <button type="button" onclick="location.href='index.html'">Home</button>
-                <button type="button" onclick="location.href='explorer.html'">Explore</button>
-                <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-                <button type="button" onclick="location.href='register.html'">Register</button>
-                <button type="button" onclick="location.href='contribution.html'">Contribute</button>
-                <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-                <button type="button" onclick="location.href='login.html'">Login</button>
-                <button type="button" onclick="location.href='mailto:106757438@students.swinburne.edu.my'">Contact Us</button>
-            </nav>
-            <p>&copy; 2026 WikiPlant. All rights reserved.</p>
-        </footer>
-    </body>
+</body>
 </html>
