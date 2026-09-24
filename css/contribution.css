@@ -1,0 +1,208 @@
+/* =========================================
+   全局样式与 Header (已优化交互)
+   ========================================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #F9F6F0;
+}
+
+header {
+    background-color: #F9F6F0;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 3px solid #6B8E23;
+    gap: 60px;
+}
+
+.logo_img {
+    height: 80px;
+    width: auto;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #2A331B;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* 增加平滑过渡 */
+}
+
+/* 增加导航栏悬浮和激活状态效果 */
+header nav a:hover,
+header nav a.active {
+    background-color: #6B8E23;
+    color: #FFFFFF;
+    transform: translateY(-2px); /* 悬浮时微微上浮 */
+}
+
+/* =========================================
+   Main Area (中间内容)
+   ========================================= */
+main {
+    background-color: #F9F6F0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.badge {
+    display: inline-block;
+    border: 2px solid #2A331B;
+    border-radius: 20px;
+    padding: 7px 15px; /* 稍微加宽左右内边距更好看 */
+    font-weight: bold;
+    margin: 10px;
+    color: #2A331B;
+    background-color: #FFFFFF;
+}
+
+/* =========================================
+   Plant Cards (植物卡片 - 增加悬浮交互)
+   ========================================= */
+.card_container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 20px;
+    flex-wrap: wrap; /* 允许在小屏幕上自动换行 */
+}
+
+.plant_card {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    width: 200px;
+    height: 260px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease; /* 动画过渡 */
+    cursor: pointer;
+}
+
+/* 鼠标悬浮时的卡片特效 */
+.plant_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0px #6B8E23; /* 增加复古硬阴影 */
+}
+
+.plant_card h3 {
+    color: #6B8E23;
+    font-size: 24px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+/* =========================================
+   About Section & Text Boxes
+   ========================================= */
+.about_section {
+    margin: 0px 40px 50px 40px;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+.about_section h2 {
+    font-size: 24px;
+    color: #2A331B;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #6B8E23;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.text_box {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    padding: 25px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.text_box p {
+    margin: 0;
+    color: #2A331B;
+}
+
+.quote_box p {
+    text-align: right;
+}
+
+.quote {
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+    color: #6B8E23; /* 将引言改为绿色更突出 */
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/* =========================================
+   Categories Section (分类网格 - 增加悬浮交互)
+   ========================================= */
+.categories_section {
+    margin: 0px 40px 50px 40px;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+.categories_section h2 {
+    font-size: 24px;
+    color: #2A331B;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #6B8E23;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.category_grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* 允许在小屏幕上自动换行 */
+}
+
+.category_card {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    flex: 1;
+    min-width: 250px; /* 保证缩小屏幕时卡片不会太窄 */
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* 鼠标悬浮特效 */
+.category_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 0px #2A331B; 
+}
+
+.category_img_placeholder {
+    background-color: #F9F6F0;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #6B8E23;
+    font-weight: bold;
+    border: 2px dashed #2A331B; /* 给占位图增加虚线边框，视觉更丰富 */
+}
+
+.category_card h3 {
+    color: #2A331B;
+    font-size: 22px;
+    margin: 0;
+}

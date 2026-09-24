@@ -1,15 +1,11 @@
-/* =========================================
-   Global Styles (全局样式)
-   ========================================= */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: #F9F6F0;
 }
 
-/* =========================================
-   Header & Navigation (头部与导航栏)
-   ========================================= */
+
 header {
     background-color: #F9F6F0;
     display: flex;
@@ -45,9 +41,7 @@ header nav a.active {
     color: #FFFFFF;
 }
 
-/* =========================================
-   Home / Existing Main Content (原有首页及主内容区)
-   ========================================= */
+
 main {
     background-color: #F9F6F0;
 }
