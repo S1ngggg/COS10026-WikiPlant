@@ -1,14 +1,18 @@
 <!-- identify.html - Plant's Notebook - Identify Page -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Learn how the Plant's Notebook photo identification feature works and what information it reveals about a plant.">
-    <meta name="keywords" content="plant identification, herbarium specimen, scientific name, common name, biodiversity">
+    <meta name="description"
+        content="Learn how the Plant's Notebook photo identification feature works and what information it reveals about a plant.">
+    <meta name="keywords"
+        content="plant identification, herbarium specimen, scientific name, common name, biodiversity">
     <meta name="author" content="Sean Liew">
     <title>Identify - Plant's Notebook</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
 
     <header>
@@ -28,12 +32,14 @@
     <main>
         <div class="identifier-intro">
             <h1>Upload a Photo to Identify a Plant</h1>
-            <p>Not sure what plant you're looking at? Simply upload a clear photo of the leaf, flower, or the whole plant, and here will match it against our reference database to suggest the most likely species.</p>
+            <p>Not sure what plant you're looking at? Simply upload a clear photo of the leaf, flower, or the whole
+                plant, and here will match it against our reference database to suggest the most likely species.</p>
         </div>
 
         <section class="how-it-works card-container">
             <div class="static-photo-container">
-                <label class="static-photo upload-box" for="plant-photo" aria-label="Upload a plant photo" title="Upload a plant photo">
+                <label class="static-photo upload-box" for="plant-photo" aria-label="Upload a plant photo"
+                    title="Upload a plant photo">
                     <img src="cloud-upload.png" alt="Upload icon" class="cloud-upload" id="upload-icon">
                     <img class="upload-preview" id="upload-preview" alt="Selected plant photo preview" hidden>
                     <input id="plant-photo" type="file" accept="image/*">
@@ -46,7 +52,7 @@
 
         <section>
             <h2>Plant Information</h2>
-            <p>
+            <p class="para">
                 Plant identification can help users learn more about unfamiliar plants by
                 connecting their appearance with useful botanical information. An identified
                 plant may have both a common name and a scientific name, allowing users to
@@ -55,7 +61,7 @@
                 scientific name can make it easier to distinguish a plant from other species
                 with similar common names.
             </p>
-            <p>
+            <p class="para">
                 Identification information can also help users recognise plants in gardens,
                 parks and other environments. Images provide a visual reference, while plant
                 details give users a clearer understanding of the species being presented. The
@@ -84,7 +90,7 @@
             </dl>
 
             <h3>Tutorial</h3>
-            <p>
+            <p class="para">
                 The steps below describe how to grow basil from seed, shown in the order they
                 should be carried out.
             </p>
@@ -112,7 +118,7 @@
 
             <aside>
                 <h2>Plant Tip</h2>
-                <p>
+                <p class="para">
                     Basil grows well in warm conditions and needs plenty of sunlight. Regular
                     trimming can encourage new growth and help the plant remain bushy.
                 </p>
@@ -159,4 +165,5 @@
         });
     </script>
 </body>
+
 </html>
