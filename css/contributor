@@ -1,0 +1,411 @@
+/* =========================================
+   Global Styles (全局样式)
+   ========================================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #F9F6F0;
+}
+
+/* =========================================
+   Header & Navigation (头部与导航栏)
+   ========================================= */
+header {
+    background-color: #F9F6F0;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 3px solid #6B8E23;
+    gap: 60px;
+}
+
+.logo_img {
+    height: 80px;
+    width: auto;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #2A331B;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+header nav a:hover,
+header nav a.active {
+    background-color: #6B8E23;
+    color: #FFFFFF;
+}
+
+/* =========================================
+   Home / Existing Main Content (原有首页及主内容区)
+   ========================================= */
+main {
+    background-color: #F9F6F0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.badge {
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 7px 7px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.card_container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0px;
+}
+
+.plant_card {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    width: 200px;
+    height: 260px;
+    padding: 20px;
+    text-align: center;
+}
+
+.plant_card h3 {
+    color: #6B8E23;
+    font-size: 24px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.about_section {
+    margin: 0px 40px 50px 40px;
+    padding: 0 20px;
+}
+
+.about_section h2 {
+    font-size: 24px;
+    color: #2A331B;
+    margin-bottom: 15px;
+}
+
+.text_box {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    padding: 25px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.text_box p {
+    margin: 0;
+    color: #2A331B;
+}
+
+.quote {
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2A331B;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.quote_box p {
+    text-align: right;
+}
+
+.categories_section {
+    margin: 0px 40px 50px 40px;
+    padding: 0 20px;
+}
+
+.categories_section h2 {
+    font-size: 24px;
+    color: #2A331B;
+    margin-bottom: 20px;
+}
+
+.category_grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.category_card {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.category_img_placeholder {
+    background-color: #F9F6F0;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #6B8E23;
+    font-weight: bold;
+}
+
+.category_card h3 {
+    color: #2A331B;
+    font-size: 22px;
+    margin: 0;
+}
+
+
+/* =========================================
+   Contributor Page (Contributor页面专有布局)
+   ========================================= */
+
+/* 主容器设置边界和居中 */
+.page_main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 左右两栏网格布局 */
+.content_grid {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr; /* 左边内容宽，右边侧边栏窄 */
+    gap: 40px;
+    align-items: start; /* 确保侧边栏可以正常使用 sticky */
+}
+
+/* 主标题美化 */
+.main_content_area h1 {
+    color: #2A331B;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    border-bottom: 5px solid #6B8E23;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* 内容区块（卡片化风格，统一现有 UI） */
+.content_section {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #2A331B;
+}
+
+.content_section h2 {
+    color: #6B8E23;
+    font-size: 24px;
+    margin-top: 0;
+    border-bottom: 2px dashed #2A331B; 
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* 步骤列表美化 */
+.styled_ol {
+    padding-left: 20px;
+}
+
+.styled_ol li {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.styled_ol li::marker {
+    color: #6B8E23;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 定义列表美化 (Guidelines) */
+.styled_dl {
+    margin-top: 20px;
+}
+
+.styled_dl dt {
+    font-size: 18px;
+    color: #2A331B;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.styled_dl dt::before {
+    content: "■";
+    color: #6B8E23;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.styled_dl dd {
+    margin-left: 0;
+    margin-bottom: 25px;
+    padding-left: 24px;
+    border-left: 3px solid #6B8E23; 
+    color: #444;
+}
+
+/* 图片区域美化 */
+.plant_figure {
+    margin: 20px 0 30px 0;
+    background-color: #F9F6F0;
+    border: 2px solid #2A331B;
+    padding: 15px;
+    text-align: center;
+}
+
+.plant_figure img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #2A331B;
+    display: block;
+    margin: 0 auto;
+}
+
+.plant_figure figcaption {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #2A331B;
+    font-weight: bold;
+}
+
+/* =========================================
+   Sidebar (侧边栏)
+   ========================================= */
+.sidebar {
+    position: sticky;
+    top: 30px; 
+}
+
+.sidebar_box {
+    background-color: #6B8E23;
+    color: #FFFFFF;
+    border: 2px solid #2A331B;
+    padding: 25px;
+    box-shadow: 4px 4px 0px #2A331B; /* 复古硬阴影 */
+}
+
+.sidebar_box h2 {
+    color: #FFFFFF;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 10px;
+}
+
+.sidebar_box p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.sidebar_box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   Footer (页脚样式补充 - 匹配整体风格)
+   ========================================= */
+.site_footer {
+    background-color: #FFFFFF;
+    border-top: 3px solid #6B8E23;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer_content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer_logo {
+    font-size: 24px;
+    color: #2A331B;
+    margin: 0 0 20px 0;
+}
+
+.footer_nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.footer_nav button {
+    background-color: #F9F6F0;
+    border: 2px solid #2A331B;
+    color: #2A331B;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.footer_nav button:hover {
+    background-color: #6B8E23;
+    color: #FFFFFF;
+}
+
+.copyright {
+    color: #444;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* =========================================
+   Responsive Design (移动端响应式适配)
+   ========================================= */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    header nav {
+        justify-content: center;
+    }
+
+    .content_grid {
+        grid-template-columns: 1fr; /* 屏幕较小时，侧边栏掉落到下方 */
+    }
+    
+    .page_main {
+        padding: 20px;
+    }
+    
+    .sidebar {
+        position: static; /* 取消悬浮效果 */
+    }
+    
+    .content_section {
+        padding: 20px;
+    }
+    
+    .card_container, .category_grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
