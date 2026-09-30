@@ -1521,6 +1521,17 @@ body.explorer-page {
     box-shadow: 3px 4px 0 var(--shadow);
     padding: 28px 26px;
     scroll-margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.explorer-page .family-card > p {
+    flex-grow: 1;
+}
+
+.explorer-page .family-card .btn {
+    align-self: flex-start;
 }
 
 .explorer-page .family-card .fam-common {
@@ -1556,7 +1567,19 @@ body.explorer-page {
     box-shadow: 2px 3px 0 var(--shadow);
     padding: 22px 22px 20px;
     scroll-margin-top: 90px;
+        display: flex;
+    flex-direction: column;
+    height: 100%;
 }
+
+.explorer-page .genus-card > p {
+    flex-grow: 1;
+}
+.explorer-page .genus-card > .tag,
+.explorer-page .genus-card .btn {
+    align-self: flex-start;
+}
+
 
 .explorer-page .genus-card .species-tags {
     display: flex;
@@ -1614,6 +1637,14 @@ body.explorer-page {
     box-shadow: 3px 4px 0 var(--shadow);
     padding: 26px 24px 22px;
     scroll-margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.explorer-page .specimen-card > p {
+    flex-grow: 1;
+    margin-bottom: 0;
 }
 
 .explorer-page .specimen-card .accession {
