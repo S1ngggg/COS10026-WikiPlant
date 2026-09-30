@@ -1094,3 +1094,180 @@
     }
 
 }
+
+.site_footer {
+    background-color: #FFFFFF;
+
+    border-top: 3px solid #6B8E23;
+
+    padding: 40px 20px 20px 20px;
+
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+.footer_content {
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.footer_logo {
+    font-size: 24px;
+
+    color: #2A331B;
+
+    margin: 0 0 10px 0;
+}
+
+.site_footer nav {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.site_footer nav button {
+    background-color: #F9F6F0;
+
+    border: 2px solid #2A331B;
+
+    color: #2A331B;
+
+    padding: 8px 16px;
+
+    font-family: inherit;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.site_footer nav button:hover {
+    background-color: #6B8E23;
+
+    color: #FFFFFF;
+}
+
+.copyright {
+    color: #718096;
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   Tablet
+   ========================================= */
+
+@media (max-width: 950px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    .content_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}
+
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header nav {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    header nav a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .page_main {
+        padding: 30px 20px;
+    }
+
+    .content_section {
+        padding: 25px 20px;
+    }
+
+    .content_section h2 {
+        font-size: 24px;
+    }
+
+    .styled_form fieldset {
+        margin-bottom: 30px;
+    }
+
+    .styled_form legend {
+        font-size: 18px;
+    }
+
+    /* Plant Information becomes one column */
+
+    .plant_information {
+        grid-template-columns: 1fr;
+    }
+
+    .plant_information legend {
+        grid-column: auto;
+    }
+
+    .plant_information p:nth-of-type(3) {
+        grid-column: auto;
+    }
+
+    /* Buttons become full width */
+
+    .form_actions {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .btn_primary,
+    .btn_secondary {
+        width: 100%;
+    }
+
+    /* Sidebar */
+
+    .sidebar_box {
+        padding: 25px 20px;
+    }
+}
