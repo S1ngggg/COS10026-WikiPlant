@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="description" content="enquiry form for WikiPlantwwww" />
-    <meta name="keywords" content="enquiries" />
+    <meta name="description" content="Enquiry form for WikiPlant website" />
+    <meta name="keywords" content="enquiries, support" />
     <meta name="author" content="Terry Lin Zhen Bin" />
     <link href="css/style.css" rel="stylesheet">
-    <title>WikiPlant enquiry form</title>
+    <title>Enquiry - WikiPlant</title>
 </head>
 
-<body class="enquiry-page">
+<body class="explorer-page">
     <header class="site-header">
         <div class="wrap">
             <a class="brand" href="index.html">
@@ -31,68 +31,98 @@
                     <li><a href="identify.html">Identify</a></li>
                     <li><a href="contributor.html">Contributor</a></li>
                     <li><a href="contribution.html">Contribute</a></li>
-                    <li><a href="enquiry_form.html">Enquiry</a></li>
+                    <li><a href="enquiry_form.html" aria-current="page">Enquiry</a></li>
                     <li><a href="register.html">Register</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
-
     </header>
 
-    <h1>WikiPlant Enquiry Form</h1>
-    <p>Ask any question you want about our website!</p>
-    <form method="post" action="mailto:106757438@students.swinburne.edu.my">
-        <fieldset>
-            <legend>User Information</legend>
-            <label for="username">Username:</label>
-            <input type="text" id="username" pattern="[A-za-z]+" required="required">
-            <p>
-                <label for="firstname">First name:</label>
-                <input type="text" id="firstname" pattern="[A-Za-z]+" required="required">
-                <label for="lastname">Last name:</label>
-                <input type="text" id="lastname" pattern="[A-Za-z]+" required="required">
-            </p>
-        </fieldset>
-        <fieldset>
-            <legend>Questions</legend>
-            <label>Which category you have question?</label>
-            <select name="categories" required="required">
-                <option value="" disabled selected>Please Select</option>
-                <option>Families</option>
-                <option>Genus</option>
-                <option>Specis</option>
-                <option>Others</option>
-            </select>
-            <br><br>
-            <label for="description">Please write down your problem here:</label><br><br>
-            <textarea id="description" name="problem_review" rows="4" cols="100"
-                placeholder="wirte down your questions here..."></textarea>
-        </fieldset>
-        <button type="submit" value="submit">Submit</button>
-        <button type="reset" value="reset">Clear Form </button>
-        <br><br>
-        <a href="index.html">Back to home</a>
+    <main class="wrap" style="padding-top: 50px; padding-bottom: 50px; max-width: 800px;">
+        <div class="page-header" style="border-bottom: none; margin-bottom: 10px; padding-top: 0;">
+            <h1>WikiPlant Enquiry Form</h1>
+            <p>Ask any question you want about our website or plant categories!</p>
+        </div>
 
-    </form>
+        <form class="record-form" method="post" action="mailto:106757438@students.swinburne.edu.my">
+            <fieldset>
+                <legend>User Information</legend>
 
-    <footer>
+                <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+                    <div class="field-group">
+                        <label for="firstName">First Name <span class="req">*</span></label>
+                        <input type="text" id="firstName" name="firstName" pattern="[A-Za-z\s]+" maxlength="25"
+                            title="Maximum 25 alphabetical characters only" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="lastName">Last Name <span class="req">*</span></label>
+                        <input type="text" id="lastName" name="lastName" pattern="[A-Za-z\s]+" maxlength="25"
+                            title="Maximum 25 alphabetical characters only" required>
+                    </div>
+                </div>
 
-        <hr>
+                <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+                    <div class="field-group">
+                        <label for="email">Email Address <span class="req">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="name@domain.com" required>
+                    </div>
+                    <div class="field-group">
+                        <label for="phoneNumber">Phone Number <span class="req">*</span></label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="\d{1,10}" maxlength="10"
+                            placeholder="e.g. 0123456789" required>
+                    </div>
+                </div>
+            </fieldset>
 
-        <p><strong>WikiPlant</strong></p>
-        <nav aria-label="Footer navigation">
-            <button type="button" onclick="location.href='index.html'">Home</button>
-            <button type="button" onclick="location.href='explorer.html'">Explore</button>
-            <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-            <button type="button" onclick="location.href='register.html'">Register</button>
-            <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-            <button type="button" onclick="location.href='login.html'">Login</button>
-            <button type="button" onclick="location.href='mailto:106757438@students.swinburne.edu.my'">Contact
-                Us</button>
-        </nav>
-        <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+            <fieldset>
+                <legend>Enquiry Details</legend>
 
+                <div class="field-group">
+                    <label for="categories">Enquiry Category <span class="req">*</span></label>
+                    <select id="categories" name="categories" required>
+                        <option value="" disabled selected>-- Select Product / Service --</option>
+                        <option value="families">Plant Families</option>
+                        <option value="genera">Plant Genera</option>
+                        <option value="species">Plant Species</option>
+                        <option value="identification">Identification Tool</option>
+                        <option value="others">Others / General Support</option>
+                    </select>
+                </div>
+
+                <div class="field-group">
+                    <label for="description">Comments / Questions <span class="req">*</span></label>
+                    <textarea id="description" name="problem_review" rows="5" cols="40"
+                        placeholder="Write down your questions or comments here..." required></textarea>
+                </div>
+            </fieldset>
+
+            <div style="display: flex; gap: 15px; margin-top: 20px;">
+                <button type="submit" class="btn">Submit</button>
+                <button type="reset" class="btn btn-outline">Clear Form</button>
+            </div>
+
+            <p style="margin-top: 20px; font-size: 0.9rem;"><a href="index.html">&larr; Back to home</a></p>
+        </form>
+    </main>
+
+    <footer class="universal-footer">
+        <div class="wrap">
+            <p><strong>WikiPlant</strong> — a community field index.</p>
+
+            <nav aria-label="Footer navigation">
+                <button type="button" onclick="location.href='index.html'">Home</button>
+                <button type="button" onclick="location.href='explorer.html'">Explore</button>
+                <button type="button" onclick="location.href='contributor.html'">Contributor</button>
+                <button type="button" onclick="location.href='register.html'">Register</button>
+                <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
+                <button type="button" onclick="location.href='login.html'">Login</button>
+                <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact
+                    Us</button>
+            </nav>
+
+            <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 

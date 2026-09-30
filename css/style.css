@@ -208,6 +208,59 @@ summary:focus-visible {
     }
 }
 
+/* footer section */
+.universal-footer {
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+    border-top: 2px solid var(--line);
+    margin-top: 80px;
+    padding: 45px 20px 35px;
+    background-color: var(--paper-deep);
+    color: var(--ink-soft);
+}
+
+.universal-footer .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+.universal-footer p {
+    margin: 10px auto;
+    font-size: 0.95rem;
+}
+
+.universal-footer nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0;
+}
+
+.universal-footer nav button {
+    background-color: var(--paper-card);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    padding: 9px 18px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0 var(--shadow);
+    transition: all 0.2s ease;
+}
+
+.universal-footer nav button:hover,
+.universal-footer nav button:focus {
+    background-color: var(--sage-deep);
+    border-color: var(--sage-deep);
+    color: var(--paper);
+    transform: translateY(-2px);
+    box-shadow: 3px 4px 0 var(--shadow);
+    outline: none;
+}
 
 /* HOME PAGE AND ENQUIRE PAGE DESIGN*/
 
@@ -2349,16 +2402,6 @@ body.identify-page {
     clear: both;
 }
 
-.identify-page footer {
-    border-top: 1px solid var(--line);
-    margin-top: 60px;
-    padding: 34px 0 46px;
-    color: var(--ink-soft);
-    font-size: 0.9rem;
-    text-align: center;
-    background: var(--paper);
-    font-style: italic;
-}
 
 @media (max-width: 700px) {
     .identify-page aside {

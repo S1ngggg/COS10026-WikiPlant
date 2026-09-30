@@ -1,174 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="Register of the Wikiplant website makers!" />
-<meta name="keywords" content="register" />
-<meta name="author" content="Sean Liew" />
-<title>Register</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register an account with WikiPlant.">
+  <meta name="author" content="Sean Liew">
+  <title>Register - WikiPlant</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-<!-- ==================== HEADER ==================== -->
+<body class="explorer-page">
 
-<header>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="WikiPlant logo">
+        <span class="brand-motto">Wiki Plant</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-drop">
+            <a href="explorer.html">Explore</a>
+            <ul class="drop-menu">
+              <li><a href="explorer-family.html">By family</a></li>
+              <li><a href="explorer-genus.html">By genus</a></li>
+              <li><a href="explorer-species.html">By species</a></li>
+            </ul>
+          </li>
+          <li><a href="identify.html">Identify</a></li>
+          <li><a href="contributor.html">Contributor</a></li>
+          <li><a href="contribution.html">Contribute</a></li>
+          <li><a href="enquiry_form.html">Enquiry</a></li>
+          <li><a href="register.html" aria-current="page">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <h1>WikiPlant</h1>
+  <main class="wrap" style="padding-top: 50px; padding-bottom: 50px; max-width: 800px;">
+    <div class="page-header" style="border-bottom: none; margin-bottom: 10px; padding-top: 0;">
+      <h1>Create an Account</h1>
+      <p>Join the community and help index biodiversity.</p>
+    </div>
 
-    <nav aria-label="Main navigation">
+    <form class="record-form" action="#" method="post">
+      <fieldset>
+        <legend>Personal Details</legend>
 
-        <a href="index.html">Home</a> |
-        <a href="explorer.html">Explore</a> |
-        <a href="contributor.html">Contributor</a> |
-        <a href="register.html">Register</a> |
-        <a href="contribution.html">Contribute</a> |
-        <a href="enquiry_form.html">Enquiry</a> |
-        <a href="login.html">Login</a>
+        <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+          <div class="field-group">
+            <label for="firstName">First Name <span class="req">*</span></label>
+            <input type="text" id="firstName" name="firstName" pattern="[A-Za-z\s]+" maxlength="25"
+              title="Alphabetical characters only" required>
+          </div>
+          <div class="field-group">
+            <label for="lastName">Last Name <span class="req">*</span></label>
+            <input type="text" id="lastName" name="lastName" pattern="[A-Za-z\s]+" maxlength="25"
+              title="Alphabetical characters only" required>
+          </div>
+        </div>
 
-    </nav>
+        <div class="field-group">
+          <label for="logUser">Username <span class="req">*</span></label>
+          <input type="text" id="logUser" name="logUser" pattern="[A-Za-z\s]+" maxlength="10"
+            title="Maximum 10 alphabetical characters only" required>
+        </div>
 
-    <hr>
+        <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+          <div class="field-group">
+            <label for="regEmail">Email Address <span class="req">*</span></label>
+            <input type="email" id="regEmail" name="regEmail" placeholder="eg: abc@gmail.com" required>
+          </div>
+          <div class="field-group">
+            <label for="phoneNumber">Phone Number <span class="req">*</span></label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="\d{1,10}" maxlength="10"
+              placeholder="eg: 0123456789" required>
+          </div>
+        </div>
+      </fieldset>
 
-</header>
+      <fieldset>
+        <legend>Address</legend>
 
-<h1>Register</h1>
+        <div class="field-group">
+          <label for="streetAddress">Street Address <span class="req">*</span></label>
+          <input type="text" id="streetAddress" name="streetAddress" maxlength="40" required>
+        </div>
 
-<form id="registerForm">
+        <div class="field-row">
+          <div class="field-group">
+            <label for="cityTown">City / Town <span class="req">*</span></label>
+            <input type="text" id="cityTown" name="cityTown" maxlength="20" required>
+          </div>
+          <div class="field-group">
+            <label for="state">State <span class="req">*</span></label>
+            <select id="state" name="state" required>
+              <option value="">-- Select State --</option>
+              <option value="Johor">Johor</option>
+              <option value="Kedah">Kedah</option>
+              <option value="Kelantan">Kelantan</option>
+              <option value="Melaka">Melaka</option>
+              <option value="Negeri Sembilan">Negeri Sembilan</option>
+              <option value="Pahang">Pahang</option>
+              <option value="Penang">Penang</option>
+              <option value="Perak">Perak</option>
+              <option value="Perlis">Perlis</option>
+              <option value="Sabah">Sabah</option>
+              <option value="Sarawak">Sarawak</option>
+              <option value="Selangor">Selangor</option>
+              <option value="Terengganu">Terengganu</option>
+              <option value="WP">Federal Territories</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="postcode">Postcode <span class="req">*</span></label>
+            <input type="text" id="postcode" name="postcode" pattern="\d{5}" maxlength="5" title="Enter 5 digits"
+              required>
+          </div>
+        </div>
+      </fieldset>
 
-  <fieldset>
-    <legend>Personal Details</legend>
+      <fieldset>
+        <legend>Account Security</legend>
 
-    <table>
-      <tr>
-        <td>
-          <label for="firstName">First Name</label><br>
-          <input type="text" id="firstName" name="firstName"
-                 pattern="^[a-zA-Z ]+$"
-                 maxlength="25" required="required">
-        </td>
-        <td>
-          <label for="lastName">Last Name</label><br>
-          <input type="text" id="lastName" name="lastName"
-                 pattern="^[a-zA-Z ]+$"
-                 maxlength="25" required="required">
-        </td>
-      </tr>
-    </table>
+        <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+          <div class="field-group">
+            <label for="regPassword">Password <span class="req">*</span></label>
+            <input type="password" id="regPassword" name="regPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}"
+              title="8-15 characters, at least 1 uppercase, 1 lowercase, 1 digit" minlength="8" maxlength="15" required>
+          </div>
+          <div class="field-group">
+            <label for="confirmPassword">Confirm Password <span class="req">*</span></label>
+            <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" maxlength="15" required>
+          </div>
+        </div>
+      </fieldset>
 
-    <p>
-      <label for="username">Username</label><br>
-      <input type="text" id="logUser" name="logUser" 
-             pattern="^[a-zA-Z ]+$" maxlength="10" required="required"> 
+      <div style="display: flex; gap: 15px; margin-top: 20px;">
+        <button type="submit" class="btn">Register</button>
+        <button type="reset" class="btn btn-outline">Reset</button>
+      </div>
 
-    <p>
-      <label for="regEmail">Email</label><br>
-      <input type="email" id="regEmail" name="regEmail"
-             placeholder="name@domain.com" required="required">
-    </p>
+      <p style="margin-top: 20px; font-size: 0.9rem;">Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+  </main>
 
-    
+  <footer class="universal-footer">
+    <div class="wrap">
+      <p><strong>WikiPlant</strong> — a community field index.</p>
 
-    <p>
-      <label for="phoneNumber">Phone Number</label><br>
-      <input type="tel" id="phoneNumber" name="phoneNumber"
-             pattern="^\d{1,10}$"
-             maxlength="10" placeholder="e.g. 0123456789" required="required">
-    </p>
+      <nav aria-label="Footer navigation">
+        <button type="button" onclick="location.href='index.html'">Home</button>
+        <button type="button" onclick="location.href='explorer.html'">Explore</button>
+        <button type="button" onclick="location.href='contributor.html'">Contributor</button>
+        <button type="button" onclick="location.href='register.html'">Register</button>
+        <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
+        <button type="button" onclick="location.href='login.html'">Login</button>
+        <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact Us</button>
+      </nav>
 
-    </fieldset>
-
-    <fieldset>
-      <legend>Address</legend>
- 
-      <table>
-        <tr>
-          <td>
-            <label for="streetAddress">Street Address</label><br>
-            <input type="text" id="streetAddress" name="streetAddress"
-                   maxlength="40" required="required">
-          </td>
-          <td>
-            <label for="cityTown">City/Town</label><br>
-            <input type="text" id="cityTown" name="cityTown"
-                   maxlength="20" required="required">
-          </td>
-        </tr>
-      </table>
- 
-      <p>
-        <label for="state">State</label><br>
-        <select id="state" name="state" required="required">
-          <option value="">-- Select State --</option>
-          <option value="Johor">Johor</option>
-          <option value="Kedah">Kedah</option>
-          <option value="Kelantan">Kelantan</option>
-          <option value="Melaka">Melaka</option>
-          <option value="Negeri Sembilan">Negeri Sembilan</option>
-          <option value="Pahang">Pahang</option>
-          <option value="Penang">Penang</option>
-          <option value="Perak">Perak</option>
-          <option value="Perlis">Perlis</option>
-          <option value="Sabah">Sabah</option>
-          <option value="Sarawak">Sarawak</option>
-          <option value="Selangor">Selangor</option>
-          <option value="Terengganu">Terengganu</option>
-          <option value="Kuala Lumpur">Kuala Lumpur (Federal Territory)</option>
-          <option value="Labuan">Labuan (Federal Territory)</option>
-          <option value="Putrajaya">Putrajaya (Federal Territory)</option>
-        </select>
-      </p>
- 
-      <p>
-        <label for="postcode">Postcode</label><br>
-        <input type="text" id="postcode" name="postcode"
-               pattern="^\d{5}$"
-               maxlength="5" title="Enter exactly 5 digits" required="required">
-      </p>
- 
-    </fieldset>
-    
-    <fieldset>
-      <legend>Account Security</legend>
-
-      <p>
-        <label for="regPassword">Password</label><br>
-        <input type="password" id="regPassword" name="regPassword"
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}"
-              title="8-15 characters, at least 1 uppercase, 1 lowercase, 1 digit"
-              minlength="8" maxlength="15" required="required">
-      </p>
-
-      <p>
-        <label for="confirmPassword">Confirm Password</label><br>
-        <input type="password" id="confirmPassword" name="confirmPassword"
-              minlength="8" maxlength="15" required="required">
-      </p>
-
-    </fieldset>
-
-    <p>
-      <input type="submit" value="Register">
-      <input type="reset" value="Reset">
-    </p>
-
-  </form>
-
-  <p>Already have an account? <a href="login.html">Login here</a></p>
-
-  <footer>
-    <hr>
-    <p><strong>WikiPlant</strong></p>
-    <nav aria-label="Footer navigation">
-      <button type="button" onclick="location.href='index.html'">Home</button>
-      <button type="button" onclick="location.href='explorer.html'">Explore</button>
-      <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-      <button type="button" onclick="location.href='register.html'">Register</button>
-      <button type="button" onclick="location.href='contribution.html'">Contribute</button>
-      <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-      <button type="button" onclick="location.href='login.html'">Login</button>
-      <button type="button" onclick="location.href='mailto:106757438@students.swinburne.edu.my'">Contact Us</button>
-    </nav>
-    <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+      <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+    </div>
   </footer>
 </body>
+
 </html>

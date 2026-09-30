@@ -1,89 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="Login of the Wikiplant website makers!" />
-<meta name="keywords" content="login" />
-<meta name="author" content="Sean Liew" />
-<title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to your WikiPlant account.">
+  <meta name="author" content="Sean Liew">
+  <title>Login - WikiPlant</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
+<body class="explorer-page">
 
-  <header>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="WikiPlant logo">
+        <span class="brand-motto">Wiki Plant</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-drop">
+            <a href="explorer.html">Explore</a>
+            <ul class="drop-menu">
+              <li><a href="explorer-family.html">By family</a></li>
+              <li><a href="explorer-genus.html">By genus</a></li>
+              <li><a href="explorer-species.html">By species</a></li>
+            </ul>
+          </li>
+          <li><a href="identify.html">Identify</a></li>
+          <li><a href="contributor.html">Contributor</a></li>
+          <li><a href="contribution.html">Contribute</a></li>
+          <li><a href="enquiry_form.html">Enquiry</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="login.html" aria-current="page">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <img src="logo.png" alt="WikiPlant" width="231" height="203">
+  <main class="wrap" style="padding-top: 50px; padding-bottom: 50px; max-width: 600px;">
+    <div class="page-header" style="border-bottom: none; margin-bottom: 10px; padding-top: 0;">
+      <h1>Welcome Back, WikiPlant User!</h1>
+      <p>Login now to contribute to the WikiPlant database!</p>
+    </div>
 
-    <nav aria-label="Main navigation">
+    <form class="record-form" action="#" method="post">
+      <fieldset>
+        <legend>Account Login</legend>
 
-        <a href="index.html">Home</a> |
-        <a href="explorer.html">Explore</a> |
-        <a href="contributor.html">Contributor</a> |
-        <a href="register.html">Register</a> |
-        <a href="enquiry_form.html">Enquiry</a> |
-        <a href="login.html">Login</a>
+        <div class="field-group">
+          <label for="loginId">Login ID <span class="req">*</span></label>
+          <input type="text" id="loginId" name="loginId" placeholder="Enter your username" pattern="[A-Za-z]+"
+            maxlength="10" title="Maximum 10 alphabetical characters only" required>
+          <span class="hint">Maximum 10 characters.</span>
+        </div>
 
-    </nav>
+        <div class="field-group">
+          <label for="loginPassword">Password <span class="req">*</span></label>
+          <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password"
+            pattern="[A-Za-z]+" maxlength="25" title="Maximum 25 alphabetical characters only" required>
+        </div>
 
-    <hr>
+        <div class="radio-row" style="margin-top: 15px;">
+          <label for="rememberMe">
+            <input type="checkbox" id="rememberMe" name="rememberMe" value="yes">
+            Remember me
+          </label>
+        </div>
+      </fieldset>
 
-</header>
-<h1>Login</h1>
+      <div style="display: flex; gap: 15px; margin-top: 20px;">
+        <button type="submit" class="btn">Login</button>
+        <button type="reset" class="btn btn-outline">Reset</button>
+      </div>
 
-<form id="loginForm">
+      <p style="margin-top: 20px; font-size: 0.9rem;">Don't have an account? <a href="register.html">Register here</a>
+      </p>
+    </form>
+  </main>
 
-  <fieldset>
-    <legend>Account Login</legend>
+  <footer class="universal-footer">
+    <div class="wrap">
+      <p><strong>WikiPlant</strong> — a community field index.</p>
 
-    <p>
-      <label for="loginId">Login</label><br>
-      <input type="text" id="loginId" name="loginId"
-             placeholder="enter your username" pattern="^[a-zA-Z ]+$"
-             maxlength="10" required="required">
-    </p>
-
-    <p>
-      <label for="loginPassword">Password</label><br>
-      <input type="password" id="loginPassword" name="loginPassword"
-             placeholder="enter your password"
-             minlength="6" required="required">
-    </p>
-
-    <p>
-      <label for="rememberMe">
-        <input type="checkbox" id="rememberMe" name="rememberMe" value="yes">
-        Remember me
-      </label>
-    </p>
-
-    <p>
-      <input type="submit" value="Login">
-      <input type="reset" value="Reset">
-    </p>
-
-  </fieldset>
-
-</form>
-
-<p>Don't have an account? <a href="register.html">Register here</a></p>
-
-<footer>
-
-    <hr>
-
-    <p><strong>WikiPlant</strong></p>
-    <nav aria-label="Footer navigation">
+      <nav aria-label="Footer navigation">
         <button type="button" onclick="location.href='index.html'">Home</button>
         <button type="button" onclick="location.href='explorer.html'">Explore</button>
         <button type="button" onclick="location.href='contributor.html'">Contributor</button>
         <button type="button" onclick="location.href='register.html'">Register</button>
         <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
         <button type="button" onclick="location.href='login.html'">Login</button>
-        <button type="button" onclick="location.href='mailto:106757438@students.swinburne.edu.my'">Contact Us</button>
-    </nav>
-    <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+        <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact Us</button>
+      </nav>
 
-</footer>
-
+      <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
+
 </html>

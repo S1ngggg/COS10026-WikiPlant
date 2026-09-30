@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WikiPlant home page" />
+    <meta name="description" content="WikiPlant home page - biodiversity index and plant catalog" />
+    <meta name="author" content="Sean Liew" />
     <title>WikiPlant | Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -18,7 +19,7 @@
             </a>
             <nav class="main-nav" aria-label="Primary">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
                     <li class="nav-drop">
                         <a href="explorer.html">Explore</a>
                         <ul class="drop-menu">
@@ -42,80 +43,99 @@
         <section class="hero">
             <div class="badge">Discover</div>
             <h1>Welcome to WikiPlant!</h1>
-            <p>Here, uncover the secrets of the plant kingdom. Browse through our never-ending catalog to identify new
-                species!<br>
-                Not enough? Contribute your personal gardening tips, and join a welcoming community dedicated to keeping
-                our
-                spaces<br>
-                green and thriving.</p>
-        </section>
+            <p>Here, uncover the secrets of the plant kingdom. Browse through our catalog to identify new species!<br>
+                Contribute your personal botanical findings, and join a welcoming community dedicated to keeping our
+                spaces green and thriving.</p>
 
-        <section class="card_container">
-            <div class="plant_card">
-                <h3>Img 1</h3>
-                <hr>
-            </div>
-            <div class="plant_card">
-                <h3>Img 2</h3>
-                <hr>
-            </div>
-            <div class="plant_card">
-                <h3>Img 3</h3>
-                <hr>
-            </div>
-        </section>
+            <section class="card_container">
+                <div class="plant_card">
+                    <img src="images/plant1.jpg" alt="Featured Plant Specimen 1"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 2px;">
+                    <h3>Specimen 1</h3>
+                </div>
+                <div class="plant_card">
+                    <img src="images/plant2.jpg" alt="Featured Plant Specimen 2"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 2px;">
+                    <h3>Specimen 2</h3>
+                </div>
+                <div class="plant_card">
+                    <img src="images/plant3.jpg" alt="Featured Plant Specimen 3"
+                        style="width: 100%; height: 140px; object-fit: cover; border-radius: 2px;">
+                    <h3>Specimen 3</h3>
+                </div>
+            </section>
 
-        <section class="about_section">
-            <h2>About Us</h2>
-            <div class="text_box">
-                <p>WikiPlant is an open-access botanical catalog designed to bridge nature and digital convenience. We
-                    assist plant enthusiasts, students, and home gardeners by documenting plant characteristics and
-                    expanding your horizon on plants to a different dimension!</p>
-            </div>
-
-            <p class="quote">Audrey Hepburn</p>
-            <div class="text_box quote_box">
-                <p>"To plant a garden is to believe in tomorrow." </p>
-            </div>
-        </section>
-
-        <section class="categories_section">
-            <h2>Browse Categories</h2>
-            <div class="category_grid">
-
-                <div class="category_card">
-                    <div class="category_img_placeholder">picture1</div>
-                    <h3>Families</h3>
+            <section class="about_section">
+                <h2>About Us</h2>
+                <div class="text_box">
+                    <p>WikiPlant is an open-access botanical catalog designed to bridge nature and digital convenience.
+                        We
+                        assist plant enthusiasts, students, and home gardeners by documenting plant characteristics and
+                        expanding your horizon on biodiversity!</p>
                 </div>
 
-                <div class="category_card">
-                    <div class="category_img_placeholder">picture2</div>
-                    <h3>Genera</h3>
+                <p class="quote">Audrey Hepburn</p>
+                <div class="text_box quote_box">
+                    <p>"To plant a garden is to believe in tomorrow."</p>
+                </div>
+            </section>
+
+            <section class="categories_section">
+                <h2>Browse Categories</h2>
+                <div class="category_grid">
+
+                    <div class="category_card">
+                        <div class="category_img_placeholder" style="padding: 0; border: none; background: none;">
+                            <img src="images/family-thumb.jpg" alt="Families Category"
+                                style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; border: 2px solid var(--line);">
+                        </div>
+                        <h3><a href="explorer-family.html" style="text-decoration: none;">Families</a></h3>
+                    </div>
+
+                    <div class="category_card">
+                        <div class="category_img_placeholder" style="padding: 0; border: none; background: none;">
+                            <img src="images/genus-thumb.jpg" alt="Genera Category"
+                                style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; border: 2px solid var(--line);">
+                        </div>
+                        <h3><a href="explorer-genus.html" style="text-decoration: none;">Genera</a></h3>
+                    </div>
+
+                    <div class="category_card">
+                        <div class="category_img_placeholder" style="padding: 0; border: none; background: none;">
+                            <img src="images/species-thumb.jpg" alt="Species Category"
+                                style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; border: 2px solid var(--line);">
+                        </div>
+                        <h3><a href="explorer-species.html" style="text-decoration: none;">Species</a></h3>
+                    </div>
+
                 </div>
 
-                <div class="category_card">
-                    <div class="category_img_placeholder">picture3</div>
-                    <h3>Species</h3>
-                </div>
-
-            </div>
+                <p style="margin-top: 15px;">
+                    <a href="https://www.youtube.com/" target="_blank"
+                        style="font-weight: bold; color: var(--clay-deep);">
+                        Click here to view our team demonstration video on YouTube!</a>
+                </p>
+            </section>
         </section>
     </main>
 
-    <footer>
-        <hr>
-        <p><strong>WikiPlant</strong></p>
-        <nav aria-label="Footer navigation">
-            <button type="button" onclick="location.href='index.html'">Home</button>
-            <button type="button" onclick="location.href='explorer.html'">Explore</button>
-            <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-            <button type="button" onclick="location.href='register.html'">Register</button>
-            <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-            <button type="button" onclick="location.href='login.html'">Login</button>
-            <button type="button" onclick="location.href='mailto:106757438@students.swinburne.edu.my'">Contact
-                Us</button>
-        </nav>
-        <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+    <footer class="universal-footer">
+        <div class="wrap">
+            <p><strong>WikiPlant</strong> — a community field index.</p>
+
+            <nav aria-label="Footer navigation">
+                <button type="button" onclick="location.href='index.html'">Home</button>
+                <button type="button" onclick="location.href='explorer.html'">Explore</button>
+                <button type="button" onclick="location.href='contributor.html'">Contributor</button>
+                <button type="button" onclick="location.href='register.html'">Register</button>
+                <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
+                <button type="button" onclick="location.href='login.html'">Login</button>
+                <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact
+                    Us</button>
+            </nav>
+
+            <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 
