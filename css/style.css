@@ -107,7 +107,7 @@ summary:focus-visible {
     flex-wrap: wrap;
 }
 
-.main-nav a {
+.site-header .main-nav a {
     text-decoration: none;
     color: var(--ink);
     font-size: 0.96rem;
@@ -209,7 +209,7 @@ summary:focus-visible {
 }
 
 
-/* HOME PAGE DESIGN */
+/* HOME PAGE AND ENQUIRE PAGE DESIGN*/
 
 body.home-page,
 body.enquiry-page {
@@ -365,9 +365,7 @@ body.enquiry-page {
 }
 
 
-/* ==========================================================================
-   3. CONTRIBUTION PAGE DESIGN
-   ========================================================================== */
+/* CONTRIBUTION PAGE DESIGN */
 body.contrib-page {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     margin: 0;
@@ -783,9 +781,7 @@ body.contrib-page {
 }
 
 
-/* ==========================================================================
-   4. CONTRIBUTOR PAGE DESIGN
-   ========================================================================== */
+/* CONTRIBUTOR PAGE */
 
 body.contributor-page {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -1326,9 +1322,7 @@ body.contributor-page {
     }
 }
 
-/* ==========================================================================
-   5. EXPLORER PAGE DESIGN
-   ========================================================================== */
+/* EXPLORER PAGE DESIGN */
 
 body.explorer-page {
     background: var(--paper);
@@ -1348,7 +1342,8 @@ body.explorer-page {
 .explorer-page .wrap {
     max-width: var(--max);
     margin: 0 auto;
-    padding: 0 32px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .explorer-page h1,
@@ -2133,4 +2128,249 @@ body.explorer-page {
 
 .explorer-page .page-header p {
     margin-bottom: 30px;
+}
+
+/* IDENTIFY PAGE DESIGN*/
+
+body.identify-page {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    background-image: radial-gradient(circle at 1px 1px, rgba(43, 51, 35, 0.05) 1px, transparent 0);
+    background-size: 22px 22px;
+}
+
+.identify-page a {
+    color: var(--clay-deep);
+}
+
+.identify-page main {
+    max-width: var(--max);
+    width: 90%;
+    margin: 0 auto;
+    padding: 36px 0 60px 0;
+}
+
+.identify-page section {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    box-shadow: 3px 4px 0 var(--shadow);
+    padding: 28px 30px;
+    margin-bottom: 30px;
+}
+
+.identify-page main h1 {
+    font-family: 'Fraunces', serif;
+    color: var(--ink);
+}
+
+.identify-page main h2 {
+    color: var(--ink);
+    border-bottom: 1px dashed var(--line);
+    padding-bottom: 8px;
+}
+
+.identify-page main h3 {
+    color: var(--sage-deep);
+}
+
+.identify-page .identifier-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.identify-page .identifier-intro h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    color: var(--ink);
+    margin-bottom: 15px;
+}
+
+.identify-page .identifier-intro p {
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 60ch;
+    margin: 0 auto;
+}
+
+/* --- How It Works / Upload Card --- */
+.identify-page .how-it-works {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    box-shadow: 3px 4px 0 var(--shadow);
+    padding: 40px 30px;
+    margin-bottom: 30px;
+}
+
+.identify-page .static-photo-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.identify-page .static-photo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 480px;
+    width: 100%;
+    min-height: 200px;
+    border-radius: 6px;
+    border: 2px dashed var(--line);
+    padding: 20px;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.identify-page .static-photo:hover,
+.identify-page .static-photo:focus-within {
+    background: var(--paper-deep);
+    border-color: var(--sage-deep);
+    border-style: solid;
+}
+
+.identify-page .upload-box input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.identify-page .cloud-upload {
+    max-width: 100%;
+    height: auto;
+}
+
+.identify-page .upload-preview {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.identify-page .identify-btn {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 14px;
+    background: var(--sage);
+    color: var(--paper);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.identify-page .identify-btn:hover {
+    background: var(--sage-deep);
+}
+
+/* --- Figures --- */
+.identify-page .figures-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.identify-page figure {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.identify-page figure img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    display: block;
+}
+
+.identify-page figcaption {
+    font-size: 85%;
+    color: var(--ink-soft);
+    margin-top: 6px;
+}
+
+.identify-page dl dt {
+    font-weight: 600;
+    color: var(--sage-deep);
+}
+
+.identify-page dl dd {
+    margin: 0 0 12px 0;
+}
+
+.identify-page ol,
+.identify-page ul {
+    padding-left: 25px;
+}
+
+.identify-page li {
+    margin-bottom: 6px;
+}
+
+/* --- Aside --- */
+.identify-page aside {
+    float: none;
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 20px 22px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--sage-deep);
+    border-radius: 3px;
+    background: var(--paper-deep);
+}
+
+.identify-page aside h2 {
+    font-size: 1.05rem;
+    color: var(--sage-deep);
+    border-bottom: none;
+    margin-bottom: 8px;
+}
+
+.identify-page main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.identify-page footer {
+    border-top: 1px solid var(--line);
+    margin-top: 60px;
+    padding: 34px 0 46px;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    text-align: center;
+    background: var(--paper);
+    font-style: italic;
+}
+
+@media (max-width: 700px) {
+    .identify-page aside {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .identify-page figure {
+        width: 100%;
+    }
+
+    .identify-page .figures-container {
+        flex-direction: column;
+    }
 }

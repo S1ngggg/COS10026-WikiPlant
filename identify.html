@@ -10,23 +10,38 @@
         content="plant identification, herbarium specimen, scientific name, common name, biodiversity">
     <meta name="author" content="Sean Liew">
     <title>Identify - Plant's Notebook</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="identify-page">
 
-    <header>
-        <img src="logo.png" alt="WikiPlant">
-        <h1>WikiPlant</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="explore.html">Classification</a></li>
-                <li><a href="identify.html">Identify</a></li>
-                <li><a href="contributor.html">Contributor</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html">
+                <img src="logo.png" alt="WikiPlant logo">
+                <span class="brand-motto">Wiki Plant</span>
+            </a>
+            <nav class="main-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nav-drop">
+                        <a href="explorer.html">Explore</a>
+                        <ul class="drop-menu">
+                            <li><a href="explorer-family.html">By family</a></li>
+                            <li><a href="explorer-genus.html">By genus</a></li>
+                            <li><a href="explorer-species.html">By species</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="identify.html">Identify</a></li>
+                    <li><a href="contributor.html">Contributor</a></li>
+                    <li><a href="contribution.html">Contribute</a></li>
+                    <li><a href="enquiry_form.html">Enquiry</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
 
     <main>

@@ -8,7 +8,7 @@
     <meta name="author" content="Terry Lin Zhen Bin">
     <title>WikiPlant | Contributor</title>
 
-    <link rel="stylesheet" href="css/contributor.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -16,17 +16,33 @@
 <body class="contributor-page">
 
     <!-- Header -->
-    <header>
-        <img src="logo.png" alt="WikiPlant logo" class="logo_img" width="231" height="203">
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html">
+                <img src="logo.png" alt="WikiPlant logo">
+                <span class="brand-motto">Wiki Plant</span>
+            </a>
+            <nav class="main-nav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nav-drop">
+                        <a href="explorer.html">Explore</a>
+                        <ul class="drop-menu">
+                            <li><a href="explorer-family.html">By family</a></li>
+                            <li><a href="explorer-genus.html">By genus</a></li>
+                            <li><a href="explorer-species.html">By species</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="identify.html">Identify</a></li>
+                    <li><a href="contributor.html">Contributor</a></li>
+                    <li><a href="contribution.html">Contribute</a></li>
+                    <li><a href="enquiry_form.html">Enquiry</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
 
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="explorer.html">Explore</a>
-            <a href="contributor.html" class="active">Contributor</a>
-            <a href="register.html">Register</a>
-            <a href="enquiry_form.html">Enquiry</a>
-            <a href="login.html">Login</a>
-        </nav>
     </header>
 
 
