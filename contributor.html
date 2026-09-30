@@ -1,146 +1,510 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Information about WikiPlant contributors and plant biodiversity monitoring">
-    <meta name="keywords" content="WikiPlant, contributors, plants, biodiversity">
+    <meta name="description" content="Information about WikiPlant contributors and community plant observations">
+    <meta name="keywords" content="WikiPlant, contributors, plants, biodiversity, citizen science">
     <meta name="author" content="Terry Lin Zhen Bin">
     <title>WikiPlant | Contributor</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/contributor.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-    <img src="logo.png" alt="WikiPlant" class="logo_img" width="231" height="203">
-    <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="explorer.html">Explore</a>
-        <a href="contributor.html" class="active">Contributor</a>
-        <a href="register.html">Register</a>
-        <a href="contribution.html">Contribute</a>
-        <a href="enquiry_form.html">Enquiry</a>
-        <a href="login.html">Login</a>
-    </nav>
-</header>
+    <!-- Header -->
+    <header>
+        <img src="logo.png"
+            alt="WikiPlant logo"
+            class="logo_img"
+            width="231"
+            height="203">
 
-<main class="page_main">
-    <div class="content_grid">
-        <div class="main_content_area">
-            <h1>WikiPlant Contributors</h1>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="explorer.html">Explore</a>
+            <a href="contributor.html" class="active">Contributor</a>
+            <a href="register.html">Register</a>
+            <a href="enquiry_form.html">Enquiry</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
 
-            <section class="content_section">
-                <h2>About Our Contributors</h2>
-                <p>
-                    WikiPlant allows people to share information about plants
-                    and contribute to plant biodiversity monitoring. Contributors
-                    can provide useful information about plants found in their
-                    local environment.
-                </p>
-                <p>
-                    Students, plant enthusiasts, researchers and members of the
-                    community can contribute plant observations to help improve
-                    the information available on WikiPlant.
-                </p>
-            </section>
 
-            <section class="content_section">
-                <h2>How to Become a Contributor</h2>
-                <p>
-                    Contributors can follow these steps when submitting
-                    information about a plant:
-                </p>
-                <ol class="styled_ol">
-                    <li>Observe a plant in a suitable location.</li>
-                    <li>Record the plant information.</li>
-                    <li>Take a clear photograph of the plant.</li>
-                    <li>Provide useful comments about the observation.</li>
-                    <li>Submit the information through the contribution form.</li>
-                </ol>
-            </section>
+    <main class="page_main">
 
-            <section class="content_section">
-                <h2>Contributor Guidelines</h2>
-                <dl class="styled_dl">
-                    <dt><strong>Accurate Information</strong></dt>
-                    <dd>
-                        Contributors should provide accurate information
-                        about the plant they observe.
-                    </dd>
+        <div class="content_grid">
 
-                    <dt><strong>Clear Photograph</strong></dt>
-                    <dd>
-                        Contributors should provide a clear photograph
-                        that can help with plant identification.
-                    </dd>
+            <!-- =========================
+                 LEFT MAIN CONTENT
+                 ========================= -->
 
-                    <dt><strong>Plant Information</strong></dt>
-                    <dd>
-                        Contributors should provide useful information
-                        about the plant and its observation.
-                    </dd>
+            <div class="main_content_area">
 
-                    <dt><strong>Respect Nature</strong></dt>
-                    <dd>
-                        Contributors should avoid damaging plants or
-                        disturbing their natural environment.
-                    </dd>
-                </dl>
-            </section>
+                <h1>Community Contributions</h1>
 
-            <section class="content_section">
-                <h2>Plant Biodiversity Monitoring</h2>
 
-                <figure class="plant_figure">
-                    <img src="classification.png" alt="Plant observed for biodiversity monitoring" width="400">
+                <!-- =========================
+                     INTRODUCTION
+                     ========================= -->
 
-                    <figcaption>
-                        Understanding the plant taxonomy hierarchy helps contributors accurately categorize observations on WikiPlant.
-                    </figcaption>
-                </figure>
+                <section class="content_section">
 
-                <p>
-                    Plant observations can provide useful information about
-                    plant diversity. Contributors can help collect information
-                    about different plants and their environments through
-                    WikiPlant.
-                </p>
-            </section>
+                    <h2>About Community Contributions</h2>
+
+                    <p>
+                        WikiPlant uses a citizen science approach to encourage members
+                        of the public to contribute useful observations about Malaysian
+                        plant biodiversity. Community members can share plant photographs,
+                        plant names and observations that may help researchers and other
+                        users understand the plants found in different environments.
+                    </p>
+
+                    <p>
+                        Contributions can provide valuable information about plant
+                        occurrences in forests, parks, gardens and other natural areas.
+                        By bringing together observations from different contributors,
+                        WikiPlant can support the collection of plant information on a
+                        larger scale. Contributors are encouraged to provide clear
+                        photographs and accurate information while respecting the natural
+                        environment where the plant is observed.
+                    </p>
+
+                    <p>
+                        Users who would like to contribute their own plant observations
+                        can use the contribution form. The submitted information is
+                        intended to support the plant biodiversity monitoring activities
+                        represented by the WikiPlant project.
+                    </p>
+
+                </section>
+
+
+                <!-- =========================
+                     RECENT OBSERVATIONS
+                     ========================= -->
+
+                <section class="content_section no_padding">
+
+                    <div class="section_header">
+                        <h2>Recent Plant Observations</h2>
+                    </div>
+
+                    <div class="contribution_feed">
+
+                        <!-- Observation 1 -->
+                        <article class="feed_card">
+
+                            <figure class="feed_img_box">
+
+                                <img src="plant1.jpg"
+                                    alt="Rafflesia arnoldii flower observed in a natural environment"
+                                    class="feed_img">
+
+                                <figcaption>
+                                    Rafflesia arnoldii observation
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="feed_info">
+
+                                <h3>Rafflesia arnoldii</h3>
+
+                                <p class="feed_meta">
+                                    <strong>Contributor:</strong> Alex Johnson<br>
+                                    <strong>Date:</strong> 12 September 2026<br>
+                                    <strong>Location:</strong> Gunung Gading National Park
+                                </p>
+
+                                <p class="feed_desc">
+                                    The contributor observed this flowering plant near
+                                    the main trail and recorded the observation for
+                                    the WikiPlant community.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Observation 2 -->
+                        <article class="feed_card">
+
+                            <figure class="feed_img_box">
+
+                                <img src="plant2.jpg"
+                                    alt="Nepenthes rajah pitcher plant observed during a hike"
+                                    class="feed_img">
+
+                                <figcaption>
+                                    Nepenthes rajah observation
+                                </figcaption>
+
+                            </figure>
+
+                            <div class="feed_info">
+
+                                <h3>Nepenthes rajah</h3>
+
+                                <p class="feed_meta">
+                                    <strong>Contributor:</strong> Sarah Lee<br>
+                                    <strong>Date:</strong> 10 September 2026<br>
+                                    <strong>Location:</strong> Mount Kinabalu
+                                </p>
+
+                                <p class="feed_desc">
+                                    A contributor recorded this pitcher plant during
+                                    a morning observation and provided information
+                                    about its surrounding environment.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     HOW CONTRIBUTIONS HELP
+                     ========================= -->
+
+                <section class="content_section">
+
+                    <h2>How Contributions Help</h2>
+
+                    <p>
+                        Community observations can support biodiversity monitoring by
+                        increasing the amount of plant information available to the
+                        WikiPlant project. Contributors can help by following a few
+                        simple steps when recording an observation.
+                    </p>
+
+                    <ol>
+                        <li>Observe the plant without damaging or disturbing it.</li>
+                        <li>Take a clear photograph of the plant.</li>
+                        <li>Record the plant name and relevant observation details.</li>
+                        <li>Submit the information through the contribution form.</li>
+                    </ol>
+
+                </section>
+
+
+                <!-- =========================
+                     PLANT INFORMATION TERMS
+                     ========================= -->
+
+                <section class="content_section">
+
+                    <h2>Plant Information Terms</h2>
+
+                    <dl>
+
+                        <dt><strong>Family</strong></dt>
+                        <dd>
+                            A taxonomic group containing related genera that share
+                            important biological characteristics.
+                        </dd>
+
+                        <dt><strong>Genus</strong></dt>
+                        <dd>
+                            A classification group containing one or more closely
+                            related plant species.
+                        </dd>
+
+                        <dt><strong>Species</strong></dt>
+                        <dd>
+                            A specific group of plants that share defining biological
+                            characteristics and can be identified as a particular type.
+                        </dd>
+
+                        <dt><strong>Citizen Science</strong></dt>
+                        <dd>
+                            Scientific research that involves members of the public
+                            contributing observations or information to support research
+                            activities.
+                        </dd>
+
+                    </dl>
+
+                </section>
+
+
+                <!-- =========================
+                     TOP CONTRIBUTORS
+                     ========================= -->
+
+                <section class="content_section">
+
+                    <h2>Community Contributors</h2>
+
+                    <p>
+                        WikiPlant recognises the contribution of community members who
+                        share plant observations. The contributor cards below show
+                        examples of users participating in the plant biodiversity
+                        monitoring community.
+                    </p>
+
+                    <div class="contributor_cards">
+
+
+                        <!-- Contributor 1 -->
+
+                        <article class="contributor_card" tabindex="0">
+
+                            <div class="contributor_card_inner">
+
+                                <div class="contributor_card_front">
+
+                                    <div class="contributor_photo">
+
+                                        <img src="avatar1.jpg"
+                                            alt="Profile photo of Alex Johnson">
+
+                                    </div>
+
+                                    <h3>Alex Johnson</h3>
+
+                                    <span class="badge">
+                                        124 Plants
+                                    </span>
+
+                                </div>
+
+
+                                <div class="contributor_card_back">
+
+                                    <h3>Alex Johnson</h3>
+
+                                    <p>Example plants submitted:</p>
+
+                                    <ul>
+                                        <li>Rafflesia arnoldii</li>
+                                        <li>Orchidaceae</li>
+                                        <li>Pitcher Plant</li>
+                                        <li>Wild Ginger</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Contributor 2 -->
+
+                        <article class="contributor_card" tabindex="0">
+
+                            <div class="contributor_card_inner">
+
+                                <div class="contributor_card_front">
+
+                                    <div class="contributor_photo">
+
+                                        <img src="avatar2.jpg"
+                                            alt="Profile photo of Sarah Lee">
+
+                                    </div>
+
+                                    <h3>Sarah Lee</h3>
+
+                                    <span class="badge">
+                                        98 Plants
+                                    </span>
+
+                                </div>
+
+
+                                <div class="contributor_card_back">
+
+                                    <h3>Sarah Lee</h3>
+
+                                    <p>Example plants submitted:</p>
+
+                                    <ul>
+                                        <li>Nepenthes rajah</li>
+                                        <li>Rhododendron</li>
+                                        <li>Wild Orchid</li>
+                                        <li>Begonia</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- Contributor 3 -->
+
+                        <article class="contributor_card" tabindex="0">
+
+                            <div class="contributor_card_inner">
+
+                                <div class="contributor_card_front">
+
+                                    <div class="contributor_photo">
+
+                                        <img src="avatar3.jpg"
+                                            alt="Profile photo of Dr. Wei">
+
+                                    </div>
+
+                                    <h3>Dr. Wei</h3>
+
+                                    <span class="badge">
+                                        85 Plants
+                                    </span>
+
+                                </div>
+
+
+                                <div class="contributor_card_back">
+
+                                    <h3>Dr. Wei</h3>
+
+                                    <p>Example plants submitted:</p>
+
+                                    <ul>
+                                        <li>Dipterocarpus</li>
+                                        <li>Wild Fern</li>
+                                        <li>Rattan</li>
+                                        <li>Rainforest Palm</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- =========================
+                 RIGHT SIDEBAR
+                 ========================= -->
+
+            <aside class="sidebar">
+
+                <!-- Join Community -->
+
+                <div class="sidebar_box green_box">
+
+                    <h2>Join the Community</h2>
+
+                    <p>
+                        Have you spotted a unique plant? Share your observation
+                        and help the WikiPlant community collect information
+                        about Malaysian plant biodiversity.
+                    </p>
+
+                    <!-- No JavaScript -->
+                    <a href="contribution.html" class="brutal_btn">
+                        SUBMIT A PLANT
+                    </a>
+
+                </div>
+
+
+                <!-- Guidelines -->
+
+                <div class="sidebar_box white_box">
+
+                    <h2>Quick Guidelines</h2>
+
+                    <ul class="styled_ul">
+
+                        <li>Provide accurate plant information.</li>
+
+                        <li>Upload clear and relevant photographs.</li>
+
+                        <li>Record the observation location when possible.</li>
+
+                        <li>Do not damage or disturb plants.</li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contribution Information -->
+
+                <div class="sidebar_box white_box">
+
+                    <h2>Before You Contribute</h2>
+
+                    <p>
+                        Make sure your photograph is clear and that the information
+                        you provide is based on your observation. Contributions
+                        should support biodiversity monitoring without disturbing
+                        the natural environment.
+                    </p>
+
+                </div>
+
+            </aside>
+
         </div>
 
-        <aside class="sidebar">
-            <div class="sidebar_box">
-                <h2>Contributor Tips</h2>
-                <p>
-                    Take a clear photograph and provide as much useful
-                    information as possible when making a contribution.
-                </p>
-                <p>
-                    Contributors should observe plants without damaging
-                    them or disturbing their natural habitat.
-                </p>
-            </div>
-        </aside>
-    </div>
-</main>
+    </main>
 
-<footer class="site_footer">
-    <div class="footer_content">
-        <p class="footer_logo"><strong>WikiPlant</strong></p>
-        <nav aria-label="Footer navigation" class="footer_nav">
-            <button type="button" onclick="location.href='index.html'">Home</button>
-            <button type="button" onclick="location.href='explorer.html'">Explore</button>
-            <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-            <button type="button" onclick="location.href='register.html'">Register</button>
-            <button type="button" onclick="location.href='contribution.html'">Contribute</button>
-            <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-            <button type="button" onclick="location.href='login.html'">Login</button>
-            <button type="button" onclick="location.href='mailto:106757438@students.swinburne.edu.my'">Contact Us</button>
-        </nav>
-        <p class="copyright">&copy; 2026 WikiPlant. All rights reserved.</p>
-    </div>
-</footer>
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer class="site_footer">
+
+        <div class="footer_content">
+
+            <p class="footer_logo">
+                <strong>WikiPlant</strong>
+            </p>
+
+            <nav aria-label="Footer navigation" class="footer_nav">
+
+                <a href="index.html">Home</a>
+
+                <a href="explorer.html">Explore</a>
+
+                <a href="contributor.html">Contributor</a>
+
+                <a href="register.html">Register</a>
+
+
+                <a href="enquiry_form.html">Enquiry</a>
+
+                <a href="login.html">Login</a>
+
+                <a href="mailto:106757438@students.swinburne.edu.my">
+                    Contact Us
+                </a>
+
+            </nav>
+
+            <p class="copyright">
+                &copy; 2026 WikiPlant. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
 
 </body>
+
 </html>
+

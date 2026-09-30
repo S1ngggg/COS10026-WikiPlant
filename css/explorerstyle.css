@@ -160,7 +160,7 @@ p{ margin: 0 0 1em; max-width: 66ch; }
   font-weight: 600;
 }
 
-
+/* ---------- nav dropdown (Explore) ---------- */
 
 .nav-drop{ position: relative; }
 
@@ -240,6 +240,7 @@ p{ margin: 0 0 1em; max-width: 66ch; }
   font-weight: 600;
 }
 
+/* ---------- linked breadcrumb tags ---------- */
 
 a.tag{ text-decoration: none; }
 a.tag:hover{ border-color: var(--sage-deep); color: var(--sage-deep); background: var(--paper-deep); }
@@ -493,54 +494,13 @@ a.tag:hover{ border-color: var(--sage-deep); color: var(--sage-deep); background
 
 /* ---------- explore page ---------- */
 
-.filter-bar{
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-.filter-bar > .groups{
-  flex: 1 1 100%;
-  margin-top: 30px;
-  padding-top: 26px;
-  border-top: 1px solid var(--line);
-}
-.filter-bar input[type="radio"]{
-  position: absolute;
-  opacity: 0;
-  width: 1px; height: 1px;
-}
-.filter-bar label{
-  cursor: pointer;
-  padding: 9px 18px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.9rem;
-  background: var(--paper-card);
-  color: var(--ink-soft);
-}
-.filter-bar input[type="radio"]:checked + label{
-  background: var(--sage-deep);
-  border-color: var(--sage-deep);
-  color: var(--paper);
-}
-.filter-bar input[type="radio"]:focus-visible + label{
-  outline: 2px solid var(--sage-deep);
-  outline-offset: 2px;
-}
-
 .specimen-grid{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.group{ display: none; }
-#f-all:checked ~ .groups .group{ display: contents; }
-#f-araceae:checked ~ .groups .group[data-family="araceae"]{ display: contents; }
-#f-rosaceae:checked ~ .groups .group[data-family="rosaceae"]{ display: contents; }
-#f-fabaceae:checked ~ .groups .group[data-family="fabaceae"]{ display: contents; }
-#f-asparagaceae:checked ~ .groups .group[data-family="asparagaceae"]{ display: contents; }
+.group{ display: contents; }
 
 .family-heading{
   grid-column: 1 / -1;
