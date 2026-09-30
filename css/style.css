@@ -304,19 +304,47 @@ body.enquiry-page {
 }
 
 .home-page .plant_card {
+    width: 220px;
     background-color: #FFFFFF;
     border: 2px solid #2A331B;
-    width: 200px;
-    height: 260px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home-page .plant_card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.home-page .category_card {
+    background-color: #FFFFFF;
+    border: 2px solid #2A331B;
+    flex: 1;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home-page .category_card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+    margin-bottom: 15px;
 }
 
 .home-page .plant_card h3 {
     color: #6B8E23;
-    font-size: 24px;
-    margin-bottom: 25px;
-    margin-top: 10px;
+    font-size: 20px;
+    margin: 15px 0 5px 0;
 }
 
 .home-page .about_section {
