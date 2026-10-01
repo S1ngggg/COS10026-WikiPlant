@@ -54,6 +54,8 @@ summary:focus-visible {
     border-bottom: 1px solid var(--line);
     background: var(--paper);
     font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    line-height: normal;
     margin: 0;
 }
 
@@ -186,6 +188,21 @@ summary:focus-visible {
     color: var(--sage-deep);
     font-weight: 600;
     background: var(--paper-deep);
+}
+
+/* Keep desktop navigation in the same position on every page. */
+@media (min-width: 801px) {
+    html {
+        scrollbar-gutter: stable;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .site-header .main-nav > ul > li > a {
+        font-weight: 500;
+    }
 }
 
 @media (max-width: 560px) {
@@ -2872,12 +2889,12 @@ body.identify-page {
     margin: 0 0 12px 0;
 }
 
-.identify-page ol,
-.identify-page ul {
+.identify-page main ol,
+.identify-page main ul {
     padding-left: 25px;
 }
 
-.identify-page li {
+.identify-page main li {
     margin-bottom: 6px;
 }
 
