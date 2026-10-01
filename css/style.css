@@ -1995,6 +1995,21 @@ body.explorer-page {
     border-top: 1px dashed var(--line);
 }
 
+
+.explorer-page .genus-heading {
+    grid-column: 1 / -1; 
+    margin: 16px 0 4px;
+    padding-top: 10px;
+    border-bottom: 1px solid var(--line-soft); 
+    padding-bottom: 8px;
+}
+
+.explorer-page .genus-heading .genus-latin {
+    font-size: 1.15rem;
+    color: var(--sage-deep);
+    margin: 0;
+}
+
 .explorer-page .family-heading:first-child {
     border-top: none;
     padding-top: 0;
