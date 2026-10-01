@@ -140,7 +140,8 @@
             </aside>
 
             <div class="contribute-callout">
-                <p class="para">Discovered a new plant? Share your findings with the WikiPlant community and help expand our plant collection.</p>
+                <p class="para">Discovered a new plant? Share your findings with the WikiPlant community and help expand
+                    our plant collection.</p>
                 <a href="contributor.html" class="contribute-btn">Go to Contributor</a>
             </div>
         </section>
@@ -165,40 +166,6 @@
         </div>
     </footer>
 
-
-
-    <script>
-        const photoInput = document.getElementById("plant-photo");
-        const uploadIcon = document.getElementById("upload-icon");
-        const uploadPreview = document.getElementById("upload-preview");
-        const identifyBtn = document.getElementById("identify-btn");
-        let previewUrl;
-
-        photoInput.addEventListener("change", () => {
-            const selectedPhoto = photoInput.files[0];
-
-            if (!selectedPhoto) {
-                return;
-            }
-
-            if (previewUrl) {
-                URL.revokeObjectURL(previewUrl);
-            }
-
-            previewUrl = URL.createObjectURL(selectedPhoto);
-            uploadPreview.src = previewUrl;
-            uploadPreview.hidden = false;
-            uploadIcon.hidden = true;
-        });
-
-        identifyBtn.addEventListener("click", () => {
-            if (!photoInput.files[0]) {
-                alert("Please select a photo first!");
-            } else {
-                alert("Identifying plant... (Mock Action)");
-            }
-        });
-    </script>
 </body>
 
 </html>
