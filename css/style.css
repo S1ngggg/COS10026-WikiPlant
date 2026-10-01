@@ -1642,6 +1642,29 @@ body.explorer-page {
     height: 100%;
 }
 
+
+.explorer-page .specimen-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; 
+    border-radius: 4px;
+    margin-bottom: 12px;
+    border: 1px solid var(--line);
+}
+
+.explorer-page .distribution {
+    font-size: 0.85rem;
+    color: var(--sage-deep);
+    margin: 4px 0 12px 0;
+    background: var(--paper-deep);
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
 .explorer-page .specimen-card > p {
     flex-grow: 1;
     margin-bottom: 0;
