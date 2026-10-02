@@ -1853,6 +1853,12 @@ body.explorer-page {
     margin: 14px 0 18px;
 }
 
+.explorer-page .family-card .spec-table .genus-tags {
+    display: inline-flex;
+    vertical-align: middle;
+    margin: 0 0 0 8px;
+}
+
 .explorer-page .family-card .species-tags {
     display: flex;
     flex-wrap: wrap;
