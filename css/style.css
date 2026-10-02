@@ -2874,754 +2874,791 @@ body.identify-page {
 }
 
 /* ABOUT US / INDIVIDUAL MEMBER PROFILE */
-body.about-page {
-    margin: 0;
-    background: #F7F5EF;
-    color: #263E32;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
-}
+body.about-page { 
+    margin: 0; 
+    background: #F7F5EF; 
+    color: #263E32; 
+    font-family: 'Work Sans', sans-serif; 
+    font-size: 18px; 
+    line-height: 1.7; 
+} 
+ 
+.about-page .about-main { 
+    max-width: 1040px; 
+    margin: 0 auto; 
+    padding: 0 32px; 
+} 
+ 
+.about-page .about-intro { 
+    padding: 64px 0 48px; 
+    text-align: center; 
+} 
+ 
+.about-page .about-eyebrow { 
+    margin: 0 0 14px; 
+    color: #586953; 
+    font-size: 0.66em; 
+    font-weight: 600; 
+    letter-spacing: 0.16em; 
+    text-transform: uppercase; 
+} 
+ 
+.about-page .about-intro h1 { 
+    margin: 0 0 20px; 
+    font-family: 'Fraunces', Georgia, serif; 
+    font-size: clamp(2.6rem, 5.5vw, 4.6rem); 
+    font-weight: 480; 
+    letter-spacing: -0.055em; 
+    line-height: 1.08; 
+} 
+ 
+.about-page .about-period { 
+    color: #A75F3E; 
+} 
+ 
+.about-page .about-intro > p:last-child { 
+    max-width: 470px; 
+    margin: 0 auto; 
+    color: #59635A; 
+    font-size: 0.92em; 
+} 
+ 
+.about-page .about-profile { 
+    border: 1px solid #D0D5C6; 
+    background: #FFFEFA; 
+    box-shadow: 0 18px 44px rgba(38, 62, 50, 0.045); 
+} 
+ 
+.about-page .about-profile-table, 
+.about-page .about-personal-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    table-layout: fixed; 
+    font-size: 100%; 
+} 
+ 
+.about-page .about-name-cell { 
+    padding: 30px 36px 26px; 
+    text-align: center; 
+    border-bottom: 1px solid #E1E4DA; 
+} 
+ 
+/* Assignment: the member name is centred, bold and exactly 200%. */ 
+.about-page .about-name { 
+    margin: 0; 
+    text-align: center; 
+    font-family: 'Fraunces', Georgia, serif; 
+    font-weight: bold; 
+    font-size: 200%; 
+    line-height: 1.25; 
+    letter-spacing: -0.025em; 
+} 
+ 
+.about-page .about-name-cell .about-eyebrow { 
+    margin-bottom: 9px; 
+} 
+ 
+.about-page .about-profile-content { 
+    padding: 38px 42px; 
+    vertical-align: top; 
+} 
+ 
+/* Assignment: floating portrait, groove border and 20px padding. */ 
+.about-page .about-portrait { 
+    float: left; 
+    width: 240px; 
+    margin: 0 40px 10px 0; 
+} 
+ 
+.about-page .about-photo { 
+    float: left; 
+    display: block; 
+    width: 100%; 
+    height: auto; 
+    border: 5px groove #B8C2AB; 
+    padding: 20px; 
+    background: #F4F3E9; 
+} 
+ 
+.about-page .about-portrait figcaption { 
+    clear: both; 
+    padding-top: 12px; 
+    text-align: center; 
+    color: #59635A; 
+    font-size: 0.68em; 
+} 
+ 
+.about-page .about-bio { 
+    display: flow-root; 
+    padding-top: 8px; 
+} 
+ 
+.about-page .about-bio h3 { 
+    margin: 0 0 12px; 
+    font-family: 'Fraunces', Georgia, serif; 
+    font-size: 1.7em; 
+    font-weight: 480; 
+    line-height: 1.2; 
+} 
+ 
+.about-page .about-bio > p:not(.about-eyebrow) { 
+    margin: 0 0 24px; 
+    color: #59635A; 
+    font-size: 0.88em; 
+} 
+ 
+.about-page .about-academic-details { 
+    margin: 0; 
+    border-top: 1px solid #E1E4DA; 
+} 
+ 
+.about-page .about-academic-details > div { 
+    padding-top: 13px; 
+} 
+ 
+.about-page .about-academic-details dt { 
+    color: #59635A; 
+    font-size: 0.64em; 
+    font-weight: 600; 
+    letter-spacing: 0.09em; 
+    text-transform: uppercase; 
+} 
+ 
+.about-page .about-academic-details dd { 
+    margin: 2px 0 0; 
+    font-size: 0.88em; 
+    font-weight: 600; 
+} 
+ 
+/* Assignment: Arial with a sans-serif fallback for the student number. */ 
+.about-page .about-student-number { 
+    font-family: Arial, sans-serif; 
+    letter-spacing: 0.06em; 
+} 
+ 
+/* Assignment: the course colour is specified as an RGB number. */ 
+.about-page .about-course { 
+    color: rgb(55, 91, 65); 
+} 
+ 
+.about-page .about-contact { 
+    padding: 20px 24px; 
+    border-top: 1px solid #D0D5C6; 
+    background-color: #EEF1E7; 
+    text-align: center; 
+} 
+ 
+.about-page .about-contact-label { 
+    display: block; 
+    margin-bottom: 5px; 
+    color: #59635A; 
+    font-size: 0.68em; 
+} 
+ 
+.about-page .about-contact a { 
+    color: #263E32; 
+    font-size: 0.85em; 
+    font-weight: 600; 
+    text-decoration-thickness: 1px; 
+    text-underline-offset: 5px; 
+    overflow-wrap: anywhere; 
+} 
+ 
+.about-page .about-contact a:hover { 
+    color: #8F4F2C; 
+} 
+ 
+.about-page .about-personal { 
+    margin-top: 66px; 
+} 
 
-.about-page .about-main {
-    max-width: 1040px;
-    margin: 0 auto;
-    padding: 0 32px;
-}
+/* =========================================================
+   SEPARATE SEAN AND BRYAN
+========================================================= */
 
-.about-page .about-intro {
-    padding: 64px 0 48px;
-    text-align: center;
-}
-
-.about-page .about-eyebrow {
-    margin: 0 0 14px;
-    color: #586953;
-    font-size: 0.66em;
-    font-weight: 600;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-}
-
-.about-page .about-intro h1 {
-    margin: 0 0 20px;
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(2.6rem, 5.5vw, 4.6rem);
-    font-weight: 480;
-    letter-spacing: -0.055em;
-    line-height: 1.08;
-}
-
-.about-page .about-period {
-    color: #A75F3E;
-}
-
-.about-page .about-intro > p:last-child {
-    max-width: 470px;
-    margin: 0 auto;
-    color: #59635A;
-    font-size: 0.92em;
-}
-
-.about-page .about-profile {
-    border: 1px solid #D0D5C6;
-    background: #FFFEFA;
-    box-shadow: 0 18px 44px rgba(38, 62, 50, 0.045);
-}
-
-.about-page .about-profile-table,
-.about-page .about-personal-table {
+.about-page .about-member-divider {
     width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    font-size: 100%;
-}
-
-.about-page .about-name-cell {
-    padding: 30px 36px 26px;
-    text-align: center;
-    border-bottom: 1px solid #E1E4DA;
-}
-
-/* Assignment: the member name is centred, bold and exactly 200%. */
-.about-page .about-name {
-    margin: 0;
-    text-align: center;
-    font-family: 'Fraunces', Georgia, serif;
-    font-weight: bold;
-    font-size: 200%;
-    line-height: 1.25;
-    letter-spacing: -0.025em;
-}
-
-.about-page .about-name-cell .about-eyebrow {
-    margin-bottom: 9px;
-}
-
-.about-page .about-profile-content {
-    padding: 38px 42px;
-    vertical-align: top;
-}
-
-/* Assignment: floating portrait, groove border and 20px padding. */
-.about-page .about-portrait {
-    float: left;
-    width: 240px;
-    margin: 0 40px 10px 0;
-}
-
-.about-page .about-photo {
-    float: left;
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 5px groove #B8C2AB;
-    padding: 20px;
-    background: #F4F3E9;
-}
-
-.about-page .about-portrait figcaption {
-    clear: both;
-    padding-top: 12px;
-    text-align: center;
-    color: #59635A;
-    font-size: 0.68em;
-}
-
-.about-page .about-bio {
-    display: flow-root;
-    padding-top: 8px;
-}
-
-.about-page .about-bio h3 {
-    margin: 0 0 12px;
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.7em;
-    font-weight: 480;
-    line-height: 1.2;
-}
-
-.about-page .about-bio > p:not(.about-eyebrow) {
-    margin: 0 0 24px;
-    color: #59635A;
-    font-size: 0.88em;
-}
-
-.about-page .about-academic-details {
-    margin: 0;
-    border-top: 1px solid #E1E4DA;
-}
-
-.about-page .about-academic-details > div {
-    padding-top: 13px;
-}
-
-.about-page .about-academic-details dt {
-    color: #59635A;
-    font-size: 0.64em;
-    font-weight: 600;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-}
-
-.about-page .about-academic-details dd {
-    margin: 2px 0 0;
-    font-size: 0.88em;
-    font-weight: 600;
-}
-
-/* Assignment: Arial with a sans-serif fallback for the student number. */
-.about-page .about-student-number {
-    font-family: Arial, sans-serif;
-    letter-spacing: 0.06em;
-}
-
-/* Assignment: the course colour is specified as an RGB number. */
-.about-page .about-course {
-    color: rgb(55, 91, 65);
-}
-
-.about-page .about-contact {
-    padding: 20px 24px;
-    border-top: 1px solid #D0D5C6;
-    background-color: #EEF1E7;
-    text-align: center;
-}
-
-.about-page .about-contact-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #59635A;
-    font-size: 0.68em;
-}
-
-.about-page .about-contact a {
-    color: #263E32;
-    font-size: 0.85em;
-    font-weight: 600;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 5px;
-    overflow-wrap: anywhere;
-}
-
-.about-page .about-contact a:hover {
-    color: #8F4F2C;
-}
-
-.about-page .about-personal {
-    margin-top: 66px;
-}
-
-.about-page .about-section-heading {
+    margin: 90px 0;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 26px;
+    align-items: center;
+    justify-content: center;
 }
 
-.about-page .about-section-heading h2 {
-    margin: 0;
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
-    font-weight: 480;
-    letter-spacing: -0.035em;
-    line-height: 1.2;
-}
-
-.about-page .about-section-index {
-    color: #59635A;
-    font-size: 0.7em;
-    white-space: nowrap;
-}
-
-.about-page .about-personal-table {
-    border: 1px solid #D0D5C6;
-}
-
-/* Assignment: centred bold headings; hexadecimal cell backgrounds. */
-.about-page .about-personal-table .about-label-column {
-    width: 30%;
-}
-
-.about-page .about-personal-table th {
-    width: 30%;
-    padding: 28px 20px;
-    border-right: 1px solid #D0D5C6;
-    background-color: #E8EDE1;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 0.85em;
-    font-weight: bold;
-    line-height: 1.5;
-}
-
-.about-page .about-personal-table td {
-    padding: 30px 34px;
-    background-color: #FFFEFA;
-    vertical-align: top;
-    color: #59635A;
-    font-size: 0.86em;
-}
-
-.about-page .about-personal-table tr + tr > * {
-    border-top: 1px solid #D0D5C6;
-}
-
-.about-page .about-row-number {
-    display: block;
-    margin-bottom: 12px;
-    color: #617358;
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.65em;
-    font-weight: 480;
-}
-
-.about-page .about-personal-table h3 {
-    margin: 8px 0 10px;
-    color: #263E32;
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 1.3em;
-    font-weight: 480;
-    line-height: 1.4;
-}
-
-.about-page .about-personal-table p {
-    margin: 0;
-}
-
-.about-page .about-personal-table .about-detail-note {
-    margin-top: 14px;
-    font-size: 0.88em;
-}
-
-.about-page .about-draft-label {
-    color: #835336;
-    font-size: 0.7em;
-    font-weight: 600;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-}
-
-.about-page .about-interest-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 18px 0 0;
-    padding: 0;
-    list-style: none;
-}
-
-.about-page .about-interest-list li {
-    padding: 4px 12px;
-    border: 1px solid #D0D5C6;
-    border-radius: 2px;
-    color: #425B3A;
-    font-size: 0.8em;
-}
-
-.about-page .about-sr-only {
-    position: absolute;
-    width: 1px;
+.about-page .about-member-divider::before,
+.about-page .about-member-divider::after {
+    content: "";
+    flex: 1;
     height: 1px;
-    margin: -1px;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
+    background: #D0D5C6;
 }
 
-@media (max-width: 700px) {
-    .about-page .about-main {
-        padding: 0 20px;
-    }
-
-    .about-page .about-intro {
-        padding: 42px 0 32px;
-    }
-
-    .about-page .about-name-cell {
-        padding: 24px 16px;
-    }
-
-    .about-page .about-profile-content {
-        padding: 28px 22px;
-    }
-
-    .about-page .about-portrait {
-        width: 100%;
-        margin: 0 0 24px;
-    }
-
-    .about-page .about-photo {
-        width: 220px;
-        max-width: 100%;
-        margin-left: max(0px, calc((100% - 220px) / 2));
-    }
-
-    .about-page .about-bio {
-        clear: both;
-    }
-
-    .about-page .about-personal {
-        margin-top: 42px;
-    }
-
-    .about-page .about-personal-table th {
-        width: 35%;
-        padding: 20px 12px;
-        overflow-wrap: anywhere;
-    }
-
-    .about-page .about-personal-table td {
-        padding: 22px 18px;
-    }
-
-    .about-page .about-section-index {
-        display: none;
-    }
+.about-page .about-member-divider span {
+    width: 10px;
+    height: 10px;
+    margin: 0 24px;
+    border: 2px solid #6B8E23;
+    border-radius: 50%;
+    background: #F7F5EF;
 }
 
-@media (max-width: 560px) {
-    .about-page .about-personal-table colgroup {
-        display: none;
-    }
-
-    .about-page .about-personal-table,
-    .about-page .about-personal-table tbody,
-    .about-page .about-personal-table tr,
-    .about-page .about-personal-table th,
-    .about-page .about-personal-table td {
-        display: block;
-        width: 100%;
-    }
-
-    .about-page .about-personal-table th {
-        border-right: 0;
-        border-bottom: 1px solid #D0D5C6;
-        padding: 18px 20px;
-    }
-
-    .about-page .about-row-number {
-        margin-bottom: 5px;
-    }
-
-    .about-page .about-personal-table td {
-        padding: 24px 22px;
-    }
-
-    .about-page .about-personal-table tr + tr td {
-        border-top: 0;
-    }
+.about-page .about-bryan-profile {
+    margin-top: 0;
 }
+ 
+.about-page .about-section-heading { 
+    display: flex; 
+    align-items: flex-end; 
+    justify-content: space-between; 
+    gap: 16px; 
+    margin-bottom: 26px; 
+} 
+ 
+.about-page .about-section-heading h2 { 
+    margin: 0; 
+    font-family: 'Fraunces', Georgia, serif; 
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem); 
+    font-weight: 480; 
+    letter-spacing: -0.035em; 
+    line-height: 1.2; 
+} 
+ 
+.about-page .about-section-index { 
+    color: #59635A; 
+    font-size: 0.7em; 
+    white-space: nowrap; 
+} 
+ 
+.about-page .about-personal-table { 
+    border: 1px solid #D0D5C6; 
+} 
+ 
+/* Assignment: centred bold headings; hexadecimal cell backgrounds. */ 
+.about-page .about-personal-table .about-label-column { 
+    width: 30%; 
+} 
+ 
+.about-page .about-personal-table th { 
+    width: 30%; 
+    padding: 28px 20px; 
+    border-right: 1px solid #D0D5C6; 
+    background-color: #E8EDE1; 
+    text-align: center; 
+    vertical-align: middle; 
+    font-size: 0.85em; 
+    font-weight: bold; 
+    line-height: 1.5; 
+} 
+ 
+.about-page .about-personal-table td { 
+    padding: 30px 34px; 
+    background-color: #FFFEFA; 
+    vertical-align: top; 
+    color: #59635A; 
+    font-size: 0.86em; 
+} 
+ 
+.about-page .about-personal-table tr + tr > * { 
+    border-top: 1px solid #D0D5C6; 
+} 
+ 
+.about-page .about-row-number { 
+    display: block; 
+    margin-bottom: 12px; 
+    color: #617358; 
+    font-family: 'Fraunces', Georgia, serif; 
+    font-size: 1.65em; 
+    font-weight: 480; 
+} 
+ 
+.about-page .about-personal-table h3 { 
+    margin: 8px 0 10px; 
+    color: #263E32; 
+    font-family: 'Fraunces', Georgia, serif; 
+    font-size: 1.3em; 
+    font-weight: 480; 
+    line-height: 1.4; 
+} 
+ 
+.about-page .about-personal-table p { 
+    margin: 0; 
+} 
+ 
+.about-page .about-personal-table .about-detail-note { 
+    margin-top: 14px; 
+    font-size: 0.88em; 
+} 
+ 
+.about-page .about-draft-label { 
+    color: #835336; 
+    font-size: 0.7em; 
+    font-weight: 600; 
+    letter-spacing: 0.09em; 
+    text-transform: uppercase; 
+} 
+ 
+.about-page .about-interest-list { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 8px; 
+    margin: 18px 0 0; 
+    padding: 0; 
+    list-style: none; 
+} 
+ 
+.about-page .about-interest-list li { 
+    padding: 4px 12px; 
+    border: 1px solid #D0D5C6; 
+    border-radius: 2px; 
+    color: #425B3A; 
+    font-size: 0.8em; 
+} 
+ 
+.about-page .about-sr-only { 
+    position: absolute; 
+    width: 1px; 
+    height: 1px; 
+    margin: -1px; 
+    padding: 0; 
+    border: 0; 
+    overflow: hidden; 
+    clip-path: inset(50%); 
+    white-space: nowrap; 
+} 
+ 
+@media (max-width: 700px) { 
+    .about-page .about-main { 
+        padding: 0 20px; 
+    } 
+ 
+    .about-page .about-intro { 
+        padding: 42px 0 32px; 
+    } 
+ 
+    .about-page .about-name-cell { 
+        padding: 24px 16px; 
+    } 
+ 
+    .about-page .about-profile-content { 
+        padding: 28px 22px; 
+    } 
+ 
+    .about-page .about-portrait { 
+        width: 100%; 
+        margin: 0 0 24px; 
+    } 
+ 
+    .about-page .about-photo { 
+        width: 220px; 
+        max-width: 100%; 
+        margin-left: max(0px, calc((100% - 220px) / 2)); 
+    } 
+ 
+    .about-page .about-bio { 
+        clear: both; 
+    } 
+ 
+    .about-page .about-personal { 
+        margin-top: 42px; 
+    } 
 
-/* Shared contribution-page theme */
-body.contrib-page,
-body.contributor-page {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Work Sans', sans-serif;
-}
-
-.contrib-page .site-header,
-.contributor-page .site-header {
-    display: block;
-    gap: 0;
-    padding: 0;
-    border-bottom: 1px solid var(--line);
-    background: var(--paper);
-    font-family: 'Work Sans', sans-serif;
-}
-
-.contrib-page .page_main,
-.contributor-page .page_main {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 48px 32px 72px;
-}
-
-.contrib-page .content_grid,
-.contributor-page .content_grid {
-    grid-template-columns: minmax(0, 1fr) 320px;
-    gap: 32px;
-}
-
-.contrib-page .content_section,
-.contributor-page .content_section {
-    margin-bottom: 24px;
-    padding: 32px;
-    border: 1px solid var(--line-soft);
-    border-radius: 8px;
-    background: var(--paper-card);
-    box-shadow: 3px 4px 0 var(--shadow);
-}
-
-.contrib-page .content_section h2,
-.contributor-page .content_section h2 {
-    color: var(--ink);
-    font-family: 'Fraunces', serif;
-    font-size: 1.8rem;
-    font-weight: 480;
-    letter-spacing: 0;
-}
-
-.contrib-page .content_section > p,
-.contributor-page .content_section > p {
-    color: var(--ink-soft);
-}
-
-.contrib-page .required_note,
-.contrib-page .form_hint {
-    color: var(--ink-soft) !important;
-}
-
-.contrib-page .required_note strong {
-    color: var(--clay-deep);
-}
-
-.contrib-page .styled_form legend {
-    border-bottom-color: var(--line-soft);
-    color: var(--ink);
-    font-family: 'Fraunces', serif;
-    font-weight: 480;
-}
-
-.contrib-page .styled_form label,
-.contrib-page .checkbox_p label {
-    color: var(--ink-soft);
-}
-
-.contrib-page .styled_form input[type="text"],
-.contrib-page .styled_form select,
-.contrib-page .styled_form textarea,
-.contrib-page .styled_form input[type="file"],
-.contrib-page .checkbox_p {
-    border-color: var(--line-soft);
-    background-color: var(--paper);
-    color: var(--ink);
-}
-
-.contrib-page .styled_form input[type="text"]:focus,
-.contrib-page .styled_form select:focus,
-.contrib-page .styled_form textarea:focus,
-.contrib-page .styled_form input[type="file"]:hover {
-    border-color: var(--sage-deep);
-    background-color: var(--paper-card);
-    box-shadow: 0 0 0 3px rgba(78, 97, 68, 0.15);
-}
-
-.contrib-page .checkbox_p input[type="checkbox"] {
-    accent-color: var(--sage-deep);
-}
-
-.contrib-page .btn_primary,
-.contrib-page .btn_secondary {
-    border: 1px solid var(--line);
-    border-radius: 4px;
-    font-family: 'Work Sans', sans-serif;
-}
-
-.contrib-page .btn_primary {
-    background: var(--sage-deep);
-    color: var(--paper);
-    box-shadow: 2px 2px 0 var(--shadow);
-}
-
-.contrib-page .btn_primary:hover {
-    background: var(--ink);
-    box-shadow: 3px 4px 0 var(--shadow);
-}
-
-.contrib-page .btn_secondary {
-    background: var(--paper);
-    color: var(--ink);
-}
-
-.contrib-page .btn_secondary:hover {
-    background: var(--paper-deep);
-    color: var(--ink);
-}
-
-.contrib-page .sidebar_box {
-    border: 1px solid var(--sage-deep);
-    border-radius: 8px;
-    background: var(--sage-deep);
-    box-shadow: 3px 4px 0 var(--shadow);
-}
-
-.contrib-page .sidebar_box h2 {
-    color: var(--paper);
-    font-family: 'Fraunces', serif;
-    font-weight: 480;
-}
-
-.contrib-page .styled_sidebar_ol p {
-    color: var(--paper-card);
-}
-
-@media (max-width: 1050px) {
-    .contrib-page .content_grid,
-    .contributor-page .content_grid {
-        grid-template-columns: 1fr;
+    .about-page .about-member-divider {
+        margin: 60px 0;
     }
-
-    .contrib-page .sidebar,
-    .contributor-page .sidebar {
-        position: static;
-    }
-}
-
-@media (max-width: 600px) {
-    .contrib-page .page_main,
-    .contributor-page .page_main {
-        padding: 30px 20px;
-    }
-
-    .contrib-page .content_section,
-    .contributor-page .content_section {
-        padding: 25px 20px;
-    }
-}
-
-/* Shared navigation drawer; the existing menu remains usable without JavaScript. */
-.site-header .nav-toggle,
-.site-header .nav-drawer-topbar,
-.site-header .nav-backdrop {
-    display: none;
-}
-
-.site-header .nav-drawer-panel {
-    display: contents;
-}
-
-@media (width < 1000px) {
-    body {
-        margin: 0;
-    }
-
-    html.nav-open {
-        overflow: hidden;
-    }
-
-    .site-header.nav-enhanced .wrap {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-between;
-        padding: 16px 24px;
-    }
-
-    .site-header.nav-enhanced .nav-toggle,
-    .site-header.nav-enhanced .nav-close {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex: 0 0 44px;
-        width: 44px;
-        height: 44px;
-        padding: 10px;
-        border: 1px solid var(--line);
-        border-radius: 3px;
-        background: var(--paper-card);
-        color: var(--ink);
-        cursor: pointer;
-    }
-
-    .site-header.nav-enhanced .nav-toggle {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .site-header.nav-enhanced .nav-toggle span {
-        width: 22px;
-        height: 2px;
-        background: currentColor;
-    }
-
-    .site-header.nav-enhanced .nav-close {
-        font-family: Arial, sans-serif;
-        font-size: 30px;
-        line-height: 1;
-    }
-
-    .site-header.nav-enhanced .nav-toggle:hover,
-    .site-header.nav-enhanced .nav-close:hover {
-        background: var(--paper-deep);
-    }
-
-    .site-header.nav-enhanced .nav-backdrop {
-        display: block;
-        position: fixed;
-        inset: 0;
-        z-index: 100;
-        background: rgba(25, 35, 26, 0.38);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.25s ease, visibility 0s linear 0.25s;
-    }
-
-    .site-header.nav-enhanced .nav-drawer-panel {
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 101;
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        width: min(360px, calc(100vw - 32px));
-        height: 100vh;
-        height: 100dvh;
-        padding: 24px;
-        border-left: 1px solid var(--line);
-        background: var(--paper-card);
-        box-shadow: -12px 0 40px rgba(43, 51, 35, 0.12);
-        transform: translateX(100%);
-        visibility: hidden;
-        transition: transform 0.3s ease, visibility 0s linear 0.3s;
-    }
-
-    .site-header.nav-enhanced .nav-drawer-topbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid var(--line-soft);
-    }
-
-    .site-header.nav-enhanced .nav-drawer-topbar > span {
-        color: var(--ink);
-        font-family: 'Fraunces', Georgia, serif;
-        font-size: 1.6rem;
-    }
-
-    .site-header.nav-enhanced .main-nav {
-        flex: 1;
-        min-height: 0;
-        overflow-y: auto;
-        overscroll-behavior: contain;
-    }
-
-    .site-header.nav-enhanced .main-nav ul {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        gap: 4px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .site-header.nav-enhanced .main-nav a {
-        display: block;
-        padding: 12px 14px;
-        font-size: 1rem;
-        font-weight: 500;
-        line-height: 1.4;
-    }
-
-    .site-header.nav-enhanced .main-nav a[aria-current="page"] {
-        border-color: var(--sage-deep);
-        background: var(--paper);
-        color: var(--sage-deep);
-    }
-
-    .site-header.nav-enhanced .nav-drop > a::after {
-        content: none;
-    }
-
-    .site-header.nav-enhanced .drop-menu {
-        position: static;
-        display: flex;
-        min-width: 0;
-        margin: 8px 14px 12px;
-        padding: 0 0 0 12px;
-        border: 0;
-        border-left: 1px solid var(--line-soft);
-        background: transparent;
-        box-shadow: none;
-    }
-
-    .site-header.nav-enhanced .drop-menu a {
-        padding: 9px 12px;
-        font-size: 0.9rem;
-    }
-
-    .site-header.nav-is-open .nav-backdrop {
-        opacity: 1;
-        visibility: visible;
-        transition-delay: 0s;
-    }
-
-    .site-header.nav-is-open .nav-drawer-panel {
-        transform: translateX(0);
-        visibility: visible;
-        transition-delay: 0s;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .site-header .nav-drawer-panel,
-    .site-header .nav-backdrop {
-        transition: none;
-    }
+ 
+    .about-page .about-personal-table th { 
+        width: 35%; 
+        padding: 20px 12px; 
+        overflow-wrap: anywhere; 
+    } 
+ 
+    .about-page .about-personal-table td { 
+        padding: 22px 18px; 
+    } 
+ 
+    .about-page .about-section-index { 
+        display: none; 
+    } 
+} 
+ 
+@media (max-width: 560px) { 
+    .about-page .about-personal-table colgroup { 
+        display: none; 
+    } 
+ 
+    .about-page .about-personal-table, 
+    .about-page .about-personal-table tbody, 
+    .about-page .about-personal-table tr, 
+    .about-page .about-personal-table th, 
+    .about-page .about-personal-table td { 
+        display: block; 
+        width: 100%; 
+    } 
+ 
+    .about-page .about-personal-table th { 
+        border-right: 0; 
+        border-bottom: 1px solid #D0D5C6; 
+        padding: 18px 20px; 
+    } 
+ 
+    .about-page .about-row-number { 
+        margin-bottom: 5px; 
+    } 
+ 
+    .about-page .about-personal-table td { 
+        padding: 24px 22px; 
+    } 
+ 
+    .about-page .about-personal-table tr + tr td { 
+        border-top: 0; 
+    } 
+} 
+ 
+/* Shared contribution-page theme */ 
+body.contrib-page, 
+body.contributor-page { 
+    background: var(--paper); 
+    color: var(--ink); 
+    font-family: 'Work Sans', sans-serif; 
+} 
+ 
+.contrib-page .site-header, 
+.contributor-page .site-header { 
+    display: block; 
+    gap: 0; 
+    padding: 0; 
+    border-bottom: 1px solid var(--line); 
+    background: var(--paper); 
+    font-family: 'Work Sans', sans-serif; 
+} 
+ 
+.contrib-page .page_main, 
+.contributor-page .page_main { 
+    max-width: var(--max); 
+    margin: 0 auto; 
+    padding: 48px 32px 72px; 
+} 
+ 
+.contrib-page .content_grid, 
+.contributor-page .content_grid { 
+    grid-template-columns: minmax(0, 1fr) 320px; 
+    gap: 32px; 
+} 
+ 
+.contrib-page .content_section, 
+.contributor-page .content_section { 
+    margin-bottom: 24px; 
+    padding: 32px; 
+    border: 1px solid var(--line-soft); 
+    border-radius: 8px; 
+    background: var(--paper-card); 
+    box-shadow: 3px 4px 0 var(--shadow); 
+} 
+ 
+.contrib-page .content_section h2, 
+.contributor-page .content_section h2 { 
+    color: var(--ink); 
+    font-family: 'Fraunces', serif; 
+    font-size: 1.8rem; 
+    font-weight: 480; 
+    letter-spacing: 0; 
+} 
+ 
+.contrib-page .content_section > p, 
+.contributor-page .content_section > p { 
+    color: var(--ink-soft); 
+} 
+ 
+.contrib-page .required_note, 
+.contrib-page .form_hint { 
+    color: var(--ink-soft) !important; 
+} 
+ 
+.contrib-page .required_note strong { 
+    color: var(--clay-deep); 
+} 
+ 
+.contrib-page .styled_form legend { 
+    border-bottom-color: var(--line-soft); 
+    color: var(--ink); 
+    font-family: 'Fraunces', serif; 
+    font-weight: 480; 
+} 
+ 
+.contrib-page .styled_form label, 
+.contrib-page .checkbox_p label { 
+    color: var(--ink-soft); 
+} 
+ 
+.contrib-page .styled_form input[type="text"], 
+.contrib-page .styled_form select, 
+.contrib-page .styled_form textarea, 
+.contrib-page .styled_form input[type="file"], 
+.contrib-page .checkbox_p { 
+    border-color: var(--line-soft); 
+    background-color: var(--paper); 
+    color: var(--ink); 
+} 
+ 
+.contrib-page .styled_form input[type="text"]:focus, 
+.contrib-page .styled_form select:focus, 
+.contrib-page .styled_form textarea:focus, 
+.contrib-page .styled_form input[type="file"]:hover { 
+    border-color: var(--sage-deep); 
+    background-color: var(--paper-card); 
+    box-shadow: 0 0 0 3px rgba(78, 97, 68, 0.15); 
+} 
+ 
+.contrib-page .checkbox_p input[type="checkbox"] { 
+    accent-color: var(--sage-deep); 
+} 
+ 
+.contrib-page .btn_primary, 
+.contrib-page .btn_secondary { 
+    border: 1px solid var(--line); 
+    border-radius: 4px; 
+    font-family: 'Work Sans', sans-serif; 
+} 
+ 
+.contrib-page .btn_primary { 
+    background: var(--sage-deep); 
+    color: var(--paper); 
+    box-shadow: 2px 2px 0 var(--shadow); 
+} 
+ 
+.contrib-page .btn_primary:hover { 
+    background: var(--ink); 
+    box-shadow: 3px 4px 0 var(--shadow); 
+} 
+ 
+.contrib-page .btn_secondary { 
+    background: var(--paper); 
+    color: var(--ink); 
+} 
+ 
+.contrib-page .btn_secondary:hover { 
+    background: var(--paper-deep); 
+    color: var(--ink); 
+} 
+ 
+.contrib-page .sidebar_box { 
+    border: 1px solid var(--sage-deep); 
+    border-radius: 8px; 
+    background: var(--sage-deep); 
+    box-shadow: 3px 4px 0 var(--shadow); 
+} 
+ 
+.contrib-page .sidebar_box h2 { 
+    color: var(--paper); 
+    font-family: 'Fraunces', serif; 
+    font-weight: 480; 
+} 
+ 
+.contrib-page .styled_sidebar_ol p { 
+    color: var(--paper-card); 
+} 
+ 
+@media (max-width: 1050px) { 
+    .contrib-page .content_grid, 
+    .contributor-page .content_grid { 
+        grid-template-columns: 1fr; 
+    } 
+ 
+    .contrib-page .sidebar, 
+    .contributor-page .sidebar { 
+        position: static; 
+    } 
+} 
+ 
+@media (max-width: 600px) { 
+    .contrib-page .page_main, 
+    .contributor-page .page_main { 
+        padding: 30px 20px; 
+    } 
+ 
+    .contrib-page .content_section, 
+    .contributor-page .content_section { 
+        padding: 25px 20px; 
+    } 
+} 
+ 
+/* Shared navigation drawer; the existing menu remains usable without JavaScript. */ 
+.site-header .nav-toggle, 
+.site-header .nav-drawer-topbar, 
+.site-header .nav-backdrop { 
+    display: none; 
+} 
+ 
+.site-header .nav-drawer-panel { 
+    display: contents; 
+} 
+ 
+@media (width < 1000px) { 
+    body { 
+        margin: 0; 
+    } 
+ 
+    html.nav-open { 
+        overflow: hidden; 
+    } 
+ 
+    .site-header.nav-enhanced .wrap { 
+        flex-direction: row; 
+        flex-wrap: nowrap; 
+        align-items: center; 
+        justify-content: space-between; 
+        padding: 16px 24px; 
+    } 
+ 
+    .site-header.nav-enhanced .nav-toggle, 
+    .site-header.nav-enhanced .nav-close { 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        flex: 0 0 44px; 
+        width: 44px; 
+        height: 44px; 
+        padding: 10px; 
+        border: 1px solid var(--line); 
+        border-radius: 3px; 
+        background: var(--paper-card); 
+        color: var(--ink); 
+        cursor: pointer; 
+    } 
+ 
+    .site-header.nav-enhanced .nav-toggle { 
+        flex-direction: column; 
+        gap: 5px; 
+    } 
+ 
+    .site-header.nav-enhanced .nav-toggle span { 
+        width: 22px; 
+        height: 2px; 
+        background: currentColor; 
+    } 
+ 
+    .site-header.nav-enhanced .nav-close { 
+        font-family: Arial, sans-serif; 
+        font-size: 30px; 
+        line-height: 1; 
+    } 
+ 
+    .site-header.nav-enhanced .nav-toggle:hover, 
+    .site-header.nav-enhanced .nav-close:hover { 
+        background: var(--paper-deep); 
+    } 
+ 
+    .site-header.nav-enhanced .nav-backdrop { 
+        display: block; 
+        position: fixed; 
+        inset: 0; 
+        z-index: 100; 
+        background: rgba(25, 35, 26, 0.38); 
+        opacity: 0; 
+        visibility: hidden; 
+        transition: opacity 0.25s ease, visibility 0s linear 0.25s; 
+    } 
+ 
+    .site-header.nav-enhanced .nav-drawer-panel { 
+        position: fixed; 
+        top: 0; 
+        right: 0; 
+        z-index: 101; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 24px; 
+        width: min(360px, calc(100vw - 32px)); 
+        height: 100vh; 
+        height: 100dvh; 
+        padding: 24px; 
+        border-left: 1px solid var(--line); 
+        background: var(--paper-card); 
+        box-shadow: -12px 0 40px rgba(43, 51, 35, 0.12); 
+        transform: translateX(100%); 
+        visibility: hidden; 
+        transition: transform 0.3s ease, visibility 0s linear 0.3s; 
+    } 
+ 
+    .site-header.nav-enhanced .nav-drawer-topbar { 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-between; 
+        gap: 16px; 
+        padding-bottom: 20px; 
+        border-bottom: 1px solid var(--line-soft); 
+    } 
+ 
+    .site-header.nav-enhanced .nav-drawer-topbar > span { 
+        color: var(--ink); 
+        font-family: 'Fraunces', Georgia, serif; 
+        font-size: 1.6rem; 
+    } 
+ 
+    .site-header.nav-enhanced .main-nav { 
+        flex: 1; 
+        min-height: 0; 
+        overflow-y: auto; 
+        overscroll-behavior: contain; 
+    } 
+ 
+    .site-header.nav-enhanced .main-nav ul { 
+        flex-direction: column; 
+        flex-wrap: nowrap; 
+        gap: 4px; 
+        margin: 0; 
+        padding: 0; 
+    } 
+ 
+    .site-header.nav-enhanced .main-nav a { 
+        display: block; 
+        padding: 12px 14px; 
+        font-size: 1rem; 
+        font-weight: 500; 
+        line-height: 1.4; 
+    } 
+ 
+    .site-header.nav-enhanced .main-nav a[aria-current="page"] { 
+        border-color: var(--sage-deep); 
+        background: var(--paper); 
+        color: var(--sage-deep); 
+    } 
+ 
+    .site-header.nav-enhanced .nav-drop > a::after { 
+        content: none; 
+    } 
+ 
+    .site-header.nav-enhanced .drop-menu { 
+        position: static; 
+        display: flex; 
+        min-width: 0; 
+        margin: 8px 14px 12px; 
+        padding: 0 0 0 12px; 
+        border: 0; 
+        border-left: 1px solid var(--line-soft); 
+        background: transparent; 
+        box-shadow: none; 
+    } 
+ 
+    .site-header.nav-enhanced .drop-menu a { 
+        padding: 9px 12px; 
+        font-size: 0.9rem; 
+    } 
+ 
+    .site-header.nav-is-open .nav-backdrop { 
+        opacity: 1; 
+        visibility: visible; 
+        transition-delay: 0s; 
+    } 
+ 
+    .site-header.nav-is-open .nav-drawer-panel { 
+        transform: translateX(0); 
+        visibility: visible; 
+        transition-delay: 0s; 
+    } 
+} 
+ 
+@media (prefers-reduced-motion: reduce) { 
+    .site-header .nav-drawer-panel, 
+    .site-header .nav-backdrop { 
+        transition: none; 
+    } 
 }
