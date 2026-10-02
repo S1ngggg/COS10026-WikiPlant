@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Species — WikiPlant</title>
 <link rel="stylesheet" href="css/style.css">
-<script src="js/navigation.js" defer></script>
 </head>
 <body class="explorer-page">
 
@@ -15,6 +14,14 @@
         <img src="images/logo.png" alt="WikiPlant logo">
         <span class="brand-motto">Wiki Plant</span>
       </a>
+      <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+      <label class="nav-toggle" for="navigation-toggle">
+          <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="nav-close" aria-hidden="true">&times;</span>
+      </label>
+      <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+      <div class="nav-drawer-panel" id="navigation-panel">
+          <div class="nav-drawer-topbar"><span>Navigation</span></div>
       <nav class="main-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Index</a></li>
@@ -34,6 +41,7 @@
           <li><a href="login.html">Login</a></li>
         </ul>
       </nav>
+      </div>
     </div>
   </header>
 
@@ -70,7 +78,7 @@
 
       <article class="specimen-card" id="monstera">
         <span class="accession">No. 0142</span>
-        <img src="images/monstera-deliciosa.jpg" alt="Swiss cheese plant" class="specimen-img">
+        <img src="images/Monstera_deliciosa.jpg" alt="Swiss cheese plant" class="specimen-img">
         <div class="common-name">Swiss cheese plant</div>
         <span class="sci">Monstera deliciosa</span>
         <div class="rank-line">
@@ -89,7 +97,7 @@
 
       <article class="specimen-card" id="monstera-acuminata">
         <span class="accession">No. 0142</span>
-        <img src="images/monstera-acuminata.jpg" alt="Shingle plant" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Shingle plant: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Shingle plant</div>
         <span class="sci">Monstera acuminata</span>
         <div class="rank-line">
@@ -112,7 +120,7 @@
 
       <article class="specimen-card" id="spathiphyllum">
         <span class="accession">No. 0143</span>
-        <img src="images/spathiphyllum-wallisii.jpg" alt="Peace lily" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Peace lily: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Peace lily</div>
         <span class="sci">Spathiphyllum wallisii</span>
         <div class="rank-line">
@@ -131,7 +139,7 @@
 
       <article class="specimen-card" id="spathiphyllum-cannifolium">
         <span class="accession">No. 0144</span>
-        <img src="images/spathiphyllum-cannifolium.jpg" alt="Canna-leaf peace lily" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Canna-leaf peace lily: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Canna-leaf peace lily</div>
         <span class="sci">Spathiphyllum cannifolium</span>
         <div class="rank-line">
@@ -162,7 +170,7 @@
 
       <article class="specimen-card" id="rosa">
         <span class="accession">No. 0091</span>
-        <img src="images/rosa-canina.jpg" alt="Dog rose" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Dog rose: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Dog rose</div>
         <span class="sci">Rosa canina</span>
         <div class="rank-line">
@@ -181,7 +189,7 @@
 
       <article class="specimen-card" id="rosa-banksiae">
         <span class="accession">No. 0091</span>
-        <img src="images/rosa-banksiae.jpg" alt="Lady Banks' rose" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Lady Banks&#x27; rose: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Lady Banks' rose</div>
         <span class="sci">Rosa banksiae</span>
         <div class="rank-line">
@@ -204,7 +212,7 @@
 
       <article class="specimen-card" id="fragaria">
         <span class="accession">No. 0092</span>
-        <img src="images/fragaria-vesca.jpg" alt="Wild strawberry" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Wild strawberry: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Wild strawberry</div>
         <span class="sci">Fragaria vesca</span>
         <div class="rank-line">
@@ -223,7 +231,7 @@
 
       <article class="specimen-card" id="fragaria-moschata">
         <span class="accession">No. 0093</span>
-        <img src="images/fragaria-moschata.jpg" alt="Musk Strawberry" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Musk Strawberry: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Musk Strawberry</div>
         <span class="sci">Fragaria moschata</span>
         <div class="rank-line">
@@ -254,7 +262,7 @@
 
       <article class="specimen-card" id="pisum">
         <span class="accession">No. 0210</span>
-        <img src="images/pisum-sativum.jpg" alt="Garden pea" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Garden pea: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Garden pea</div>
         <span class="sci">Pisum sativum</span>
         <div class="rank-line">
@@ -273,7 +281,7 @@
 
       <article class="specimen-card" id="pisum-fulvum">
         <span class="accession">No. 0210</span>
-        <img src="images/pisum-fulvum.jpg" alt="Tawny pea" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Tawny pea: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Tawny pea</div>
         <span class="sci">Pisum fulvum</span>
         <div class="rank-line">
@@ -296,7 +304,7 @@
 
       <article class="specimen-card" id="laburnum">
         <span class="accession">No. 0211</span>
-        <img src="images/laburnum-anagyroides.jpg" alt="Common laburnum" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Common laburnum: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Common laburnum</div>
         <span class="sci">Laburnum anagyroides</span>
         <div class="rank-line">
@@ -315,7 +323,7 @@
 
       <article class="specimen-card" id="laburnum-alpinum">
         <span class="accession">No. 0211</span>
-        <img src="images/laburnum-alpinum.jpg" alt="Alpine laburnum" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Alpine laburnum: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Alpine laburnum</div>
         <span class="sci">Laburnum alpinum</span>
         <div class="rank-line">
@@ -345,7 +353,7 @@
 
       <article class="specimen-card" id="dracaena">
         <span class="accession">No. 0304</span>
-        <img src="images/dracaena-trifasciata.jpg" alt="Snake plant" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Snake plant: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Snake plant</div>
         <span class="sci">Dracaena trifasciata</span>
         <div class="rank-line">
@@ -364,7 +372,7 @@
 
       <article class="specimen-card" id="dracaena-cinnabari">
         <span class="accession">No. 0305</span>
-        <img src="images/dracaena-cinnabari.jpg" alt="Dragon blood tree" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Dragon blood tree: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Dragon blood tree</div>
         <span class="sci">Dracaena cinnabari</span>
         <div class="rank-line">
@@ -387,7 +395,7 @@
 
       <article class="specimen-card" id="chlorophytum">
         <span class="accession">No. 0306</span>
-        <img src="images/chlorophytum-comosum.jpg" alt="Spider plant" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Spider plant: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Spider plant</div>
         <span class="sci">Chlorophytum comosum</span>
         <div class="rank-line">
@@ -406,7 +414,7 @@
 
       <article class="specimen-card" id="chlorophytum-tuberosum">
         <span class="accession">No. 0307</span>
-        <img src="images/chlorophytum-tuberosum.jpg" alt="Musli" class="specimen-img">
+        <div class="specimen-photo-placeholder" role="img" aria-label="Musli: photograph unavailable">Photo unavailable</div>
         <div class="common-name">Musli</div>
         <span class="sci">Chlorophytum tuberosum</span>
         <div class="rank-line">
@@ -439,14 +447,14 @@
   <div class="wrap">
     <p><strong>WikiPlant</strong> — a community field index.</p>
     <nav aria-label="Footer navigation">
-      <button type="button" onclick="location.href='index.html'">Index</button>
-      <button type="button" onclick="location.href='explorer.html'">Explore</button>
-      <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-      <button type="button" onclick="location.href='aboutus.html'">About Us</button>
-      <button type="button" onclick="location.href='register.html'">Register</button>
-      <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-      <button type="button" onclick="location.href='login.html'">Login</button>
-      <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact Us</button>
+      <a href="index.html">Index</a>
+      <a href="explorer.html">Explore</a>
+      <a href="contributor.html">Contributor</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="register.html">Register</a>
+      <a href="enquiry_form.html">Enquiry</a>
+      <a href="login.html">Login</a>
+      <a href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
     </nav>
     <p>&copy; 2026 WikiPlant. All rights reserved.</p>
   </div>

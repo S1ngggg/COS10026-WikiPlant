@@ -1,0 +1,12 @@
+---
+description: This project must use HTML and CSS only, with no JavaScript.
+alwaysApply: true
+---
+
+# HTML and CSS only
+
+- This restriction applies to every page and future website change in this project.
+- Do not add JavaScript files, script elements, JavaScript URLs, inline event handlers, or libraries and frameworks that require JavaScript.
+- Use native HTML controls and CSS for interactions. Navigation links must use ordinary anchor elements with `href` attributes.
+- Reuse `css/style.css` as the single shared stylesheet.
+- Keep any temporary verification programs outside this project.

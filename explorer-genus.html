@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Genera — WikiPlant</title>
   <link rel="stylesheet" href="css/style.css">
-<script src="js/navigation.js" defer></script>
 </head>
 
 <body class="explorer-page">
@@ -17,6 +16,14 @@
         <img src="images/logo.png" alt="WikiPlant logo">
         <span class="brand-motto">Wiki Plant</span>
       </a>
+      <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+      <label class="nav-toggle" for="navigation-toggle">
+          <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="nav-close" aria-hidden="true">&times;</span>
+      </label>
+      <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+      <div class="nav-drawer-panel" id="navigation-panel">
+          <div class="nav-drawer-topbar"><span>Navigation</span></div>
       <nav class="main-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Index</a></li>
@@ -36,6 +43,7 @@
           <li><a href="login.html">Login</a></li>
         </ul>
       </nav>
+      </div>
     </div>
   </header>
 
@@ -72,7 +80,7 @@
               style="text-decoration:none;">Araceae</a></span>
           <div class="species-tags">
             <a class="tag" href="explorer-species.html#monstera">M. deliciosa</a>
-            <a class="tag" href="explorer-species.html#monstera">M. acuminata</a>
+            <a class="tag" href="explorer-species.html#monstera-acuminata">M. acuminata</a>
           </div>
           <a class="btn btn-outline" href="explorer-species.html#monstera">View species record</a>
         </article>
@@ -84,7 +92,7 @@
               style="text-decoration:none;">Araceae</a></span>
           <div class="species-tags">
             <a class="tag" href="explorer-species.html#spathiphyllum">S. wallisii</a>
-            <a class="tag" href="explorer-species.html#spathiphyllum">S. cannifolium</a>
+            <a class="tag" href="explorer-species.html#spathiphyllum-cannifolium">S. cannifolium</a>
           </div>
           <a class="btn btn-outline" href="explorer-species.html#spathiphyllum">View species record</a>
         </article>
@@ -106,7 +114,7 @@
               style="text-decoration:none;">Rosaceae</a></span>
           <div class="species-tags">
             <a class="tag" href="explorer-species.html#rosa">R. canina</a>
-            <a class="tag" href="explorer-species.html#rosa">R. banksiae</a>
+            <a class="tag" href="explorer-species.html#rosa-banksiae">R. banksiae</a>
           </div>
           <a class="btn btn-outline" href="explorer-species.html#rosa">View species record</a>
         </article>
@@ -119,7 +127,7 @@
               style="text-decoration:none;">Rosaceae</a></span>
           <div class="species-tags">
             <a class="tag" href="explorer-species.html#fragaria">F. vesca</a>
-            <a class="tag" href="explorer-species.html#fragaria">F. moschata</a>
+            <a class="tag" href="explorer-species.html#fragaria-moschata">F. moschata</a>
           </div>
           <a class="btn btn-outline" href="explorer-species.html#fragaria">View species record</a>
         </article>
@@ -140,7 +148,7 @@
               style="text-decoration:none;">Fabaceae</a></span>
           <div class="species-tags">
             <a class="tag" href="explorer-species.html#pisum">P. sativum</a>
-            <a class="tag" href="explorer-species.html#pisum">P.  fulvum</a>
+            <a class="tag" href="explorer-species.html#pisum-fulvum">P.  fulvum</a>
 
           </div>
           <a class="btn btn-outline" href="explorer-species.html#pisum">View species record</a>
@@ -153,7 +161,7 @@
               style="text-decoration:none;">Fabaceae</a></span>
           <div class="species-tags">
             <a class="tag" href="explorer-species.html#laburnum">L. anagyroides</a>
-            <a class="tag" href="explorer-species.html#laburnum">L. alpinum</a>
+            <a class="tag" href="explorer-species.html#laburnum-alpinum">L. alpinum</a>
           </div>
           <a class="btn btn-outline" href="explorer-species.html#laburnum">View species record</a>
         </article>
@@ -175,7 +183,7 @@
               style="text-decoration:none;">Asparagaceae</a></span>
           <div class="species-tags">
             <a class="tag" href="explorer-species.html#dracaena">D. trifasciata</a>
-            <a class="tag" href="explorer-species.html#dracaena">D. cinnabari</a>
+            <a class="tag" href="explorer-species.html#dracaena-cinnabari">D. cinnabari</a>
           </div>
           <a class="btn btn-outline" href="explorer-species.html#dracaena">View species record</a>
         </article>
@@ -187,7 +195,7 @@
               style="text-decoration:none;">Asparagaceae</a></span>
           <div class="species-tags">
             <a class="tag" href="explorer-species.html#chlorophytum">C. comosum</a>
-            <a class="tag" href="explorer-species.html#chlorophytum">C. tuberosum</a>
+            <a class="tag" href="explorer-species.html#chlorophytum-tuberosum">C. tuberosum</a>
           </div>
           <a class="btn btn-outline" href="explorer-species.html#chlorophytum">View species record</a>
         </article>
@@ -210,14 +218,14 @@
       <p><strong>WikiPlant</strong> — a community field index.</p>
 
       <nav aria-label="Footer navigation">
-        <button type="button" onclick="location.href='index.html'">Index</button>
-        <button type="button" onclick="location.href='explorer.html'">Explore</button>
-        <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-        <button type="button" onclick="location.href='aboutus.html'">About Us</button>
-        <button type="button" onclick="location.href='register.html'">Register</button>
-        <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-        <button type="button" onclick="location.href='login.html'">Login</button>
-        <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact Us</button>
+        <a href="index.html">Index</a>
+        <a href="explorer.html">Explore</a>
+        <a href="contributor.html">Contributor</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="register.html">Register</a>
+        <a href="enquiry_form.html">Enquiry</a>
+        <a href="login.html">Login</a>
+        <a href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
       </nav>
 
       <p>&copy; 2026 WikiPlant. All rights reserved.</p>
