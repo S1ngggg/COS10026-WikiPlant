@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explore — WikiPlant</title>
   <link rel="stylesheet" href="css/style.css">
-<script src="js/navigation.js" defer></script>
 </head>
 
 <body class="explorer-page">
@@ -17,6 +16,14 @@
         <img src="images/logo.png" alt="WikiPlant logo">
         <span class="brand-motto">Wiki Plant</span>
       </a>
+      <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+      <label class="nav-toggle" for="navigation-toggle">
+          <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="nav-close" aria-hidden="true">&times;</span>
+      </label>
+      <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+      <div class="nav-drawer-panel" id="navigation-panel">
+          <div class="nav-drawer-topbar"><span>Navigation</span></div>
       <nav class="main-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Index</a></li>
@@ -36,6 +43,7 @@
           <li><a href="login.html">Login</a></li>
         </ul>
       </nav>
+      </div>
     </div>
   </header>
 
@@ -88,14 +96,14 @@
       <p><strong>WikiPlant</strong> — a community field index.</p>
 
       <nav aria-label="Footer navigation">
-        <button type="button" onclick="location.href='index.html'">Index</button>
-        <button type="button" onclick="location.href='explorer.html'">Explore</button>
-        <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-        <button type="button" onclick="location.href='aboutus.html'">About Us</button>
-        <button type="button" onclick="location.href='register.html'">Register</button>
-        <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-        <button type="button" onclick="location.href='login.html'">Login</button>
-        <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact Us</button>
+        <a href="index.html">Index</a>
+        <a href="explorer.html">Explore</a>
+        <a href="contributor.html">Contributor</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="register.html">Register</a>
+        <a href="enquiry_form.html">Enquiry</a>
+        <a href="login.html">Login</a>
+        <a href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
       </nav>
 
       <p>&copy; 2026 WikiPlant. All rights reserved.</p>
