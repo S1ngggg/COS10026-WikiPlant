@@ -106,24 +106,6 @@
     <main class="about-main">
 
 <!-- =====================================================
-             PAGE INTRODUCTION
-        ====================================================== -->
-
-        <section class="about-intro" aria-labelledby="about-title">
-
-            <h1 id="about-title">
-                The people behind<br>
-                the page<span class="about-period">.</span>
-            </h1>
-
-            <p>
-                A little introduction to our studies, our roots,
-                and the things we enjoy.
-            </p>
-
-        </section>
-
-<!-- =====================================================
              SEAN PROFILE
         ====================================================== -->
 
@@ -135,10 +117,15 @@
                     Sean Liew Shou Tian profile and contact information
                 </caption>
 
+                <colgroup>
+                    <col class="about-label-column">
+                    <col>
+                </colgroup>
+
                 <tbody>
 
                     <tr>
-                        <td class="about-portrait-cell">
+                        <td class="about-portrait-cell" colspan="2">
                             <figure class="about-portrait">
                                 <!-- Replace the placeholder with Sean's personal photo. -->
                                 <img
@@ -153,29 +140,25 @@
 
                     <tr>
 
-                        <td class="about-name-cell">
+                        <td class="about-name-cell" colspan="2">
 
                             <p class="about-eyebrow">
                                 Meet the member
                             </p>
 
-                            <h2 id="member-name" class="about-name">
+                            <h1 id="member-name" class="about-name">
                                 Sean Liew Shou Tian
-                            </h2>
+                            </h1>
 
                         </td>
 
                     </tr>
 
-                    <tr>
-
-                        <td class="about-profile-content">
+                    <tr class="about-info-row">
+                        <th scope="row">Introduction</th>
+                        <td class="about-profile-value">
 
                             <div class="about-bio">
-
-                                <p class="about-eyebrow">
-                                    Student &amp; WikiPlant team member
-                                </p>
 
                                 <h3>
                                     Hello, I&rsquo;m Sean.
@@ -189,51 +172,29 @@
                                     to know a little more about me.
                                 </p>
 
-                                <dl class="about-academic-details">
-
-                                    <div>
-
-                                        <dt>
-                                            Student number
-                                        </dt>
-
-                                        <dd class="about-student-number">
-                                            106763150
-                                        </dd>
-
-                                    </div>
-
-                                    <div>
-
-                                        <dt>
-                                            Course
-                                        </dt>
-
-                                        <dd class="about-course">
-                                            Bachelor in Computer Science
-                                        </dd>
-
-                                    </div>
-
-                                </dl>
-
                             </div>
 
                         </td>
 
                     </tr>
 
+                    <tr class="about-info-row">
+                        <th scope="row">Student number</th>
+                        <td class="about-profile-value about-student-number">106763150</td>
+                    </tr>
+
+                    <tr class="about-info-row">
+                        <th scope="row">Course</th>
+                        <td class="about-profile-value about-course">Bachelor in Computer Science</td>
+                    </tr>
+
                 </tbody>
 
                 <tfoot>
 
-                    <tr>
-
-                        <td class="about-contact">
-
-                            <span class="about-contact-label">
-                                Let&rsquo;s get in touch
-                            </span>
+                    <tr class="about-info-row">
+                        <th scope="row">Email</th>
+                        <td class="about-profile-value about-contact">
 
                             <a href="mailto:106763150@students.swinburne.edu.my">
 
