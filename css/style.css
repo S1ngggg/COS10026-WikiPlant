@@ -2008,6 +2008,23 @@ body.explorer-page {
     margin-bottom: 12px;
 }
 
+.explorer-page .map-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    margin: 4px 0 14px;
+    background: var(--paper-deep);
+}
+
+.explorer-page .map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 .explorer-page .btn {
     display: inline-block;
     font-family: 'Work Sans', sans-serif;
