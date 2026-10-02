@@ -1856,10 +1856,24 @@ body.explorer-page {
     margin: 14px 0 18px;
 }
 
-.explorer-page .family-card .spec-table .genus-tags {
-    display: inline-flex;
-    vertical-align: middle;
-    margin: 0 0 0 8px;
+.explorer-page .family-card .spec-table .logged-cell {
+    display: grid;
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+    align-items: start;
+    column-gap: 8px;
+}
+
+.explorer-page .family-card .spec-table .logged-cell > span {
+    align-self: center;
+}
+
+.explorer-page .family-card .spec-table .genus-tags,
+.explorer-page .family-card .spec-table .species-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-width: 0;
+    margin: 0;
 }
 
 .explorer-page .family-card .species-tags {
@@ -3086,12 +3100,130 @@ body.about-page {
     color: #8F4F2C;
 }
 
+/* Sean's profile: centred photo, followed by his name and details. */
+.about-page .about-profile-sean .about-portrait-cell {
+    padding: 36px 24px 0;
+}
+
+.about-page .about-profile-sean .about-portrait {
+    display: flow-root;
+    float: none;
+    width: min(240px, 100%);
+    margin: 0 auto;
+}
+
+.about-page .about-profile-sean .about-photo {
+    width: 100%;
+    margin: 0;
+}
+
+.about-page .about-profile-sean .about-bio {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-top: 0;
+    text-align: center;
+}
+
 .about-page .about-personal {
     margin-top: 66px;
 }
 
-.about-page .about-personal + .about-profile {
-    margin-top: 66px;
+.about-page .about-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+}
+
+.about-page .about-photo-initial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #B8C2AB;
+    border-radius: 50%;
+    background: #E8EDE1;
+    color: #586953;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 3rem;
+}
+
+.about-page .about-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 42px 0 64px;
+    padding-top: 24px;
+    border-top: 1px solid #D0D5C6;
+}
+
+.about-page .about-pagination-end {
+    justify-content: flex-end;
+}
+
+.about-page .about-pagination-start {
+    justify-content: flex-start;
+}
+
+.about-page .about-pagination-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+    color: #263E32;
+    text-decoration: none;
+}
+
+.about-page .about-pagination-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.about-page .about-pagination-next .about-pagination-copy {
+    text-align: right;
+}
+
+.about-page .about-pagination-label {
+    color: #586953;
+    font-size: 0.62em;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.about-page .about-pagination-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.15em;
+    line-height: 1.3;
+}
+
+.about-page .about-pagination-arrow {
+    display: flex;
+    flex: 0 0 52px;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid #617358;
+    border-radius: 50%;
+    background: #EEF1E7;
+    font-size: 1.5rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.about-page .about-pagination-link:hover .about-pagination-arrow {
+    background: #263E32;
+    color: #FFFEFA;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-page .about-pagination-arrow {
+        transition: none;
+    }
 }
 
 .about-page .about-section-heading {
