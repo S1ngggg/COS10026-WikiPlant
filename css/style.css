@@ -2281,7 +2281,8 @@ body.explorer-page {
 
 .explorer-page .filter-bar {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 9px;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
@@ -2303,23 +2304,51 @@ body.explorer-page {
 }
 
 .explorer-page .filter-bar label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
     cursor: pointer;
-    padding: 9px 18px;
+    padding: 7px 16px;
     border: 1px solid var(--line);
     border-radius: 999px;
     font-size: 0.9rem;
     background: var(--paper-card);
     color: var(--ink-soft);
+    line-height: 1.2;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.explorer-page .filter-bar label:hover {
+    border-color: var(--sage-deep);
+    color: var(--sage-deep);
 }
 
 .explorer-page .filter-bar .filter-heading {
     flex: 1 1 100%;
-    margin-top: 8px;
-    padding-top: 12px;
+    margin-top: 12px;
+    padding-top: 14px;
     border-top: 1px solid var(--line-soft);
     color: var(--ink);
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+.explorer-page .filter-bar .filter-heading:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+@media (max-width: 520px) {
+    .explorer-page .filter-bar {
+        gap: 8px;
+    }
+
+    .explorer-page .filter-bar label {
+        min-height: 36px;
+        padding: 7px 12px;
+        font-size: 0.84rem;
+    }
 }
 
 .explorer-page .filter-bar input[type="radio"]:checked+label {
