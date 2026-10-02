@@ -63,10 +63,42 @@
     <a href="explorer-species.html" aria-current="page">Species</a>
   </nav>
 
+  <div class="filter-bar" role="group" aria-label="Filter species by family or genus">
+    <span class="filter-heading">Filter by family</span>
+    <input type="radio" name="family-filter" id="f-all" checked>
+    <label for="f-all">All families</label>
+    <input type="radio" name="family-filter" id="f-araceae">
+    <label for="f-araceae">Araceae</label>
+    <input type="radio" name="family-filter" id="f-rosaceae">
+    <label for="f-rosaceae">Rosaceae</label>
+    <input type="radio" name="family-filter" id="f-fabaceae">
+    <label for="f-fabaceae">Fabaceae</label>
+    <input type="radio" name="family-filter" id="f-asparagaceae">
+    <label for="f-asparagaceae">Asparagaceae</label>
+
+    <span class="filter-heading">Filter by genus</span>
+    <input type="radio" name="genus-filter" id="g-all" checked>
+    <label for="g-all">All genera</label>
+    <input type="radio" name="genus-filter" id="g-monstera">
+    <label for="g-monstera">Monstera</label>
+    <input type="radio" name="genus-filter" id="g-spathiphyllum">
+    <label for="g-spathiphyllum">Spathiphyllum</label>
+    <input type="radio" name="genus-filter" id="g-rosa">
+    <label for="g-rosa">Rosa</label>
+    <input type="radio" name="genus-filter" id="g-fragaria">
+    <label for="g-fragaria">Fragaria</label>
+    <input type="radio" name="genus-filter" id="g-pisum">
+    <label for="g-pisum">Pisum</label>
+    <input type="radio" name="genus-filter" id="g-laburnum">
+    <label for="g-laburnum">Laburnum</label>
+    <input type="radio" name="genus-filter" id="g-dracaena">
+    <label for="g-dracaena">Dracaena</label>
+    <input type="radio" name="genus-filter" id="g-chlorophytum">
+    <label for="g-chlorophytum">Chlorophytum</label>
+
   <div class="groups specimen-grid">
 
-    <!-- ================= ARACEAE (天南星科) ================= -->
-    <div class="group" data-family="araceae" style="display: contents;">
+    <div class="group" data-family="araceae">
       <div class="family-heading" id="araceae">
         <h2 class="fam-latin sci">Araceae</h2>
         <span class="fam-common">The arum family — leaves that shelter a spadix and spathe.</span>
@@ -87,6 +119,11 @@
           <span class="tag">Species: deliciosa</span>
         </div>
         <div class="distribution">📍 Native: Southern Mexico to Panama</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Monstera deliciosa"
+            src="https://www.google.com/maps?q=Monstera+deliciosa+Southern+Mexico+to+Panama&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>Wide, glossy leaves that develop fenestrations as the plant matures. Climbs by aerial roots in its native range.</p>
       </article>
 
@@ -101,6 +138,11 @@
           <span class="tag">Species: acuminata</span>
         </div>
         <div class="distribution">📍 Native: Central America & Mexico</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Monstera acuminata"
+            src="https://www.google.com/maps?q=Monstera+acuminata+Central+America+Mexico&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A tropical climbing vine native to Central America and Mexico, famous for its unique "shingle" growth habit and holey leaves.</p>
       </article>
 
@@ -119,6 +161,11 @@
           <span class="tag">Species: wallisii</span>
         </div>
         <div class="distribution">📍 Native: Colombia & Venezuela</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Spathiphyllum wallisii"
+            src="https://www.google.com/maps?q=Spathiphyllum+wallisii+Colombia+Venezuela&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>Dark lance-shaped leaves and a single white spathe curling around a pale spadix. Tolerant of low light.</p>
       </article>
 
@@ -133,12 +180,16 @@
           <span class="tag">Species: cannifolium</span>
         </div>
         <div class="distribution">📍 Native: Northern South America</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Spathiphyllum cannifolium"
+            src="https://www.google.com/maps?q=Spathiphyllum+cannifolium+Northern+South+America&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A tropical, evergreen herbaceous perennial belonging to the Araceae (arum) family.</p>
       </article>
     </div>
 
-    <!-- ================= ROSACEAE (蔷薇科) ================= -->
-    <div class="group" data-family="rosaceae" style="display: contents;">
+    <div class="group" data-family="rosaceae">
       <div class="family-heading" id="rosaceae">
         <h2 class="fam-latin sci">Rosaceae</h2>
         <span class="fam-common">The rose family — five-petalled flowers, often with thorns.</span>
@@ -159,6 +210,11 @@
           <span class="tag">Species: canina</span>
         </div>
         <div class="distribution">📍 Native: Europe & Western Asia</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Rosa canina"
+            src="https://www.google.com/maps?q=Rosa+canina+Europe+Western+Asia&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A scrambling hedgerow rose with pale pink flowers and hooked thorns along an arching stem.</p>
       </article>
 
@@ -173,6 +229,11 @@
           <span class="tag">Species: banksiae</span>
         </div>
         <div class="distribution">📍 Native: Central & Western China</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Rosa banksiae"
+            src="https://www.google.com/maps?q=Xizang+China&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A fast-growing, nearly thornless climbing shrub native to central and western China.</p>
       </article>
 
@@ -190,7 +251,12 @@
           <a class="tag" href="explorer-genus.html#fragaria">Genus: Fragaria</a>
           <span class="tag">Species: vesca</span>
         </div>
-        <div class="distribution">📍 Native: Northern Hemisphere</div>
+        <div class="distribution">📍 Native: North America</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Fragaria vesca"
+            src="https://www.google.com/maps?q=North+America&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>Trifoliate leaves and small white flowers, followed by fruit far smaller than its cultivated relatives.</p>
       </article>
 
@@ -205,12 +271,17 @@
           <span class="tag">Species: moschata</span>
         </div>
         <div class="distribution">📍 Native: Europe</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Fragaria moschata"
+            src="https://www.google.com/maps?q=Fragaria+moschata+Europe&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A European wild strawberry species prized for its intensely aromatic, uniquely flavored fruit.</p>
       </article>
     </div>
 
-    <!-- ================= FABACEAE (豆科) ================= -->
-    <div class="group" data-family="fabaceae" style="display: contents;">
+
+    <div class="group" data-family="fabaceae">
       <div class="family-heading" id="fabaceae">
         <h2 class="fam-latin sci">Fabaceae</h2>
         <span class="fam-common">The legume family — pod fruits and nitrogen-fixing roots.</span>
@@ -230,7 +301,12 @@
           <a class="tag" href="explorer-genus.html#pisum">Genus: Pisum</a>
           <span class="tag">Species: sativum</span>
         </div>
-        <div class="distribution">📍 Native: Mediterranean Basin</div>
+        <div class="distribution">📍 Native: Russia</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Pisum sativum"
+            src="https://www.google.com/maps?q=Russia&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A climbing annual with tendrilled compound leaves, grown for the seed pods it sets after flowering.</p>
       </article>
 
@@ -245,6 +321,11 @@
           <span class="tag">Species: fulvum</span>
         </div>
         <div class="distribution">📍 Native: Middle East</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Pisum fulvum"
+            src="https://www.google.com/maps?q=Pisum+fulvum+Middle+East&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A wild annual plant belonging to the legume family (Fabaceae) and a close wild relative of the cultivated garden pea.</p>
       </article>
 
@@ -263,6 +344,11 @@
           <span class="tag">Species: anagyroides</span>
         </div>
         <div class="distribution">📍 Native: Central & Southern Europe</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Laburnum anagyroides"
+            src="https://www.google.com/maps?q=Laburnum+anagyroides+Central+Southern+Europe&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A small tree hung with long yellow flower chains in late spring, followed by slender seed pods.</p>
       </article>
 
@@ -277,12 +363,16 @@
           <span class="tag">Species: alpinum</span>
         </div>
         <div class="distribution">📍 Native: Central & Southern Europe</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Laburnum alpinum"
+            src="https://www.google.com/maps?q=Laburnum+alpinum+Central+Southern+Europe&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A small deciduous tree or large shrub famous for its long, hanging chains of bright yellow, fragrant flowers.</p>
       </article>
     </div>
 
-    <!-- ================= ASPARAGACEAE (天门冬科) ================= -->
-    <div class="group" data-family="asparagaceae" style="display: contents;">
+    <div class="group" data-family="asparagaceae">
       <div class="family-heading" id="asparagaceae">
         <h2 class="fam-latin sci">Asparagaceae</h2>
         <span class="fam-common">A family of strap-like leaves, redrawn by taxonomists more than once.</span>
@@ -303,6 +393,11 @@
           <span class="tag">Species: trifasciata</span>
         </div>
         <div class="distribution">📍 Native: Tropical West Africa</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Dracaena trifasciata"
+            src="https://www.google.com/maps?q=Dracaena+trifasciata+Tropical+West+Africa&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>Stiff, upright leaves banded in mottled green. Reclassified from Sansevieria in recent revisions.</p>
       </article>
 
@@ -317,6 +412,11 @@
           <span class="tag">Species: cinnabari</span>
         </div>
         <div class="distribution">📍 Native: Socotra Archipelago</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Dracaena cinnabari"
+            src="https://www.google.com/maps?q=Dracaena+cinnabari+Socotra+Archipelago&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A rare, iconic evergreen tree famous for its dense, umbrella-shaped canopy and crimson-red resin.</p>
       </article>
 
@@ -335,6 +435,11 @@
           <span class="tag">Species: comosum</span>
         </div>
         <div class="distribution">📍 Native: Southern Africa</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Chlorophytum comosum"
+            src="https://www.google.com/maps?q=Chlorophytum+comosum+Southern+Africa&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>Arching grass-like leaves that send out long runners tipped with plantlets.</p>
       </article>
 
@@ -348,15 +453,21 @@
           <a class="tag" href="explorer-genus.html#chlorophytum">Genus: Chlorophytum</a>
           <span class="tag">Species: tuberosum</span>
         </div>
-        <div class="distribution">📍 Native: India & Africa</div>
+        <div class="distribution">📍 Native: Circar mountains, India</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Chlorophytum tuberosum"
+            src="https://www.google.com/maps?q=Coromandel+Coast+India&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A small, tuberous perennial herb in the asparagus family that grows 20 to 50 cm tall.</p>
       </article>
     </div>
 
   </div>
+  </div>
 </div>
 
-<div class="wrap" style="margin-bottom: 50px;">
+<div class="wrap species-cta-wrap">
     <div class="cta-text-box">
       <h2>Help Us Grow the Index</h2>
       <p>WikiPlant is powered by a community of plant enthusiasts. See who is building our database or join us to share your own knowledge.</p>

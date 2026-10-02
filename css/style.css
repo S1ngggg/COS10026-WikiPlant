@@ -2033,6 +2033,23 @@ body.explorer-page {
     margin-bottom: 12px;
 }
 
+.explorer-page .map-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    margin: 4px 0 14px;
+    background: var(--paper-deep);
+}
+
+.explorer-page .map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 .explorer-page .btn {
     display: inline-block;
     font-family: 'Work Sans', sans-serif;
@@ -2264,12 +2281,15 @@ body.explorer-page {
 
 .explorer-page .filter-bar {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 9px;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
-.explorer-page .filter-bar>.groups {
+.explorer-page .filter-bar>.groups,
+.explorer-page .filter-bar>.family-grid,
+.explorer-page .filter-bar>.family-section {
     flex: 1 1 100%;
     margin-top: 30px;
     padding-top: 26px;
@@ -2284,13 +2304,51 @@ body.explorer-page {
 }
 
 .explorer-page .filter-bar label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
     cursor: pointer;
-    padding: 9px 18px;
+    padding: 7px 16px;
     border: 1px solid var(--line);
     border-radius: 999px;
     font-size: 0.9rem;
     background: var(--paper-card);
     color: var(--ink-soft);
+    line-height: 1.2;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.explorer-page .filter-bar label:hover {
+    border-color: var(--sage-deep);
+    color: var(--sage-deep);
+}
+
+.explorer-page .filter-bar .filter-heading {
+    flex: 1 1 100%;
+    margin-top: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line-soft);
+    color: var(--ink);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.explorer-page .filter-bar .filter-heading:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+@media (max-width: 520px) {
+    .explorer-page .filter-bar {
+        gap: 8px;
+    }
+
+    .explorer-page .filter-bar label {
+        min-height: 36px;
+        padding: 7px 12px;
+        font-size: 0.84rem;
+    }
 }
 
 .explorer-page .filter-bar input[type="radio"]:checked+label {
@@ -2320,6 +2378,92 @@ body.explorer-page {
 .explorer-page #f-fabaceae:checked~.groups .group[data-family="fabaceae"],
 .explorer-page #f-asparagaceae:checked~.groups .group[data-family="asparagaceae"] {
     display: contents;
+}
+
+.explorer-page .filter-bar>.family-grid .family-card,
+.explorer-page .filter-bar>.family-section {
+    display: none;
+}
+
+.explorer-page #f-all:checked~.family-grid .family-card,
+.explorer-page #f-araceae:checked~.family-grid #araceae,
+.explorer-page #f-rosaceae:checked~.family-grid #rosaceae,
+.explorer-page #f-fabaceae:checked~.family-grid #fabaceae,
+.explorer-page #f-asparagaceae:checked~.family-grid #asparagaceae {
+    display: flex;
+}
+
+.explorer-page #f-all:checked~.family-section,
+.explorer-page #f-araceae:checked~#araceae,
+.explorer-page #f-rosaceae:checked~#rosaceae,
+.explorer-page #f-fabaceae:checked~#fabaceae,
+.explorer-page #f-asparagaceae:checked~#asparagaceae {
+    display: block;
+}
+
+.explorer-page #g-monstera:checked~.family-section .genus-card:not(#monstera),
+.explorer-page #g-spathiphyllum:checked~.family-section .genus-card:not(#spathiphyllum),
+.explorer-page #g-rosa:checked~.family-section .genus-card:not(#rosa),
+.explorer-page #g-fragaria:checked~.family-section .genus-card:not(#fragaria),
+.explorer-page #g-pisum:checked~.family-section .genus-card:not(#pisum),
+.explorer-page #g-laburnum:checked~.family-section .genus-card:not(#laburnum),
+.explorer-page #g-dracaena:checked~.family-section .genus-card:not(#dracaena),
+.explorer-page #g-chlorophytum:checked~.family-section .genus-card:not(#chlorophytum) {
+    display: none;
+}
+
+.explorer-page #g-monstera:checked~#rosaceae,
+.explorer-page #g-monstera:checked~#fabaceae,
+.explorer-page #g-monstera:checked~#asparagaceae,
+.explorer-page #g-spathiphyllum:checked~#rosaceae,
+.explorer-page #g-spathiphyllum:checked~#fabaceae,
+.explorer-page #g-spathiphyllum:checked~#asparagaceae,
+.explorer-page #g-rosa:checked~#araceae,
+.explorer-page #g-rosa:checked~#fabaceae,
+.explorer-page #g-rosa:checked~#asparagaceae,
+.explorer-page #g-fragaria:checked~#araceae,
+.explorer-page #g-fragaria:checked~#fabaceae,
+.explorer-page #g-fragaria:checked~#asparagaceae,
+.explorer-page #g-pisum:checked~#araceae,
+.explorer-page #g-pisum:checked~#rosaceae,
+.explorer-page #g-pisum:checked~#asparagaceae,
+.explorer-page #g-laburnum:checked~#araceae,
+.explorer-page #g-laburnum:checked~#rosaceae,
+.explorer-page #g-laburnum:checked~#asparagaceae,
+.explorer-page #g-dracaena:checked~#araceae,
+.explorer-page #g-dracaena:checked~#rosaceae,
+.explorer-page #g-dracaena:checked~#fabaceae,
+.explorer-page #g-chlorophytum:checked~#araceae,
+.explorer-page #g-chlorophytum:checked~#rosaceae,
+.explorer-page #g-chlorophytum:checked~#fabaceae {
+    display: none;
+}
+
+.explorer-page #g-monstera:checked~.groups .genus-heading:not(#genus-monstera),
+.explorer-page #g-monstera:checked~.groups .specimen-card:not(#monstera):not([id^="monstera-"]),
+.explorer-page #g-monstera:checked~.groups .family-heading:not(#araceae),
+.explorer-page #g-spathiphyllum:checked~.groups .genus-heading:not(#genus-spathiphyllum),
+.explorer-page #g-spathiphyllum:checked~.groups .specimen-card:not(#spathiphyllum):not([id^="spathiphyllum-"]),
+.explorer-page #g-spathiphyllum:checked~.groups .family-heading:not(#araceae),
+.explorer-page #g-rosa:checked~.groups .genus-heading:not(#genus-rosa),
+.explorer-page #g-rosa:checked~.groups .specimen-card:not(#rosa):not([id^="rosa-"]),
+.explorer-page #g-rosa:checked~.groups .family-heading:not(#rosaceae),
+.explorer-page #g-fragaria:checked~.groups .genus-heading:not(#genus-fragaria),
+.explorer-page #g-fragaria:checked~.groups .specimen-card:not(#fragaria):not([id^="fragaria-"]),
+.explorer-page #g-fragaria:checked~.groups .family-heading:not(#rosaceae),
+.explorer-page #g-pisum:checked~.groups .genus-heading:not(#genus-pisum),
+.explorer-page #g-pisum:checked~.groups .specimen-card:not(#pisum):not([id^="pisum-"]),
+.explorer-page #g-pisum:checked~.groups .family-heading:not(#fabaceae),
+.explorer-page #g-laburnum:checked~.groups .genus-heading:not(#genus-laburnum),
+.explorer-page #g-laburnum:checked~.groups .specimen-card:not(#laburnum):not([id^="laburnum-"]),
+.explorer-page #g-laburnum:checked~.groups .family-heading:not(#fabaceae),
+.explorer-page #g-dracaena:checked~.groups .genus-heading:not(#genus-dracaena),
+.explorer-page #g-dracaena:checked~.groups .specimen-card:not(#dracaena):not([id^="dracaena-"]),
+.explorer-page #g-dracaena:checked~.groups .family-heading:not(#asparagaceae),
+.explorer-page #g-chlorophytum:checked~.groups .genus-heading:not(#genus-chlorophytum),
+.explorer-page #g-chlorophytum:checked~.groups .specimen-card:not(#chlorophytum):not([id^="chlorophytum-"]),
+.explorer-page #g-chlorophytum:checked~.groups .family-heading:not(#asparagaceae) {
+    display: none;
 }
 
 .explorer-page .family-heading {
@@ -2624,6 +2768,10 @@ body.explorer-page {
     max-width: 700px; /* 控制文本框的最大宽度，让它居中 */
     margin: 40px auto 0 auto;
     box-shadow: 4px 5px 0 var(--shadow, rgba(43, 51, 35, 0.14)); /* 采用你其他卡片的投影风格 */
+}
+
+.explorer-page .species-cta-wrap {
+    margin-bottom: 50px;
 }
 
 .cta-text-box h2 {
