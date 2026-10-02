@@ -66,12 +66,12 @@
                 <label class="static-photo upload-box" for="plant-photo" aria-label="Upload a plant photo"
                     title="Upload a plant photo">
                     <img src="images/cloud-upload.png" alt="Upload icon" class="cloud-upload" id="upload-icon">
-                    <img class="images/upload-preview" id="upload-preview" alt="Selected plant photo preview" hidden>
                     <input id="plant-photo" type="file" accept="image/*">
                 </label>
                 <div class="identify-action-row">
-                    <button type="button" class="identify-btn" id="identify-btn">Identify plant</button>
+                    <button type="button" class="identify-btn" id="identify-btn" disabled aria-describedby="identify-preview-note">Identify plant</button>
                 </div>
+                <p class="identify-preview-note" id="identify-preview-note">This page is for demonstration only. Plant identification is not available yet.</p>
             </div>
         </section>
 

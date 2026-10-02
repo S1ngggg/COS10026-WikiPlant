@@ -476,6 +476,138 @@ body.enquiry-page {
 /* =========================================================
    4. Main Content Layout
    ========================================================= */
+/* =========================================================
+   WikiPlant - Contributor Page
+   Author: Bryan Tan
+   Description: Contributor page styling
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE LAYOUT
+   ========================================================= */
+
+body.contributor-page {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.contributor-page .page_main {
+    width: min(var(--max), calc(100% - 48px));
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 48px 0 60px;
+}
+
+/* =========================================================
+   2. PAGE INTRO / HERO
+   ========================================================= */
+
+.contributor-page .page-intro {
+    position: relative;
+    margin-bottom: 32px;
+    padding: 48px;
+    overflow: hidden;
+
+    background: var(--paper-card);
+    border: 1px solid var(--line-soft);
+    border-radius: 12px;
+
+    box-shadow: 3px 4px 0 var(--shadow);
+}
+
+.contributor-page .page-intro::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    bottom: -100px;
+
+    width: 260px;
+    height: 260px;
+
+    background: rgba(124, 148, 115, 0.14);
+    border-radius: 50%;
+}
+
+.contributor-page .eyebrow {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 10px;
+
+    color: var(--sage-deep);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contributor-page .page-intro h1 {
+    position: relative;
+    z-index: 1;
+
+    max-width: 800px;
+    margin: 0;
+
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-size: 48px;
+    font-weight: 480;
+    line-height: 1.1;
+}
+
+.contributor-page .intro-copy {
+    position: relative;
+    z-index: 1;
+
+    max-width: 760px;
+    margin: 18px 0 0;
+
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.contributor-page .intro-actions {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.contributor-page .intro-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    border: 2px solid var(--sage-deep);
+    border-radius: 7px;
+
+    background: var(--sage-deep);
+    color: var(--paper);
+
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.contributor-page .intro-button:hover {
+    border-color: var(--ink);
+    background: var(--ink);
+}
+
+/* =========================================================
+   3. MAIN CONTENT + SIDEBAR
+   ========================================================= */
 
 .contributor-page .content_grid {
     display: grid;
@@ -488,18 +620,27 @@ body.enquiry-page {
     min-width: 0;
 }
 
+.contributor-page .sidebar {
+    position: sticky;
+    top: 24px;
+
+    width: 320px;
+    min-width: 0;
+}
+
 /* =========================================================
-   5. Content Sections
+   4. CONTENT SECTIONS
    ========================================================= */
 
 .contributor-page .content_section {
     margin-bottom: 28px;
-    padding: 36px;
-    background: #FFFFFF;
-    border: 1px solid #E1E6DD;
-    border-radius: 20px;
-    box-shadow:
-        0 8px 24px rgba(42, 51, 27, 0.045);
+    padding: 32px;
+
+    background: var(--paper-card);
+    border: 1px solid var(--line-soft);
+    border-radius: 10px;
+
+    box-shadow: 3px 4px 0 var(--shadow);
 }
 
 .contributor-page .content_section:last-child {
@@ -507,9 +648,10 @@ body.enquiry-page {
 }
 
 .contributor-page .section-kicker {
-    margin-bottom: 9px;
-    color: #6B8E23;
-    font-size: 11px;
+    margin: 0 0 8px;
+
+    color: var(--sage-deep);
+    font-size: 10px;
     font-weight: 800;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -517,16 +659,17 @@ body.enquiry-page {
 
 .contributor-page .content_section h2 {
     margin: 0 0 18px;
-    color: #2A331B;
-    font-size: 27px;
-    font-weight: 800;
+
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 480;
     line-height: 1.2;
-    letter-spacing: -0.025em;
 }
 
 .contributor-page .content_section p {
-    color: #555D50;
-    font-size: 15px;
+    color: var(--ink-soft);
+    font-size: 14px;
     line-height: 1.8;
 }
 
@@ -535,28 +678,30 @@ body.enquiry-page {
 }
 
 .contributor-page .about-section p + p {
-    margin-top: 15px;
+    margin-top: 14px;
 }
 
 /* =========================================================
-   6. Callout Note
+   5. CALLOUT NOTE
    ========================================================= */
 
 .contributor-page .callout-note {
-    margin-top: 24px !important;
-    padding: 18px 20px;
-    background: #F5F8EF;
-    border-left: 4px solid #6B8E23;
-    border-radius: 0 10px 10px 0;
-    color: #455038 !important;
+    margin-top: 22px !important;
+    padding: 17px 19px;
+
+    border-left: 4px solid var(--sage-deep);
+    border-radius: 0 8px 8px 0;
+
+    background: var(--paper);
+    color: var(--ink-soft) !important;
 }
 
 .contributor-page .callout-note strong {
-    color: #2A331B;
+    color: var(--ink);
 }
 
 /* =========================================================
-   7. Section Heading
+   6. SECTION HEADING
    ========================================================= */
 
 .contributor-page .section-heading {
@@ -564,7 +709,8 @@ body.enquiry-page {
     align-items: flex-end;
     justify-content: space-between;
     gap: 20px;
-    margin-bottom: 24px;
+
+    margin-bottom: 22px;
 }
 
 .contributor-page .section-heading h2 {
@@ -572,7 +718,7 @@ body.enquiry-page {
 }
 
 /* =========================================================
-   8. Observation Feed
+   7. OBSERVATION / RECORD CARDS
    ========================================================= */
 
 .contributor-page .contribution_feed {
@@ -583,11 +729,14 @@ body.enquiry-page {
 .contributor-page .feed_card {
     display: grid;
     grid-template-columns: 190px minmax(0, 1fr);
+
     min-height: 190px;
-    background: #FBFCF9;
-    border: 1px solid #E0E6DA;
-    border-radius: 16px;
     overflow: hidden;
+
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 10px;
+
     transition:
         transform 0.2s ease,
         border-color 0.2s ease,
@@ -596,49 +745,59 @@ body.enquiry-page {
 
 .contributor-page .feed_card:hover {
     transform: translateY(-3px);
-    border-color: #C8D5B9;
-    box-shadow:
-        0 10px 24px rgba(42, 51, 27, 0.08);
+
+    border-color: var(--sage);
+
+    box-shadow: 3px 5px 0 var(--shadow);
 }
 
-/* Image */
+/* Record image */
+
 .contributor-page .feed_img_box {
-    position: relative;
     display: flex;
     flex-direction: column;
+
     margin: 0;
     min-width: 0;
-    background: #E8EDE2;
+
+    background: var(--paper-deep);
 }
 
 .contributor-page .feed_img {
     width: 100%;
     height: 100%;
     min-height: 190px;
+
     object-fit: cover;
 }
 
 .contributor-page .feed_img_box figcaption {
     padding: 8px 12px;
-    background: rgba(42, 51, 27, 0.9);
-    color: #FFFFFF;
+
+    background: var(--ink);
+    color: var(--paper);
+
     font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
-/* Observation information */
+/* Record information */
+
 .contributor-page .feed_info {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 25px 28px;
+
+    padding: 24px 27px;
 }
 
 .contributor-page .record-type {
-    margin: 0 0 8px !important;
-    color: #6B8E23 !important;
+    margin: 0 0 7px !important;
+
+    color: var(--sage-deep) !important;
+
     font-size: 10px !important;
     font-weight: 800;
     letter-spacing: 0.12em;
@@ -647,33 +806,40 @@ body.enquiry-page {
 
 .contributor-page .feed_info h3 {
     margin: 0;
-    color: #2A331B;
+
+    color: var(--ink);
+
+    font-family: 'Fraunces', serif;
     font-size: 21px;
-    font-weight: 800;
+    font-weight: 480;
     line-height: 1.3;
 }
 
 .contributor-page .feed_info h3 i {
-    color: #68715F;
-    font-size: 16px;
-    font-weight: 500;
+    color: var(--ink-soft);
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .contributor-page .feed_meta {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 5px 8px;
+    gap: 6px;
+
     margin: 12px 0 0 !important;
-    color: #68705F !important;
+
+    color: var(--ink-soft) !important;
     font-size: 12px !important;
 }
 
 .contributor-page .feed_meta span {
-    padding: 3px 7px;
-    background: #EAF0E2;
+    padding: 4px 8px;
+
+    background: var(--paper-deep);
     border-radius: 5px;
-    color: #58721F !important;
+
+    color: var(--sage-deep) !important;
+
     font-size: 9px !important;
     font-weight: 800;
     letter-spacing: 0.05em;
@@ -681,102 +847,185 @@ body.enquiry-page {
 }
 
 .contributor-page .feed_desc {
-    margin: 13px 0 0 !important;
-    color: #596155 !important;
+    margin: 12px 0 0 !important;
+
+    color: var(--ink-soft) !important;
+
     font-size: 13px !important;
     line-height: 1.7 !important;
 }
 
 /* =========================================================
-   9. Guidance / Steps
+   8. USEFUL INFORMATION FOR RECORD
+   ========================================================= */
+/* =========================================================
+   8. USEFUL INFORMATION FOR RECORD
+   ========================================================= */
+/* =========================================================
+   8. USEFUL INFORMATION FOR RECORD
+   ========================================================= */
+
+/* =========================================================
+   8. USEFUL INFORMATION FOR RECORD (CLEAN GRID)
+   ========================================================= */
+.contributor-page .plant_grid {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    margin: 20px 0 0;
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    background: var(--paper);
+    overflow: hidden;
+}
+
+/* 顶部加粗表头样式 */
+.contributor-page .grid_header {
+    background: var(--paper-deep);
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 800;
+    padding: 14px 15px;
+    border-bottom: 2px solid var(--line-soft);
+}
+
+.contributor-page .grid_header.right {
+    background: var(--paper-card); /* 右侧表头可配浅色背景区分 */
+}
+
+/* 左侧名称列样式 */
+.contributor-page .grid_label {
+    background: var(--paper-deep);
+    color: var(--sage-deep);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--line-soft);
+}
+
+/* 右侧说明列样式 */
+.contributor-page .grid_data {
+    color: var(--ink-soft);
+    font-size: 13px;
+    line-height: 1.7;
+    padding: 14px 15px;
+    border-bottom: 1px solid var(--line-soft);
+}
+
+/* 移除最后一行的底边框 */
+.contributor-page .grid_label:last-of-type,
+.contributor-page .grid_data:last-of-type {
+    border-bottom: none;
+}
+/* =========================================================
+   9. GUIDANCE / STEPS
    ========================================================= */
 
 .contributor-page .steps-list {
     display: grid;
-    gap: 13px;
-    margin: 24px 0 0;
+    gap: 12px;
+
+    margin: 22px 0 0;
     padding: 0;
+
     list-style: none;
-    counter-reset: none;
 }
 
 .contributor-page .steps-list li {
     display: grid;
-    grid-template-columns: 44px minmax(0, 1fr);
-    gap: 15px;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
     align-items: start;
-    padding: 16px;
-    background: #F8FAF5;
-    border: 1px solid #E3E9DD;
-    border-radius: 12px;
+
+    padding: 15px;
+
+    background: var(--paper);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
 }
 
 .contributor-page .steps-list li > span {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 36px;
-    background: #6B8E23;
+
+    width: 34px;
+    height: 34px;
+
+    background: var(--sage-deep);
     border-radius: 50%;
-    color: #FFFFFF;
+
+    color: var(--paper);
+
     font-size: 11px;
     font-weight: 800;
 }
 
 .contributor-page .steps-list strong {
     display: block;
+
     margin-bottom: 4px;
-    color: #2A331B;
+
+    color: var(--ink);
+
     font-size: 14px;
     font-weight: 800;
 }
 
 .contributor-page .steps-list p {
     margin: 0;
-    color: #646C5E;
+
+    color: var(--ink-soft);
+
     font-size: 13px;
     line-height: 1.65;
 }
 
 /* =========================================================
-   10. Plant Information / Definition List
+   10. PLANT DETAILS / DEFINITION LIST
    ========================================================= */
 
 .contributor-page .plant-details {
     display: grid;
-    grid-template-columns: 165px minmax(0, 1fr);
-    margin: 24px 0 0;
-    border-top: 1px solid #E1E7DC;
+    grid-template-columns: 160px minmax(0, 1fr);
+
+    margin: 22px 0 0;
+
+    border-top: 1px solid var(--line-soft);
 }
 
 .contributor-page .plant-details dt,
 .contributor-page .plant-details dd {
     margin: 0;
-    padding: 15px 16px;
-    border-bottom: 1px solid #E1E7DC;
+    padding: 14px 15px;
+
+    border-bottom: 1px solid var(--line-soft);
 }
 
 .contributor-page .plant-details dt {
-    background: #F5F8F1;
-    color: #4F651E;
-    font-size: 12px;
+    background: var(--paper-deep);
+
+    color: var(--sage-deep);
+
+    font-size: 11px;
     font-weight: 800;
 }
 
 .contributor-page .plant-details dd {
-    color: #596154;
+    color: var(--ink-soft);
+
     font-size: 13px;
     line-height: 1.7;
 }
 
 /* =========================================================
-   11. Contributors Section
+   11. CONTRIBUTOR CARDS
    ========================================================= */
 
 .contributor-page .people-intro {
     max-width: 760px;
-    margin: 0 0 25px;
+    margin: 0 0 23px;
+
+    color: var(--ink-soft);
 }
 
 .contributor-page .contributor_cards {
@@ -785,49 +1034,57 @@ body.enquiry-page {
     gap: 18px;
 }
 
-/* =========================================================
-   12. Contributor Flip Card
-   ========================================================= */
-
 .contributor-page .contributor_card {
     position: relative;
+
     min-width: 0;
-    min-height: 340px;
+    min-height: 330px;
+
     perspective: 1200px;
 }
 
 /* Hidden checkbox */
+
 .contributor-page .contributor-card-toggle {
     position: absolute;
+
     width: 1px;
     height: 1px;
+
     opacity: 0;
 }
 
 /* Keyboard focus */
+
 .contributor-page .contributor-card-toggle:focus-visible
 + .contributor-card-front {
-    outline: 3px solid #9DBB68;
+    outline: 3px solid var(--sage-deep);
     outline-offset: 4px;
 }
 
-/* Shared front/back */
+/* Front + Back */
+
 .contributor-page .contributor-card-front,
 .contributor-page .contributor-card-back {
     position: absolute;
     inset: 0;
+
     width: 100%;
     height: 100%;
-    border-radius: 18px;
+
     overflow: hidden;
+
+    border-radius: 10px;
+
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+
     transition:
         transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 /* =========================================================
-   13. Card Front
+   12. CONTRIBUTOR CARD FRONT
    ========================================================= */
 
 .contributor-page .contributor-card-front {
@@ -835,30 +1092,38 @@ body.enquiry-page {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px;
-    background: #F9F6F0;
-    border: 1px solid #DCE3D5;
+
+    padding: 28px;
+
+    background: var(--paper-card);
+    border: 1px solid var(--line-soft);
+
     text-align: center;
     cursor: pointer;
+
     transform: rotateY(0deg);
 }
 
 .contributor-page .contributor-card-front:hover {
-    border-color: #B9C9A5;
+    border-color: var(--sage);
 }
 
 .contributor-page .contributor_avatar {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 82px;
-    height: 82px;
-    margin-bottom: 18px;
-    background: #6B8E23;
-    border: 7px solid #E3EBD8;
+
+    width: 78px;
+    height: 78px;
+    margin-bottom: 16px;
+
+    background: var(--sage-deep);
+    border: 6px solid var(--paper-deep);
     border-radius: 50%;
-    color: #FFFFFF;
-    font-size: 29px;
+
+    color: var(--paper);
+
+    font-size: 27px;
     font-weight: 800;
 }
 
@@ -869,24 +1134,31 @@ body.enquiry-page {
 }
 
 .contributor-page .contributor-name {
-    color: #2A331B;
+    color: var(--ink);
+
+    font-family: 'Fraunces', serif;
     font-size: 19px;
-    font-weight: 800;
+    font-weight: 480;
 }
 
 .contributor-page .contributor-role {
     margin-top: 5px;
-    color: #727A6B;
+
+    color: var(--ink-soft);
+
     font-size: 12px;
 }
 
 .contributor-page .badge {
-    margin-top: 15px;
+    margin-top: 14px;
     padding: 6px 10px;
-    background: #E5ECD9;
+
+    background: var(--paper-deep);
     border-radius: 999px;
-    color: #55721F;
-    font-size: 10px;
+
+    color: var(--sage-deep);
+
+    font-size: 9px;
     font-weight: 800;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -896,8 +1168,11 @@ body.enquiry-page {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    margin-top: 25px;
-    color: #6B8E23;
+
+    margin-top: 22px;
+
+    color: var(--sage-deep);
+
     font-size: 11px;
     font-weight: 700;
 }
@@ -907,20 +1182,23 @@ body.enquiry-page {
 }
 
 /* =========================================================
-   14. Card Back
+   13. CONTRIBUTOR CARD BACK
    ========================================================= */
 
 .contributor-page .contributor-card-back {
     display: flex;
     flex-direction: column;
-    background: #2A331B;
-    color: #FFFFFF;
+
+    background: var(--sage-deep);
+    color: var(--paper);
+
     transform: rotateY(180deg);
 }
 
 .contributor-page .contributor-card-back > img {
     width: 100%;
-    height: 125px;
+    height: 120px;
+
     object-fit: cover;
 }
 
@@ -928,12 +1206,15 @@ body.enquiry-page {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     flex: 1;
-    padding: 20px 22px;
+
+    padding: 19px 21px;
 }
 
 .contributor-page .contribution-label {
-    color: #B7CD8E;
+    color: var(--paper-deep);
+
     font-size: 9px;
     font-weight: 800;
     letter-spacing: 0.13em;
@@ -942,63 +1223,63 @@ body.enquiry-page {
 
 .contributor-page .contribution-copy h3 {
     margin: 7px 0 0;
-    color: #FFFFFF;
+
+    color: var(--paper);
+
+    font-family: 'Fraunces', serif;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 480;
 }
 
 .contributor-page .contribution-copy > p {
     margin: 3px 0 0;
-    color: #CBD3BF;
+
+    color: var(--paper-deep);
+
     font-size: 12px;
 }
 
 .contributor-page .contribution-copy .contribution-note {
     margin-top: 12px;
-    color: #E1E7D9;
+
+    color: var(--paper-deep);
+
     font-size: 12px;
     line-height: 1.6;
 }
 
 .contributor-page .flip-return {
     display: inline-flex;
+
     margin-top: auto;
-    padding-top: 13px;
-    color: #BFD397;
+    padding-top: 12px;
+
+    color: var(--paper-deep);
+
     font-size: 11px;
     font-weight: 700;
     cursor: pointer;
 }
 
 .contributor-page .flip-return:hover {
-    color: #FFFFFF;
+    color: var(--paper);
 }
 
 .contributor-page .contribution-copy > a {
     display: inline-flex;
+
     margin-top: 9px;
-    color: #FFFFFF;
+
+    color: var(--paper);
+
     font-size: 11px;
     font-weight: 700;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-/* Text-only contributor */
-.contributor-page .contributor-card-text-only {
-    background:
-        linear-gradient(
-            145deg,
-            #2A331B 0%,
-            #40551E 100%
-        );
-}
+/* Flip card */
 
-.contributor-page .contributor-card-text-only .contribution-copy {
-    justify-content: center;
-}
-
-/* Flip */
 .contributor-page .contributor-card-toggle:checked
 ~ .contributor-card-front {
     transform: rotateY(-180deg);
@@ -1009,25 +1290,28 @@ body.enquiry-page {
     transform: rotateY(0deg);
 }
 
-/* =========================================================
-   15. Sidebar Layout & Cards
-   ========================================================= */
+/* Text-only card */
 
-/* 修复后的 Sidebar（移除了原代码中的重复定义，并添加了防收缩属性） */
-.contributor-page .sidebar {
-    position: sticky;
-    top: 24px;
-    min-width: 0;
-    width: 320px;
-    flex-shrink: 0;
+.contributor-page .contributor-card-text-only {
+    background: var(--sage-deep);
 }
 
+.contributor-page .contributor-card-text-only .contribution-copy {
+    justify-content: center;
+}
+
+/* =========================================================
+   14. SIDEBAR BOX
+   ========================================================= */
+
 .contributor-page .sidebar_box {
-    margin: 0 0 20px;
-    padding: 28px;
-    border-radius: 20px;
-    box-shadow:
-        0 8px 24px rgba(42, 51, 27, 0.06);
+    margin-bottom: 20px;
+    padding: 26px;
+
+    border: 1px solid var(--line-soft);
+    border-radius: 10px;
+
+    box-shadow: 3px 4px 0 var(--shadow);
 }
 
 .contributor-page .sidebar_box:last-child {
@@ -1035,169 +1319,170 @@ body.enquiry-page {
 }
 
 /* =========================================================
-   15.1 Green CTA Card
+   15. GREEN CTA SIDEBAR
    ========================================================= */
 
 .contributor-page .green_box {
-    background:
-        linear-gradient(
-            145deg,
-            #536F20 0%,
-            #6B8E23 100%
-        );
-    color: #FFFFFF;
+    background: var(--sage-deep);
+    color: var(--paper);
 }
 
-/* Small heading */
 .contributor-page .green_box .section-kicker {
-    display: block;
-    width: 100%;
-    margin: 0 0 14px;
-    padding: 0;
-    color: #DCE9C8;
+    margin: 0 0 12px;
+
+    color: var(--paper-deep);
+
     font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.13em;
-    line-height: 1.4;
-    text-transform: uppercase;
 }
 
-/* No decorative line inside CTA */
-.contributor-page .green_box .section-kicker::before {
-    display: none;
-}
-
-/* Main CTA heading */
 .contributor-page .green_box h2 {
-    max-width: 260px;
-    margin: 0 0 16px;
-    color: #FFFFFF;
-    font-size: 26px;
-    font-weight: 800;
+    margin: 0 0 15px;
+
+    color: var(--paper);
+
+    font-family: 'Fraunces', serif;
+    font-size: 25px;
+    font-weight: 480;
     line-height: 1.2;
-    letter-spacing: -0.025em;
 }
 
-/* CTA description */
 .contributor-page .green_box > p {
     margin: 0;
-    color: #E7EDDD;
+
+    color: var(--paper-deep);
+
     font-size: 13px;
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
-/* =========================================================
-   CTA Button
-   ========================================================= */
+/* CTA button */
 
 .contributor-page .green_box .brutal_btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     width: 100%;
-    margin-top: 22px;
-    padding: 14px 16px;
-    background: #F9F6F0;
-    border: 2px solid #F9F6F0;
-    border-radius: 9px;
-    color: #2A331B;
+    margin-top: 20px;
+    padding: 13px 15px;
+
+    background: var(--paper-card);
+    border: 2px solid var(--paper-card);
+    border-radius: 7px;
+
+    color: var(--ink);
+
     font-size: 12px;
     font-weight: 800;
     text-decoration: none;
-    transition:
-        background-color 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+
+    transition: 0.2s ease;
 }
 
 .contributor-page .green_box .brutal_btn:hover {
-    background: #FFFFFF;
+    background: var(--paper);
     transform: translateY(-2px);
-    box-shadow:
-        0 8px 18px rgba(42, 51, 27, 0.16);
 }
 
 .contributor-page .green_box .brutal_btn span {
-    font-size: 18px;
-    line-height: 1;
+    font-size: 17px;
 }
 
-/* =========================================================
-   Login Note
-   ========================================================= */
+/* Login note */
 
 .contributor-page .green_box .login-note {
-    margin: 17px 0 0 !important;
-    color: #DCE5D2 !important;
+    margin: 16px 0 0 !important;
+
+    color: var(--paper-deep) !important;
+
     font-size: 11px !important;
     line-height: 1.6 !important;
 }
 
 .contributor-page .green_box .login-note a {
-    color: #FFFFFF;
+    color: var(--paper);
+
     font-weight: 800;
     text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
 }
 
 /* =========================================================
-   15.2 Before You Submit
+   16. BEFORE YOU SUBMIT
    ========================================================= */
 
 .contributor-page .white_box {
-    background: #FFFFFF;
-    border: 1px solid #E0E6DA;
+    background: var(--paper-card);
 }
 
-/* Heading */
 .contributor-page .white_box h2 {
-    margin: 0 0 20px;
-    color: #2A331B;
+    margin: 0 0 18px;
+
+    color: var(--ink);
+
+    font-family: 'Fraunces', serif;
     font-size: 20px;
-    font-weight: 800;
-    line-height: 1.25;
-    letter-spacing: -0.015em;
+    font-weight: 480;
 }
 
-/* Checklist */
 .contributor-page .styled_ul {
     display: grid;
-    gap: 14px;
+    gap: 12px;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 
 .contributor-page .styled_ul li {
     position: relative;
-    min-height: 20px;
-    padding-left: 28px;
-    color: #60685A;
+
+    padding-left: 27px;
+
+    color: var(--ink-soft);
+
     font-size: 12px;
     line-height: 1.65;
 }
 
-/* Check circle */
 .contributor-page .styled_ul li::before {
     content: "✓";
+
     position: absolute;
     left: 0;
     top: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 19px;
-    height: 19px;
-    background: #EAF0E2;
+
+    width: 18px;
+    height: 18px;
+
+    background: var(--paper-deep);
     border-radius: 50%;
-    color: #6B8E23;
+
+    color: var(--sage-deep);
+
     font-size: 10px;
     font-weight: 900;
 }
 
 /* =========================================================
-   16. Tablet
+   17. TEXT LINKS
+   ========================================================= */
+
+.contributor-page .text-link {
+    color: var(--sage-deep);
+    font-weight: 700;
+}
+
+.contributor-page .text-link:hover {
+    color: var(--ink);
+}
+
+/* =========================================================
+   18. TABLET
    ========================================================= */
 
 @media (max-width: 1050px) {
@@ -1206,25 +1491,23 @@ body.enquiry-page {
         grid-template-columns: 1fr;
     }
 
-    /* 重置宽度以适应平板响应式布局 */
     .contributor-page .sidebar {
         position: static;
+
         width: 100%;
+
         display: grid;
-        grid-template-columns:
-            minmax(0, 1.1fr)
-            minmax(0, 0.9fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
     }
 
     .contributor-page .sidebar_box {
         margin-bottom: 0;
     }
-
 }
 
 /* =========================================================
-   17. Smaller Tablet
+   19. SMALL TABLET
    ========================================================= */
 
 @media (max-width: 800px) {
@@ -1235,30 +1518,32 @@ body.enquiry-page {
     }
 
     .contributor-page .page-intro {
-        padding: 42px 34px;
-        border-radius: 22px;
+        padding: 38px 32px;
+    }
+
+    .contributor-page .page-intro h1 {
+        font-size: 40px;
     }
 
     .contributor-page .content_section {
-        padding: 28px;
+        padding: 27px;
     }
 
     .contributor-page .contributor_cards {
         grid-template-columns: 1fr;
     }
 
-    .contributor-page .contributor_card {
-        min-height: 310px;
-    }
-
     .contributor-page .sidebar {
         grid-template-columns: 1fr;
     }
 
+    .contributor-page .plant_information {
+        grid-template-columns: 130px minmax(0, 1fr);
+    }
 }
 
 /* =========================================================
-   18. Mobile
+   20. MOBILE
    ========================================================= */
 
 @media (max-width: 620px) {
@@ -1269,39 +1554,36 @@ body.enquiry-page {
     }
 
     .contributor-page .page-intro {
-        margin-bottom: 24px;
-        padding: 34px 24px;
-        border-radius: 18px;
+        padding: 32px 23px;
+        border-radius: 9px;
     }
 
     .contributor-page .page-intro h1 {
-        font-size: 36px;
+        font-size: 34px;
     }
 
     .contributor-page .intro-copy {
         font-size: 14px;
-        line-height: 1.7;
     }
 
     .contributor-page .intro-actions {
-        align-items: stretch;
         flex-direction: column;
     }
 
     .contributor-page .intro-button {
-        justify-content: space-between;
+        width: 100%;
     }
 
     .contributor-page .content_section {
-        padding: 23px 20px;
-        border-radius: 16px;
+        padding: 22px 19px;
     }
 
     .contributor-page .content_section h2 {
-        font-size: 23px;
+        font-size: 24px;
     }
 
-    /* Observation */
+    /* Record card */
+
     .contributor-page .feed_card {
         grid-template-columns: 1fr;
     }
@@ -1316,10 +1598,35 @@ body.enquiry-page {
     }
 
     .contributor-page .feed_info {
-        padding: 21px;
+        padding: 20px;
+    }
+
+    /* Useful Information */
+
+    .contributor-page .plant_information {
+        display: block;
+    }
+
+    .contributor-page .plant_information legend {
+        display: block;
+    }
+
+    .contributor-page .plant_information label {
+        padding-bottom: 7px;
+        border-bottom: 0;
+    }
+
+    .contributor-page .plant_information p {
+        padding-top: 6px;
+    }
+
+    .contributor-page .plant_information p:first-of-type {
+        grid-column: auto;
+        text-align: left;
     }
 
     /* Definition list */
+
     .contributor-page .plant-details {
         display: block;
     }
@@ -1334,34 +1641,33 @@ body.enquiry-page {
     }
 
     /* Sidebar */
+
     .contributor-page .sidebar {
         display: block;
     }
 
     .contributor-page .sidebar_box {
         margin-bottom: 16px;
-        padding: 24px;
+        padding: 23px;
     }
 
     .contributor-page .green_box h2 {
-        max-width: none;
-        font-size: 24px;
+        font-size: 23px;
     }
-
 }
 
 /* =========================================================
-   19. Small Mobile
+   21. SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 430px) {
 
     .contributor-page .page-intro {
-        padding: 30px 20px;
+        padding: 28px 19px;
     }
 
     .contributor-page .page-intro h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .contributor-page .section-heading {
@@ -1369,33 +1675,27 @@ body.enquiry-page {
     }
 
     .contributor-page .steps-list li {
-        grid-template-columns:
-            36px minmax(0, 1fr);
-        gap: 11px;
+        grid-template-columns: 35px minmax(0, 1fr);
+        gap: 10px;
         padding: 13px;
     }
 
     .contributor-page .steps-list li > span {
-        width: 32px;
-        height: 32px;
+        width: 31px;
+        height: 31px;
     }
 
     .contributor-page .contributor_card {
-        min-height: 300px;
+        min-height: 295px;
     }
 
     .contributor-page .sidebar_box {
-        padding: 21px;
+        padding: 20px;
     }
-
-    .contributor-page .green_box h2 {
-        font-size: 22px;
-    }
-
 }
 
 /* =========================================================
-   20. Reduced Motion
+   22. ACCESSIBILITY / REDUCED MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1407,399 +1707,6 @@ body.enquiry-page {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-    }
-
-}
-
-.site_footer {
-    background-color: #FFFFFF;
-
-    border-top: 3px solid #6B8E23;
-
-    padding: 40px 20px 20px 20px;
-
-    text-align: center;
-
-    margin-top: 20px;
-}
-
-.footer_content {
-    max-width: 1200px;
-
-    margin: 0 auto;
-}
-
-.footer_logo {
-    font-size: 24px;
-
-    color: #2A331B;
-
-    margin: 0 0 10px 0;
-}
-
-.site_footer nav {
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 15px;
-
-    margin-bottom: 30px;
-}
-
-.site_footer nav a {
-    background-color: #F9F6F0;
-
-    border: 2px solid #2A331B;
-
-    color: #2A331B;
-
-    padding: 8px 16px;
-
-    font-family: inherit;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition:
-        background-color 0.2s ease,
-        color 0.2s ease;
-}
-
-.site_footer nav a:hover {
-    background-color: #6B8E23;
-
-    color: #FFFFFF;
-}
-
-.copyright {
-    color: #718096;
-
-    font-size: 14px;
-
-    margin: 0;
-}
-
-
-/* =========================================
-   Tablet
-   ========================================= */
-
-@media (max-width: 950px) {
-
-    .contrib-page .site-header {
-        flex-direction: column;
-
-        gap: 20px;
-
-        text-align: center;
-    }
-
-    .contrib-page .site-header nav {
-        justify-content: center;
-    }
-
-    .contrib-page .content_grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contrib-page .sidebar {
-        position: static;
-    }
-}
-
-
-/* =========================================
-   Mobile
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    .contrib-page .site-header {
-        padding: 20px;
-    }
-
-    .contrib-page .site-header nav {
-        width: 100%;
-
-        flex-direction: column;
-    }
-
-    .contrib-page .site-header nav a {
-        width: 100%;
-
-        text-align: center;
-    }
-
-    .contrib-page .page_main {
-        padding: 30px 20px;
-    }
-
-    .contrib-page .content_section {
-        padding: 25px 20px;
-    }
-
-    .contrib-page .content_section h2 {
-        font-size: 24px;
-    }
-
-    .contrib-page .styled_form fieldset {
-        margin-bottom: 30px;
-    }
-
-    .contrib-page .styled_form legend {
-        font-size: 18px;
-    }
-
-    /* Plant Information becomes one column */
-
-    .contrib-page .plant_information {
-        grid-template-columns: 1fr;
-    }
-
-    .contrib-page .plant_information legend {
-        grid-column: auto;
-    }
-
-    .contrib-page .plant_information p:nth-of-type(3) {
-        grid-column: auto;
-    }
-
-    /* Buttons become full width */
-
-    .contrib-page .form_actions {
-        flex-direction: column;
-
-        width: 100%;
-    }
-
-    .contrib-page .btn_primary,
-    .contrib-page .btn_secondary {
-        width: 100%;
-    }
-
-    /* Sidebar */
-
-    .contrib-page .sidebar_box {
-        padding: 25px 20px;
-    }
-}
-
-/* Use the shared WikiPlant palette and typography from style.css. */
-body.contributor-page {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Work Sans', sans-serif;
-}
-
-.contributor-page .page_main {
-    width: min(var(--max), calc(100% - 48px));
-    max-width: var(--max);
-    padding-top: 48px;
-}
-
-.contributor-page .page-intro,
-.contributor-page .content_section,
-.contributor-page .contributor-card-front,
-.contributor-page .white_box {
-    border: 1px solid var(--line-soft);
-    border-radius: 8px;
-    background: var(--paper-card);
-    box-shadow: 3px 4px 0 var(--shadow);
-}
-
-.contributor-page .page-intro::after {
-    background: rgba(124, 148, 115, 0.14);
-}
-
-.contributor-page .eyebrow,
-.contributor-page .section-kicker,
-.contributor-page .text-link:hover,
-.contributor-page .flip-prompt {
-    color: var(--sage-deep);
-}
-
-.contributor-page .page-intro h1,
-.contributor-page .content_section h2,
-.contributor-page .white_box h2,
-.contributor-page .contributor-name {
-    color: var(--ink);
-    font-family: 'Fraunces', serif;
-    font-weight: 480;
-    letter-spacing: 0;
-}
-
-.contributor-page .intro-copy,
-.contributor-page .content_section p,
-.contributor-page .people-intro,
-.contributor-page .plant-details dd {
-    color: var(--ink-soft);
-}
-
-.contributor-page .intro-button,
-.contributor-page .steps-list li > span,
-.contributor-page .contributor_avatar {
-    border-color: var(--sage-deep);
-    background: var(--sage-deep);
-    color: var(--paper);
-}
-
-.contributor-page .intro-button:hover {
-    border-color: var(--ink);
-    background: var(--ink);
-}
-
-.contributor-page .text-link {
-    color: var(--sage-deep);
-}
-
-.contributor-page .callout-note {
-    border-left-color: var(--sage-deep);
-    background: var(--paper);
-    color: var(--ink-soft) !important;
-}
-
-.contributor-page .callout-note strong,
-.contributor-page .steps-list strong {
-    color: var(--ink);
-}
-
-.contributor-page .feed_card,
-.contributor-page .steps-list li,
-.contributor-page .plant-details dt {
-    border-color: var(--line-soft);
-    background: var(--paper);
-}
-
-.contributor-page .feed_card:hover {
-    border-color: var(--sage);
-    box-shadow: 3px 5px 0 var(--shadow);
-}
-
-.contributor-page .feed_img_box {
-    background: var(--paper-deep);
-}
-
-.contributor-page .feed_img_box figcaption {
-    background: var(--ink);
-    color: var(--paper);
-}
-
-.contributor-page .record-type {
-    color: var(--sage-deep) !important;
-}
-
-.contributor-page .feed_info h3,
-.contributor-page .contribution-copy h3,
-.contributor-page .green_box h2 {
-    color: var(--ink);
-    font-family: 'Fraunces', serif;
-    font-weight: 480;
-}
-
-.contributor-page .feed_info h3 {
-    color: var(--ink);
-}
-
-.contributor-page .feed_info h3 i,
-.contributor-page .feed_meta,
-.contributor-page .feed_desc,
-.contributor-page .steps-list p,
-.contributor-page .contributor-role {
-    color: var(--ink-soft) !important;
-}
-
-.contributor-page .feed_meta span,
-.contributor-page .badge,
-.contributor-page .styled_ul li::before {
-    background: var(--paper-deep);
-    color: var(--sage-deep) !important;
-}
-
-.contributor-page .plant-details,
-.contributor-page .plant-details dt,
-.contributor-page .plant-details dd {
-    border-color: var(--line-soft);
-}
-
-.contributor-page .plant-details dt {
-    color: var(--sage-deep);
-}
-
-.contributor-page .contributor-card-toggle:focus-visible
-+ .contributor-card-front {
-    outline-color: var(--sage-deep);
-}
-
-.contributor-page .contributor-card-front:hover {
-    border-color: var(--sage);
-}
-
-.contributor-page .contributor-card-back,
-.contributor-page .contributor-card-text-only,
-.contributor-page .green_box {
-    background: var(--sage-deep);
-    color: var(--paper);
-}
-
-.contributor-page .contribution-label,
-.contributor-page .flip-return,
-.contributor-page .green_box .section-kicker,
-.contributor-page .green_box > p,
-.contributor-page .green_box .login-note {
-    color: var(--paper-deep) !important;
-}
-
-.contributor-page .contribution-copy h3,
-.contributor-page .green_box h2 {
-    color: var(--paper);
-}
-
-.contributor-page .contribution-copy > p,
-.contributor-page .contribution-copy .contribution-note {
-    color: var(--paper-deep);
-}
-
-.contributor-page .contribution-copy > a,
-.contributor-page .green_box .login-note a {
-    color: var(--paper);
-}
-
-.contributor-page .sidebar_box {
-    border: 1px solid var(--line-soft);
-    border-radius: 8px;
-    box-shadow: 3px 4px 0 var(--shadow);
-}
-
-.contributor-page .green_box .brutal_btn {
-    border-color: var(--paper-card);
-    background: var(--paper-card);
-    color: var(--ink);
-}
-
-.contributor-page .green_box .brutal_btn:hover {
-    background: var(--paper);
-}
-
-.contributor-page .white_box {
-    background: var(--paper-card);
-}
-
-.contributor-page .white_box h2 {
-    color: var(--ink);
-}
-
-.contributor-page .styled_ul li {
-    color: var(--ink-soft);
-}
-
-@media (max-width: 800px) {
-    .contributor-page .page_main {
-        width: min(100% - 32px, 720px);
-        padding-top: 32px;
     }
 }
 
@@ -1949,6 +1856,19 @@ body.explorer-page {
     margin: 14px 0 18px;
 }
 
+.explorer-page .family-card .spec-table .genus-tags {
+    display: inline-flex;
+    vertical-align: middle;
+    margin: 0 0 0 8px;
+}
+
+.explorer-page .family-card .species-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 12px 0 16px;
+}
+
 .explorer-page .family-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2046,6 +1966,28 @@ body.explorer-page {
 .explorer-page .specimen-card > p {
     flex-grow: 1;
     margin-bottom: 0;
+}
+
+.explorer-page .specimen-img,
+.explorer-page .specimen-photo-placeholder {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin: 18px 0 20px;
+    border: 1px solid var(--line-soft);
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.explorer-page .specimen-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--paper-deep);
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    text-align: center;
 }
 
 .explorer-page .specimen-card .accession {
@@ -2826,13 +2768,6 @@ body.identify-page {
     height: auto;
 }
 
-.identify-page .upload-preview {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    border-radius: 6px;
-}
-
 .identify-page .identify-btn {
     display: block;
     width: 100%;
@@ -2852,6 +2787,20 @@ body.identify-page {
 
 .identify-page .identify-btn:hover {
     background: var(--sage-deep);
+}
+
+.identify-page .identify-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    background: var(--sage);
+}
+
+.identify-page .identify-preview-note {
+    max-width: 480px;
+    margin: 16px auto 0;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    text-align: center;
 }
 
 /* --- Figures --- */
@@ -3138,6 +3087,10 @@ body.about-page {
 }
 
 .about-page .about-personal {
+    margin-top: 66px;
+}
+
+.about-page .about-personal + .about-profile {
     margin-top: 66px;
 }
 
@@ -3511,6 +3464,22 @@ body.contributor-page {
     .contributor-page .content_section {
         padding: 25px 20px;
     }
+}
+
+.record-form .form-preview-note {
+    padding: 14px 16px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper-deep);
+    color: var(--ink-soft);
+}
+
+.record-form .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    box-shadow: none;
+    background: var(--sage-deep);
+    border-color: var(--sage-deep);
+    color: var(--paper);
 }
 
 /* Shared navigation drawer controlled entirely by HTML and CSS. */
