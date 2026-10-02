@@ -2331,6 +2331,10 @@ body.explorer-page {
     display: none;
 }
 
+.explorer-page .specimen-grid .group {
+    display: contents;
+}
+
 .explorer-page #f-all:checked~.groups .group,
 .explorer-page #f-araceae:checked~.groups .group[data-family="araceae"],
 .explorer-page #f-rosaceae:checked~.groups .group[data-family="rosaceae"],
@@ -2641,6 +2645,10 @@ body.explorer-page {
     max-width: 700px; /* 控制文本框的最大宽度，让它居中 */
     margin: 40px auto 0 auto;
     box-shadow: 4px 5px 0 var(--shadow, rgba(43, 51, 35, 0.14)); /* 采用你其他卡片的投影风格 */
+}
+
+.explorer-page .species-cta-wrap {
+    margin-bottom: 50px;
 }
 
 .cta-text-box h2 {
