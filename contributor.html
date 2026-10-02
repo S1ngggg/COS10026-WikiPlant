@@ -528,45 +528,32 @@
                  Plant Information
                  ========================= -->
 
-            <section class="content_section information-section"
-                     aria-labelledby="information-title">
-
-                <div class="section-kicker">
-                    Observation details
-                </div>
-
-
-                <h2 id="information-title">
-                    Useful information to record
-                </h2>
-
-
-                <table class="contributor-summary">
-                    <caption>Minimum details for a useful observation</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Record detail</th>
-                            <th scope="col">Why it helps</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Plant name</th>
-                            <td>Helps connect the observation to a species record.</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Date and habitat</th>
-                            <td>Provides context for reviewing where and when it was observed.</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Clear photograph</th>
-                            <td>Shows the visible features used to review the plant.</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </section>
-
+            <div class="content_section">
+    <p class="section-kicker">OBSERVATION DETAILS</p>
+    
+    <!-- 标题移出表格外部，恢复正常的页面大标题样式 -->
+    <h2>Useful information to record</h2>
+    <p>Minimum details for a useful observation</p>
+    
+    <!-- 全新的表格网格容器 -->
+    <div class="plant_grid">
+        <!-- 表头行 -->
+        <div class="grid_header left">Record detail</div>
+        <div class="grid_header right">Why it helps</div>
+        
+        <!-- 数据行 1 -->
+        <div class="grid_label">Plant name</div>
+        <div class="grid_data">Helps connect the observation to a species record.</div>
+        
+        <!-- 数据行 2 -->
+        <div class="grid_label">Date and habitat</div>
+        <div class="grid_data">Provides context for reviewing where and when it was observed.</div>
+        
+        <!-- 数据行 3 -->
+        <div class="grid_label">Clear photograph</div>
+        <div class="grid_data">Shows the visible features used to review the plant.</div>
+    </div>
+</div>
 
 
             <!-- =========================
