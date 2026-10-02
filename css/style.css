@@ -1853,15 +1853,22 @@ body.explorer-page {
     margin: 14px 0 18px;
 }
 
-.explorer-page .family-card .spec-table .genera-cell {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px;
+.explorer-page .family-card .spec-table .logged-cell {
+    display: grid;
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+    align-items: start;
+    column-gap: 8px;
 }
 
-.explorer-page .family-card .spec-table .genus-tags {
-    flex: 1 1 150px;
+.explorer-page .family-card .spec-table .logged-cell > span {
+    align-self: center;
+}
+
+.explorer-page .family-card .spec-table .genus-tags,
+.explorer-page .family-card .spec-table .species-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
     min-width: 0;
     margin: 0;
 }
