@@ -282,6 +282,26 @@ summary:focus-visible {
     outline: none;
 }
 
+/* Empty pages reserved for Enhancement and Acknowledgement content. */
+body.blank-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.blank-page .blank-main {
+    flex: 1;
+}
+
+.blank-page .universal-footer {
+    margin-top: 0;
+}
+
 /* HOME PAGE AND ENQUIRE PAGE DESIGN*/
 
 body.home-page,
@@ -3056,7 +3076,7 @@ body.identify-page {
 /* ABOUT US / INDIVIDUAL MEMBER PROFILE */
 body.about-page {
     margin: 0;
-    background: #F7F5EF;
+    background: #F3EFE2;
     color: #263E32;
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
