@@ -8,6 +8,139 @@
     <title>Enhancement | WikiPlant</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Enhancement Page Specific Styles */
+        .enhancement-main {
+            background-color: #e8f5e9;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            color: #000;
+        }
+
+        .enhancement-main .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .enhancement-section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px dashed #b9d6b9;
+        }
+
+        .enhancement-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .enhancement-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .enhancement-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .enhancement-image {
+            flex: 1 1 45%;
+        }
+
+        .enhancement-image video,
+        .enhancement-image .media-placeholder {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .enhancement-image .media-placeholder {
+            aspect-ratio: 16 / 9;
+            background-color: #c8e6c9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2e7d32;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .enhancement-details {
+            flex: 1 1 50%;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .enhancement-details p {
+            margin-bottom: 30px;
+        }
+
+        .tags-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .tags-group h3 {
+            font-size: 1.1rem;
+            margin: 0;
+            white-space: nowrap;
+            padding-top: 5px;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            border: 1px solid #000;
+            padding: 5px 15px;
+            background-color: transparent;
+            font-size: 0.95rem;
+            text-decoration: none;
+            color: #000;
+            display: inline-block;
+        }
+
+        .tag:hover {
+            background-color: #dcedc8;
+        }
+
+        @media (max-width: 768px) {
+            .enhancement-content {
+                flex-direction: column;
+            }
+
+            .tags-group {
+                flex-direction: column;
+            }
+
+            .enhancement-image,
+            .enhancement-details {
+                flex: 1 1 100%;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body class="enhancement-page">
@@ -19,13 +152,9 @@
                 <span class="brand-motto">Wiki Plant</span>
             </a>
 
-            <input
-                class="nav-state"
-                type="checkbox"
-                id="navigation-toggle"
+            <input class="nav-state" type="checkbox" id="navigation-toggle"
                 aria-label="Open or close navigation"
-                aria-controls="navigation-panel"
-            >
+                aria-controls="navigation-panel">
 
             <label class="nav-toggle" for="navigation-toggle">
                 <span class="nav-toggle-lines" aria-hidden="true">
@@ -33,43 +162,35 @@
                     <span></span>
                     <span></span>
                 </span>
-
                 <span class="nav-close" aria-hidden="true">&times;</span>
             </label>
 
-            <label
-                class="nav-backdrop"
-                for="navigation-toggle"
-                aria-hidden="true">
-            </label>
+            <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
 
             <div class="nav-drawer-panel" id="navigation-panel">
-
                 <div class="nav-drawer-topbar">
                     <span>Navigation</span>
                 </div>
 
                 <nav class="main-nav" aria-label="Primary">
                     <ul>
-
                         <li class="nav-drop">
                             <a href="explorer.html">Explore</a>
-
                             <ul class="drop-menu">
-                                <li>
-                                    <a href="explorer-family.html">By family</a>
-                                </li>
-
-                                <li>
-                                    <a href="explorer-genus.html">By genus</a>
-                                </li>
-
-                                <li>
-                                    <a href="explorer-species.html">By species</a>
-                                </li>
+                                <li><a href="explorer-family.html">By family</a></li>
+                                <li><a href="explorer-genus.html">By genus</a></li>
+                                <li><a href="explorer-species.html">By species</a></li>
                             </ul>
                         </li>
 
+<<<<<<< HEAD
+                        <li><a href="identify.html">Identify</a></li>
+                        <li><a href="contributor.html">Contributor</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="enquiry_form.html">Enquiry</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+=======
                         <li>
                             <a href="identify.html">Identify</a>
                         </li>
@@ -94,15 +215,15 @@
                             <a href="login.html">Login</a>
                         </li>
 
+>>>>>>> 021794a9612d6bdaf1c26775315ab2f14c1a4d07
                     </ul>
                 </nav>
-
             </div>
+
         </div>
     </header>
 
     <main class="enhancement-main" aria-label="Enhancement">
-
         <div class="wrap">
 
             <p class="intro-title">
@@ -110,39 +231,36 @@
             </p>
 
 
+            <!-- 1. Fluid Layout -->
             <section class="enhancement-section">
 
-                <h2>Responsive Layout</h2>
+                <h2>Fluid Layout (Hamburger Menu)</h2>
 
                 <div class="enhancement-content">
 
-                    <!-- Left Column: Responsive Layout Video -->
                     <div class="enhancement-image">
-
                         <video autoplay muted loop playsinline>
                             <source src="images/Screenrecord.mp4" type="video/mp4">
                             Your browser does not support the video element.
                         </video>
-
                     </div>
 
-
-                    <!-- Right Column: Text and Tags -->
                     <div class="enhancement-details">
 
                         <p>
-                            The website works on devices with different screen sizes.
-                            Its responsive layout allows the website to adapt to different
-                            window sizes, making it suitable for PC monitors, laptop screens,
-                            tablets, and mobile devices.
+                            The website uses a responsive fluid layout that adapts to
+                            different screen sizes. On smaller screens, the navigation
+                            links are replaced by a hamburger menu, allowing users to
+                            access the navigation without taking up excessive screen space.
                         </p>
 
-
                         <div class="tags-group">
-
                             <h3>Applied Page:</h3>
 
                             <div class="tags-container">
+<<<<<<< HEAD
+                                <a href="index.html" class="tag">All Pages (Global)</a>
+=======
 
                                 <a href="acknowledgement.html" class="tag">
                                     Acknowledgement
@@ -210,40 +328,506 @@
                                     By Species
                                 </a>
 
+>>>>>>> 021794a9612d6bdaf1c26775315ab2f14c1a4d07
                             </div>
                         </div>
 
-
                         <div class="tags-group">
-
                             <h3>Refer Sources:</h3>
 
                             <div class="tags-container">
-
-                                <a href="#" class="tag">
-                                    Source 1
+                                <a href="https://www.w3schools.com/css/css_rwd_intro.asp"
+                                    class="tag" target="_blank" rel="noopener">
+                                    W3Schools RWD
                                 </a>
 
-                                <a href="#" class="tag">
-                                    Source 2
+                                <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design"
+                                    class="tag" target="_blank" rel="noopener">
+                                    MDN Responsive Design
                                 </a>
-
-                                <a href="#" class="tag">
-                                    Source 3
-                                </a>
-
                             </div>
-
                         </div>
 
                     </div>
-
                 </div>
+            </section>
 
+
+            <!-- 2. Fixed Navigation Bar -->
+            <section class="enhancement-section">
+
+                <h2>Fixed Navigation Bar</h2>
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+                        <div class="media-placeholder">
+                            Navigation bar remains accessible while users browse the page.
+                        </div>
+                    </div>
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            A fixed navigation design keeps the main navigation easily
+                            accessible while users move through the website. This reduces
+                            the need to repeatedly return to the top of a page when users
+                            want to visit another section of WikiPlant.
+                        </p>
+
+                        <div class="tags-group">
+                            <h3>Applied Page:</h3>
+
+                            <div class="tags-container">
+                                <a href="index.html" class="tag">All Pages (Global)</a>
+                            </div>
+                        </div>
+
+                        <div class="tags-group">
+                            <h3>Refer Sources:</h3>
+
+                            <div class="tags-container">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position"
+                                    class="tag" target="_blank" rel="noopener">
+                                    MDN CSS Position
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 3. Picture Hover Effect -->
+            <section class="enhancement-section">
+
+                <h2>Picture Hover Effect</h2>
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+                        <div class="media-placeholder">
+                            Plant image hover effect
+                        </div>
+                    </div>
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            Picture hover effects provide visual feedback when users
+                            move the pointer over plant images. The effect improves
+                            interactivity and helps users recognise that an image or
+                            plant card can provide additional information.
+                        </p>
+
+                        <div class="tags-group">
+                            <h3>Applied Page:</h3>
+
+                            <div class="tags-container">
+                                <a href="index.html" class="tag">Main Page</a>
+                                <a href="explorer.html" class="tag">Explorer</a>
+                            </div>
+                        </div>
+
+                        <div class="tags-group">
+                            <h3>Refer Sources:</h3>
+
+                            <div class="tags-container">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition"
+                                    class="tag" target="_blank" rel="noopener">
+                                    MDN CSS Transition
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 4. Button Hover Effect -->
+            <section class="enhancement-section">
+
+                <h2>Button Hover Effect</h2>
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+                        <div class="media-placeholder">
+                            Interactive button hover effect
+                        </div>
+                    </div>
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            Button hover effects provide immediate visual feedback
+                            when users move the pointer over interactive controls.
+                            This makes links and buttons easier to identify and
+                            improves the overall user experience.
+                        </p>
+
+                        <div class="tags-group">
+                            <h3>Applied Page:</h3>
+
+                            <div class="tags-container">
+                                <a href="index.html" class="tag">Main Page</a>
+                                <a href="enquiry_form.html" class="tag">Enquiry</a>
+                                <a href="register.html" class="tag">Register</a>
+                                <a href="login.html" class="tag">Login</a>
+                            </div>
+                        </div>
+
+                        <div class="tags-group">
+                            <h3>Refer Sources:</h3>
+
+                            <div class="tags-container">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover"
+                                    class="tag" target="_blank" rel="noopener">
+                                    MDN :hover
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 5. Photo Gallery -->
+            <section class="enhancement-section">
+
+                <h2>Photo Gallery</h2>
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+                        <div class="media-placeholder">
+                            Plant photo gallery
+                        </div>
+                    </div>
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            The photo gallery presents multiple plant photographs
+                            in an organised layout. It allows users to visually
+                            compare plant characteristics and provides a more
+                            engaging way to explore biodiversity information.
+                        </p>
+
+                        <div class="tags-group">
+                            <h3>Applied Page:</h3>
+
+                            <div class="tags-container">
+                                <a href="explorer.html" class="tag">Explorer</a>
+                                <a href="explorer-species.html" class="tag">Species</a>
+                            </div>
+                        </div>
+
+                        <div class="tags-group">
+                            <h3>Refer Sources:</h3>
+
+                            <div class="tags-container">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout"
+                                    class="tag" target="_blank" rel="noopener">
+                                    MDN CSS Grid
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 6. Flip Card -->
+            <section class="enhancement-section">
+
+                <h2>Flip Card</h2>
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+                        <div class="media-placeholder">
+                            CSS-only flip card
+                        </div>
+                    </div>
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            CSS-only flip cards are used to present plant information
+                            in two sides. The front can display a plant image while
+                            the back can provide additional information such as the
+                            plant name, scientific name or description. This improves
+                            information presentation without requiring JavaScript.
+                        </p>
+
+                        <div class="tags-group">
+                            <h3>Applied Page:</h3>
+
+                            <div class="tags-container">
+                                <a href="contributor.html" class="tag">Contributor</a>
+                                <a href="explorer.html" class="tag">Explorer</a>
+                            </div>
+                        </div>
+
+                        <div class="tags-group">
+                            <h3>Refer Sources:</h3>
+
+                            <div class="tags-container">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform"
+                                    class="tag" target="_blank" rel="noopener">
+                                    MDN CSS Transform
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 7. Back to Top -->
+            <section class="enhancement-section">
+
+                <h2>Back to Top Button</h2>
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+                        <div class="media-placeholder">
+                            Back to top navigation
+                        </div>
+                    </div>
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            A back-to-top function helps users quickly return to the
+                            beginning of a long page. This is especially useful for
+                            pages containing many plant records, descriptions or
+                            sections.
+                        </p>
+
+                        <div class="tags-group">
+                            <h3>Applied Page:</h3>
+
+                            <div class="tags-container">
+                                <a href="explorer.html" class="tag">Explorer</a>
+                                <a href="contributor.html" class="tag">Contributor</a>
+                            </div>
+                        </div>
+
+                        <div class="tags-group">
+                            <h3>Refer Sources:</h3>
+
+                            <div class="tags-container">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"
+                                    class="tag" target="_blank" rel="noopener">
+                                    MDN Anchor Links
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 8. Page Rating -->
+            <section class="enhancement-section">
+
+                <h2>Page Rating</h2>
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+                        <div class="media-placeholder">
+                            Page rating interface
+                        </div>
+                    </div>
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            The page rating feature allows users to provide feedback
+                            about their experience with a page. It can help identify
+                            whether the information and presentation are useful to
+                            visitors.
+                        </p>
+
+                        <div class="tags-group">
+                            <h3>Applied Page:</h3>
+
+                            <div class="tags-container">
+                                <a href="enquiry_form.html" class="tag">Enquiry</a>
+                                <a href="explorer.html" class="tag">Explorer</a>
+                            </div>
+                        </div>
+
+                        <div class="tags-group">
+                            <h3>Refer Sources:</h3>
+
+                            <div class="tags-container">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form"
+                                    class="tag" target="_blank" rel="noopener">
+                                    MDN HTML Forms
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 9. Video -->
+            <section class="enhancement-section">
+
+                <h2>Video / YouTube Video</h2>
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+                        <div class="media-placeholder">
+                            Educational plant video
+                        </div>
+                    </div>
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            Videos are included to provide visual explanations and
+                            additional information about plants and the WikiPlant
+                            project. Multimedia content can make information easier
+                            to understand and provide users with another way to
+                            learn about plant biodiversity.
+                        </p>
+
+                        <div class="tags-group">
+                            <h3>Applied Page:</h3>
+
+                            <div class="tags-container">
+                                <a href="explorer.html" class="tag">Explorer</a>
+                                <a href="aboutus-terry.html" class="tag">Terry</a>
+                                <a href="aboutus-bryan.html" class="tag">Bryan</a>
+                                <a href="aboutus-Joshua.html" class="tag">Joshua</a>
+                            </div>
+                        </div>
+
+                        <div class="tags-group">
+                            <h3>Refer Sources:</h3>
+
+                            <div class="tags-container">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video"
+                                    class="tag" target="_blank" rel="noopener">
+                                    MDN HTML Video
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 10. Google Map -->
+            <section class="enhancement-section">
+
+                <h2>Google Map</h2>
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+                        <div class="media-placeholder">
+                            Interactive location map
+                        </div>
+                    </div>
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            A Google Map can be used to display geographical locations
+                            related to plant observations. This provides geographical
+                            context and helps users understand where particular plant
+                            records or observations are located.
+                        </p>
+
+                        <div class="tags-group">
+                            <h3>Applied Page:</h3>
+
+                            <div class="tags-container">
+                                <a href="explorer.html" class="tag">Explorer</a>
+                                <a href="contributor.html" class="tag">Contributor</a>
+                            </div>
+                        </div>
+
+                        <div class="tags-group">
+                            <h3>Refer Sources:</h3>
+
+                            <div class="tags-container">
+                                <a href="https://developers.google.com/maps"
+                                    class="tag" target="_blank" rel="noopener">
+                                    Google Maps Platform
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 11. Music / Audio -->
+            <section class="enhancement-section">
+
+                <h2>Music / Audio</h2>
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+                        <div class="media-placeholder">
+                            Audio player
+                        </div>
+                    </div>
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            Audio content provides an additional multimedia element
+                            for the website. It can be used to introduce personal
+                            content, provide narration or enhance a profile page
+                            while giving users an alternative way to interact with
+                            the content.
+                        </p>
+
+                        <div class="tags-group">
+                            <h3>Applied Page:</h3>
+
+                            <div class="tags-container">
+                                <a href="aboutus-sean.html" class="tag">Sean Profile</a>
+                            </div>
+                        </div>
+
+                        <div class="tags-group">
+                            <h3>Refer Sources:</h3>
+
+                            <div class="tags-container">
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio"
+                                    class="tag" target="_blank" rel="noopener">
+                                    MDN HTML Audio
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </section>
 
         </div>
-
     </main>
 
     <footer class="universal-footer">
@@ -254,43 +838,36 @@
                 <strong>WikiPlant</strong> — a community field index.
             </p>
 
-
             <nav aria-label="Footer navigation">
+<<<<<<< HEAD
+                <a href="index.html">Index</a>
+=======
+>>>>>>> 021794a9612d6bdaf1c26775315ab2f14c1a4d07
                 <a href="explorer.html">Explore</a>
-
                 <a href="contributor.html">Contributor</a>
+<<<<<<< HEAD
+                <a href="aboutus.html">About Us</a>
+=======
 
                 <a href="aboutus-sean.html">About Us</a>
 
+>>>>>>> 021794a9612d6bdaf1c26775315ab2f14c1a4d07
                 <a href="register.html">Register</a>
-
                 <a href="enquiry_form.html">Enquiry</a>
-
                 <a href="login.html">Login</a>
-
-                <a href="enhancement.html" aria-current="page">
-                    Enhancement
-                </a>
-
-                <a href="acknowledgement.html">
-                    Acknowledgement
-                </a>
-
+                <a href="enhancement.html" aria-current="page">Enhancement</a>
+                <a href="acknowledgement.html">Acknowledgement</a>
                 <a href="mailto:106764593@students.swinburne.edu.my">
                     Contact Us
                 </a>
-
             </nav>
 
-
-            <p>
-                &copy; 2026 WikiPlant. All rights reserved.
-            </p>
+            <p>&copy; 2026 WikiPlant. All rights reserved.</p>
 
         </div>
 
     </footer>
 
 </body>
-
 </html>
+
