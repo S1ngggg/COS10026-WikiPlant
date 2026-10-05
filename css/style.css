@@ -2122,11 +2122,11 @@ body.explorer-page {
 .explorer-page .specimen-photo-placeholder {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     margin: 18px 0 20px;
     border: 1px solid var(--line-soft);
     border-radius: 3px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .explorer-page .plant-photo {
@@ -2137,14 +2137,27 @@ body.explorer-page {
 .explorer-page .plant-photo img {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     margin: 0;
     border: 1px solid var(--line-soft);
     border-radius: 3px;
     background: var(--paper-deep);
     color: var(--ink-soft);
     font-size: 0.85rem;
-    object-fit: cover;
+    object-fit: contain;
+}
+
+.explorer-page .photo-credit {
+    margin-top: 6px;
+    color: var(--ink-soft);
+    font-size: 0.7rem;
+    line-height: 1.4;
+}
+
+.explorer-page .photo-credit a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .explorer-page .family-card > .plant-photo,
