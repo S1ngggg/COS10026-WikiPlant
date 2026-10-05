@@ -282,7 +282,7 @@ summary:focus-visible {
     outline: none;
 }
 
-/* Empty pages reserved for Enhancement and Acknowledgement content. */
+/* Empty page reserved for Acknowledgement content. */
 body.blank-page {
     display: flex;
     flex-direction: column;
@@ -300,6 +300,122 @@ body.blank-page {
 
 .blank-page .universal-footer {
     margin-top: 0;
+}
+
+/* Enhancement page */
+body.enhancement-page {
+    margin: 0;
+    background-color: #e8f5e9;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+/* Enhancement Page Specific Styles */
+.enhancement-page .enhancement-main {
+    background-color: #e8f5e9;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+.enhancement-page .enhancement-main .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.enhancement-page .intro-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.enhancement-page .enhancement-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.enhancement-page .enhancement-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Left Column */
+.enhancement-page .enhancement-image {
+    flex: 1 1 45%;
+}
+
+.enhancement-page .enhancement-image video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Column */
+.enhancement-page .enhancement-details {
+    flex: 1 1 50%;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.enhancement-page .enhancement-details p {
+    margin-bottom: 30px;
+}
+
+.enhancement-page .tags-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.enhancement-page .tags-group h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    white-space: nowrap;
+    padding-top: 5px;
+}
+
+.enhancement-page .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.enhancement-page .tag {
+    border: 1px solid #000;
+    padding: 5px 15px;
+    background-color: transparent;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+}
+
+.enhancement-page .tag:hover {
+    background-color: #dcedc8;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .enhancement-page .enhancement-content {
+        flex-direction: column;
+    }
+
+    .enhancement-page .tags-group {
+        flex-direction: column;
+    }
+
+    .enhancement-page .enhancement-image,
+    .enhancement-page .enhancement-details {
+        flex: 1 1 100%;
+        width: 100%;
+    }
 }
 
 /* HOME PAGE AND ENQUIRE PAGE DESIGN*/
@@ -2950,6 +3066,10 @@ body.identify-page {
     height: auto;
 }
 
+.identify-page .identify-action-row {
+    margin-top: 24px;
+}
+
 .identify-page .identify-btn {
     display: block;
     width: 100%;
@@ -2975,14 +3095,6 @@ body.identify-page {
     opacity: 0.55;
     cursor: not-allowed;
     background: var(--sage);
-}
-
-.identify-page .identify-preview-note {
-    max-width: 480px;
-    margin: 16px auto 0;
-    color: var(--ink-soft);
-    font-size: 0.85rem;
-    text-align: center;
 }
 
 /* --- Figures --- */
