@@ -255,7 +255,10 @@ summary:focus-visible {
     margin: 22px 0;
 }
 
-.universal-footer nav button {
+.universal-footer nav a {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
     background-color: var(--paper-card);
     border: 1px solid var(--line);
     color: var(--ink);
@@ -269,14 +272,34 @@ summary:focus-visible {
     transition: all 0.2s ease;
 }
 
-.universal-footer nav button:hover,
-.universal-footer nav button:focus {
+.universal-footer nav a:hover,
+.universal-footer nav a:focus {
     background-color: var(--sage-deep);
     border-color: var(--sage-deep);
     color: var(--paper);
     transform: translateY(-2px);
     box-shadow: 3px 4px 0 var(--shadow);
     outline: none;
+}
+
+/* Empty pages reserved for Enhancement and Acknowledgement content. */
+body.blank-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.blank-page .blank-main {
+    flex: 1;
+}
+
+.blank-page .universal-footer {
+    margin-top: 0;
 }
 
 /* HOME PAGE AND ENQUIRE PAGE DESIGN*/
@@ -1979,6 +2002,28 @@ body.explorer-page {
     margin-bottom: 0;
 }
 
+.explorer-page .specimen-img,
+.explorer-page .specimen-photo-placeholder {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin: 18px 0 20px;
+    border: 1px solid var(--line-soft);
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.explorer-page .specimen-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--paper-deep);
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
 .explorer-page .specimen-card .accession {
     position: absolute;
     top: 14px;
@@ -2006,6 +2051,23 @@ body.explorer-page {
     flex-wrap: wrap;
     gap: 6px;
     margin-bottom: 12px;
+}
+
+.explorer-page .map-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    margin: 4px 0 14px;
+    background: var(--paper-deep);
+}
+
+.explorer-page .map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .explorer-page .btn {
@@ -2239,12 +2301,15 @@ body.explorer-page {
 
 .explorer-page .filter-bar {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 9px;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
-.explorer-page .filter-bar>.groups {
+.explorer-page .filter-bar>.groups,
+.explorer-page .filter-bar>.family-grid,
+.explorer-page .filter-bar>.family-section {
     flex: 1 1 100%;
     margin-top: 30px;
     padding-top: 26px;
@@ -2259,13 +2324,51 @@ body.explorer-page {
 }
 
 .explorer-page .filter-bar label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
     cursor: pointer;
-    padding: 9px 18px;
+    padding: 7px 16px;
     border: 1px solid var(--line);
     border-radius: 999px;
     font-size: 0.9rem;
     background: var(--paper-card);
     color: var(--ink-soft);
+    line-height: 1.2;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.explorer-page .filter-bar label:hover {
+    border-color: var(--sage-deep);
+    color: var(--sage-deep);
+}
+
+.explorer-page .filter-bar .filter-heading {
+    flex: 1 1 100%;
+    margin-top: 12px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line-soft);
+    color: var(--ink);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.explorer-page .filter-bar .filter-heading:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+@media (max-width: 520px) {
+    .explorer-page .filter-bar {
+        gap: 8px;
+    }
+
+    .explorer-page .filter-bar label {
+        min-height: 36px;
+        padding: 7px 12px;
+        font-size: 0.84rem;
+    }
 }
 
 .explorer-page .filter-bar input[type="radio"]:checked+label {
@@ -2295,6 +2398,92 @@ body.explorer-page {
 .explorer-page #f-fabaceae:checked~.groups .group[data-family="fabaceae"],
 .explorer-page #f-asparagaceae:checked~.groups .group[data-family="asparagaceae"] {
     display: contents;
+}
+
+.explorer-page .filter-bar>.family-grid .family-card,
+.explorer-page .filter-bar>.family-section {
+    display: none;
+}
+
+.explorer-page #f-all:checked~.family-grid .family-card,
+.explorer-page #f-araceae:checked~.family-grid #araceae,
+.explorer-page #f-rosaceae:checked~.family-grid #rosaceae,
+.explorer-page #f-fabaceae:checked~.family-grid #fabaceae,
+.explorer-page #f-asparagaceae:checked~.family-grid #asparagaceae {
+    display: flex;
+}
+
+.explorer-page #f-all:checked~.family-section,
+.explorer-page #f-araceae:checked~#araceae,
+.explorer-page #f-rosaceae:checked~#rosaceae,
+.explorer-page #f-fabaceae:checked~#fabaceae,
+.explorer-page #f-asparagaceae:checked~#asparagaceae {
+    display: block;
+}
+
+.explorer-page #g-monstera:checked~.family-section .genus-card:not(#monstera),
+.explorer-page #g-spathiphyllum:checked~.family-section .genus-card:not(#spathiphyllum),
+.explorer-page #g-rosa:checked~.family-section .genus-card:not(#rosa),
+.explorer-page #g-fragaria:checked~.family-section .genus-card:not(#fragaria),
+.explorer-page #g-pisum:checked~.family-section .genus-card:not(#pisum),
+.explorer-page #g-laburnum:checked~.family-section .genus-card:not(#laburnum),
+.explorer-page #g-dracaena:checked~.family-section .genus-card:not(#dracaena),
+.explorer-page #g-chlorophytum:checked~.family-section .genus-card:not(#chlorophytum) {
+    display: none;
+}
+
+.explorer-page #g-monstera:checked~#rosaceae,
+.explorer-page #g-monstera:checked~#fabaceae,
+.explorer-page #g-monstera:checked~#asparagaceae,
+.explorer-page #g-spathiphyllum:checked~#rosaceae,
+.explorer-page #g-spathiphyllum:checked~#fabaceae,
+.explorer-page #g-spathiphyllum:checked~#asparagaceae,
+.explorer-page #g-rosa:checked~#araceae,
+.explorer-page #g-rosa:checked~#fabaceae,
+.explorer-page #g-rosa:checked~#asparagaceae,
+.explorer-page #g-fragaria:checked~#araceae,
+.explorer-page #g-fragaria:checked~#fabaceae,
+.explorer-page #g-fragaria:checked~#asparagaceae,
+.explorer-page #g-pisum:checked~#araceae,
+.explorer-page #g-pisum:checked~#rosaceae,
+.explorer-page #g-pisum:checked~#asparagaceae,
+.explorer-page #g-laburnum:checked~#araceae,
+.explorer-page #g-laburnum:checked~#rosaceae,
+.explorer-page #g-laburnum:checked~#asparagaceae,
+.explorer-page #g-dracaena:checked~#araceae,
+.explorer-page #g-dracaena:checked~#rosaceae,
+.explorer-page #g-dracaena:checked~#fabaceae,
+.explorer-page #g-chlorophytum:checked~#araceae,
+.explorer-page #g-chlorophytum:checked~#rosaceae,
+.explorer-page #g-chlorophytum:checked~#fabaceae {
+    display: none;
+}
+
+.explorer-page #g-monstera:checked~.groups .genus-heading:not(#genus-monstera),
+.explorer-page #g-monstera:checked~.groups .specimen-card:not(#monstera):not([id^="monstera-"]),
+.explorer-page #g-monstera:checked~.groups .family-heading:not(#araceae),
+.explorer-page #g-spathiphyllum:checked~.groups .genus-heading:not(#genus-spathiphyllum),
+.explorer-page #g-spathiphyllum:checked~.groups .specimen-card:not(#spathiphyllum):not([id^="spathiphyllum-"]),
+.explorer-page #g-spathiphyllum:checked~.groups .family-heading:not(#araceae),
+.explorer-page #g-rosa:checked~.groups .genus-heading:not(#genus-rosa),
+.explorer-page #g-rosa:checked~.groups .specimen-card:not(#rosa):not([id^="rosa-"]),
+.explorer-page #g-rosa:checked~.groups .family-heading:not(#rosaceae),
+.explorer-page #g-fragaria:checked~.groups .genus-heading:not(#genus-fragaria),
+.explorer-page #g-fragaria:checked~.groups .specimen-card:not(#fragaria):not([id^="fragaria-"]),
+.explorer-page #g-fragaria:checked~.groups .family-heading:not(#rosaceae),
+.explorer-page #g-pisum:checked~.groups .genus-heading:not(#genus-pisum),
+.explorer-page #g-pisum:checked~.groups .specimen-card:not(#pisum):not([id^="pisum-"]),
+.explorer-page #g-pisum:checked~.groups .family-heading:not(#fabaceae),
+.explorer-page #g-laburnum:checked~.groups .genus-heading:not(#genus-laburnum),
+.explorer-page #g-laburnum:checked~.groups .specimen-card:not(#laburnum):not([id^="laburnum-"]),
+.explorer-page #g-laburnum:checked~.groups .family-heading:not(#fabaceae),
+.explorer-page #g-dracaena:checked~.groups .genus-heading:not(#genus-dracaena),
+.explorer-page #g-dracaena:checked~.groups .specimen-card:not(#dracaena):not([id^="dracaena-"]),
+.explorer-page #g-dracaena:checked~.groups .family-heading:not(#asparagaceae),
+.explorer-page #g-chlorophytum:checked~.groups .genus-heading:not(#genus-chlorophytum),
+.explorer-page #g-chlorophytum:checked~.groups .specimen-card:not(#chlorophytum):not([id^="chlorophytum-"]),
+.explorer-page #g-chlorophytum:checked~.groups .family-heading:not(#asparagaceae) {
+    display: none;
 }
 
 .explorer-page .family-heading {
@@ -2601,6 +2790,10 @@ body.explorer-page {
     box-shadow: 4px 5px 0 var(--shadow, rgba(43, 51, 35, 0.14)); /* 采用你其他卡片的投影风格 */
 }
 
+.explorer-page .species-cta-wrap {
+    margin-bottom: 50px;
+}
+
 .cta-text-box h2 {
     font-family: 'Fraunces', serif;
     font-size: 1.8rem;
@@ -2757,13 +2950,6 @@ body.identify-page {
     height: auto;
 }
 
-.identify-page .upload-preview {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    border-radius: 6px;
-}
-
 .identify-page .identify-btn {
     display: block;
     width: 100%;
@@ -2783,6 +2969,20 @@ body.identify-page {
 
 .identify-page .identify-btn:hover {
     background: var(--sage-deep);
+}
+
+.identify-page .identify-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    background: var(--sage);
+}
+
+.identify-page .identify-preview-note {
+    max-width: 480px;
+    margin: 16px auto 0;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    text-align: center;
 }
 
 /* --- Figures --- */
@@ -2876,7 +3076,7 @@ body.identify-page {
 /* ABOUT US / INDIVIDUAL MEMBER PROFILE */
 body.about-page {
     margin: 0;
-    background: #F7F5EF;
+    background: #F3EFE2;
     color: #263E32;
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
@@ -3068,8 +3268,172 @@ body.about-page {
     color: #8F4F2C;
 }
 
+/* Sean's profile: centred photo, followed by his name and details. */
+.about-page .about-profile-sean {
+    margin-top: 32px;
+}
+
+.about-page .about-profile-sean .about-portrait-cell {
+    padding: 36px 24px 0;
+}
+
+.about-page .about-profile-sean .about-portrait {
+    display: flow-root;
+    float: none;
+    width: min(240px, 100%);
+    margin: 0 auto;
+}
+
+.about-page .about-profile-sean .about-photo {
+    width: 100%;
+    margin: 0;
+}
+
+.about-page .about-profile-sean .about-bio {
+    margin: 0;
+    padding-top: 0;
+    text-align: left;
+}
+
+.about-page .about-profile-sean .about-profile-table .about-label-column {
+    width: 30%;
+}
+
+.about-page .about-profile-sean .about-info-row > th {
+    padding: 24px 18px;
+    border-right: 1px solid #D0D5C6;
+    border-top: 1px solid #D0D5C6;
+    background-color: #E8EDE1;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.85em;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.about-page .about-profile-sean .about-profile-value {
+    padding: 24px 28px;
+    border-top: 1px solid #D0D5C6;
+    background-color: #FFFEFA;
+    vertical-align: middle;
+    font-size: 0.9em;
+    overflow-wrap: anywhere;
+}
+
+.about-page .about-profile-sean .about-contact {
+    text-align: left;
+}
+
+.about-page .about-profile-sean .about-bio > p:last-child {
+    margin-bottom: 0;
+}
+
+.about-page .about-profile-sean .about-student-number,
+.about-page .about-profile-sean .about-course {
+    color: rgb(38, 62, 50);
+    font-weight: 600;
+}
+
 .about-page .about-personal {
     margin-top: 66px;
+}
+
+.about-page .about-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+}
+
+.about-page .about-photo-initial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #B8C2AB;
+    border-radius: 50%;
+    background: #E8EDE1;
+    color: #586953;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 3rem;
+}
+
+.about-page .about-pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 42px 0 64px;
+    padding-top: 24px;
+    border-top: 1px solid #D0D5C6;
+}
+
+.about-page .about-pagination-end {
+    justify-content: flex-end;
+}
+
+.about-page .about-pagination-start {
+    justify-content: flex-start;
+}
+
+.about-page .about-pagination-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 100%;
+    color: #263E32;
+    text-decoration: none;
+}
+
+.about-page .about-pagination-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.about-page .about-pagination-next .about-pagination-copy {
+    text-align: right;
+}
+
+.about-page .about-pagination-label {
+    color: #586953;
+    font-size: 0.62em;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.about-page .about-pagination-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.15em;
+    line-height: 1.3;
+}
+
+.about-page .about-pagination-arrow {
+    display: flex;
+    flex: 0 0 52px;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid #617358;
+    border-radius: 50%;
+    background: #EEF1E7;
+    font-size: 1.5rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.about-page .about-pagination-link:hover .about-pagination-arrow {
+    background: #263E32;
+    color: #FFFEFA;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-page .about-pagination-arrow {
+        transition: none;
+    }
 }
 
 .about-page .about-section-heading {
@@ -3444,8 +3808,26 @@ body.contributor-page {
     }
 }
 
-/* Shared navigation drawer; the existing menu remains usable without JavaScript. */
+.record-form .form-preview-note {
+    padding: 14px 16px;
+    border: 1px solid var(--line-soft);
+    background: var(--paper-deep);
+    color: var(--ink-soft);
+}
+
+.record-form .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    box-shadow: none;
+    background: var(--sage-deep);
+    border-color: var(--sage-deep);
+    color: var(--paper);
+}
+
+/* Shared navigation drawer controlled entirely by HTML and CSS. */
+.site-header .nav-state,
 .site-header .nav-toggle,
+.site-header .nav-close,
 .site-header .nav-drawer-topbar,
 .site-header .nav-backdrop {
     display: none;
@@ -3460,11 +3842,12 @@ body.contributor-page {
         margin: 0;
     }
 
-    html.nav-open {
+    html:has(.nav-state:checked) {
         overflow: hidden;
     }
 
-    .site-header.nav-enhanced .wrap {
+    .site-header .wrap {
+        position: relative;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
@@ -3472,12 +3855,23 @@ body.contributor-page {
         padding: 16px 24px;
     }
 
-    .site-header.nav-enhanced .nav-toggle,
-    .site-header.nav-enhanced .nav-close {
-        display: flex;
+    .site-header .nav-state {
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 24px;
+        z-index: 2;
+        width: 44px;
+        height: 44px;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .site-header .nav-toggle,
+    .site-header .nav-close {
         align-items: center;
         justify-content: center;
-        flex: 0 0 44px;
         width: 44px;
         height: 44px;
         padding: 10px;
@@ -3488,40 +3882,71 @@ body.contributor-page {
         cursor: pointer;
     }
 
-    .site-header.nav-enhanced .nav-toggle {
+    .site-header .nav-toggle {
+        display: flex;
+        flex: 0 0 44px;
+        margin: 0;
+    }
+
+    .site-header .nav-toggle-lines {
+        display: flex;
         flex-direction: column;
         gap: 5px;
     }
 
-    .site-header.nav-enhanced .nav-toggle span {
+    .site-header .nav-toggle-lines span {
         width: 22px;
         height: 2px;
         background: currentColor;
     }
 
-    .site-header.nav-enhanced .nav-close {
-        font-family: Arial, sans-serif;
-        font-size: 30px;
-        line-height: 1;
-    }
-
-    .site-header.nav-enhanced .nav-toggle:hover,
-    .site-header.nav-enhanced .nav-close:hover {
+    .site-header .nav-state:hover + .nav-toggle {
         background: var(--paper-deep);
     }
 
-    .site-header.nav-enhanced .nav-backdrop {
+    .site-header .nav-state:focus-visible + .nav-toggle,
+    .site-header .nav-state:checked:focus-visible + .nav-toggle .nav-close {
+        outline: 2px solid var(--sage-deep);
+        outline-offset: 3px;
+    }
+
+    .site-header .nav-state:checked {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        z-index: 103;
+    }
+
+    .site-header .nav-state:checked + .nav-toggle .nav-toggle-lines {
+        visibility: hidden;
+    }
+
+    .site-header .nav-state:checked + .nav-toggle .nav-close {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        z-index: 102;
+        display: flex;
+        font-family: Arial, sans-serif;
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 1;
+    }
+
+    .site-header .nav-backdrop {
         display: block;
+        margin: 0;
         position: fixed;
         inset: 0;
         z-index: 100;
         background: rgba(25, 35, 26, 0.38);
         opacity: 0;
         visibility: hidden;
+        cursor: pointer;
         transition: opacity 0.25s ease, visibility 0s linear 0.25s;
     }
 
-    .site-header.nav-enhanced .nav-drawer-panel {
+    .site-header .nav-drawer-panel {
         position: fixed;
         top: 0;
         right: 0;
@@ -3541,29 +3966,28 @@ body.contributor-page {
         transition: transform 0.3s ease, visibility 0s linear 0.3s;
     }
 
-    .site-header.nav-enhanced .nav-drawer-topbar {
+    .site-header .nav-drawer-topbar {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        padding-bottom: 20px;
+        min-height: 65px;
+        padding: 0 60px 20px 0;
         border-bottom: 1px solid var(--line-soft);
     }
 
-    .site-header.nav-enhanced .nav-drawer-topbar > span {
+    .site-header .nav-drawer-topbar > span {
         color: var(--ink);
         font-family: 'Fraunces', Georgia, serif;
         font-size: 1.6rem;
     }
 
-    .site-header.nav-enhanced .main-nav {
+    .site-header .main-nav {
         flex: 1;
         min-height: 0;
         overflow-y: auto;
         overscroll-behavior: contain;
     }
 
-    .site-header.nav-enhanced .main-nav ul {
+    .site-header .main-nav ul {
         flex-direction: column;
         flex-wrap: nowrap;
         gap: 4px;
@@ -3571,7 +3995,7 @@ body.contributor-page {
         padding: 0;
     }
 
-    .site-header.nav-enhanced .main-nav a {
+    .site-header .main-nav a {
         display: block;
         padding: 12px 14px;
         font-size: 1rem;
@@ -3579,17 +4003,17 @@ body.contributor-page {
         line-height: 1.4;
     }
 
-    .site-header.nav-enhanced .main-nav a[aria-current="page"] {
+    .site-header .main-nav a[aria-current="page"] {
         border-color: var(--sage-deep);
         background: var(--paper);
         color: var(--sage-deep);
     }
 
-    .site-header.nav-enhanced .nav-drop > a::after {
+    .site-header .nav-drop > a::after {
         content: none;
     }
 
-    .site-header.nav-enhanced .drop-menu {
+    .site-header .drop-menu {
         position: static;
         display: flex;
         min-width: 0;
@@ -3601,18 +4025,18 @@ body.contributor-page {
         box-shadow: none;
     }
 
-    .site-header.nav-enhanced .drop-menu a {
+    .site-header .drop-menu a {
         padding: 9px 12px;
         font-size: 0.9rem;
     }
 
-    .site-header.nav-is-open .nav-backdrop {
+    .site-header .nav-state:checked ~ .nav-backdrop {
         opacity: 1;
         visibility: visible;
         transition-delay: 0s;
     }
 
-    .site-header.nav-is-open .nav-drawer-panel {
+    .site-header .nav-state:checked ~ .nav-drawer-panel {
         transform: translateX(0);
         visibility: visible;
         transition-delay: 0s;
