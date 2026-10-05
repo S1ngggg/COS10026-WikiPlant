@@ -4184,3 +4184,62 @@ body.contributor-page {
         transition: none;
     }
 }
+
+.home-page .category_card h3 a {
+    text-decoration: none;
+}
+
+.home-page .demo-video {
+    margin-top: 25px;
+}
+
+.home-page .demo-video-link {
+    color: var(--clay-deep);
+    font-weight: 700;
+}
+
+.cta-wrap {
+    margin-bottom: 50px;
+}
+
+.explorer-page .genus-card .tag a {
+    text-decoration: none;
+}
+
+.explorer-page .form-page-wrap {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.explorer-page .form-page-wrap-wide {
+    max-width: 800px;
+}
+
+.explorer-page .form-page-wrap-narrow {
+    max-width: 600px;
+}
+
+.explorer-page .page-header.form-page-header {
+    border-bottom: none;
+    margin-bottom: 10px;
+    padding-top: 0;
+}
+
+.explorer-page .field-row.field-row-two {
+    grid-template-columns: 1fr 1fr;
+}
+
+.explorer-page .remember-row {
+    margin-top: 15px;
+}
+
+.explorer-page .form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.explorer-page .form-prompt {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}

@@ -48,8 +48,8 @@
     </div>
   </header>
 
-  <main class="wrap" style="padding-top: 50px; padding-bottom: 50px; max-width: 800px;">
-    <div class="page-header" style="border-bottom: none; margin-bottom: 10px; padding-top: 0;">
+  <main class="wrap form-page-wrap form-page-wrap-wide">
+    <div class="page-header form-page-header">
       <h1>Create an Account</h1>
       <p>Join the community and help index biodiversity.</p>
     </div>
@@ -58,7 +58,7 @@
       <fieldset>
         <legend>Personal Details</legend>
 
-        <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+        <div class="field-row field-row-two">
           <div class="field-group">
             <label for="firstName">First Name <span class="req">*</span></label>
             <input type="text" id="firstName" name="firstName" pattern="[A-Za-z\s]+" maxlength="25"
@@ -77,7 +77,7 @@
             title="Maximum 10 alphabetical characters only" required>
         </div>
 
-        <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+        <div class="field-row field-row-two">
           <div class="field-group">
             <label for="regEmail">Email Address <span class="req">*</span></label>
             <input type="email" id="regEmail" name="regEmail" placeholder="eg: abc@gmail.com" required>
@@ -134,7 +134,7 @@
       <fieldset>
         <legend>Account Security</legend>
 
-        <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+        <div class="field-row field-row-two">
           <div class="field-group">
             <label for="regPassword">Password <span class="req">*</span></label>
             <input type="password" id="regPassword" name="regPassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}"
@@ -147,12 +147,12 @@
         </div>
       </fieldset>
 
-      <div style="display: flex; gap: 15px; margin-top: 20px;">
+      <div class="form-actions">
         <button type="submit" class="btn" disabled>Register</button>
         <button type="reset" class="btn btn-outline">Reset</button>
       </div>
 
-      <p style="margin-top: 20px; font-size: 0.9rem;">Already have an account? <a href="login.html">Login here</a></p>
+      <p class="form-prompt">Already have an account? <a href="login.html">Login here</a></p>
     </form>
   </main>
 

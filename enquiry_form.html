@@ -48,8 +48,8 @@
         </div>
     </header>
 
-    <main class="wrap" style="padding-top: 50px; padding-bottom: 50px; max-width: 800px;">
-        <div class="page-header" style="border-bottom: none; margin-bottom: 10px; padding-top: 0;">
+    <main class="wrap form-page-wrap form-page-wrap-wide">
+        <div class="page-header form-page-header">
             <h1>WikiPlant Enquiry Form</h1>
             <p>Ask any question you want about our website or plant categories!</p>
         </div>
@@ -58,7 +58,7 @@
             <fieldset>
                 <legend>User Information</legend>
 
-                <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+                <div class="field-row field-row-two">
                     <div class="field-group">
                         <label for="firstName">First Name <span class="req">*</span></label>
                         <input type="text" id="firstName" name="firstName" pattern="[A-Za-z\s]+" maxlength="25"
@@ -71,7 +71,7 @@
                     </div>
                 </div>
 
-                <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+                <div class="field-row field-row-two">
                     <div class="field-group">
                         <label for="email">Email Address <span class="req">*</span></label>
                         <input type="email" id="email" name="email" placeholder="name@domain.com" required>
@@ -106,7 +106,7 @@
                 </div>
             </fieldset>
 
-            <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <div class="form-actions">
                 <button type="submit" class="btn">Submit</button>
                 <button type="reset" class="btn btn-outline">Clear Form</button>
             </div>
