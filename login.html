@@ -38,7 +38,7 @@
           </li>
           <li><a href="identify.html">Identify</a></li>
           <li><a href="contributor.html">Contributor</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="aboutus-sean.html">About Us</a></li>
           <li><a href="enquiry_form.html">Enquiry</a></li>
           <li><a href="register.html">Register</a></li>
           <li><a href="login.html" aria-current="page">Login</a></li>
@@ -48,14 +48,13 @@
     </div>
   </header>
 
-  <main class="wrap" style="padding-top: 50px; padding-bottom: 50px; max-width: 600px;">
-    <div class="page-header" style="border-bottom: none; margin-bottom: 10px; padding-top: 0;">
+  <main class="wrap form-page-wrap form-page-wrap-narrow">
+    <div class="page-header form-page-header">
       <h1>Welcome Back, WikiPlant User!</h1>
       <p>Login now to contribute to the WikiPlant database!</p>
     </div>
 
     <form class="record-form" action="#" method="post">
-            <p class="hint form-preview-note" id="form-preview-note">This form is for demonstration only. Account login is not available yet.</p>
       <fieldset>
         <legend>Account Login</legend>
 
@@ -72,7 +71,7 @@
             pattern="[A-Za-z]+" maxlength="25" title="Maximum 25 alphabetical characters only" required>
         </div>
 
-        <div class="radio-row" style="margin-top: 15px;">
+        <div class="radio-row remember-row">
           <label for="rememberMe">
             <input type="checkbox" id="rememberMe" name="rememberMe" value="yes">
             Remember me
@@ -80,12 +79,12 @@
         </div>
       </fieldset>
 
-      <div style="display: flex; gap: 15px; margin-top: 20px;">
-        <button type="submit" class="btn" disabled aria-describedby="form-preview-note">Login</button>
+      <div class="form-actions">
+        <button type="submit" class="btn" disabled>Login</button>
         <button type="reset" class="btn btn-outline">Reset</button>
       </div>
 
-      <p style="margin-top: 20px; font-size: 0.9rem;">Don't have an account? <a href="register.html">Register here</a>
+      <p class="form-prompt">Don't have an account? <a href="register.html">Register here</a>
       </p>
     </form>
   </main>
@@ -95,10 +94,9 @@
       <p><strong>WikiPlant</strong> — a community field index.</p>
 
       <nav aria-label="Footer navigation">
-        <a href="index.html">Index</a>
         <a href="explorer.html">Explore</a>
         <a href="contributor.html">Contributor</a>
-        <a href="aboutus.html">About Us</a>
+        <a href="aboutus-sean.html">About Us</a>
         <a href="register.html">Register</a>
         <a href="enquiry_form.html">Enquiry</a>
         <a href="login.html">Login</a>
