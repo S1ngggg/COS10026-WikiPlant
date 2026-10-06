@@ -4243,3 +4243,50 @@ body.contributor-page {
     margin-top: 20px;
     font-size: 0.9rem;
 }
+
+/* 先给图片添加过渡时间，让动画显得平滑，而不是生硬地瞬间变大 */
+.plant_card img,
+.category_card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 当鼠标悬停在卡片上时，图片放大 5% 并增加阴影 */
+.plant_card:hover img,
+.category_card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* 让整个页面的滚动变得平滑，而不是瞬间跳跃 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 回到顶部按钮的样式和固定位置 */
+a.back-to-top {
+    position: fixed;
+    bottom: 40px;      /* 距离底部 40px */
+    right: 40px;       /* 距离右侧 40px */
+    background-color: #2e7d32; /* 配合你网站的绿色主题 */
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* 变成圆形 */
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 999;      /* 确保它不会被其他元素挡住 */
+}
+
+/* 按钮的悬停特效（顺便把 Button Hover enhancement 也应用在这里） */
+.back-to-top:hover {
+    background-color: #1b5e20; /* 悬停时颜色变深 */
+    transform: translateY(-3px); /* 悬停时微微上浮 */
+}
+/* 强制把所有分页箭头和悬浮按钮的颜色覆盖掉 */
+/* 强制修改所有页面中带有 aria-hidden="true" 属性的箭头图标颜色 */
