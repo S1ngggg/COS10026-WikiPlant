@@ -200,7 +200,7 @@ summary:focus-visible {
         margin: 0;
     }
 
-    .site-header .main-nav > ul > li > a {
+    .site-header .main-nav>ul>li>a {
         font-weight: 500;
     }
 }
@@ -418,9 +418,599 @@ body.enhancement-page {
     }
 }
 
-/* HOME PAGE AND ENQUIRE PAGE DESIGN*/
+/* HOME PAGE DESIGN*/
 
-body.home-page,
+/* HOMEPAGE: immersive botanical photography and restrained editorial typography.
+   These rules are scoped to .home-page so the other pages retain their designs.
+   We have mapped the team's custom design directly to the global WikiPlant color variables. */
+body.home-page {
+    /* Mapping layout colors to existing site theme */
+    --home-cream: var(--paper);
+    --home-forest: var(--ink);
+    --home-deep: var(--ink);
+    --home-gold: var(--clay-deep);
+    --home-muted: var(--ink-soft);
+
+    margin: 0;
+    background: var(--home-cream);
+    color: var(--home-forest);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.home-page main {
+    background: var(--home-cream);
+}
+
+.home-page a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+    margin: 0;
+}
+
+.home-page h1 em,
+.home-page h2 em {
+    font-weight: 400;
+}
+
+.home-page p {
+    margin: 0;
+}
+
+.home-page a:focus-visible {
+    outline: 2px solid var(--home-gold);
+    outline-offset: 6px;
+}
+
+.home-page .home-content-width {
+    width: calc(100% - 160px);
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-page .home-eyebrow {
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+/* The photograph fills the hero; transparent copy sits at its lower-right edge. */
+.home-page .home-hero {
+    position: relative;
+    isolation: isolate;
+    margin: 0 32px;
+    min-height: 520px;
+    height: calc(100vh - 80px);
+    /* Adjusted to accommodate standard site header */
+    height: calc(100svh - 80px);
+    max-height: 1000px;
+    background: var(--home-deep);
+    overflow: hidden;
+}
+
+.home-page .home-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 45% 48%;
+    z-index: -2;
+}
+
+.home-page .home-hero-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 42%, rgba(8, 26, 18, 0.55)),
+        linear-gradient(0deg, rgba(8, 26, 18, 0.48), transparent 40%);
+    z-index: -1;
+}
+
+.home-page .home-hero-copy {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 465px;
+    max-width: 46%;
+    background: transparent;
+    color: var(--home-cream);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+    padding: 41px 45px 39px;
+}
+
+.home-page .home-hero-copy .home-eyebrow {
+    color: var(--paper-card);
+    margin-bottom: 22px;
+    font-size: 9px;
+}
+
+.home-page .home-hero-copy h1 {
+    font: normal 400 53px/1.07 'Fraunces', Georgia, serif;
+    letter-spacing: -0.045em;
+    margin-bottom: 22px;
+}
+
+.home-page .home-hero-copy>p:not(.home-eyebrow) {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--paper);
+}
+
+.home-page .home-text-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    border-bottom: 1px solid var(--line);
+    padding: 0 0 9px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    line-height: 1.5;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.home-page .home-text-link span {
+    font-size: 19px;
+    transition: transform 0.2s;
+}
+
+.home-page .home-text-link:hover {
+    color: var(--clay-deep);
+    border-color: var(--clay-deep);
+}
+
+.home-page .home-text-link:hover span {
+    transform: translateX(4px);
+}
+
+.home-page .home-hero-copy .home-text-link {
+    margin-top: 26px;
+    border-color: rgba(243, 239, 226, 0.65);
+}
+
+.home-page .home-hero-copy .home-text-link:hover {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+/* Story: asymmetrical photograph and copy, with generous space between them. */
+.home-page .home-story {
+    display: grid;
+    grid-template-columns: 0.92fr 1fr;
+    align-items: center;
+    gap: clamp(60px, 9vw, 145px);
+    padding-top: 115px;
+    padding-bottom: 120px;
+    scroll-margin-top: 30px;
+}
+
+.home-page .home-story-photo {
+    margin: 0;
+}
+
+.home-page .home-story-photo img {
+    display: block;
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+}
+
+.home-page .home-story-photo figcaption {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+    font-size: 10px;
+    line-height: 1.6;
+    padding-top: 16px;
+    color: var(--home-muted);
+}
+
+.home-page .home-story-photo figcaption span {
+    font-size: 8px;
+}
+
+.home-page .home-story-copy h2,
+.home-page .home-participate-copy h2 {
+    font-size: clamp(38px, 4vw, 56px);
+    margin-bottom: 29px;
+}
+
+.home-page .home-story-copy>p:not(.home-eyebrow),
+.home-page .home-participate-copy>p:not(.home-eyebrow) {
+    color: var(--ink-soft);
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 17px;
+}
+
+.home-page .home-story-copy .home-text-link {
+    margin-top: 14px;
+}
+
+/* Collections: photographic entry points, matched to the global green palette. */
+.home-page .home-collection {
+    background: var(--sage-deep);
+    color: var(--paper);
+    padding: 88px 0 90px;
+}
+
+.home-page .home-collection .home-eyebrow {
+    color: var(--line-soft);
+}
+
+.home-page .home-collection-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 70px;
+    margin-bottom: 50px;
+}
+
+.home-page .home-collection-heading h2 {
+    font-size: clamp(38px, 4vw, 55px);
+}
+
+.home-page .home-collection-heading>p {
+    max-width: 310px;
+    color: var(--paper-deep);
+    font-size: 12px;
+    line-height: 1.9;
+    padding-bottom: 5px;
+}
+
+.home-page .home-collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.home-page .home-collection-item {
+    display: block;
+}
+
+.home-page .home-collection-image {
+    overflow: hidden;
+    background: var(--home-deep);
+}
+
+.home-page .home-collection-image img {
+    display: block;
+    width: 100%;
+    height: 315px;
+    object-fit: cover;
+    transition: transform 0.6s;
+}
+
+.home-page .home-collection-item:hover img {
+    transform: scale(1.04);
+}
+
+.home-page .home-collection-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px 0 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.home-page .home-collection-number {
+    align-self: flex-start;
+    padding-top: 6px;
+    font-size: 9px;
+    color: var(--line-soft);
+}
+
+.home-page .home-collection-label h3 {
+    font-size: 32px;
+}
+
+.home-page .home-collection-arrow {
+    display: grid;
+    place-items: center;
+    margin-left: auto;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.home-page .home-collection-item:hover .home-collection-arrow {
+    background: var(--paper);
+    color: var(--sage-deep);
+}
+
+.home-page .home-collection-item>p {
+    color: var(--paper-deep);
+    font-size: 11px;
+    line-height: 1.9;
+    margin-top: 15px;
+    max-width: 28em;
+}
+
+/* Community invitation and project video link. */
+.home-page .home-participate {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 120px;
+    padding-top: 115px;
+    padding-bottom: 100px;
+}
+
+.home-page .home-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 27px;
+    margin-top: 30px;
+}
+
+.home-page .home-solid-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 15px 23px;
+    background: var(--sage-deep);
+    color: var(--paper);
+    font-size: 11px;
+    letter-spacing: 0.025em;
+    transition: background-color 0.2s;
+}
+
+.home-page .home-solid-link span {
+    font-size: 18px;
+}
+
+.home-page .home-solid-link:hover {
+    background: var(--ink);
+}
+
+.home-page .home-field-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.home-page .home-field-steps li {
+    display: flex;
+    gap: 25px;
+    border-top: 1px solid var(--line);
+    padding: 27px 0;
+}
+
+.home-page .home-field-steps li:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.home-page .home-step-number {
+    font-size: 10px;
+    color: var(--clay-deep);
+    padding-top: 5px;
+}
+
+.home-page .home-field-steps h3 {
+    font-size: 25px;
+    margin-bottom: 9px;
+    letter-spacing: -0.025em;
+}
+
+.home-page .home-field-steps p {
+    font-size: 11px;
+    color: var(--ink-soft);
+}
+
+.home-page .home-project-note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    border-top: 1px solid var(--line);
+    padding: 30px 0 50px;
+}
+
+.home-page .home-project-note .home-eyebrow {
+    margin-bottom: 8px;
+    font-size: 9px;
+}
+
+.home-page .home-project-note>div>p:last-child {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+@media (max-width: 1050px) {
+    .home-page .home-content-width {
+        width: calc(100% - 96px);
+    }
+
+    .home-page .home-hero {
+        margin: 0 24px;
+    }
+
+    .home-page .home-hero-copy {
+        padding: 32px;
+        max-width: 49%;
+    }
+
+    .home-page .home-hero-copy h1 {
+        font-size: 45px;
+    }
+
+    .home-page .home-story {
+        gap: 60px;
+    }
+
+    .home-page .home-story-photo img {
+        height: 520px;
+    }
+
+    .home-page .home-participate {
+        gap: 65px;
+    }
+
+    .home-page .home-collection-image img {
+        height: 265px;
+    }
+}
+
+@media (max-width: 760px) {
+    .home-page .home-hero {
+        margin: 0 16px;
+        min-height: 740px;
+        height: 82vh;
+        height: 82svh;
+    }
+
+    .home-page .home-hero-image {
+        object-position: 37% center;
+    }
+
+    .home-page .home-hero-copy {
+        width: 440px;
+        max-width: calc(100% - 32px);
+        padding: 34px;
+    }
+
+    .home-page .home-hero-copy h1 {
+        font-size: 44px;
+    }
+
+    .home-page .home-content-width {
+        width: calc(100% - 48px);
+    }
+
+    .home-page .home-story {
+        grid-template-columns: 1fr;
+        gap: 42px;
+        padding-top: 65px;
+        padding-bottom: 70px;
+    }
+
+    .home-page .home-story-photo img {
+        height: 510px;
+    }
+
+    .home-page .home-story-copy h2,
+    .home-page .home-participate-copy h2 {
+        font-size: 43px;
+    }
+
+    .home-page .home-collection {
+        padding: 62px 0 65px;
+    }
+
+    .home-page .home-collection-heading {
+        display: block;
+        margin-bottom: 35px;
+    }
+
+    .home-page .home-collection-heading h2 {
+        font-size: 43px;
+    }
+
+    .home-page .home-collection-heading>p {
+        max-width: 430px;
+        margin-top: 22px;
+    }
+
+    .home-page .home-collection-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .home-page .home-collection-image img {
+        height: 370px;
+    }
+
+    .home-page .home-collection-label h3 {
+        font-size: 32px;
+    }
+
+    .home-page .home-collection-item>p {
+        max-width: none;
+    }
+
+    .home-page .home-participate {
+        grid-template-columns: 1fr;
+        gap: 42px;
+        padding-top: 65px;
+        padding-bottom: 50px;
+    }
+
+    .home-page .home-field-steps h3 {
+        font-size: 24px;
+    }
+
+    .home-page .home-project-note {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 38px;
+    }
+
+    .home-page .home-project-note>div>p:last-child {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-page .home-hero {
+        min-height: 700px;
+    }
+
+    .home-page .home-hero-copy {
+        padding: 27px;
+    }
+
+    .home-page .home-hero-copy h1 {
+        font-size: 39px;
+    }
+
+    .home-page .home-hero-copy .home-eyebrow {
+        font-size: 8px;
+    }
+
+    .home-page .home-hero-copy>p:not(.home-eyebrow) {
+        font-size: 12px;
+    }
+
+    .home-page .home-story-copy h2,
+    .home-page .home-participate-copy h2,
+    .home-page .home-collection-heading h2 {
+        font-size: 37px;
+    }
+
+    .home-page .home-story-photo img {
+        height: 430px;
+    }
+
+    .home-page .home-collection-image img {
+        height: 320px;
+    }
+}
+
+/* ENQUIRY PAGE DESIGN */
+
 body.enquiry-page {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -428,162 +1018,12 @@ body.enquiry-page {
     color: #2A331B;
 }
 
-.home-page a,
 .enquiry-page a {
     color: #2A331B;
 }
 
-.home-page main,
 .enquiry-page main {
     background-color: #F9F6F0;
-}
-
-.home-page .hero {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.home-page .badge {
-    display: inline-block;
-    border: 2px solid black;
-    border-radius: 20px;
-    padding: 7px 7px;
-    font-weight: bold;
-    margin: 10px;
-}
-
-.home-page .card_container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin: 50px 0px;
-}
-
-.home-page .plant_card {
-    width: 220px;
-    background-color: #FFFFFF;
-    border: 2px solid #2A331B;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.home-page .plant_card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 2px;
-}
-
-.home-page .category_card {
-    background-color: #FFFFFF;
-    border: 2px solid #2A331B;
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.home-page .category_card img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 4px;
-    border: 1px solid var(--line);
-    margin-bottom: 15px;
-}
-
-.home-page .plant_card h3 {
-    color: #6B8E23;
-    font-size: 20px;
-    margin: 15px 0 5px 0;
-}
-
-.home-page .about_section {
-    margin: 0px 40px 50px 40px;
-    padding: 0 20px;
-    display: block;
-}
-
-.home-page .about_section h2 {
-    font-size: 24px;
-    color: #2A331B;
-    margin-bottom: 15px;
-}
-
-.home-page .text_box {
-    background-color: #FFFFFF;
-    border: 2px solid #2A331B;
-    padding: 25px;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    display: block;
-    box-sizing: border-box;
-}
-
-.home-page .text_box p {
-    margin: 0;
-    color: #2A331B;
-}
-
-.home-page .quote {
-    text-align: right;
-    font-weight: bold;
-    font-size: 18px;
-    color: #2A331B;
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
-.home-page .quote_box p {
-    text-align: right;
-}
-
-.home-page .categories_section {
-    margin: 0px 40px 50px 40px;
-    padding: 0 20px;
-}
-
-.home-page .categories_section h2 {
-    font-size: 24px;
-    color: #2A331B;
-    margin-bottom: 20px;
-}
-
-.home-page .category_grid {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-}
-
-.home-page .category_card {
-    background-color: #FFFFFF;
-    border: 2px solid #2A331B;
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-}
-
-.home-page .category_img_placeholder {
-    background-color: #F9F6F0;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    color: #6B8E23;
-    border: 2px dashed #6B8E23;
-    font-weight: bold;
-}
-
-.home-page .category_card h3 {
-    color: #2A331B;
-    font-size: 22px;
-    margin: 0;
 }
 
 /* a little bit for enquiry page */
@@ -813,7 +1253,7 @@ body.contributor-page {
     max-width: 850px;
 }
 
-.contributor-page .about-section p + p {
+.contributor-page .about-section p+p {
     margin-top: 14px;
 }
 
@@ -1025,7 +1465,8 @@ body.contributor-page {
 }
 
 .contributor-page .grid_header.right {
-    background: var(--paper-card); /* 右侧表头可配浅色背景区分 */
+    background: var(--paper-card);
+    /* 右侧表头可配浅色背景区分 */
 }
 
 /* 左侧名称列样式 */
@@ -1052,6 +1493,7 @@ body.contributor-page {
 .contributor-page .grid_data:last-of-type {
     border-bottom: none;
 }
+
 /* =========================================================
    9. GUIDANCE / STEPS
    ========================================================= */
@@ -1079,7 +1521,7 @@ body.contributor-page {
     border-radius: 8px;
 }
 
-.contributor-page .steps-list li > span {
+.contributor-page .steps-list li>span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1192,8 +1634,7 @@ body.contributor-page {
 
 /* Keyboard focus */
 
-.contributor-page .contributor-card-toggle:focus-visible
-+ .contributor-card-front {
+.contributor-page .contributor-card-toggle:focus-visible+.contributor-card-front {
     outline: 3px solid var(--sage-deep);
     outline-offset: 4px;
 }
@@ -1331,7 +1772,7 @@ body.contributor-page {
     transform: rotateY(180deg);
 }
 
-.contributor-page .contributor-card-back > img {
+.contributor-page .contributor-card-back>img {
     width: 100%;
     height: 120px;
 
@@ -1367,7 +1808,7 @@ body.contributor-page {
     font-weight: 480;
 }
 
-.contributor-page .contribution-copy > p {
+.contributor-page .contribution-copy>p {
     margin: 3px 0 0;
 
     color: var(--paper-deep);
@@ -1401,7 +1842,7 @@ body.contributor-page {
     color: var(--paper);
 }
 
-.contributor-page .contribution-copy > a {
+.contributor-page .contribution-copy>a {
     display: inline-flex;
 
     margin-top: 9px;
@@ -1416,13 +1857,11 @@ body.contributor-page {
 
 /* Flip card */
 
-.contributor-page .contributor-card-toggle:checked
-~ .contributor-card-front {
+.contributor-page .contributor-card-toggle:checked~.contributor-card-front {
     transform: rotateY(-180deg);
 }
 
-.contributor-page .contributor-card-toggle:checked
-~ .contributor-card-back {
+.contributor-page .contributor-card-toggle:checked~.contributor-card-back {
     transform: rotateY(0deg);
 }
 
@@ -1482,7 +1921,7 @@ body.contributor-page {
     line-height: 1.2;
 }
 
-.contributor-page .green_box > p {
+.contributor-page .green_box>p {
     margin: 0;
 
     color: var(--paper-deep);
@@ -1816,7 +2255,7 @@ body.contributor-page {
         padding: 13px;
     }
 
-    .contributor-page .steps-list li > span {
+    .contributor-page .steps-list li>span {
         width: 31px;
         height: 31px;
     }
@@ -1970,7 +2409,7 @@ body.explorer-page {
     height: 100%;
 }
 
-.explorer-page .family-card > p {
+.explorer-page .family-card>p {
     flex-grow: 1;
 }
 
@@ -1999,7 +2438,7 @@ body.explorer-page {
     column-gap: 8px;
 }
 
-.explorer-page .family-card .spec-table .logged-cell > span {
+.explorer-page .family-card .spec-table .logged-cell>span {
     align-self: center;
 }
 
@@ -2038,15 +2477,16 @@ body.explorer-page {
     box-shadow: 2px 3px 0 var(--shadow);
     padding: 22px 22px 20px;
     scroll-margin-top: 90px;
-        display: flex;
+    display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.explorer-page .genus-card > p {
+.explorer-page .genus-card>p {
     flex-grow: 1;
 }
-.explorer-page .genus-card > .tag,
+
+.explorer-page .genus-card>.tag,
 .explorer-page .genus-card .btn {
     align-self: flex-start;
 }
@@ -2113,7 +2553,7 @@ body.explorer-page {
     height: 100%;
 }
 
-.explorer-page .specimen-card > p {
+.explorer-page .specimen-card>p {
     flex-grow: 1;
     margin-bottom: 0;
 }
@@ -2160,8 +2600,8 @@ body.explorer-page {
     text-underline-offset: 2px;
 }
 
-.explorer-page .family-card > .plant-photo,
-.explorer-page .genus-card > .plant-photo {
+.explorer-page .family-card>.plant-photo,
+.explorer-page .genus-card>.plant-photo {
     width: 100%;
 }
 
@@ -2933,13 +3373,16 @@ body.explorer-page {
 
 .cta-text-box {
     background-color: var(--paper-card, #FFFFFF);
-    border: 2px solid var(--ink, #2B3323); /* 深色实线边框 */
+    border: 2px solid var(--ink, #2B3323);
+    /* 深色实线边框 */
     border-radius: 4px;
     padding: 40px 30px;
     text-align: center;
-    max-width: 700px; /* 控制文本框的最大宽度，让它居中 */
+    max-width: 700px;
+    /* 控制文本框的最大宽度，让它居中 */
     margin: 40px auto 0 auto;
-    box-shadow: 4px 5px 0 var(--shadow, rgba(43, 51, 35, 0.14)); /* 采用你其他卡片的投影风格 */
+    box-shadow: 4px 5px 0 var(--shadow, rgba(43, 51, 35, 0.14));
+    /* 采用你其他卡片的投影风格 */
 }
 
 .explorer-page .species-cta-wrap {
@@ -3264,7 +3707,7 @@ body.about-page {
     color: #A75F3E;
 }
 
-.about-page .about-intro > p:last-child {
+.about-page .about-intro>p:last-child {
     max-width: 470px;
     margin: 0 auto;
     color: #59635A;
@@ -3349,7 +3792,7 @@ body.about-page {
     line-height: 1.2;
 }
 
-.about-page .about-bio > p:not(.about-eyebrow) {
+.about-page .about-bio>p:not(.about-eyebrow) {
     margin: 0 0 24px;
     color: #59635A;
     font-size: 0.88em;
@@ -3360,7 +3803,7 @@ body.about-page {
     border-top: 1px solid #E1E4DA;
 }
 
-.about-page .about-academic-details > div {
+.about-page .about-academic-details>div {
     padding-top: 13px;
 }
 
@@ -3447,7 +3890,7 @@ body.about-page {
     width: 30%;
 }
 
-.about-page .about-profile-sean .about-info-row > th {
+.about-page .about-profile-sean .about-info-row>th {
     padding: 24px 18px;
     border-right: 1px solid #D0D5C6;
     border-top: 1px solid #D0D5C6;
@@ -3472,7 +3915,7 @@ body.about-page {
     text-align: left;
 }
 
-.about-page .about-profile-sean .about-bio > p:last-child {
+.about-page .about-profile-sean .about-bio>p:last-child {
     margin-bottom: 0;
 }
 
@@ -3636,7 +4079,7 @@ body.about-page {
     font-size: 0.86em;
 }
 
-.about-page .about-personal-table tr + tr > * {
+.about-page .about-personal-table tr+tr>* {
     border-top: 1px solid #D0D5C6;
 }
 
@@ -3783,7 +4226,7 @@ body.about-page {
         padding: 24px 22px;
     }
 
-    .about-page .about-personal-table tr + tr td {
+    .about-page .about-personal-table tr+tr td {
         border-top: 0;
     }
 }
@@ -3838,8 +4281,8 @@ body.contributor-page {
     letter-spacing: 0;
 }
 
-.contrib-page .content_section > p,
-.contributor-page .content_section > p {
+.contrib-page .content_section>p,
+.contributor-page .content_section>p {
     color: var(--ink-soft);
 }
 
@@ -3933,6 +4376,7 @@ body.contributor-page {
 }
 
 @media (max-width: 1050px) {
+
     .contrib-page .content_grid,
     .contributor-page .content_grid {
         grid-template-columns: 1fr;
@@ -3945,6 +4389,7 @@ body.contributor-page {
 }
 
 @media (max-width: 600px) {
+
     .contrib-page .page_main,
     .contributor-page .page_main {
         padding: 30px 20px;
@@ -4048,12 +4493,12 @@ body.contributor-page {
         background: currentColor;
     }
 
-    .site-header .nav-state:hover + .nav-toggle {
+    .site-header .nav-state:hover+.nav-toggle {
         background: var(--paper-deep);
     }
 
-    .site-header .nav-state:focus-visible + .nav-toggle,
-    .site-header .nav-state:checked:focus-visible + .nav-toggle .nav-close {
+    .site-header .nav-state:focus-visible+.nav-toggle,
+    .site-header .nav-state:checked:focus-visible+.nav-toggle .nav-close {
         outline: 2px solid var(--sage-deep);
         outline-offset: 3px;
     }
@@ -4065,11 +4510,11 @@ body.contributor-page {
         z-index: 103;
     }
 
-    .site-header .nav-state:checked + .nav-toggle .nav-toggle-lines {
+    .site-header .nav-state:checked+.nav-toggle .nav-toggle-lines {
         visibility: hidden;
     }
 
-    .site-header .nav-state:checked + .nav-toggle .nav-close {
+    .site-header .nav-state:checked+.nav-toggle .nav-close {
         position: fixed;
         top: 24px;
         right: 24px;
@@ -4122,7 +4567,7 @@ body.contributor-page {
         border-bottom: 1px solid var(--line-soft);
     }
 
-    .site-header .nav-drawer-topbar > span {
+    .site-header .nav-drawer-topbar>span {
         color: var(--ink);
         font-family: 'Fraunces', Georgia, serif;
         font-size: 1.6rem;
@@ -4157,7 +4602,7 @@ body.contributor-page {
         color: var(--sage-deep);
     }
 
-    .site-header .nav-drop > a::after {
+    .site-header .nav-drop>a::after {
         content: none;
     }
 
@@ -4178,13 +4623,13 @@ body.contributor-page {
         font-size: 0.9rem;
     }
 
-    .site-header .nav-state:checked ~ .nav-backdrop {
+    .site-header .nav-state:checked~.nav-backdrop {
         opacity: 1;
         visibility: visible;
         transition-delay: 0s;
     }
 
-    .site-header .nav-state:checked ~ .nav-drawer-panel {
+    .site-header .nav-state:checked~.nav-drawer-panel {
         transform: translateX(0);
         visibility: visible;
         transition-delay: 0s;
@@ -4192,6 +4637,7 @@ body.contributor-page {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .site-header .nav-drawer-panel,
     .site-header .nav-backdrop {
         transition: none;
@@ -4256,3 +4702,59 @@ body.contributor-page {
     margin-top: 20px;
     font-size: 0.9rem;
 }
+
+/* 先给图片添加过渡时间，让动画显得平滑，而不是生硬地瞬间变大 */
+.plant_card img,
+.category_card img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 当鼠标悬停在卡片上时，图片放大 5% 并增加阴影 */
+.plant_card:hover img,
+.category_card:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 让整个页面的滚动变得平滑，而不是瞬间跳跃 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 回到顶部按钮的样式和固定位置 */
+a.back-to-top {
+    position: fixed;
+    bottom: 40px;
+    /* 距离底部 40px */
+    right: 40px;
+    /* 距离右侧 40px */
+    background-color: #2e7d32;
+    /* 配合你网站的绿色主题 */
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    /* 变成圆形 */
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    /* 确保它不会被其他元素挡住 */
+}
+
+/* 按钮的悬停特效（顺便把 Button Hover enhancement 也应用在这里） */
+.back-to-top:hover {
+    background-color: #1b5e20;
+    /* 悬停时颜色变深 */
+    transform: translateY(-3px);
+    /* 悬停时微微上浮 */
+}
+
+/* 强制把所有分页箭头和悬浮按钮的颜色覆盖掉 */
+/* 强制修改所有页面中带有 aria-hidden="true" 属性的箭头图标颜色 */

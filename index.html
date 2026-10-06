@@ -17,7 +17,8 @@
                 <img src="images/logo.png" alt="WikiPlant logo">
                 <span class="brand-motto">Wiki Plant</span>
             </a>
-            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation"
+                aria-controls="navigation-panel">
             <label class="nav-toggle" for="navigation-toggle">
                 <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
                 <span class="nav-close" aria-hidden="true">&times;</span>
@@ -25,94 +26,145 @@
             <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
             <div class="nav-drawer-panel" id="navigation-panel">
                 <div class="nav-drawer-topbar"><span>Navigation</span></div>
-            <nav class="main-nav" aria-label="Primary">
-                <ul>
-                    <li class="nav-drop">
-                        <a href="explorer.html">Explore</a>
-                        <ul class="drop-menu">
-                            <li><a href="explorer-family.html">By family</a></li>
-                            <li><a href="explorer-genus.html">By genus</a></li>
-                            <li><a href="explorer-species.html">By species</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="identify.html">Identify</a></li>
-                    <li><a href="contributor.html">Contributor</a></li>
-                    <li><a href="aboutus-sean.html">About Us</a></li>
-                    <li><a href="enquiry_form.html">Enquiry</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </nav>
+                <nav class="main-nav" aria-label="Primary">
+                    <ul>
+                        <li class="nav-drop">
+                            <a href="explorer.html">Explore</a>
+                            <ul class="drop-menu">
+                                <li><a href="explorer-family.html">By family</a></li>
+                                <li><a href="explorer-genus.html">By genus</a></li>
+                                <li><a href="explorer-species.html">By species</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="identify.html">Identify</a></li>
+                        <li><a href="contributor.html">Contributor</a></li>
+                        <li><a href="aboutus-sean.html">About Us</a></li>
+                        <li><a href="enquiry_form.html">Enquiry</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="badge">Discover</div>
-            <h1>Welcome to WikiPlant!</h1>
-            <p>Here, uncover the secrets of the plant kingdom. Browse through our catalog to identify new species!<br>
-                Contribute your personal botanical findings, and join a welcoming community dedicated to keeping our
-                spaces green and thriving.</p>
-
-            <section class="card_container">
-                <div class="plant_card">
-                    <img src="images/plant1.jpg" alt="Featured Plant Specimen 1">
-                    <h3>Specimen 1</h3>
-                </div>
-                <div class="plant_card">
-                    <img src="images/plant2.jpg" alt="Featured Plant Specimen 2">
-                    <h3>Specimen 2</h3>
-                </div>
-                <div class="plant_card">
-                    <img src="images/plant3.jpg" alt="Featured Plant Specimen 3">
-                    <h3>Specimen 3</h3>
-                </div>
-            </section>
-
-            <section class="about_section">
-                <h2>About Us</h2>
-                <div class="text_box">
-                    <p>WikiPlant is an open-access botanical catalog designed to bridge nature and digital convenience.
-                        We assist plant enthusiasts, students, and home gardeners by documenting plant characteristics
-                        and
-                        expanding your horizon on biodiversity!</p>
-                </div>
-
-                <p class="quote">Audrey Hepburn</p>
-                <div class="text_box quote_box">
-                    <p>"To plant a garden is to believe in tomorrow."</p>
-                </div>
-            </section>
-
-            <section class="categories_section">
-                <h2>Browse Categories</h2>
-                <div class="category_grid">
-
-                    <div class="category_card">
-                        <img src="images/family.jpg" alt="Families Category">
-                        <h3><a href="explorer-family.html">Families</a></h3>
-                    </div>
-
-                    <div class="category_card">
-                        <img src="images/genera.jpg" alt="Genera Category">
-                        <h3><a href="explorer-genus.html">Genera</a></h3>
-                    </div>
-
-                    <div class="category_card">
-                        <img src="images/species.jpg" alt="Species Category">
-                        <h3><a href="explorer-species.html">Species</a></h3>
-                    </div>
-
-                </div>
-
-                <p class="demo-video">
-                    <a href="https://www.youtube.com/" target="_blank"
-                        class="demo-video-link">
-                        Click here to view our team demonstration video on YouTube!</a>
-                </p>
-            </section>
+    <main id="home-main">
+        <section class="home-hero" aria-labelledby="home-title">
+            <img class="home-hero-image" src="images/nordic_forest.jpg" alt="Nordic forest" fetchpriority="high"
+                width="1672" height="941">
+            <div class="home-hero-shade" aria-hidden="true"></div>
+            <div class="home-hero-copy">
+                <p class="home-eyebrow">Discover. Document. Preserve.</p>
+                <h1 id="home-title">A living world,<br><em>closer to you.</em></h1>
+                <p>Explore the remarkable plants around us. Share a discovery, follow your curiosity, and help grow our
+                    understanding of Malaysia's biodiversity.</p>
+                <a class="home-text-link" href="explorer.html">Explore the collection now!<span
+                        aria-hidden="true">&#8594;</span></a>
+            </div>
         </section>
+
+        <section class="home-story home-content-width" id="home-story" aria-labelledby="home-story-title">
+            <figure class="home-story-photo">
+                <img src="images/fern.jpg" alt="fern" width="1024" height="1536">
+            </figure>
+            <div class="home-story-copy">
+                <p class="home-eyebrow">The WikiPlant story</p>
+                <h2 id="home-story-title">A Small observations, <br><em> makes a difference.</em></h2>
+                <p>Imagine walking by a familiar path., yet dozens of flowers you never take notice of. The natural
+                    world has a way of
+                    inviting us to look a little closer.</p>
+                <p>WikiPlant brings those moments together. Our open botanical catalog connects plant enthusiasts,
+                    students, gardeners, or you name it, through a shared curiosity about Malaysia's plant life!
+                </p>
+                <p>Browse the relationships between plants, learn what makes each one different, and contribute
+                    observations from your own surroundings. Each record is a small step towards a richer picture of the
+                    biodiversity we share.</p>
+                <a class="home-text-link" href="contributor.html">Meet the community <span
+                        aria-hidden="true">&#8594;</span></a>
+            </div>
+        </section>
+
+        <section class="home-collection" aria-labelledby="home-collection-title">
+            <div class="home-content-width">
+                <div class="home-collection-heading">
+                    <div>
+                        <p class="home-eyebrow">The botanical collection</p>
+                        <h2 id="home-collection-title">One kingdom.<br><em>Many connections.</em></h2>
+                    </div>
+                </div>
+                <div class="home-collection-grid">
+                    <a class="home-collection-item" href="explorer-family.html">
+                        <div class="home-collection-image"><img src="images/families.jpg" alt="families" loading="lazy"
+                                width="1254" height="1254"></div>
+                        <div class="home-collection-label"><span class="home-collection-number">01</span>
+                            <h3>Families</h3><span class="home-collection-arrow" aria-hidden="true">&#8599;</span>
+                        </div>
+                        <p>Begin with the broader relationships that bring plants together.</p>
+                    </a>
+                    <a class="home-collection-item" href="explorer-genus.html">
+                        <div class="home-collection-image"><img src="images/ferndark.jpg" alt="genus." loading="lazy"
+                                width="1024" height="1536"></div>
+                        <div class="home-collection-label"><span class="home-collection-number">02</span>
+                            <h3>Genera</h3><span class="home-collection-arrow" aria-hidden="true">&#8599;</span>
+                        </div>
+                        <p>Look closer at groups of plants with shared characteristics.</p>
+                    </a>
+                    <a class="home-collection-item" href="explorer-species.html">
+                        <div class="home-collection-image"><img src="images/species.jpg" alt="a flower" loading="lazy"
+                                width="1254" height="1254"></div>
+                        <div class="home-collection-label"><span class="home-collection-number">03</span>
+                            <h3>Species</h3><span class="home-collection-arrow" aria-hidden="true">&#8599;</span>
+                        </div>
+                        <p>Discover the distinctive details that give each plant identity.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-participate home-content-width" aria-labelledby="home-participate-title">
+            <div class="home-participate-copy">
+                <p class="home-eyebrow">A shared field notebook</p>
+                <h2 id="home-participate-title">Your curiosity<br><em>belongs here.</em></h2>
+                <p>You do not need to be an expert to start paying attention. Whether you are meeting a plant for the
+                    first time or perhaps a second time, there is a place for your discovery in WikiPlant!
+                </p>
+                <div class="home-actions">
+                    <a class="home-solid-link" href="contribution.html">Contribute a plant <span
+                            aria-hidden="true">&#8599;</span></a>
+                    <a class="home-text-link" href="identify.html">Identify a plant <span
+                            aria-hidden="true">&#8594;</span></a>
+                </div>
+            </div>
+            <ol class="home-field-steps">
+                <li><span class="home-step-number" aria-hidden="true">01</span>
+                    <div>
+                        <h3>Notice something new.</h3>
+                        <p>Take a moment to observe the plants around you.</p>
+                    </div>
+                </li>
+                <li><span class="home-step-number" aria-hidden="true">02</span>
+                    <div>
+                        <h3>Capture the details.</h3>
+                        <p>Photograph the leaves, flowers, and features that catch your eye.</p>
+                    </div>
+                </li>
+                <li><span class="home-step-number" aria-hidden="true">03</span>
+                    <div>
+                        <h3>Share your observation.</h3>
+                        <p>Add a plant record and become part of the community.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <aside class="home-project-note home-content-width" aria-label="Team demonstration">
+            <div>
+                <p class="home-eyebrow">Behind the project</p>
+                <p>Get to know the people growing WikiPlant.</p>
+            </div>
+            <a class="home-text-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">View
+                team demonstration </a>
+        </aside>
     </main>
 
     <footer class="universal-footer">
@@ -135,6 +187,8 @@
             <p>&copy; 2026 WikiPlant. All rights reserved.</p>
         </div>
     </footer>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>
 
 </html>
