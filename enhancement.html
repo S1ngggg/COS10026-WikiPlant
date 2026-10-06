@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Enhancement page for WikiPlant.">
+
+    <title>Enhancement | WikiPlant</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Enhancement Page Specific Styles */
+
+        .enhancement-main {
+            background-color: #e8f5e9;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            color: #000;
+        }
+
+        .enhancement-main .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .enhancement-section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px dashed #b9d6b9;
+        }
+
+        .enhancement-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .enhancement-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .enhancement-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .enhancement-image {
+            flex: 1 1 45%;
+        }
+
+        .enhancement-image video,
+        .enhancement-image .media-placeholder {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .enhancement-image .media-placeholder {
+            aspect-ratio: 16 / 9;
+            background-color: #c8e6c9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2e7d32;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .enhancement-details {
+            flex: 1 1 50%;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .enhancement-details p {
+            margin-bottom: 30px;
+        }
+
+        .tags-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .tags-group h3 {
+            font-size: 1.1rem;
+            margin: 0;
+            white-space: nowrap;
+            padding-top: 5px;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            border: 1px solid #000;
+            padding: 5px 15px;
+            background-color: transparent;
+            font-size: 0.95rem;
+            text-decoration: none;
+            color: #000;
+            display: inline-block;
+        }
+
+        .tag:hover {
+            background-color: #dcedc8;
+        }
+
+        @media (max-width: 768px) {
+
+            .enhancement-content {
+                flex-direction: column;
+            }
+
+            .tags-group {
+                flex-direction: column;
+            }
+
+            .enhancement-image,
+            .enhancement-details {
+                flex: 1 1 100%;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="enhancement-page">
+
+    <header class="site-header">
+
+        <div class="wrap">
+
+            <a class="brand" href="index.html" aria-label="WikiPlant home">
+                <img src="images/logo.png" alt="WikiPlant logo">
+                <span class="brand-motto">Wiki Plant</span>
+            </a>
+
+
+            <input class="nav-state"
+                type="checkbox"
+                id="navigation-toggle"
+                aria-label="Open or close navigation"
+                aria-controls="navigation-panel">
+
+
+            <label class="nav-toggle" for="navigation-toggle">
+
+                <span class="nav-toggle-lines" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+
+                <span class="nav-close" aria-hidden="true">
+                    &times;
+                </span>
+
+            </label>
+
+
+            <label class="nav-backdrop"
+                for="navigation-toggle"
+                aria-hidden="true">
+            </label>
+
+
+            <div class="nav-drawer-panel" id="navigation-panel">
+
+                <div class="nav-drawer-topbar">
+                    <span>Navigation</span>
+                </div>
+
+
+                <nav class="main-nav" aria-label="Primary">
+
+                    <ul>
+
+                        <li class="nav-drop">
+
+                            <a href="explorer.html">
+                                Explore
+                            </a>
+
+                            <ul class="drop-menu">
+
+                                <li>
+                                    <a href="explorer-family.html">
+                                        By family
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="explorer-genus.html">
+                                        By genus
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="explorer-species.html">
+                                        By species
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+                        <li>
+                            <a href="identify.html">
+                                Identify
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="contributor.html">
+                                Contributor
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="aboutus.html">
+                                About Us
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="enquiry_form.html">
+                                Enquiry
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="register.html">
+                                Register
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="login.html">
+                                Login
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="enhancement-main" aria-label="Enhancement">
+
+        <div class="wrap">
+
+            <p class="intro-title">
+                Here, you'll discover the enhancements we've made to our website.
+            </p>
+
+
+            <!-- 1. Fluid Layout -->
+            <section class="enhancement-section">
+
+                <h2>
+                    Fluid Layout (Hamburger Menu)
+                </h2>
+
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+
+                        <video autoplay muted loop playsinline controls>
+
+                            <source src="images/Screenrecord.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support the video element.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            The website uses a responsive fluid layout that adapts to
+                            different screen sizes. On smaller screens, the navigation
+                            links are replaced by a hamburger menu, allowing users to
+                            access the navigation without taking up excessive screen space.
+                        </p>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Applied Page:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="index.html" class="tag">
+                                    Index
+                                </a>
+
+                                <a href="explorer.html" class="tag">
+                                    Explorer
+                                </a>
+
+                                <a href="explorer-family.html" class="tag">
+                                    Explorer Family
+                                </a>
+
+                                <a href="explorer-genus.html" class="tag">
+                                    Explorer Genus
+                                </a>
+
+                                <a href="explorer-species.html" class="tag">
+                                    Explorer Species
+                                </a>
+
+                                <a href="identify.html" class="tag">
+                                    Identify
+                                </a>
+
+                                <a href="contributor.html" class="tag">
+                                    Contributor
+                                </a>
+
+                                <a href="aboutus.html" class="tag">
+                                    About Us
+                                </a>
+
+                                <a href="enquiry_form.html" class="tag">
+                                    Enquiry
+                                </a>
+
+                                <a href="register.html" class="tag">
+                                    Register
+                                </a>
+
+                                <a href="login.html" class="tag">
+                                    Login
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Refer Sources:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="https://www.w3schools.com/css/css_rwd_intro.asp"
+                                    class="tag"
+                                    target="_blank"
+                                    rel="noopener">
+                                    W3Schools RWD
+                                </a>
+
+                                <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design"
+                                    class="tag"
+                                    target="_blank"
+                                    rel="noopener">
+                                    MDN Responsive Design
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 2. Fixed Navigation Bar -->
+            <section class="enhancement-section">
+
+                <h2>
+                    Fixed Navigation Bar
+                </h2>
+
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+
+                        <video autoplay muted loop playsinline controls>
+
+                            <source src="images/Fixed Navigation Bar.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support the video element.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            The fixed navigation bar keeps the main navigation visible
+                            and accessible while users scroll through the website.
+                            This allows users to quickly access other pages without
+                            having to scroll back to the top of the page.
+                        </p>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Applied Page:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="index.html" class="tag">
+                                    Index
+                                </a>
+
+                                <a href="explorer.html" class="tag">
+                                    Explorer
+                                </a>
+
+                                <a href="explorer-family.html" class="tag">
+                                    Explorer Family
+                                </a>
+
+                                <a href="explorer-genus.html" class="tag">
+                                    Explorer Genus
+                                </a>
+
+                                <a href="explorer-species.html" class="tag">
+                                    Explorer Species
+                                </a>
+
+                                <a href="identify.html" class="tag">
+                                    Identify
+                                </a>
+
+                                <a href="contributor.html" class="tag">
+                                    Contributor
+                                </a>
+
+                                <a href="aboutus.html" class="tag">
+                                    About Us
+                                </a>
+
+                                <a href="enquiry_form.html" class="tag">
+                                    Enquiry
+                                </a>
+
+                                <a href="register.html" class="tag">
+                                    Register
+                                </a>
+
+                                <a href="login.html" class="tag">
+                                    Login
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Refer Sources:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position"
+                                    class="tag"
+                                    target="_blank"
+                                    rel="noopener">
+                                    MDN CSS Position
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 3. Picture Hover Effect -->
+            <section class="enhancement-section">
+
+                <h2>
+                    Picture Hover Effect
+                </h2>
+
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+
+                        <video autoplay muted loop playsinline controls>
+
+                            <source src="images/Picture Hover Effect.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support the video element.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            Picture hover effects provide visual feedback when users
+                            move the pointer over plant images. The effect improves
+                            interactivity and helps users recognise that an image or
+                            plant card can provide additional information.
+                        </p>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Applied Page:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="index.html" class="tag">
+                                    Index
+                                </a>
+
+                                <a href="contributor.html" class="tag">
+                                    Contributor
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Refer Sources:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition"
+                                    class="tag"
+                                    target="_blank"
+                                    rel="noopener">
+                                    MDN CSS Transition
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 4. Button Hover Effect -->
+            <section class="enhancement-section">
+
+                <h2>
+                    Button Hover Effect
+                </h2>
+
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+
+                        <video autoplay muted loop playsinline controls>
+
+                            <source src="images/Button Hover Effect.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support the video element.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            Button hover effects provide immediate visual feedback
+                            when users move the pointer over interactive controls.
+                            This makes links and buttons easier to identify and
+                            improves the overall user experience.
+                        </p>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Applied Page:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="index.html" class="tag">
+                                    Index
+                                </a>
+
+                                <a href="explorer.html" class="tag">
+                                    Explorer
+                                </a>
+
+                                <a href="explorer-family.html" class="tag">
+                                    Explorer Family
+                                </a>
+
+                                <a href="explorer-genus.html" class="tag">
+                                    Explorer Genus
+                                </a>
+
+                                <a href="explorer-species.html" class="tag">
+                                    Explorer Species
+                                </a>
+
+                                <a href="identify.html" class="tag">
+                                    Identify
+                                </a>
+
+                                <a href="contributor.html" class="tag">
+                                    Contributor
+                                </a>
+
+                                <a href="aboutus.html" class="tag">
+                                    About Us
+                                </a>
+
+                                <a href="enquiry_form.html" class="tag">
+                                    Enquiry
+                                </a>
+
+                                <a href="register.html" class="tag">
+                                    Register
+                                </a>
+
+                                <a href="login.html" class="tag">
+                                    Login
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Refer Sources:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover"
+                                    class="tag"
+                                    target="_blank"
+                                    rel="noopener">
+                                    MDN :hover
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 5. Photo Gallery -->
+            <section class="enhancement-section">
+
+                <h2>
+                    Photo Gallery
+                </h2>
+
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+
+                        <video autoplay muted loop playsinline controls>
+
+                            <source src="images/Photo Gallery.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support the video element.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            The photo gallery presents multiple plant photographs
+                            in an organised layout. It allows users to visually
+                            compare plant characteristics and provides a more
+                            engaging way to explore biodiversity information.
+                        </p>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Applied Page:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="index.html" class="tag">
+                                    Index
+                                </a>
+
+                                <a href="explorer.html" class="tag">
+                                    Explorer
+                                </a>
+
+                                <a href="identify.html" class="tag">
+                                    Identify
+                                </a>
+
+                                <a href="contributor.html" class="tag">
+                                    Contributor
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Refer Sources:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout"
+                                    class="tag"
+                                    target="_blank"
+                                    rel="noopener">
+                                    MDN CSS Grid
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 6. Flip Card -->
+            <section class="enhancement-section">
+
+                <h2>
+                    Flip Card
+                </h2>
+
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+
+                        <video autoplay muted loop playsinline controls>
+
+                            <source src="images/Flip Card.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support the video element.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            Flip cards provide an interactive way to display
+                            information. When users hover over a card, it flips
+                            to reveal additional details about a plant, such as
+                            its description or characteristics.
+                        </p>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Applied Page:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="contributor.html" class="tag">
+                                    Contributor
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Refer Sources:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform"
+                                    class="tag"
+                                    target="_blank"
+                                    rel="noopener">
+                                    MDN CSS Transform
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 7. Back to Top -->
+            <section class="enhancement-section">
+
+                <h2>
+                    Back to Top Button
+                </h2>
+
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+
+                        <video autoplay muted loop playsinline controls>
+
+                            <source src="images/Back to Top.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support the video element.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            A back-to-top function helps users quickly return to the
+                            beginning of a long page. This is especially useful for
+                            pages containing many plant records, descriptions or
+                            sections.
+                        </p>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Applied Page:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="index.html" class="tag">
+                                    Index
+                                </a>
+
+                                <a href="explorer.html" class="tag">
+                                    Explorer
+                                </a>
+
+                                <a href="explorer-family.html" class="tag">
+                                    Explorer Family
+                                </a>
+
+                                <a href="explorer-genus.html" class="tag">
+                                    Explorer Genus
+                                </a>
+
+                                <a href="explorer-species.html" class="tag">
+                                    Explorer Species
+                                </a>
+
+                                <a href="identify.html" class="tag">
+                                    Identify
+                                </a>
+
+                                <a href="contributor.html" class="tag">
+                                    Contributor
+                                </a>
+
+                                <a href="aboutus.html" class="tag">
+                                    About Us
+                                </a>
+
+                                <a href="enquiry_form.html" class="tag">
+                                    Enquiry
+                                </a>
+
+                                <a href="register.html" class="tag">
+                                    Register
+                                </a>
+
+                                <a href="login.html" class="tag">
+                                    Login
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Refer Sources:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"
+                                    class="tag"
+                                    target="_blank"
+                                    rel="noopener">
+                                    MDN Anchor Links
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 8. Video -->
+            <section class="enhancement-section">
+
+                <h2>
+                    Video / YouTube Video
+                </h2>
+
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+
+                        <div class="media-placeholder">
+                            Educational plant video
+                        </div>
+
+                    </div>
+
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            Videos are included to provide visual explanations and
+                            additional information about plants and the WikiPlant
+                            project. Multimedia content can make information easier
+                            to understand and provide users with another way to
+                            learn about plant biodiversity.
+                        </p>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Applied Page:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="index.html" class="tag">
+                                    Index
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Refer Sources:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video"
+                                    class="tag"
+                                    target="_blank"
+                                    rel="noopener">
+                                    MDN HTML Video
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- 9. Google Map -->
+            <section class="enhancement-section">
+
+                <h2>
+                    Google Map
+                </h2>
+
+
+                <div class="enhancement-content">
+
+                    <div class="enhancement-image">
+
+                        <video autoplay muted loop playsinline controls>
+
+                            <source src="images/Google Map.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support the video element.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="enhancement-details">
+
+                        <p>
+                            A Google Map can be used to display geographical locations
+                            related to plant observations. This provides geographical
+                            context and helps users understand where particular plant
+                            records or observations are located.
+                        </p>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Applied Page:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="explorer.html" class="tag">
+                                    Explorer
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="tags-group">
+
+                            <h3>
+                                Refer Sources:
+                            </h3>
+
+
+                            <div class="tags-container">
+
+                                <a href="https://developers.google.com/maps"
+                                    class="tag"
+                                    target="_blank"
+                                    rel="noopener">
+                                    Google Maps Platform
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <footer class="universal-footer">
+
+        <div class="wrap">
+
+            <p>
+                <strong>WikiPlant</strong> — a community field index.
+            </p>
+
+
+            <nav aria-label="Footer navigation">
+
+                <a href="index.html">
+                    Index
+                </a>
+
+                <a href="explorer.html">
+                    Explore
+                </a>
+
+                <a href="contributor.html">
+                    Contributor
+                </a>
+
+                <a href="aboutus.html">
+                    About Us
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+                <a href="enquiry_form.html">
+                    Enquiry
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="enhancement.html" aria-current="page">
+                    Enhancement
+                </a>
+
+                <a href="acknowledgement.html">
+                    Acknowledgement
+                </a>
+
+                <a href="mailto:106764593@students.swinburne.edu.my">
+                    Contact Us
+                </a>
+
+            </nav>
+
+
+            <p>
+                &copy; 2026 WikiPlant. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        ↑
+    </a>
+
+</body>
+
+</html>

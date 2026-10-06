@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="280" viewBox="0 0 240 280">
+  <rect width="240" height="280" fill="#E8E6D9"/>
+  <circle cx="120" cy="109" r="67" fill="none" stroke="#C9CEBB" stroke-width="1"/>
+  <circle cx="120" cy="109" r="88" fill="none" stroke="#D4D7C8" stroke-width="1"/>
+  <circle cx="120" cy="91" r="26" fill="#84927A"/>
+  <path d="M67 168c0-32 22-52 53-52s53 20 53 52" fill="#84927A"/>
+  <path d="M29 28h23M29 28v23M211 28h-23M211 28v23M29 252h23M29 252v-23M211 252h-23M211 252v-23" fill="none" stroke="#A6AF98"/>
+  <text x="120" y="221" text-anchor="middle" font-family="Georgia,serif" font-size="25" fill="#344637">SL</text>
+  <text x="120" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" letter-spacing="2" fill="#56644D">PORTRAIT TO COME</text>
+</svg>

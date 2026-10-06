@@ -12,13 +12,20 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="WikiPlant home">
         <img src="images/logo.png" alt="WikiPlant logo">
         <span class="brand-motto">Wiki Plant</span>
       </a>
+      <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+      <label class="nav-toggle" for="navigation-toggle">
+          <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="nav-close" aria-hidden="true">&times;</span>
+      </label>
+      <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+      <div class="nav-drawer-panel" id="navigation-panel">
+          <div class="nav-drawer-topbar"><span>Navigation</span></div>
       <nav class="main-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html">Index</a></li>
           <li class="nav-drop">
             <a href="explorer.html" aria-current="page">Explore</a>
             <ul class="drop-menu">
@@ -29,11 +36,13 @@
           </li>
           <li><a href="identify.html">Identify</a></li>
           <li><a href="contributor.html">Contributor</a></li>
+          <li><a href="aboutus-sean.html">About Us</a></li>
           <li><a href="enquiry_form.html">Enquiry</a></li>
           <li><a href="register.html">Register</a></li>
           <li><a href="login.html">Login</a></li>
         </ul>
       </nav>
+      </div>
     </div>
   </header>
 
@@ -55,97 +64,192 @@
       <a href="explorer-species.html">Species</a>
     </nav>
 
+    <div class="filter-bar" role="group" aria-label="Family filter options">
+      <span class="filter-heading">Filter by family</span>
+      <input type="radio" name="family-filter" id="f-all" checked>
+      <label for="f-all">All families</label>
+      <input type="radio" name="family-filter" id="f-araceae">
+      <label for="f-araceae">Araceae</label>
+      <input type="radio" name="family-filter" id="f-rosaceae">
+      <label for="f-rosaceae">Rosaceae</label>
+      <input type="radio" name="family-filter" id="f-fabaceae">
+      <label for="f-fabaceae">Fabaceae</label>
+      <input type="radio" name="family-filter" id="f-asparagaceae">
+      <label for="f-asparagaceae">Asparagaceae</label>
+
     <div class="family-grid">
 
       <article class="family-card" id="araceae">
         <h2 class="sci">Araceae</h2>
+        <figure class="plant-photo">
+          <img src="images/Monstera_deliciosa.jpg" alt="Monstera deliciosa, representative of the Araceae family">
+        </figure>
         <span class="fam-common">The arum family</span>
         <p>Recognised by a flower structure unlike most other families: a spike of tiny flowers (the spadix) wrapped in
           a single petal-like bract (the spathe). Leaves are often glossy and, in climbing genera, develop distinctive
           perforations with age.</p>
+        <div class="distribution">Distribution: Widespread, with greatest diversity in tropical regions.</div>
         <table class="spec-table">
           <tr>
             <th>Genera logged</th>
-            <td>2</td>
+            <td>
+              <div class="logged-cell">
+                <span>2</span>
+                <div class="genus-tags">
+                  <a class="tag" href="explorer-genus.html#monstera">Monstera</a>
+                  <a class="tag" href="explorer-genus.html#spathiphyllum">Spathiphyllum</a>
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <th>Species logged</th>
-            <td>4</td>
+            <td>
+              <div class="logged-cell">
+                <span>4</span>
+                <div class="species-tags">
+                  <a class="tag" href="explorer-species.html#monstera">M. deliciosa</a>
+                  <a class="tag" href="explorer-species.html#monstera-acuminata">M. acuminata</a>
+                  <a class="tag" href="explorer-species.html#spathiphyllum">S. wallisii</a>
+                  <a class="tag" href="explorer-species.html#spathiphyllum-cannifolium">S. cannifolium</a>
+                </div>
+              </div>
+            </td>
           </tr>
         </table>
-        <div class="genus-tags">
-          <a class="tag" href="explorer-genus.html#monstera">Monstera</a>
-          <a class="tag" href="explorer-genus.html#spathiphyllum">Spathiphyllum</a>
-        </div>
         <a class="btn btn-outline" href="explorer-genus.html#araceae">View genera in Araceae</a>
       </article>
 
       <article class="family-card" id="rosaceae">
         <h2 class="sci">Rosaceae</h2>
+        <figure class="plant-photo">
+          <img src="images/plants/rosa-canina.jpg" alt="Rosa canina, representative of the Rosaceae family">
+        </figure>
         <span class="fam-common">The rose family</span>
         <p>A large family typically bearing five-petalled flowers with a whorl of stamens, ranging from thorned shrubs
           to fruit-bearing trees. Many of the plants most associated with orchards and hedgerows sit here.</p>
+        <div class="distribution">Distribution: Worldwide, especially in temperate regions.</div>
         <table class="spec-table">
           <tr>
             <th>Genera logged</th>
-            <td>2</td>
+            <td>
+              <div class="logged-cell">
+                <span>2</span>
+                <div class="genus-tags">
+                  <a class="tag" href="explorer-genus.html#rosa">Rosa</a>
+                  <a class="tag" href="explorer-genus.html#fragaria">Fragaria</a>
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <th>Species logged</th>
-            <td>4</td>
+            <td>
+              <div class="logged-cell">
+                <span>4</span>
+                <div class="species-tags">
+                  <a class="tag" href="explorer-species.html#rosa">R. canina</a>
+                  <a class="tag" href="explorer-species.html#rosa-banksiae">R. banksiae</a>
+                  <a class="tag" href="explorer-species.html#fragaria">F. vesca</a>
+                  <a class="tag" href="explorer-species.html#fragaria-moschata">F. moschata</a>
+                </div>
+              </div>
+            </td>
           </tr>
         </table>
-        <div class="genus-tags">
-          <a class="tag" href="explorer-genus.html#rosa">Rosa</a>
-          <a class="tag" href="explorer-genus.html#fragaria">Fragaria</a>
-        </div>
         <a class="btn btn-outline" href="explorer-genus.html#rosaceae">View genera in Rosaceae</a>
       </article>
 
       <article class="family-card" id="fabaceae">
         <h2 class="sci">Fabaceae</h2>
+        <figure class="plant-photo">
+          <img src="images/plants/trifolium-pratense.jpg" alt="Red clover (Trifolium pratense), representative of the Fabaceae family">
+          <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Bombus_rupestris_-_Trifolium_pratense_-_Keila.jpg">Ivar Leidus / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
+        </figure>
         <span class="fam-common">The legume family</span>
         <p>Identified by pod fruits and, in many genera, compound leaves that fold at night. Roots in this family
           commonly host bacteria that fix nitrogen into the surrounding soil.</p>
+        <div class="distribution">Distribution: Nearly worldwide, from tropical forests to temperate regions.</div>
         <table class="spec-table">
           <tr>
             <th>Genera logged</th>
-            <td>2</td>
+            <td>
+              <div class="logged-cell">
+                <span>2</span>
+                <div class="genus-tags">
+                  <a class="tag" href="explorer-genus.html#lathyrus">Lathyrus</a>
+                  <a class="tag" href="explorer-genus.html#trifolium">Trifolium</a>
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <th>Species logged</th>
-            <td>4</td>
+            <td>
+              <div class="logged-cell">
+                <span>4</span>
+                <div class="species-tags">
+                  <a class="tag" href="explorer-species.html#lathyrus-oleraceus">L. oleraceus</a>
+                  <a class="tag" href="explorer-species.html#lathyrus-fulvus">L. fulvus</a>
+                  <a class="tag" href="explorer-species.html#trifolium-pratense">T. pratense</a>
+                  <a class="tag" href="explorer-species.html#trifolium-repens">T. repens</a>
+                </div>
+              </div>
+            </td>
           </tr>
         </table>
-        <div class="genus-tags">
-          <a class="tag" href="explorer-genus.html#pisum">Pisum</a>
-          <a class="tag" href="explorer-genus.html#laburnum">Laburnum</a>
-        </div>
         <a class="btn btn-outline" href="explorer-genus.html#fabaceae">View genera in Fabaceae</a>
       </article>
 
       <article class="family-card" id="asparagaceae">
         <h2 class="sci">Asparagaceae</h2>
+        <figure class="plant-photo">
+          <img src="images/plants/dracaena-trifasciata.jpg" alt="Dracaena trifasciata, representative of the Asparagaceae family">
+          <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Dracaena_trifasciata_55523517.jpg">elawrey / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></figcaption>
+        </figure>
         <span class="fam-common">A family redrawn more than once</span>
         <p>A broad family of strap- or blade-shaped leaves with parallel veins, brought together from several older,
           smaller families as classification has been revised. Boundaries here shift more than most.</p>
-        <table class="spec-table">
+        <div class="distribution">Distribution: Worldwide, with many species in tropical and subtropical regions.</div>
+        <table class="spec-table"> 
           <tr>
             <th>Genera logged</th>
-            <td>2</td>
+            <td>
+              <div class="logged-cell">
+                <span>2</span>
+                <div class="genus-tags">
+                  <a class="tag" href="explorer-genus.html#dracaena">Dracaena</a>
+                  <a class="tag" href="explorer-genus.html#chlorophytum">Chlorophytum</a>
+                </div>
+              </div>
+            </td>
           </tr>
           <tr>
             <th>Species logged</th>
-            <td>4</td>
+            <td>
+              <div class="logged-cell">
+                <span>4</span>
+                <div class="species-tags">
+                  <a class="tag" href="explorer-species.html#dracaena">D. trifasciata</a>
+                  <a class="tag" href="explorer-species.html#dracaena-cinnabari">D. cinnabari</a>
+                  <a class="tag" href="explorer-species.html#chlorophytum">C. comosum</a>
+                  <a class="tag" href="explorer-species.html#chlorophytum-tuberosum">C. tuberosum</a>
+                </div>
+              </div>
+            </td>
           </tr>
         </table>
-        <div class="genus-tags">
-          <a class="tag" href="explorer-genus.html#dracaena">Dracaena</a>
-          <a class="tag" href="explorer-genus.html#chlorophytum">Chlorophytum</a>
-        </div>
         <a class="btn btn-outline" href="explorer-genus.html#asparagaceae">View genera in Asparagaceae</a>
       </article>
 
+    </div>
+    </div>
+  </div>
+<div class="wrap cta-wrap">
+    <div class="cta-text-box">
+      <h2>Help Us Grow the Index</h2>
+      <p>WikiPlant is powered by a community of plant enthusiasts. See who is building our database or join us to share your own knowledge.</p>
+      <a href="contributor.html" class="cta-btn">Meet Our Contributors</a>
     </div>
   </div>
 
@@ -154,19 +258,22 @@
       <p><strong>WikiPlant</strong> — a community field index.</p>
 
       <nav aria-label="Footer navigation">
-        <button type="button" onclick="location.href='index.html'">Index</button>
-        <button type="button" onclick="location.href='explorer.html'">Explore</button>
-        <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-        <button type="button" onclick="location.href='register.html'">Register</button>
-        <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-        <button type="button" onclick="location.href='login.html'">Login</button>
-        <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact Us</button>
+        <a href="explorer.html">Explore</a>
+        <a href="contributor.html">Contributor</a>
+        <a href="aboutus-sean.html">About Us</a>
+        <a href="register.html">Register</a>
+        <a href="enquiry_form.html">Enquiry</a>
+        <a href="login.html">Login</a>
+        <a href="enhancement.html">Enhancement</a>
+        <a href="acknowledgement.html">Acknowledgement</a>
+        <a href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
       </nav>
 
       <p>&copy; 2026 WikiPlant. All rights reserved.</p>
     </div>
   </footer>
-
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>
 
 </html>

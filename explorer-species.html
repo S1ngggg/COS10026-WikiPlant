@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,13 +10,20 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="WikiPlant home">
         <img src="images/logo.png" alt="WikiPlant logo">
         <span class="brand-motto">Wiki Plant</span>
       </a>
+      <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+      <label class="nav-toggle" for="navigation-toggle">
+          <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="nav-close" aria-hidden="true">&times;</span>
+      </label>
+      <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+      <div class="nav-drawer-panel" id="navigation-panel">
+          <div class="nav-drawer-topbar"><span>Navigation</span></div>
       <nav class="main-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html">Index</a></li>
           <li class="nav-drop">
             <a href="explorer.html" aria-current="page">Explore</a>
             <ul class="drop-menu">
@@ -27,11 +34,13 @@
           </li>
           <li><a href="identify.html">Identify</a></li>
           <li><a href="contributor.html">Contributor</a></li>
+          <li><a href="aboutus-sean.html">About Us</a></li>
           <li><a href="enquiry_form.html">Enquiry</a></li>
           <li><a href="register.html">Register</a></li>
           <li><a href="login.html">Login</a></li>
         </ul>
       </nav>
+      </div>
     </div>
   </header>
 
@@ -53,17 +62,56 @@
     <a href="explorer-species.html" aria-current="page">Species</a>
   </nav>
 
+  <div class="filter-bar" role="group" aria-label="Filter species by family or genus">
+    <span class="filter-heading">Filter by family</span>
+    <input type="radio" name="family-filter" id="f-all" checked>
+    <label for="f-all">All families</label>
+    <input type="radio" name="family-filter" id="f-araceae">
+    <label for="f-araceae">Araceae</label>
+    <input type="radio" name="family-filter" id="f-rosaceae">
+    <label for="f-rosaceae">Rosaceae</label>
+    <input type="radio" name="family-filter" id="f-fabaceae">
+    <label for="f-fabaceae">Fabaceae</label>
+    <input type="radio" name="family-filter" id="f-asparagaceae">
+    <label for="f-asparagaceae">Asparagaceae</label>
+
+    <span class="filter-heading">Filter by genus</span>
+    <input type="radio" name="genus-filter" id="g-all" checked>
+    <label for="g-all">All genera</label>
+    <input type="radio" name="genus-filter" id="g-monstera">
+    <label for="g-monstera">Monstera</label>
+    <input type="radio" name="genus-filter" id="g-spathiphyllum">
+    <label for="g-spathiphyllum">Spathiphyllum</label>
+    <input type="radio" name="genus-filter" id="g-rosa">
+    <label for="g-rosa">Rosa</label>
+    <input type="radio" name="genus-filter" id="g-fragaria">
+    <label for="g-fragaria">Fragaria</label>
+    <input type="radio" name="genus-filter" id="g-lathyrus">
+    <label for="g-lathyrus">Lathyrus</label>
+    <input type="radio" name="genus-filter" id="g-trifolium">
+    <label for="g-trifolium">Trifolium</label>
+    <input type="radio" name="genus-filter" id="g-dracaena">
+    <label for="g-dracaena">Dracaena</label>
+    <input type="radio" name="genus-filter" id="g-chlorophytum">
+    <label for="g-chlorophytum">Chlorophytum</label>
+
   <div class="groups specimen-grid">
 
-    <div class="group" data-family="araceae" style="display: contents;">
+    <div class="group" data-family="araceae">
       <div class="family-heading" id="araceae">
         <h2 class="fam-latin sci">Araceae</h2>
         <span class="fam-common">The arum family — leaves that shelter a spadix and spathe.</span>
       </div>
 
+      <div class="genus-heading" id="genus-monstera">
+        <h3 class="genus-latin sci">Genus: Monstera</h3>
+      </div>
+
       <article class="specimen-card" id="monstera">
         <span class="accession">No. 0142</span>
-        <img src="images/monstera-deliciosa.jpg" alt="Swiss cheese plant" class="specimen-img">
+        <figure class="plant-photo">
+          <img src="images/Monstera_deliciosa.jpg" alt="Swiss cheese plant (Monstera deliciosa)" class="specimen-img">
+        </figure>
         <div class="common-name">Swiss cheese plant</div>
         <span class="sci">Monstera deliciosa</span>
         <div class="rank-line">
@@ -72,12 +120,17 @@
           <span class="tag">Species: deliciosa</span>
         </div>
         <div class="distribution">📍 Native: Southern Mexico to Panama</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Monstera deliciosa"
+            src="https://www.google.com/maps?q=Monstera+deliciosa+Southern+Mexico+to+Panama&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>Wide, glossy leaves that develop fenestrations as the plant matures. Climbs by aerial roots in its native range.</p>
       </article>
 
       <article class="specimen-card" id="monstera-acuminata">
-        <span class="accession">No. 0142</span>
-        <img src="images/monstera-acuminata.jpg" alt="Shingle plant" class="specimen-img">
+        <span class="accession">No. 0143</span>
+        <figure class="plant-photo"><img src="images/plants/monstera-acuminata.jpg" alt="Shingle plant (Monstera acuminata)" class="specimen-img"></figure>
         <div class="common-name">Shingle plant</div>
         <span class="sci">Monstera acuminata</span>
         <div class="rank-line">
@@ -86,12 +139,21 @@
           <span class="tag">Species: acuminata</span>
         </div>
         <div class="distribution">📍 Native: Central America & Mexico</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Monstera acuminata"
+            src="https://www.google.com/maps?q=Monstera+acuminata+Central+America+Mexico&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A tropical climbing vine native to Central America and Mexico, famous for its unique "shingle" growth habit and holey leaves.</p>
       </article>
 
+      <div class="genus-heading" id="genus-spathiphyllum">
+        <h3 class="genus-latin sci">Genus: Spathiphyllum</h3>
+      </div>
+
       <article class="specimen-card" id="spathiphyllum">
-        <span class="accession">No. 0143</span>
-        <img src="images/spathiphyllum-wallisii.jpg" alt="Peace lily" class="specimen-img">
+        <span class="accession">No. 0144</span>
+        <figure class="plant-photo"><img src="images/plants/spathiphyllum-wallisii.jpg" alt="Peace lily (Spathiphyllum wallisii)" class="specimen-img"></figure>
         <div class="common-name">Peace lily</div>
         <span class="sci">Spathiphyllum wallisii</span>
         <div class="rank-line">
@@ -100,12 +162,17 @@
           <span class="tag">Species: wallisii</span>
         </div>
         <div class="distribution">📍 Native: Colombia & Venezuela</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Spathiphyllum wallisii"
+            src="https://www.google.com/maps?q=Spathiphyllum+wallisii+Colombia+Venezuela&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>Dark lance-shaped leaves and a single white spathe curling around a pale spadix. Tolerant of low light.</p>
       </article>
 
       <article class="specimen-card" id="spathiphyllum-cannifolium">
-        <span class="accession">No. 0144</span>
-        <img src="images/spathiphyllum-cannifolium.jpg" alt="Canna-leaf peace lily" class="specimen-img">
+        <span class="accession">No. 0145</span>
+        <figure class="plant-photo"><img src="images/plants/spathiphyllum-cannifolium.jpg" alt="Canna-leaf peace lily (Spathiphyllum cannifolium)" class="specimen-img"></figure>
         <div class="common-name">Canna-leaf peace lily</div>
         <span class="sci">Spathiphyllum cannifolium</span>
         <div class="rank-line">
@@ -114,19 +181,28 @@
           <span class="tag">Species: cannifolium</span>
         </div>
         <div class="distribution">📍 Native: Northern South America</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Spathiphyllum cannifolium"
+            src="https://www.google.com/maps?q=Spathiphyllum+cannifolium+Northern+South+America&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A tropical, evergreen herbaceous perennial belonging to the Araceae (arum) family.</p>
       </article>
     </div>
 
-    <div class="group" data-family="rosaceae" style="display: contents;">
+    <div class="group" data-family="rosaceae">
       <div class="family-heading" id="rosaceae">
         <h2 class="fam-latin sci">Rosaceae</h2>
         <span class="fam-common">The rose family — five-petalled flowers, often with thorns.</span>
       </div>
 
+      <div class="genus-heading" id="genus-rosa">
+        <h3 class="genus-latin sci">Genus: Rosa</h3>
+      </div>
+
       <article class="specimen-card" id="rosa">
         <span class="accession">No. 0091</span>
-        <img src="images/rosa-canina.jpg" alt="Dog rose" class="specimen-img">
+        <figure class="plant-photo"><img src="images/plants/rosa-canina.jpg" alt="Dog rose (Rosa canina)" class="specimen-img"></figure>
         <div class="common-name">Dog rose</div>
         <span class="sci">Rosa canina</span>
         <div class="rank-line">
@@ -135,12 +211,17 @@
           <span class="tag">Species: canina</span>
         </div>
         <div class="distribution">📍 Native: Europe & Western Asia</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Rosa canina"
+            src="https://www.google.com/maps?q=Rosa+canina+Europe+Western+Asia&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A scrambling hedgerow rose with pale pink flowers and hooked thorns along an arching stem.</p>
       </article>
 
       <article class="specimen-card" id="rosa-banksiae">
-        <span class="accession">No. 0091</span>
-        <img src="images/rosa-banksiae.jpg" alt="Lady Banks' rose" class="specimen-img">
+        <span class="accession">No. 0092</span>
+        <figure class="plant-photo"><img src="images/plants/rosa-banksiae.jpg" alt="Lady Banks' rose (Rosa banksiae)" class="specimen-img"></figure>
         <div class="common-name">Lady Banks' rose</div>
         <span class="sci">Rosa banksiae</span>
         <div class="rank-line">
@@ -148,13 +229,22 @@
           <a class="tag" href="explorer-genus.html#rosa">Genus: Rosa</a>
           <span class="tag">Species: banksiae</span>
         </div>
-        <div class="distribution">📍 Native: Central & Western China</div>
+        <div class="distribution">📍 Native: China</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Rosa banksiae"
+            src="https://www.google.com/maps?q=China&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A fast-growing, nearly thornless climbing shrub native to central and western China.</p>
       </article>
 
+      <div class="genus-heading" id="genus-fragaria">
+        <h3 class="genus-latin sci">Genus: Fragaria</h3>
+      </div>
+
       <article class="specimen-card" id="fragaria">
-        <span class="accession">No. 0092</span>
-        <img src="images/fragaria-vesca.jpg" alt="Wild strawberry" class="specimen-img">
+        <span class="accession">No. 0093</span>
+        <figure class="plant-photo"><img src="images/plants/fragaria-vesca.jpg" alt="Wild strawberry (Fragaria vesca)" class="specimen-img"></figure>
         <div class="common-name">Wild strawberry</div>
         <span class="sci">Fragaria vesca</span>
         <div class="rank-line">
@@ -162,14 +252,19 @@
           <a class="tag" href="explorer-genus.html#fragaria">Genus: Fragaria</a>
           <span class="tag">Species: vesca</span>
         </div>
-        <div class="distribution">📍 Native: Northern Hemisphere</div>
+        <div class="distribution">📍 Native: Temperate Europe, Asia & North America</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Fragaria vesca"
+            src="https://www.google.com/maps?q=Temperate+Northern+Hemisphere&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>Trifoliate leaves and small white flowers, followed by fruit far smaller than its cultivated relatives.</p>
       </article>
 
       <article class="specimen-card" id="fragaria-moschata">
-        <span class="accession">No. 0093</span>
-        <img src="images/fragaria-moschata.jpg" alt="Musk Strawberry" class="specimen-img">
-        <div class="common-name">Musk Strawberry</div>
+        <span class="accession">No. 0094</span>
+        <figure class="plant-photo"><img src="images/plants/fragaria-moschata.jpg" alt="Musk strawberry (Fragaria moschata)" class="specimen-img"></figure>
+        <div class="common-name">Musk strawberry</div>
         <span class="sci">Fragaria moschata</span>
         <div class="rank-line">
           <a class="tag" href="explorer-family.html#rosaceae">Family: Rosaceae</a>
@@ -177,82 +272,126 @@
           <span class="tag">Species: moschata</span>
         </div>
         <div class="distribution">📍 Native: Europe</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Fragaria moschata"
+            src="https://www.google.com/maps?q=Fragaria+moschata+Europe&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A European wild strawberry species prized for its intensely aromatic, uniquely flavored fruit.</p>
       </article>
     </div>
 
-    <div class="group" data-family="fabaceae" style="display: contents;">
+
+    <div class="group" data-family="fabaceae">
       <div class="family-heading" id="fabaceae">
         <h2 class="fam-latin sci">Fabaceae</h2>
         <span class="fam-common">The legume family — pod fruits and nitrogen-fixing roots.</span>
       </div>
 
-      <article class="specimen-card" id="pisum">
+      <div class="genus-heading" id="genus-lathyrus">
+        <h3 class="genus-latin sci">Genus: Lathyrus</h3>
+      </div>
+
+      <article class="specimen-card" id="lathyrus-oleraceus">
         <span class="accession">No. 0210</span>
-        <img src="images/pisum-sativum.jpg" alt="Garden pea" class="specimen-img">
+        <figure class="plant-photo"><img src="images/plants/pisum-sativum.jpg" alt="Garden pea (Lathyrus oleraceus, traditionally Pisum sativum)" class="specimen-img"></figure>
         <div class="common-name">Garden pea</div>
-        <span class="sci">Pisum sativum</span>
+        <span class="sci">Lathyrus oleraceus</span>
         <div class="rank-line">
           <a class="tag" href="explorer-family.html#fabaceae">Family: Fabaceae</a>
-          <a class="tag" href="explorer-genus.html#pisum">Genus: Pisum</a>
-          <span class="tag">Species: sativum</span>
+          <a class="tag" href="explorer-genus.html#lathyrus">Genus: Lathyrus</a>
+          <span class="tag">Species: oleraceus</span>
         </div>
-        <div class="distribution">📍 Native: Mediterranean Basin</div>
-        <p>A climbing annual with tendrilled compound leaves, grown for the seed pods it sets after flowering.</p>
+        <div class="distribution">📍 Native: Eurasia</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Lathyrus oleraceus"
+            src="https://www.google.com/maps?q=Eurasia&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <p>The cultivated garden pea, traditionally known as <i>Pisum sativum</i>, is an annual legume grown for its edible seeds and pods.</p>
       </article>
 
-      <article class="specimen-card" id="pisum-fulvum">
-        <span class="accession">No. 0210</span>
-        <img src="images/pisum-fulvum.jpg" alt="Tawny pea" class="specimen-img">
+      <article class="specimen-card" id="lathyrus-fulvus">
+        <span class="accession">No. 0211</span>
+        <figure class="plant-photo"><img src="images/plants/pisum-fulvum.jpg" alt="Tawny pea (Lathyrus fulvus, traditionally Pisum fulvum)" class="specimen-img"></figure>
         <div class="common-name">Tawny pea</div>
-        <span class="sci">Pisum fulvum</span>
+        <span class="sci">Lathyrus fulvus</span>
         <div class="rank-line">
           <a class="tag" href="explorer-family.html#fabaceae">Family: Fabaceae</a>
-          <a class="tag" href="explorer-genus.html#pisum">Genus: Pisum</a>
-          <span class="tag">Species: fulvum</span>
+          <a class="tag" href="explorer-genus.html#lathyrus">Genus: Lathyrus</a>
+          <span class="tag">Species: fulvus</span>
         </div>
         <div class="distribution">📍 Native: Middle East</div>
-        <p>A wild annual plant belonging to the legume family (Fabaceae) and a close wild relative of the cultivated garden pea.</p>
+        <div class="map-frame">
+          <iframe title="Native range map for Lathyrus fulvus"
+            src="https://www.google.com/maps?q=Lathyrus+fulvus+Middle+East&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <p>A wild pea native to the eastern Mediterranean; it is traditionally known as <i>Pisum fulvum</i>.</p>
       </article>
 
-      <article class="specimen-card" id="laburnum">
-        <span class="accession">No. 0211</span>
-        <img src="images/laburnum-anagyroides.jpg" alt="Common laburnum" class="specimen-img">
-        <div class="common-name">Common laburnum</div>
-        <span class="sci">Laburnum anagyroides</span>
+      <div class="genus-heading" id="genus-trifolium">
+        <h3 class="genus-latin sci">Genus: Trifolium</h3>
+      </div>
+
+      <article class="specimen-card" id="trifolium-pratense">
+        <span class="accession">No. 0212</span>
+        <figure class="plant-photo"><img src="images/plants/trifolium-pratense.jpg" alt="Red clover (Trifolium pratense)" class="specimen-img">
+          <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Bombus_rupestris_-_Trifolium_pratense_-_Keila.jpg">Ivar Leidus / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
+        </figure>
+        <div class="common-name">Red clover</div>
+        <span class="sci">Trifolium pratense</span>
         <div class="rank-line">
           <a class="tag" href="explorer-family.html#fabaceae">Family: Fabaceae</a>
-          <a class="tag" href="explorer-genus.html#laburnum">Genus: Laburnum</a>
-          <span class="tag">Species: anagyroides</span>
+          <a class="tag" href="explorer-genus.html#trifolium">Genus: Trifolium</a>
+          <span class="tag">Species: pratense</span>
         </div>
-        <div class="distribution">📍 Native: Central & Southern Europe</div>
-        <p>A small tree hung with long yellow flower chains in late spring, followed by slender seed pods.</p>
+        <div class="distribution">📍 Native: Europe, western Asia & northwest Africa</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Trifolium pratense"
+            src="https://www.google.com/maps?q=Trifolium+pratense+Europe&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <p>A familiar forage legume with three-part leaves and rounded heads of pink-red flowers.</p>
       </article>
 
-      <article class="specimen-card" id="laburnum-alpinum">
-        <span class="accession">No. 0211</span>
-        <img src="images/laburnum-alpinum.jpg" alt="Alpine laburnum" class="specimen-img">
-        <div class="common-name">Alpine laburnum</div>
-        <span class="sci">Laburnum alpinum</span>
+      <article class="specimen-card" id="trifolium-repens">
+        <span class="accession">No. 0213</span>
+        <figure class="plant-photo"><img src="images/plants/trifolium-repens.jpg" alt="White clover (Trifolium repens)" class="specimen-img">
+          <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Trifolium_repens_inflorescence_-_Niitv%C3%A4lja.jpg">Ivar Leidus / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
+        </figure>
+        <div class="common-name">White clover</div>
+        <span class="sci">Trifolium repens</span>
         <div class="rank-line">
           <a class="tag" href="explorer-family.html#fabaceae">Family: Fabaceae</a>
-          <a class="tag" href="explorer-genus.html#laburnum">Genus: Laburnum</a>
-          <span class="tag">Species: alpinum</span>
+          <a class="tag" href="explorer-genus.html#trifolium">Genus: Trifolium</a>
+          <span class="tag">Species: repens</span>
         </div>
-        <div class="distribution">📍 Native: Central & Southern Europe</div>
-        <p>A small deciduous tree or large shrub famous for its long, hanging chains of bright yellow, fragrant flowers.</p>
+        <div class="distribution">📍 Native: Europe & western Asia</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Trifolium repens"
+            src="https://www.google.com/maps?q=Trifolium+repens+Europe&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <p>A low-growing perennial clover with creeping stems, three-part leaves and rounded heads of white flowers.</p>
       </article>
     </div>
 
-    <div class="group" data-family="asparagaceae" style="display: contents;">
+    <div class="group" data-family="asparagaceae">
       <div class="family-heading" id="asparagaceae">
         <h2 class="fam-latin sci">Asparagaceae</h2>
         <span class="fam-common">A family of strap-like leaves, redrawn by taxonomists more than once.</span>
       </div>
 
+      <div class="genus-heading" id="genus-dracaena">
+        <h3 class="genus-latin sci">Genus: Dracaena</h3>
+      </div>
+
       <article class="specimen-card" id="dracaena">
         <span class="accession">No. 0304</span>
-        <img src="images/dracaena-trifasciata.jpg" alt="Snake plant" class="specimen-img">
+        <figure class="plant-photo"><img src="images/plants/dracaena-trifasciata.jpg" alt="Snake plant (Dracaena trifasciata)" class="specimen-img">
+          <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Dracaena_trifasciata_55523517.jpg">elawrey / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></figcaption>
+        </figure>
         <div class="common-name">Snake plant</div>
         <span class="sci">Dracaena trifasciata</span>
         <div class="rank-line">
@@ -260,13 +399,20 @@
           <a class="tag" href="explorer-genus.html#dracaena">Genus: Dracaena</a>
           <span class="tag">Species: trifasciata</span>
         </div>
-        <div class="distribution">📍 Native: Tropical West Africa</div>
+        <div class="distribution">📍 Native: Central Africa</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Dracaena trifasciata"
+            src="https://www.google.com/maps?q=Dracaena+trifasciata+Central+Africa&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>Stiff, upright leaves banded in mottled green. Reclassified from Sansevieria in recent revisions.</p>
       </article>
 
       <article class="specimen-card" id="dracaena-cinnabari">
         <span class="accession">No. 0305</span>
-        <img src="images/dracaena-cinnabari.jpg" alt="Dragon blood tree" class="specimen-img">
+        <figure class="plant-photo"><img src="images/plants/dracaena-cinnabari.jpg" alt="Dragon's blood tree (Dracaena cinnabari)" class="specimen-img">
+          <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Socotra_dragon_tree.JPG">Boris Khvostichenko / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
+        </figure>
         <div class="common-name">Dragon blood tree</div>
         <span class="sci">Dracaena cinnabari</span>
         <div class="rank-line">
@@ -275,12 +421,23 @@
           <span class="tag">Species: cinnabari</span>
         </div>
         <div class="distribution">📍 Native: Socotra Archipelago</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Dracaena cinnabari"
+            src="https://www.google.com/maps?q=Dracaena+cinnabari+Socotra+Archipelago&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A rare, iconic evergreen tree famous for its dense, umbrella-shaped canopy and crimson-red resin.</p>
       </article>
 
+      <div class="genus-heading" id="genus-chlorophytum">
+        <h3 class="genus-latin sci">Genus: Chlorophytum</h3>
+      </div>
+
       <article class="specimen-card" id="chlorophytum">
         <span class="accession">No. 0306</span>
-        <img src="images/chlorophytum-comosum.jpg" alt="Spider plant" class="specimen-img">
+        <figure class="plant-photo"><img src="images/plants/chlorophytum-comosum.jpg" alt="Spider plant (Chlorophytum comosum)" class="specimen-img">
+          <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Malamadre_(Chlorophytum_comosum).jpg">Juan Carlos Fonseca Mata / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
+        </figure>
         <div class="common-name">Spider plant</div>
         <span class="sci">Chlorophytum comosum</span>
         <div class="rank-line">
@@ -289,12 +446,19 @@
           <span class="tag">Species: comosum</span>
         </div>
         <div class="distribution">📍 Native: Southern Africa</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Chlorophytum comosum"
+            src="https://www.google.com/maps?q=Chlorophytum+comosum+Southern+Africa&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>Arching grass-like leaves that send out long runners tipped with plantlets.</p>
       </article>
 
       <article class="specimen-card" id="chlorophytum-tuberosum">
         <span class="accession">No. 0307</span>
-        <img src="images/chlorophytum-tuberosum.jpg" alt="Musli" class="specimen-img">
+        <figure class="plant-photo"><img src="images/plants/chlorophytum-tuberosum.jpg" alt="Musli (Chlorophytum tuberosum)" class="specimen-img">
+          <figcaption class="photo-credit">Photo: <a href="https://www.inaturalist.org/observations/299107159">Ravuri Krishna Chaitanya / iNaturalist</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></figcaption>
+        </figure>
         <div class="common-name">Musli</div>
         <span class="sci">Chlorophytum tuberosum</span>
         <div class="rank-line">
@@ -302,29 +466,46 @@
           <a class="tag" href="explorer-genus.html#chlorophytum">Genus: Chlorophytum</a>
           <span class="tag">Species: tuberosum</span>
         </div>
-        <div class="distribution">📍 Native: India & Africa</div>
+        <div class="distribution">📍 Native: Circar mountains, India</div>
+        <div class="map-frame">
+          <iframe title="Native range map for Chlorophytum tuberosum"
+            src="https://www.google.com/maps?q=Coromandel+Coast+India&amp;output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
         <p>A small, tuberous perennial herb in the asparagus family that grows 20 to 50 cm tall.</p>
       </article>
     </div>
 
   </div>
+  </div>
 </div>
+
+<div class="wrap species-cta-wrap">
+    <div class="cta-text-box">
+      <h2>Help Us Grow the Index</h2>
+      <p>WikiPlant is powered by a community of plant enthusiasts. See who is building our database or join us to share your own knowledge.</p>
+      <a href="contributor.html" class="cta-btn">Meet Our Contributors</a>
+    </div>
+  </div>
 
 <footer class="universal-footer">
   <div class="wrap">
     <p><strong>WikiPlant</strong> — a community field index.</p>
     <nav aria-label="Footer navigation">
-      <button type="button" onclick="location.href='index.html'">Index</button>
-      <button type="button" onclick="location.href='explorer.html'">Explore</button>
-      <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-      <button type="button" onclick="location.href='register.html'">Register</button>
-      <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-      <button type="button" onclick="location.href='login.html'">Login</button>
-      <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact Us</button>
+      <a href="explorer.html">Explore</a>
+      <a href="contributor.html">Contributor</a>
+      <a href="aboutus-sean.html">About Us</a>
+      <a href="register.html">Register</a>
+      <a href="enquiry_form.html">Enquiry</a>
+      <a href="login.html">Login</a>
+      <a href="enhancement.html">Enhancement</a>
+      <a href="acknowledgement.html">Acknowledgement</a>
+      <a href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
     </nav>
     <p>&copy; 2026 WikiPlant. All rights reserved.</p>
   </div>
 </footer>
-
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>
 </html>

@@ -15,16 +15,10 @@
 <meta name="keywords"
       content="WikiPlant, contributors, plants, biodiversity, citizen science">
 
-<meta name="author"
-      content="Terry Lin Zhen Bin">
 
 <title>Community contributors | WikiPlant</title>
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/contributor.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet">
 
 </head>
 
@@ -38,7 +32,7 @@
 
     <div class="wrap">
 
-        <a class="brand" href="index.html">
+        <a class="brand" href="index.html" aria-label="WikiPlant home">
 
             <img src="images/logo.png"
                  alt="WikiPlant logo">
@@ -50,23 +44,23 @@
         </a>
 
 
+        <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+        <label class="nav-toggle" for="navigation-toggle">
+            <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="nav-close" aria-hidden="true">&times;</span>
+        </label>
+        <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+        <div class="nav-drawer-panel" id="navigation-panel">
+            <div class="nav-drawer-topbar"><span>Navigation</span></div>
         <nav class="main-nav"
              aria-label="Primary">
 
             <ul>
 
-                <li>
-                    <a href="index.html">
-                        Index
-                    </a>
-                </li>
-
 
                 <li class="nav-drop">
 
-                    <a href="explorer.html">
-                        Explore
-                    </a>
+                    <a href="explorer.html">Explore</a>
 
                     <ul class="drop-menu">
 
@@ -106,6 +100,7 @@
                         Contributor
                     </a>
                 </li>
+                <li><a href="aboutus-sean.html">About Us</a></li>
 
 
                 <li>
@@ -131,6 +126,7 @@
             </ul>
 
         </nav>
+        </div>
 
     </div>
 
@@ -535,73 +531,32 @@
                  Plant Information
                  ========================= -->
 
-            <section class="content_section information-section"
-                     aria-labelledby="information-title">
+            <div class="content_section">
+    <p class="section-kicker">OBSERVATION DETAILS</p>
 
-                <div class="section-kicker">
-                    Observation details
-                </div>
+    <!-- 标题移出表格外部，恢复正常的页面大标题样式 -->
+    <h2>Useful information to record</h2>
+    <p>Minimum details for a useful observation</p>
 
+    <!-- 全新的表格网格容器 -->
+    <div class="plant_grid">
+        <!-- 表头行 -->
+        <div class="grid_header left">Record detail</div>
+        <div class="grid_header right">Why it helps</div>
 
-                <h2 id="information-title">
-                    Useful information to record
-                </h2>
+        <!-- 数据行 1 -->
+        <div class="grid_label">Plant name</div>
+        <div class="grid_data">Helps connect the observation to a species record.</div>
 
+        <!-- 数据行 2 -->
+        <div class="grid_label">Date and habitat</div>
+        <div class="grid_data">Provides context for reviewing where and when it was observed.</div>
 
-                <dl class="plant-details">
-
-
-                    <dt>
-                        Plant name
-                    </dt>
-
-                    <dd>
-
-                        The common or scientific name of the plant,
-                        if known.
-
-                    </dd>
-
-
-                    <dt>
-                        Observation date
-                    </dt>
-
-                    <dd>
-
-                        The date when the plant was observed.
-
-                    </dd>
-
-
-                    <dt>
-                        Habitat
-                    </dt>
-
-                    <dd>
-
-                        The environment where the plant was found,
-                        such as a garden, forest or park.
-
-                    </dd>
-
-
-                    <dt>
-                        Photograph
-                    </dt>
-
-                    <dd>
-
-                        A clear photograph showing useful features
-                        of the plant.
-
-                    </dd>
-
-
-                </dl>
-
-            </section>
-
+        <!-- 数据行 3 -->
+        <div class="grid_label">Clear photograph</div>
+        <div class="grid_data">Shows the visible features used to review the plant.</div>
+    </div>
+</div>
 
 
             <!-- =========================
@@ -1082,14 +1037,15 @@
 
 
         <nav aria-label="Footer navigation">
-            <button type="button" onclick="location.href='index.html'">Index</button>
-            <button type="button" onclick="location.href='explorer.html'">Explore</button>
-            <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-            <button type="button" onclick="location.href='register.html'">Register</button>
-            <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-            <button type="button" onclick="location.href='login.html'">Login</button>
-            <button type="button"
-                onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact Us</button>
+            <a href="explorer.html">Explore</a>
+            <a href="contributor.html">Contributor</a>
+            <a href="aboutus-sean.html">About Us</a>
+            <a href="register.html">Register</a>
+            <a href="enquiry_form.html">Enquiry</a>
+            <a href="login.html">Login</a>
+            <a href="enhancement.html">Enhancement</a>
+            <a href="acknowledgement.html">Acknowledgement</a>
+            <a href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
         </nav>
 
 
@@ -1100,7 +1056,8 @@
     </div>
 
 </footer>
-
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>
 
 </html>

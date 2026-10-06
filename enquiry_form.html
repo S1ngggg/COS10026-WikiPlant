@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Enquiry form for WikiPlant website" />
     <meta name="keywords" content="enquiries, support" />
     <meta name="author" content="Terry Lin Zhen Bin" />
@@ -13,13 +14,20 @@
 <body class="explorer-page">
     <header class="site-header">
         <div class="wrap">
-            <a class="brand" href="index.html">
+            <a class="brand" href="index.html" aria-label="WikiPlant home">
                 <img src="images/logo.png" alt="WikiPlant logo">
                 <span class="brand-motto">Wiki Plant</span>
             </a>
+            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+            <label class="nav-toggle" for="navigation-toggle">
+                <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="nav-close" aria-hidden="true">&times;</span>
+            </label>
+            <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+            <div class="nav-drawer-panel" id="navigation-panel">
+                <div class="nav-drawer-topbar"><span>Navigation</span></div>
             <nav class="main-nav" aria-label="Primary">
                 <ul>
-                    <li><a href="index.html">Index</a></li>
                     <li class="nav-drop">
                         <a href="explorer.html">Explore</a>
                         <ul class="drop-menu">
@@ -30,16 +38,18 @@
                     </li>
                     <li><a href="identify.html">Identify</a></li>
                     <li><a href="contributor.html">Contributor</a></li>
+                    <li><a href="aboutus-sean.html">About Us</a></li>
                     <li><a href="enquiry_form.html" aria-current="page">Enquiry</a></li>
                     <li><a href="register.html">Register</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
+            </div>
         </div>
     </header>
 
-    <main class="wrap" style="padding-top: 50px; padding-bottom: 50px; max-width: 800px;">
-        <div class="page-header" style="border-bottom: none; margin-bottom: 10px; padding-top: 0;">
+    <main class="wrap form-page-wrap form-page-wrap-wide">
+        <div class="page-header form-page-header">
             <h1>WikiPlant Enquiry Form</h1>
             <p>Ask any question you want about our website or plant categories!</p>
         </div>
@@ -48,7 +58,7 @@
             <fieldset>
                 <legend>User Information</legend>
 
-                <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+                <div class="field-row field-row-two">
                     <div class="field-group">
                         <label for="firstName">First Name <span class="req">*</span></label>
                         <input type="text" id="firstName" name="firstName" pattern="[A-Za-z\s]+" maxlength="25"
@@ -61,7 +71,7 @@
                     </div>
                 </div>
 
-                <div class="field-row" style="grid-template-columns: 1fr 1fr;">
+                <div class="field-row field-row-two">
                     <div class="field-group">
                         <label for="email">Email Address <span class="req">*</span></label>
                         <input type="email" id="email" name="email" placeholder="name@domain.com" required>
@@ -96,12 +106,11 @@
                 </div>
             </fieldset>
 
-            <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <div class="form-actions">
                 <button type="submit" class="btn">Submit</button>
                 <button type="reset" class="btn btn-outline">Clear Form</button>
             </div>
 
-            <p style="margin-top: 20px; font-size: 0.9rem;"><a href="index.html">&larr; Back to Index</a></p>
         </form>
     </main>
 
@@ -110,19 +119,23 @@
             <p><strong>WikiPlant</strong> — a community field index.</p>
 
             <nav aria-label="Footer navigation">
-                <button type="button" onclick="location.href='index.html'">Index</button>
-                <button type="button" onclick="location.href='explorer.html'">Explore</button>
-                <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-                <button type="button" onclick="location.href='register.html'">Register</button>
-                <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-                <button type="button" onclick="location.href='login.html'">Login</button>
-                <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact
-                    Us</button>
+                <a href="explorer.html">Explore</a>
+                <a href="contributor.html">Contributor</a>
+                <a href="aboutus-sean.html">About Us</a>
+                <a href="register.html">Register</a>
+                <a href="enquiry_form.html">Enquiry</a>
+                <a href="login.html">Login</a>
+                <a href="enhancement.html">Enhancement</a>
+                <a href="acknowledgement.html">Acknowledgement</a>
+                <a href="mailto:106764593@students.swinburne.edu.my">Contact
+                    Us</a>
             </nav>
 
             <p>&copy; 2026 WikiPlant. All rights reserved.</p>
         </div>
     </footer>
+    <!-- Back to Top Button -->
+<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>
 
 </html>

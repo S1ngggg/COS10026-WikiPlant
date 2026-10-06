@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Learn how the Plant's Notebook photo identification feature works and what information it reveals about a plant.">
     <meta name="keywords"
@@ -17,13 +18,20 @@
 
     <header class="site-header">
         <div class="wrap">
-            <a class="brand" href="index.html">
+            <a class="brand" href="index.html" aria-label="WikiPlant home">
                 <img src="images/logo.png" alt="WikiPlant logo">
                 <span class="brand-motto">Wiki Plant</span>
             </a>
+            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+            <label class="nav-toggle" for="navigation-toggle">
+                <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="nav-close" aria-hidden="true">&times;</span>
+            </label>
+            <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+            <div class="nav-drawer-panel" id="navigation-panel">
+                <div class="nav-drawer-topbar"><span>Navigation</span></div>
             <nav class="main-nav" aria-label="Primary">
                 <ul>
-                    <li><a href="index.html">Index</a></li>
                     <li class="nav-drop">
                         <a href="explorer.html">Explore</a>
                         <ul class="drop-menu">
@@ -34,12 +42,13 @@
                     </li>
                     <li><a href="identify.html" aria-current="page">Identify</a></li>
                     <li><a href="contributor.html">Contributor</a></li>
-                    <li><a href="contribution.html">Contribute</a></li>
+                    <li><a href="aboutus-sean.html">About Us</a></li>
                     <li><a href="enquiry_form.html">Enquiry</a></li>
                     <li><a href="register.html">Register</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
+            </div>
         </div>
 
     </header>
@@ -56,11 +65,10 @@
                 <label class="static-photo upload-box" for="plant-photo" aria-label="Upload a plant photo"
                     title="Upload a plant photo">
                     <img src="images/cloud-upload.png" alt="Upload icon" class="cloud-upload" id="upload-icon">
-                    <img class="images/upload-preview" id="upload-preview" alt="Selected plant photo preview" hidden>
                     <input id="plant-photo" type="file" accept="image/*">
                 </label>
                 <div class="identify-action-row">
-                    <button type="button" class="identify-btn" id="identify-btn">Identify plant</button>
+                    <button type="button" class="identify-btn" id="identify-btn" disabled>Identify plant</button>
                 </div>
             </div>
         </section>
@@ -139,11 +147,13 @@
                 </p>
             </aside>
 
-            <div class="contribute-callout">
-                <p class="para">Discovered a new plant? Share your findings with the WikiPlant community and help expand
-                    our plant collection.</p>
-                <a href="contributor.html" class="contribute-btn">Go to Contributor</a>
-            </div>
+<div class="wrap cta-wrap">
+    <div class="cta-text-box">
+      <h2>Help Us Grow the Index</h2>
+      <p>WikiPlant is powered by a community of plant enthusiasts. See who is building our database or join us to share your own knowledge.</p>
+      <a href="contributor.html" class="cta-btn">Meet Our Contributors</a>
+    </div>
+  </div>
         </section>
     </main>
 
@@ -152,20 +162,23 @@
             <p><strong>WikiPlant</strong> — a community field index.</p>
 
             <nav aria-label="Footer navigation">
-                <button type="button" onclick="location.href='index.html'">Index</button>
-                <button type="button" onclick="location.href='explorer.html'">Explore</button>
-                <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-                <button type="button" onclick="location.href='register.html'">Register</button>
-                <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-                <button type="button" onclick="location.href='login.html'">Login</button>
-                <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact
-                    Us</button>
+                <a href="explorer.html">Explore</a>
+                <a href="contributor.html">Contributor</a>
+                <a href="aboutus-sean.html">About Us</a>
+                <a href="register.html">Register</a>
+                <a href="enquiry_form.html">Enquiry</a>
+               <a href="login.html">Login</a>
+                <a href="enhancement.html">Enhancement</a>
+                <a href="acknowledgement.html">Acknowledgement</a>
+                <a href="mailto:106764593@students.swinburne.edu.my">Contact
+                    Us</a>
             </nav>
 
             <p>&copy; 2026 WikiPlant. All rights reserved.</p>
         </div>
     </footer>
-
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>
 
 </html>
