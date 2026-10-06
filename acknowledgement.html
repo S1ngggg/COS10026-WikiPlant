@@ -7,9 +7,96 @@
     <meta name="description" content="Acknowledgement page for WikiPlant.">
     <title>Acknowledgement | WikiPlant</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Acknowledgement Page Specific Styles */
+        .acknowledgement-main {
+            background-color: #e8f5e9;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            color: #000;
+            min-height: 60vh;
+        }
+
+        .acknowledgement-main .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .ack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+            gap: 30px;
+        }
+
+        .ack-section {
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #ccc;
+        }
+
+        .ack-section h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e8f5e9;
+            padding-bottom: 10px;
+        }
+
+        .ack-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .ack-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .ack-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #000;
+            font-size: 1.2rem;
+            line-height: 1.2;
+        }
+
+        .ack-list a {
+            color: #0066cc;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .ack-list a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .ack-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
-<body class="blank-page">
+<body class="acknowledgement-page">
     <header class="site-header">
         <div class="wrap">
             <a class="brand" href="index.html" aria-label="WikiPlant home">
@@ -46,7 +133,48 @@
         </div>
     </header>
 
-    <main class="blank-main" aria-label="Acknowledgement"></main>
+    <main class="acknowledgement-main" aria-label="Acknowledgement">
+        <div class="wrap">
+            <h1 class="page-title">Acknowledgement</h1>
+            <p class="intro-text">All the website links used for this assignment are credited below.</p>
+
+            <div class="ack-grid">
+                <!-- Photos/pictures Section -->
+                <section class="ack-section">
+                    <h2>Photos/pictures</h2>
+                    <ul class="ack-list">
+                        <li><a href="#" target="_blank">Insert photo reference link here</a></li>
+                        <li><a href="#" target="_blank">Insert photo reference link here</a></li>
+                    </ul>
+                </section>
+
+                <!-- Information Section -->
+                <section class="ack-section">
+                    <h2>Information</h2>
+                    <ul class="ack-list">
+                        <li><a href="#" target="_blank">Insert information reference link here</a></li>
+                        <li><a href="#" target="_blank">Insert information reference link here</a></li>
+                    </ul>
+                </section>
+
+                <!-- Icons Section -->
+                <section class="ack-section">
+                    <h2>Icons</h2>
+                    <ul class="ack-list">
+                        <li><a href="#" target="_blank">Insert icon reference link here</a></li>
+                    </ul>
+                </section>
+
+                <!-- Buttons Section -->
+                <section class="ack-section">
+                    <h2>Buttons</h2>
+                    <ul class="ack-list">
+                        <li><a href="#" target="_blank">Insert button reference link here</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
 
     <footer class="universal-footer">
         <div class="wrap">
@@ -61,15 +189,15 @@
                 <a href="login.html">Login</a>
                 <a href="enhancement.html">Enhancement</a>
                 <a href="acknowledgement.html" aria-current="page">Acknowledgement</a>
-                <a href="mailto:106764593@students.swinburne.edu.my">Contact
-                    Us</a>
+                <a href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
             </nav>
 
             <p>&copy; 2026 WikiPlant. All rights reserved.</p>
         </div>
     </footer>
-<!-- Back to Top Button -->
-<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>
 
 </html>

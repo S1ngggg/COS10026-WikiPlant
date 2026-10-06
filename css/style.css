@@ -1127,10 +1127,8 @@ body.contributor-page {
     margin: 0;
 
     color: var(--ink);
-    font-family: 'Fraunces', serif;
-    font-size: 48px;
-    font-weight: 480;
-    line-height: 1.1;
+
+    font: 480 48px/1.1 'Fraunces', serif;
 }
 
 .contributor-page .intro-copy {
@@ -1150,8 +1148,9 @@ body.contributor-page {
     z-index: 1;
 
     display: flex;
+    align-items: center;   /* 新增 */
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;             /* 12改16 */
 
     margin-top: 25px;
 }
@@ -1181,28 +1180,6 @@ body.contributor-page {
     background: var(--ink);
 }
 
-/* =========================================================
-   3. MAIN CONTENT + SIDEBAR
-   ========================================================= */
-
-.contributor-page .content_grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
-    gap: 32px;
-    align-items: start;
-}
-
-.contributor-page .main_content_area {
-    min-width: 0;
-}
-
-.contributor-page .sidebar {
-    position: sticky;
-    top: 24px;
-
-    width: 320px;
-    min-width: 0;
-}
 
 /* =========================================================
    4. CONTENT SECTIONS
@@ -1444,6 +1421,27 @@ body.contributor-page {
 /* =========================================================
    8. USEFUL INFORMATION FOR RECORD (CLEAN GRID)
    ========================================================= */
+.contributor-page .plant_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.contributor-page .plant_table caption {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contributor-page .plant_table th,
+.contributor-page .plant_table td {
+    border: 1px solid var(--line-soft);
+    padding: 12px;
+    text-align: left;
+}
+
+.contributor-page .plant_table th {
+    background: var(--paper-deep);
+}
 .contributor-page .plant_grid {
     display: grid;
     grid-template-columns: 150px minmax(0, 1fr);
@@ -1561,9 +1559,29 @@ body.contributor-page {
 /* =========================================================
    10. PLANT DETAILS / DEFINITION LIST
    ========================================================= */
+.contributor-page .plant-details dt {
+    margin-top: 16px;
 
+    color: var(--sage-deep);
+
+    font-weight: 800;
+
+    background: transparent;
+
+    border: none;
+
+    padding: 0;
+}
+
+.contributor-page .plant-details dd {
+    margin: 6px 0 0;
+
+    padding: 0 0 14px;
+
+    border-bottom: 1px solid var(--line-soft);
+}
 .contributor-page .plant-details {
-    display: grid;
+    display: block;
     grid-template-columns: 160px minmax(0, 1fr);
 
     margin: 22px 0 0;
@@ -1608,8 +1626,9 @@ body.contributor-page {
 
 .contributor-page .contributor_cards {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
+    width: 100%;
 }
 
 .contributor-page .contributor_card {
@@ -2046,10 +2065,14 @@ body.contributor-page {
 /* =========================================================
    17. TEXT LINKS
    ========================================================= */
-
 .contributor-page .text-link {
+    display: inline-flex;
+    align-items: center;
+
     color: var(--sage-deep);
     font-weight: 700;
+
+    text-decoration: none;
 }
 
 .contributor-page .text-link:hover {
@@ -4258,10 +4281,27 @@ body.contributor-page {
 
 .contrib-page .content_grid,
 .contributor-page .content_grid {
-    grid-template-columns: minmax(0, 1fr) 320px;
-    gap: 32px;
+    display: block;
 }
 
+
+
+.contributor-page .sidebar {
+    float: right;
+    width: 30%;
+    border: 3px solid var(--sage-deep);
+}
+
+.contributor-page .main_content_area {
+    float: left;
+    width: 68%;
+}
+
+.contributor-page .content_grid::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 .contrib-page .content_section,
 .contributor-page .content_section {
     margin-bottom: 24px;
@@ -4756,5 +4796,61 @@ a.back-to-top {
     /* 悬停时微微上浮 */
 }
 
-/* 强制把所有分页箭头和悬浮按钮的颜色覆盖掉 */
-/* 强制修改所有页面中带有 aria-hidden="true" 属性的箭头图标颜色 */
+.contributor-page .plant_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.contributor-page .plant_table caption {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contributor-page .plant_table th,
+.contributor-page .plant_table td {
+    padding: 12px;
+    border: 1px solid var(--line-soft);
+    text-align: left;
+}
+
+.contributor-page .plant_table th {
+    background: var(--paper-deep);
+    color: var(--ink);
+}
+.glossary-list {
+    display: block;
+}
+
+.glossary-list dt {
+    margin-top: 1rem;
+    margin-bottom: .3rem;
+
+    font-weight: 700;
+
+    color: var(--sage-deep);
+}
+
+.glossary-list dd {
+    margin: 0;
+
+    line-height: 1.6;
+
+    font-size: 0.9rem;
+}
+.contributor-page .people-section{
+    clear: both;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.contributor-page .contributor_cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.contributor-page .people-section{
+    clear: both;
+    width: 100%;
+    margin-top: 30px;
+}
