@@ -1526,7 +1526,7 @@ body.explorer-page {
     height: 100%;
 }
 
-.explorer-page .family-card > p {
+.explorer-page .family-card>p {
     flex-grow: 1;
 }
 
@@ -1567,15 +1567,16 @@ body.explorer-page {
     box-shadow: 2px 3px 0 var(--shadow);
     padding: 22px 22px 20px;
     scroll-margin-top: 90px;
-        display: flex;
+    display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.explorer-page .genus-card > p {
+.explorer-page .genus-card>p {
     flex-grow: 1;
 }
-.explorer-page .genus-card > .tag,
+
+.explorer-page .genus-card>.tag,
 .explorer-page .genus-card .btn {
     align-self: flex-start;
 }
@@ -1646,7 +1647,7 @@ body.explorer-page {
 .explorer-page .specimen-img {
     width: 100%;
     height: 180px;
-    object-fit: cover; 
+    object-fit: cover;
     border-radius: 4px;
     margin-bottom: 12px;
     border: 1px solid var(--line);
@@ -1665,7 +1666,7 @@ body.explorer-page {
     font-weight: 500;
 }
 
-.explorer-page .specimen-card > p {
+.explorer-page .specimen-card>p {
     flex-grow: 1;
     margin-bottom: 0;
 }
@@ -2498,4 +2499,104 @@ body.identify-page {
     .identify-page .figures-container {
         flex-direction: column;
     }
+}
+
+/* profile */
+
+body.profile-page {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.profile-page main {
+    max-width: 950px;
+    margin: 40px auto;
+    background: var(--paper-card);
+    padding: 40px;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    box-shadow: 3px 4px 0 var(--shadow);
+}
+
+.profile-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 200%;
+    margin-bottom: 5px;
+    color: var(--ink);
+}
+
+.student-id {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.course-name {
+    color: rgb(78, 97, 68);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.profile-photo {
+    float: left;
+    border: 6px groove #C7BC98;
+    padding: 20px;
+    margin: 0 30px 20px 0;
+    max-width: 250px;
+    background-color: #FFFFFF;
+}
+
+.short-intro {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    clear: both;
+}
+
+.profile-table th,
+.profile-table td {
+    border: 1px solid var(--line);
+    padding: 18px;
+    vertical-align: top;
+}
+
+.profile-table th {
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--paper-deep);
+    color: var(--ink);
+}
+
+.profile-table td {
+    background-color: #FFFFFF;
+    line-height: 1.7;
+}
+
+.profile-table .email-container {
+    text-align: center;
+    background-color: #F8F5EA;
+}
+
+.profile-table .email-container a {
+    color: var(--sage-deep);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.profile-table .email-container a:hover {
+    text-decoration: underline;
+}
+
+.profile-text-content {
+    overflow: hidden;
 }
