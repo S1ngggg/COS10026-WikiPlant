@@ -100,6 +100,12 @@ summary:focus-visible {
     }
 }
 
+.site-header .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .main-nav ul {
     list-style: none;
     display: flex;
@@ -123,6 +129,12 @@ summary:focus-visible {
     background: var(--paper-deep);
 }
 
+.site-header .main-nav .nav-drop:hover>a,
+.site-header .main-nav .nav-drop:focus-within>a {
+    border-color: var(--line);
+    background: var(--paper-deep);
+}
+
 .main-nav a[aria-current="page"] {
     border-color: var(--sage-deep);
     color: var(--sage-deep);
@@ -134,12 +146,13 @@ summary:focus-visible {
     position: relative;
 }
 
-.nav-drop>a::after {
-    content: "\2304";
-    margin-left: 5px;
-    font-size: 0.8em;
-    position: relative;
-    top: 1px;
+.site-header .nav-drop>a::after {
+    display: inline-block;
+    margin-left: 7px;
+    border: 4px solid transparent;
+    border-top-color: currentColor;
+    content: "";
+    transform: translateY(2px);
 }
 
 .nav-drop .drop-menu {
@@ -161,7 +174,8 @@ summary:focus-visible {
 }
 
 .nav-drop:hover .drop-menu,
-.nav-drop:focus-within .drop-menu {
+.nav-drop:focus-within .drop-menu,
+.nav-drop .drop-menu:hover {
     display: flex;
 }
 
@@ -4346,26 +4360,17 @@ body.contributor-page {
 
 .contrib-page .content_grid,
 .contributor-page .content_grid {
-    display: block;
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    gap: 32px;
 }
 
-
-
 .contributor-page .sidebar {
-    float: right;
-    width: 30%;
-    border: 3px solid var(--sage-deep);
+    min-width: 0;
 }
 
 .contributor-page .main_content_area {
-    float: left;
-    width: 68%;
-}
-
-.contributor-page .content_grid::after {
-    content: "";
-    display: block;
-    clear: both;
+    min-width: 0;
 }
 .contrib-page .content_section,
 .contributor-page .content_section {
@@ -4679,7 +4684,9 @@ body.contributor-page {
     }
 
     .site-header .main-nav {
+        display: flex;
         flex: 1;
+        flex-direction: column;
         min-height: 0;
         overflow-y: auto;
         overscroll-behavior: contain;
@@ -4707,13 +4714,10 @@ body.contributor-page {
         color: var(--sage-deep);
     }
 
-    .site-header .nav-drop>a::after {
-        content: none;
-    }
-
     .site-header .drop-menu {
         position: static;
         display: flex;
+        flex: 1 0 100%;
         min-width: 0;
         margin: 8px 14px 12px;
         padding: 0 0 0 12px;
@@ -5082,4 +5086,315 @@ body.about-terry-page .about-pagination-link:hover .about-pagination-arrow {
     clear: both;
     width: 100%;
     margin-top: 30px;
+}
+body.profile-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.profile-page .profile-hub {
+    width: min(100% - 48px, var(--max));
+    margin: 0 auto;
+    padding: 76px 0 24px;
+    flex: 1;
+}
+
+.profile-page .team-intro {
+    max-width: 680px;
+    margin: 0 auto 52px;
+    text-align: center;
+}
+
+.profile-page .profile-eyebrow {
+    margin: 0 0 12px;
+    color: var(--sage-deep);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.profile-page .team-intro h1 {
+    margin: 0 0 16px;
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 480;
+    line-height: 1.08;
+}
+
+.profile-page .team-intro>p:last-child {
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.profile-page .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.profile-page .member-card {
+    position: relative;
+    min-height: 230px;
+    padding: 34px 36px;
+    border: 1px solid var(--line);
+    background: var(--paper-card);
+    color: var(--ink);
+    text-decoration: none;
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.profile-page .member-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--sage);
+    background: var(--paper-deep);
+}
+
+.profile-page .member-number {
+    color: var(--clay-deep);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+.profile-page .member-card h2 {
+    margin: 44px 0 12px;
+    color: var(--ink);
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 480;
+}
+
+.profile-page .member-card p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--line-soft);
+    color: var(--sage-deep);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.profile-page .universal-footer {
+    margin-top: 56px;
+}
+
+@media (max-width: 640px) {
+    .profile-page .profile-hub {
+        padding-top: 56px;
+    }
+
+    .profile-page .team-intro {
+        margin-bottom: 36px;
+    }
+
+    .profile-page .team-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .profile-page .member-card {
+        min-height: 190px;
+        padding: 26px;
+    }
+
+    .profile-page .member-card h2 {
+        margin-top: 32px;
+    }
+}
+/* ===== PROFILE HUB ===== */
+
+.profile-hub{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.team-hero{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.team-hero h1{
+    font-size:3rem;
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+.team-hero p{
+    max-width:700px;
+    margin:auto;
+    color:#666;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+/* ===== GRID ===== */
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+/* ===== CARD ===== */
+
+.member-card{
+    background:white;
+    text-decoration:none;
+    color:inherit;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+
+    transition:.3s;
+    text-align:center;
+}
+
+.member-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.15);
+}
+
+.member-avatar{
+    width:120px;
+    height:120px;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+.member-avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #4caf50;
+}
+
+.member-card h2{
+    font-size:1.6rem;
+    margin-bottom:10px;
+    color:#2e7d32;
+}
+
+.role{
+    display:inline-block;
+
+    background:#e8f5e9;
+    color:#2e7d32;
+
+    padding:6px 14px;
+    border-radius:50px;
+
+    margin-bottom:15px;
+
+    font-size:.9rem;
+    font-weight:600;
+}
+
+.member-card p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.btn-view{
+    color:#4caf50;
+    font-weight:bold;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+    .team-grid{
+        grid-template-columns:1fr;
+    }
+
+    .team-hero h1{
+        font-size:2.2rem;
+    }
+}
+.auth-buttons{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-left:12px;
+}
+.register-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    padding:8px 18px;
+    border-radius:999px;
+
+    border:1px solid var(--sage-deep);
+
+    color:var(--sage-deep);
+    background:transparent;
+
+    font-weight:600;
+}
+.login-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    padding:8px 18px;
+    border-radius:999px;
+
+    background:var(--sage-deep);
+    color:white;
+
+    font-weight:600;
+}
+.register-btn:hover{
+    background:var(--paper-deep);
+}
+
+.login-btn:hover{
+    background:var(--ink);
+}
+
+.auth-buttons a[aria-current="page"] {
+    outline: 2px solid var(--sage-deep);
+    outline-offset: 2px;
+}
+
+.site-header .brand {
+    color: var(--ink);
+}
+
+.site-header .auth-buttons .register-btn {
+    color: var(--sage-deep);
+}
+
+.site-header .auth-buttons .login-btn {
+    color: var(--paper);
+}
+
+@media (width < 1000px) {
+    .site-header .auth-buttons {
+        flex: 0 0 auto;
+        margin: 0;
+    }
 }

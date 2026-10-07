@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,13 +25,14 @@
 
 
     <!-- =========================
-         Header
+         Header and Navigation
          ========================= -->
 
     <header class="site-header">
 
         <div class="wrap">
 
+            <!-- WikiPlant Logo -->
             <a class="brand"
                href="index.html"
                aria-label="WikiPlant home">
@@ -47,15 +47,17 @@
             </a>
 
 
+            <!-- Mobile Navigation Toggle -->
             <input class="nav-state"
                    type="checkbox"
                    id="navigation-toggle"
-                   aria-label="Open or close navigation"
+                   aria-label="Toggle navigation"
                    aria-controls="navigation-panel">
 
 
             <label class="nav-toggle"
-                   for="navigation-toggle">
+                   for="navigation-toggle"
+                   aria-label="Open navigation menu">
 
                 <span class="nav-toggle-lines"
                       aria-hidden="true">
@@ -66,32 +68,48 @@
 
                 </span>
 
+
                 <span class="nav-close"
                       aria-hidden="true">
+
                     &times;
+
                 </span>
 
             </label>
 
 
+            <!-- Mobile Navigation Background -->
             <label class="nav-backdrop"
                    for="navigation-toggle"
                    aria-hidden="true">
             </label>
 
 
+            <!-- Navigation Panel -->
             <div class="nav-drawer-panel"
                  id="navigation-panel">
 
+
                 <div class="nav-drawer-topbar">
-                    <span>Navigation</span>
+
+                    <span>
+                        Navigation
+                    </span>
+
                 </div>
 
 
+                <!-- Main Navigation -->
                 <nav class="main-nav"
-                     aria-label="Primary">
+                     aria-label="Primary navigation">
 
                     <ul>
+
+
+                        <!-- =========================
+                             Explore
+                             ========================= -->
 
                         <li class="nav-drop">
 
@@ -99,23 +117,24 @@
                                 Explore
                             </a>
 
+
                             <ul class="drop-menu">
 
                                 <li>
                                     <a href="explorer-family.html">
-                                        By family
+                                        By Family
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="explorer-genus.html">
-                                        By genus
+                                        By Genus
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="explorer-species.html">
-                                        By species
+                                        By Species
                                     </a>
                                 </li>
 
@@ -124,51 +143,107 @@
                         </li>
 
 
+                        <!-- =========================
+                             Identify
+                             ========================= -->
+
                         <li>
+
                             <a href="identify.html">
                                 Identify
                             </a>
+
                         </li>
 
 
-                        <li>
+                        <!-- =========================
+                             Contribute
+                             ========================= -->
+
+                        <li class="nav-drop">
+
                             <a href="contributor.html"
                                aria-current="page">
-                                Contributor
+                                Contribute
                             </a>
+
+
+                            <ul class="drop-menu">
+
+                                <li>
+                                    <a href="contribution.html">
+                                        Contribution Form
+                                    </a>
+                                </li>
+
+                            </ul>
+
                         </li>
 
 
-                        <li>
-                            <a href="aboutus-sean.html">
+                        <!-- =========================
+                             About Us
+                             ========================= -->
+
+                        <li class="nav-drop">
+
+                            <a href="profile.html">
                                 About Us
                             </a>
+
+
+                            <ul class="drop-menu">
+
+                                <li>
+                                    <a href="aboutus-sean.html">
+                                        Sean
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="aboutus-bryan.html">
+                                        Bryan
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="aboutus-joshua.html">
+                                        Joshua
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="aboutus-terry.html">
+                                        Terry
+                                    </a>
+                                </li>
+
+                            </ul>
+
                         </li>
 
 
+                        <!-- =========================
+                             Enquiry
+                             ========================= -->
+
                         <li>
+
                             <a href="enquiry_form.html">
                                 Enquiry
                             </a>
+
                         </li>
 
-
-                        <li>
-                            <a href="register.html">
-                                Register
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a href="login.html">
-                                Login
-                            </a>
-                        </li>
 
                     </ul>
 
                 </nav>
+
+                <div class="auth-buttons">
+                    <a href="register.html" class="register-btn">Register</a>
+                    <a href="login.html" class="login-btn">Login</a>
+                </div>
 
             </div>
 
@@ -244,7 +319,7 @@
 
 
         <!-- =========================
-             Main Grid
+             Main Content Grid
              ========================= -->
 
         <div class="content_grid">
@@ -461,7 +536,6 @@
 
                         </article>
 
-
                     </div>
 
                 </section>
@@ -561,7 +635,25 @@
                                 </p>
 
                             </div>
+                        <li>
+                            <span>
+                                04
+                            </span>
 
+                            <div>
+
+                                <strong>
+                                    Review before submitting
+                                </strong>
+
+                                <p>
+                                    Check that your information is accurate and your
+                                    photograph is clear before submitting the observation.
+                                </p>
+
+                            </div>
+
+</li>
                         </li>
 
                     </ol>
@@ -580,9 +672,7 @@
                    aria-label="Contribution information">
 
 
-                <!-- =========================
-                     Join WikiPlant
-                     ========================= -->
+                <!-- Join WikiPlant -->
 
                 <section class="sidebar_box green_box"
                          aria-labelledby="join-title">
@@ -634,9 +724,7 @@
 
 
 
-                <!-- =========================
-                     Guidelines
-                     ========================= -->
+                <!-- Before You Submit -->
 
                 <section class="sidebar_box white_box"
                          aria-labelledby="quick-guidelines-title">
@@ -670,9 +758,7 @@
 
 
 
-                <!-- =========================
-                     Plant Information
-                     ========================= -->
+                <!-- Plant Information -->
 
                 <section class="sidebar_box white_box plant-information-section"
                          aria-labelledby="information-title">
@@ -694,74 +780,45 @@
 
                     <table class="plant_table">
 
-                        <caption>
-                            Useful information to record
-                        </caption>
+    <caption>
+        Information required for contribution
+    </caption>
 
+    <thead>
+        <tr>
+            <th scope="col">Field</th>
+            <th scope="col">Requirement</th>
+        </tr>
+    </thead>
 
-                        <thead>
+    <tbody>
+        <tr>
+            <td>Contributor Name</td>
+            <td>Required</td>
+        </tr>
 
-                            <tr>
+        <tr>
+            <td>Plant Name</td>
+            <td>Required</td>
+        </tr>
 
-                                <th scope="col">
-                                    Record detail
-                                </th>
+        <tr>
+            <td>Plant Category</td>
+            <td>Species, Family, Genus or Other</td>
+        </tr>
 
-                                <th scope="col">
-                                    Why it helps
-                                </th>
+        <tr>
+            <td>Plant Photo</td>
+            <td>Clear image of the plant</td>
+        </tr>
 
-                            </tr>
+        <tr>
+            <td>Observations</td>
+            <td>Maximum 500 characters</td>
+        </tr>
+    </tbody>
 
-                        </thead>
-
-
-                        <tbody>
-
-                            <tr>
-
-                                <td>
-                                    Plant name
-                                </td>
-
-                                <td>
-                                    Helps connect the observation to a species
-                                    record.
-                                </td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    Date and habitat
-                                </td>
-
-                                <td>
-                                    Provides context for reviewing where and
-                                    when it was observed.
-                                </td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    Clear photograph
-                                </td>
-
-                                <td>
-                                    Shows the visible features used to review
-                                    the plant.
-                                </td>
-
-                            </tr>
-
-                        </tbody>
-
-                    </table>
+</table>
 
                 </section>
 
@@ -810,7 +867,7 @@
 
 
                 <!-- =========================
-                     Contributor 1
+                     Bryan Tan
                      ========================= -->
 
                 <article class="contributor_card">
@@ -917,7 +974,7 @@
 
 
                 <!-- =========================
-                     Contributor 2
+                     Sarah Lim
                      ========================= -->
 
                 <article class="contributor_card">
@@ -1024,7 +1081,7 @@
 
 
                 <!-- =========================
-                     Contributor 3
+                     Daniel Wong
                      ========================= -->
 
                 <article class="contributor_card">
@@ -1126,7 +1183,6 @@
 
                 </article>
 
-
             </div>
 
         </section>
@@ -1138,55 +1194,216 @@
     <!-- =========================
          Footer
          ========================= -->
-        <footer class="universal-footer">
+
+    <footer class="universal-footer">
+
         <div class="wrap">
-            <nav class="footer-columns" aria-label="Footer navigation">
+
+            <nav class="footer-columns"
+                 aria-label="Footer navigation">
+
+
+                <!-- Explore -->
+
                 <div class="footer-column">
-                    <h2 class="footer-heading"><a href="explorer.html">Explore</a></h2>
+
+                    <h2 class="footer-heading">
+
+                        <a href="explorer.html">
+                            Explore
+                        </a>
+
+                    </h2>
+
+
                     <ul>
-                        <li><a href="explorer-family.html">Family</a></li>
-                        <li><a href="explorer-genus.html">Genus</a></li>
-                        <li><a href="explorer-species.html">Species</a></li>
+
+                        <li>
+                            <a href="explorer-family.html">
+                                Family
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="explorer-genus.html">
+                                Genus
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="explorer-species.html">
+                                Species
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
+
+
+
+                <!-- Identify -->
+
                 <div class="footer-column">
-                    <h2 class="footer-heading">Identify</h2>
+
+                    <h2 class="footer-heading">
+                        Identify
+                    </h2>
+
+
                     <ul>
-                        <li><a href="identify.html">Identify a plant</a></li>
+
+                        <li>
+                            <a href="identify.html">
+                                Identify a plant
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
+
+
+
+                <!-- Contribution -->
+
                 <div class="footer-column">
-                    <h2 class="footer-heading">Contribution</h2>
+
+                    <h2 class="footer-heading">
+                        Contribution
+                    </h2>
+
+
                     <ul>
-                        <li><a href="contributor.html">Contributor</a></li>
-                        <li><a href="contribution.html" aria-current="page">Contribution Form</a></li>
+
+                        <li>
+                            <a href="contributor.html"
+                               aria-current="page">
+                                Contributor
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contribution.html">
+                                Contribution Form
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
+
+
+
+                <!-- Enquiry -->
+
                 <div class="footer-column">
-                    <h2 class="footer-heading">Enquiry</h2>
+
+                    <h2 class="footer-heading">
+                        Enquiry
+                    </h2>
+
+
                     <ul>
-                        <li><a href="enquiry_form.html">Enquiry Form</a></li>
+
+                        <li>
+                            <a href="enquiry_form.html">
+                                Enquiry Form
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
+
+
+
+                <!-- More -->
+
                 <div class="footer-column">
-                    <h2 class="footer-heading">More</h2>
+
+                    <h2 class="footer-heading">
+                        More
+                    </h2>
+
+
                     <ul>
-                        <li><a href="aboutus-sean.html">About Us</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="enhancement.html">Enhancement</a></li>
-                        <li><a href="acknowledgement.html">Acknowledgement</a></li>
+
+                        <li>
+                            <a href="profile.html">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="register.html">
+                                Register
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="login.html">
+                                Login
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="enhancement.html">
+                                Enhancement
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="acknowledgement.html">
+                                Acknowledgement
+                            </a>
+                        </li>
+
                     </ul>
+
                 </div>
+
             </nav>
+
+
+
+            <!-- Footer Bottom -->
+
             <div class="footer-bottom">
-                <a class="footer-contact" href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
-                <p class="footer-copyright">&copy; 2026 WikiPlant. All rights reserved.</p>
+
+                <a class="footer-contact"
+                   href="mailto:106764593@students.swinburne.edu.my">
+
+                    Contact Us
+
+                </a>
+
+
+                <p class="footer-copyright">
+
+                    &copy; 2026 WikiPlant. All rights reserved.
+
+                </p>
+
             </div>
+
         </div>
+
     </footer>
-<!-- Back to Top Button -->
-<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+
+
+
+    <!-- Back to Top -->
+
+    <a href="#"
+       class="back-to-top"
+       aria-label="Back to top">
+
+        ↑
+
+    </a>
+
+
 </body>
 
 </html>
