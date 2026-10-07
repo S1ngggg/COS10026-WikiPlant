@@ -6,7 +6,7 @@
 <title>Species — WikiPlant</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="explorer-page">
+<body class="explorer-page explorer-species-page">
 
   <header class="site-header">
     <div class="wrap">
@@ -25,7 +25,7 @@
       <nav class="main-nav" aria-label="Primary">
         <ul>
           <li class="nav-drop">
-            <a href="explorer.html" aria-current="page">Explore</a>
+            <a href="explorer.html">Explore</a>
             <ul class="drop-menu">
               <li><a href="explorer-family.html">By Family</a></li>
               <li><a href="explorer-genus.html">By Genus</a></li>
@@ -125,7 +125,7 @@
       <article class="specimen-card" id="monstera">
         <span class="accession">No. 0142</span>
         <figure class="plant-photo">
-          <img src="images/Monstera_deliciosa.jpg" alt="Swiss cheese plant (Monstera deliciosa)" class="specimen-img">
+          <img src="images/monstera-deliciosa-flickr.jpg" alt="Swiss cheese plant (Monstera deliciosa)" class="specimen-img">
         </figure>
         <div class="common-name">Swiss cheese plant</div>
         <span class="sci">Monstera deliciosa</span>
@@ -546,5 +546,16 @@
     </footer>
 <!-- Back to Top Button -->
 <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+<script>
+  const speciesFilterBar = document.querySelector('.filter-bar');
+
+  speciesFilterBar.addEventListener('change', (event) => {
+    if (event.target.matches('input[type="radio"]')) {
+      requestAnimationFrame(() => {
+        speciesFilterBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  });
+</script>
 </body>
 </html>

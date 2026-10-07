@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="explorer-page">
+<body class="explorer-page explorer-genus-page">
 
   <header class="site-header">
     <div class="wrap">
@@ -27,7 +27,7 @@
       <nav class="main-nav" aria-label="Primary">
         <ul>
           <li class="nav-drop">
-            <a href="explorer.html" aria-current="page">Explore</a>
+            <a href="explorer.html">Explore</a>
             <ul class="drop-menu">
               <li><a href="explorer-family.html">By Family</a></li>
               <li><a href="explorer-genus.html" aria-current="page">By Genus</a></li>
@@ -122,7 +122,7 @@
         <article class="genus-card" id="monstera">
           <h3 class="sci">Monstera</h3>
           <figure class="plant-photo">
-            <img src="images/Monstera_deliciosa.jpg" alt="Monstera deliciosa, representative of the Monstera genus">
+            <img src="images/monstera-deliciosa-flickr.jpg" alt="Monstera deliciosa, representative of the Monstera genus">
           </figure>
           <p>Climbing aroids that root as they grow, best known for the wide leaf perforations that develop with
             maturity.</p>
@@ -374,6 +374,17 @@
     </footer>
 <!-- Back to Top Button -->
 <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+<script>
+  const genusFilterBar = document.querySelector('.filter-bar');
+
+  genusFilterBar.addEventListener('change', (event) => {
+    if (event.target.matches('input[type="radio"]')) {
+      requestAnimationFrame(() => {
+        genusFilterBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+  });
+</script>
 </body>
 
 </html>
