@@ -1,7 +1,7 @@
 /* For all pages */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 :root {
     --paper: #F3EFE2;
     --paper-deep: #EAE2CB;
@@ -201,6 +201,18 @@ summary:focus-visible {
 .drop-menu a[aria-current="page"] {
     color: var(--sage-deep);
     font-weight: 600;
+    background: var(--paper-deep);
+}
+
+.contribution-page .site-header .drop-menu a[aria-current="page"] {
+    border-color: transparent;
+    color: var(--ink);
+    font-weight: inherit;
+    background: transparent;
+}
+
+.contribution-page .site-header .drop-menu a[aria-current="page"]:hover {
+    border-color: var(--line);
     background: var(--paper-deep);
 }
 
@@ -572,7 +584,7 @@ body.home-page {
 .home-page .home-hero {
     position: relative;
     isolation: isolate;
-    margin: 0 32px;
+    margin: 0;
     min-height: 520px;
     height: calc(100vh - 80px);
     /* Adjusted to accommodate standard site header */
@@ -923,10 +935,6 @@ body.home-page {
         width: calc(100% - 96px);
     }
 
-    .home-page .home-hero {
-        margin: 0 24px;
-    }
-
     .home-page .home-hero-copy {
         padding: 32px;
         max-width: 49%;
@@ -955,7 +963,6 @@ body.home-page {
 
 @media (max-width: 760px) {
     .home-page .home-hero {
-        margin: 0 16px;
         min-height: 740px;
         height: 82vh;
         height: 82svh;
@@ -1712,12 +1719,18 @@ body.contributor-page {
     color: var(--ink-soft);
 }
 
+.contributor-page .contributor_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    width: 100%;
+}
 
 .contributor-page .contributor_card {
     position: relative;
 
     min-width: 0;
-    height: 330px;
+    min-height: 330px;
 
     perspective: 1200px;
 }
@@ -3739,20 +3752,20 @@ body.explorer-species-page .specimen-card > p {
     min-height: 100px;
 }
 
-.contribution-page fieldset {
+.explorer-page fieldset {
     border: 1px solid var(--line);
     border-radius: 3px;
     padding: 14px 16px 16px;
     margin: 0 0 20px;
 }
 
-.contribution-page legend {
+.explorer-page legend {
     font-weight: 600;
     font-size: 0.88rem;
     padding: 0 6px;
 }
 
-.contribution-page .radio-row {
+.explorer-page .radio-row {
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
@@ -3761,7 +3774,7 @@ body.explorer-species-page .specimen-card > p {
     align-items: center;
 }
 
-.contribution-page .radio-row label {
+.explorer-page .radio-row label {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -3769,41 +3782,41 @@ body.explorer-species-page .specimen-card > p {
     margin-bottom: 0;
 }
 
-.contribution-page .radio-row input {
+.explorer-page .radio-row input {
     width: auto;
 }
 
-.contribution-page .guide-card {
+.explorer-page .guide-card {
     background: var(--paper-deep);
     border: 1px solid var(--line);
     border-radius: 3px;
     padding: 24px 22px;
 }
 
-.contribution-page .guide-card h3 {
+.explorer-page .guide-card h3 {
     font-size: 1.1rem;
 }
 
-.contribution-page .guide-card ol {
+.explorer-page .guide-card ol {
     padding-left: 20px;
     margin: 0 0 18px;
 }
 
-.contribution-page .guide-card li {
+.explorer-page .guide-card li {
     margin-bottom: 10px;
 }
 
-.contribution-page .guide-card .tag {
+.explorer-page .guide-card .tag {
     margin-top: 6px;
 }
 
-.contribution-page .page-header {
+.explorer-page .page-header {
     padding: 46px 0 10px;
     border-bottom: 1px solid var(--line);
     margin-bottom: 44px;
 }
 
-.contribution-page .page-header .kicker {
+.explorer-page .page-header .kicker {
     font-family: 'Fraunces', serif;
     font-style: italic;
     color: var(--sage-deep);
@@ -3811,7 +3824,7 @@ body.explorer-species-page .specimen-card > p {
     margin-bottom: 8px;
 }
 
-.contribution-page .page-header p {
+.explorer-page .page-header p {
     margin-bottom: 30px;
 }
 
@@ -3830,7 +3843,7 @@ body.explorer-species-page .specimen-card > p {
     /* 采用你其他卡片的投影风格 */
 }
 
-.contribution-page .species-cta-wrap {
+.explorer-page .species-cta-wrap {
     margin-bottom: 50px;
 }
 
@@ -5756,4 +5769,25 @@ body.about-joshua {
         flex: 0 0 auto;
         margin: 0;
     }
+}
+/* Contribution page layout fix */
+
+.contribution-page .page_main{
+    max-width:900px;
+    margin:0 auto;
+    padding:50px 24px;
+}
+
+.contribution-page .page-header{
+    max-width:800px;
+    margin:0 auto 30px;
+}
+
+.contribution-page .record-form{
+    max-width:800px;
+    margin:0 auto;
+    background:var(--paper-card);
+    padding:20px;
+    border:1px solid var(--line);
+    border-radius:8px;
 }
