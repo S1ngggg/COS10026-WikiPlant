@@ -2404,6 +2404,52 @@ body.explorer-page {
     background-size: 22px 22px;
 }
 
+body.explorer-family-page .page-header {
+    padding: clamp(40px, 6vw, 76px) 0 30px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(135deg, var(--paper-deep), transparent 78%);
+}
+
+body.explorer-family-page .page-header .kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--sage-deep);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+body.explorer-family-page .page-header p {
+    color: var(--ink-soft);
+}
+
+body.explorer-family-page .family-card {
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(43, 51, 35, 0.08);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+body.explorer-family-page .family-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(43, 51, 35, 0.13);
+}
+
+body.explorer-family-page .family-card .plant-photo img {
+    border-radius: 8px;
+}
+
+body.explorer-family-page .family-card .distribution {
+    margin: 0 0 8px;
+    padding: 10px 12px;
+    border-left: 3px solid var(--sage-deep);
+    border-radius: 0 8px 8px 0;
+    background: var(--paper-deep);
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+}
+
 .explorer-page a {
     color: var(--clay-deep);
 }
@@ -4955,33 +5001,6 @@ body.about-terry-page {
 body.about-terry-page .about-main {
     padding-top: 42px;
     padding-bottom: 72px;
-}
-
-body.about-terry-page .about-music {
-    max-width: 720px;
-    margin: 38px auto 0;
-    padding: 24px;
-    border: 1px solid rgba(185, 168, 255, 0.45);
-    border-radius: 12px;
-    background: rgba(15, 19, 37, 0.9);
-    box-shadow: 0 12px 32px rgba(3, 6, 22, 0.28);
-}
-
-body.about-terry-page .about-music .about-eyebrow {
-    margin: 0 0 6px;
-    color: #aab0e8;
-}
-
-body.about-terry-page .about-music h2 {
-    margin: 0 0 16px;
-    color: #f3f1ff;
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
-}
-
-body.about-terry-page .about-music audio {
-    display: block;
-    width: 100%;
 }
 
 body.about-terry-page .about-profile-terry,
