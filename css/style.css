@@ -1,7 +1,8 @@
-/* For all pages */
+/* Shared styles */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root {
     --paper: #F3EFE2;
     --paper-deep: #EAE2CB;
@@ -216,7 +217,6 @@ summary:focus-visible {
     background: var(--paper-deep);
 }
 
-/* Keep desktop navigation in the same position on every page. */
 @media (min-width: 1000px) {
     html {
         scrollbar-gutter: stable;
@@ -251,7 +251,6 @@ summary:focus-visible {
     }
 }
 
-/* Shared five-column footer. */
 .universal-footer {
     width: 100%;
     margin-top: 80px;
@@ -374,7 +373,7 @@ summary:focus-visible {
     }
 }
 
-/* Empty page reserved for Acknowledgement content. */
+/* acknowledgement.html */
 body.blank-page {
     display: flex;
     flex-direction: column;
@@ -394,7 +393,7 @@ body.blank-page {
     margin-top: 0;
 }
 
-/* Enhancement page */
+/* enhancement.html */
 body.enhancement-page {
     margin: 0;
     background-color: #e8f5e9;
@@ -402,7 +401,6 @@ body.enhancement-page {
     color: #000;
 }
 
-/* Enhancement Page Specific Styles */
 .enhancement-page .enhancement-main {
     background-color: #e8f5e9;
     padding: 40px 20px;
@@ -435,7 +433,6 @@ body.enhancement-page {
     align-items: flex-start;
 }
 
-/* Left Column */
 .enhancement-page .enhancement-image {
     flex: 1 1 45%;
 }
@@ -448,7 +445,6 @@ body.enhancement-page {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Right Column */
 .enhancement-page .enhancement-details {
     flex: 1 1 50%;
     font-size: 1.1rem;
@@ -493,7 +489,6 @@ body.enhancement-page {
     background-color: #dcedc8;
 }
 
-/* Responsive Layout */
 @media (max-width: 768px) {
     .enhancement-page .enhancement-content {
         flex-direction: column;
@@ -510,13 +505,8 @@ body.enhancement-page {
     }
 }
 
-/* HOME PAGE DESIGN*/
-
-/* HOMEPAGE: immersive botanical photography and restrained editorial typography.
-   These rules are scoped to .home-page so the other pages retain their designs.
-   We have mapped the team's custom design directly to the global WikiPlant color variables. */
+/* index.html */
 body.home-page {
-    /* Mapping layout colors to existing site theme */
     --home-cream: var(--paper);
     --home-forest: var(--ink);
     --home-deep: var(--ink);
@@ -580,14 +570,13 @@ body.home-page {
     margin-bottom: 25px;
 }
 
-/* The photograph fills the hero; transparent copy sits at its lower-right edge. */
 .home-page .home-hero {
     position: relative;
     isolation: isolate;
     margin: 0;
     min-height: 520px;
     height: calc(100vh - 80px);
-    /* Adjusted to accommodate standard site header */
+
     height: calc(100svh - 80px);
     max-height: 1000px;
     background: var(--home-deep);
@@ -680,7 +669,6 @@ body.home-page {
     border-color: #FFFFFF;
 }
 
-/* Story: asymmetrical photograph and copy, with generous space between them. */
 .home-page .home-story {
     display: grid;
     grid-template-columns: 0.92fr 1fr;
@@ -735,7 +723,6 @@ body.home-page {
     margin-top: 14px;
 }
 
-/* Collections: photographic entry points, matched to the global green palette. */
 .home-page .home-collection {
     background: var(--sage-deep);
     color: var(--paper);
@@ -837,7 +824,6 @@ body.home-page {
     max-width: 28em;
 }
 
-/* Community invitation and project video link. */
 .home-page .home-participate {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1096,7 +1082,7 @@ body.home-page {
     }
 }
 
-/* ENQUIRY PAGE DESIGN */
+/* enquiry_form.html */
 
 body.enquiry-page {
     font-family: Arial, Helvetica, sans-serif;
@@ -1113,8 +1099,6 @@ body.enquiry-page {
     background-color: #F9F6F0;
 }
 
-/* a little bit for enquiry page */
-
 .enquiry-page form {
     padding: 20px;
     margin: 0 auto;
@@ -1128,32 +1112,14 @@ body.enquiry-page {
 }
 
 
-/* CONTRIBUTION PAGE DESIGN */
-
+/* contribution.html */
 body.contribution-page {
     background: var(--paper);
     color: var(--ink);
     font-family: 'Work Sans', sans-serif;
 }
 
-/* CONTRIBUTOR PAGE */
-
-
-
-/* =========================================================
-   4. Main Content Layout
-   ========================================================= */
-/* =========================================================
-   WikiPlant - Contributor Page
-   Author: Bryan Tan
-   Description: Contributor page styling
-   ========================================================= */
-
-
-/* =========================================================
-   1. PAGE LAYOUT
-   ========================================================= */
-
+/* contributor.html */
 body.contributor-page {
     background: var(--paper);
     color: var(--ink);
@@ -1166,10 +1132,6 @@ body.contributor-page {
     margin: 0 auto;
     padding: 48px 0 60px;
 }
-
-/* =========================================================
-   2. PAGE INTRO / HERO
-   ========================================================= */
 
 .contributor-page .page-intro {
     position: relative;
@@ -1240,10 +1202,8 @@ body.contributor-page {
 
     display: flex;
     align-items: center;
-    /* 新增 */
     flex-wrap: wrap;
     gap: 16px;
-    /* 12改16 */
 
     margin-top: 25px;
 }
@@ -1273,10 +1233,6 @@ body.contributor-page {
     background: var(--ink);
 }
 
-
-/* =========================================================
-   4. CONTENT SECTIONS
-   ========================================================= */
 
 .contributor-page .content_section {
     margin-bottom: 28px;
@@ -1327,10 +1283,6 @@ body.contributor-page {
     margin-top: 14px;
 }
 
-/* =========================================================
-   5. CALLOUT NOTE
-   ========================================================= */
-
 .contributor-page .callout-note {
     margin-top: 22px !important;
     padding: 17px 19px;
@@ -1346,10 +1298,6 @@ body.contributor-page {
     color: var(--ink);
 }
 
-/* =========================================================
-   6. SECTION HEADING
-   ========================================================= */
-
 .contributor-page .section-heading {
     display: flex;
     align-items: flex-end;
@@ -1362,10 +1310,6 @@ body.contributor-page {
 .contributor-page .section-heading h2 {
     margin-bottom: 0;
 }
-
-/* =========================================================
-   7. OBSERVATION / RECORD CARDS
-   ========================================================= */
 
 .contributor-page .contribution_feed {
     display: grid;
@@ -1397,8 +1341,6 @@ body.contributor-page {
     box-shadow: 3px 5px 0 var(--shadow);
 }
 
-/* Record image */
-
 .contributor-page .feed_img_box {
     display: flex;
     flex-direction: column;
@@ -1428,8 +1370,6 @@ body.contributor-page {
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
-
-/* Record information */
 
 .contributor-page .feed_info {
     display: flex;
@@ -1501,19 +1441,6 @@ body.contributor-page {
     line-height: 1.7 !important;
 }
 
-/* =========================================================
-   8. USEFUL INFORMATION FOR RECORD
-   ========================================================= */
-/* =========================================================
-   8. USEFUL INFORMATION FOR RECORD
-   ========================================================= */
-/* =========================================================
-   8. USEFUL INFORMATION FOR RECORD
-   ========================================================= */
-
-/* =========================================================
-   8. USEFUL INFORMATION FOR RECORD (CLEAN GRID)
-   ========================================================= */
 .contributor-page .plant_table {
     width: 100%;
     border-collapse: collapse;
@@ -1546,7 +1473,6 @@ body.contributor-page {
     overflow: hidden;
 }
 
-/* 顶部加粗表头样式 */
 .contributor-page .grid_header {
     background: var(--paper-deep);
     color: var(--ink);
@@ -1558,10 +1484,8 @@ body.contributor-page {
 
 .contributor-page .grid_header.right {
     background: var(--paper-card);
-    /* 右侧表头可配浅色背景区分 */
 }
 
-/* 左侧名称列样式 */
 .contributor-page .grid_label {
     background: var(--paper-deep);
     color: var(--sage-deep);
@@ -1571,7 +1495,6 @@ body.contributor-page {
     border-bottom: 1px solid var(--line-soft);
 }
 
-/* 右侧说明列样式 */
 .contributor-page .grid_data {
     color: var(--ink-soft);
     font-size: 13px;
@@ -1580,15 +1503,10 @@ body.contributor-page {
     border-bottom: 1px solid var(--line-soft);
 }
 
-/* 移除最后一行的底边框 */
 .contributor-page .grid_label:last-of-type,
 .contributor-page .grid_data:last-of-type {
     border-bottom: none;
 }
-
-/* =========================================================
-   9. GUIDANCE / STEPS
-   ========================================================= */
 
 .contributor-page .steps-list {
     display: grid;
@@ -1650,9 +1568,6 @@ body.contributor-page {
     line-height: 1.65;
 }
 
-/* =========================================================
-   10. PLANT DETAILS / DEFINITION LIST
-   ========================================================= */
 .contributor-page .plant-details dt {
     margin-top: 16px;
 
@@ -1708,10 +1623,6 @@ body.contributor-page {
     line-height: 1.7;
 }
 
-/* =========================================================
-   11. CONTRIBUTOR CARDS
-   ========================================================= */
-
 .contributor-page .people-intro {
     max-width: 760px;
     margin: 0 0 23px;
@@ -1735,8 +1646,6 @@ body.contributor-page {
     perspective: 1200px;
 }
 
-/* Hidden checkbox */
-
 .contributor-page .contributor-card-toggle {
     position: absolute;
 
@@ -1746,14 +1655,10 @@ body.contributor-page {
     opacity: 0;
 }
 
-/* Keyboard focus */
-
 .contributor-page .contributor-card-toggle:focus-visible+.contributor-card-front {
     outline: 3px solid var(--sage-deep);
     outline-offset: 4px;
 }
-
-/* Front + Back */
 
 .contributor-page .contributor-card-front,
 .contributor-page .contributor-card-back {
@@ -1773,10 +1678,6 @@ body.contributor-page {
     transition:
         transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-
-/* =========================================================
-   12. CONTRIBUTOR CARD FRONT
-   ========================================================= */
 
 .contributor-page .contributor-card-front {
     display: flex;
@@ -1871,10 +1772,6 @@ body.contributor-page {
 .contributor-page .flip-prompt span {
     font-size: 15px;
 }
-
-/* =========================================================
-   13. CONTRIBUTOR CARD BACK
-   ========================================================= */
 
 .contributor-page .contributor-card-back {
     display: flex;
@@ -1975,8 +1872,6 @@ body.contributor-page {
     text-underline-offset: 3px;
 }
 
-/* Flip card */
-
 .contributor-page .contributor-card-toggle:checked~.contributor-card-front {
     transform: rotateY(-180deg);
 }
@@ -1985,8 +1880,6 @@ body.contributor-page {
     transform: rotateY(0deg);
 }
 
-/* Text-only card */
-
 .contributor-page .contributor-card-text-only {
     background: var(--sage-deep);
 }
@@ -1994,10 +1887,6 @@ body.contributor-page {
 .contributor-page .contributor-card-text-only .contribution-copy {
     justify-content: center;
 }
-
-/* =========================================================
-   14. SIDEBAR BOX
-   ========================================================= */
 
 .contributor-page .sidebar_box {
     margin-bottom: 20px;
@@ -2012,10 +1901,6 @@ body.contributor-page {
 .contributor-page .sidebar_box:last-child {
     margin-bottom: 0;
 }
-
-/* =========================================================
-   15. GREEN CTA SIDEBAR
-   ========================================================= */
 
 .contributor-page .green_box {
     background: var(--sage-deep);
@@ -2050,8 +1935,6 @@ body.contributor-page {
     line-height: 1.7;
 }
 
-/* CTA button */
-
 .contributor-page .green_box .brutal_btn {
     display: flex;
     align-items: center;
@@ -2083,8 +1966,6 @@ body.contributor-page {
     font-size: 17px;
 }
 
-/* Login note */
-
 .contributor-page .green_box .login-note {
     margin: 16px 0 0 !important;
 
@@ -2100,10 +1981,6 @@ body.contributor-page {
     font-weight: 800;
     text-decoration: underline;
 }
-
-/* =========================================================
-   16. BEFORE YOU SUBMIT
-   ========================================================= */
 
 .contributor-page .white_box {
     background: var(--paper-card);
@@ -2163,9 +2040,6 @@ body.contributor-page {
     font-weight: 900;
 }
 
-/* =========================================================
-   17. TEXT LINKS
-   ========================================================= */
 .contributor-page .text-link {
     display: inline-flex;
     align-items: center;
@@ -2179,10 +2053,6 @@ body.contributor-page {
 .contributor-page .text-link:hover {
     color: var(--ink);
 }
-
-/* =========================================================
-   18. TABLET
-   ========================================================= */
 
 @media (max-width: 1050px) {
 
@@ -2204,10 +2074,6 @@ body.contributor-page {
         margin-bottom: 0;
     }
 }
-
-/* =========================================================
-   19. SMALL TABLET
-   ========================================================= */
 
 @media (max-width: 800px) {
 
@@ -2240,10 +2106,6 @@ body.contributor-page {
         grid-template-columns: 130px minmax(0, 1fr);
     }
 }
-
-/* =========================================================
-   20. MOBILE
-   ========================================================= */
 
 @media (max-width: 620px) {
 
@@ -2281,8 +2143,6 @@ body.contributor-page {
         font-size: 24px;
     }
 
-    /* Record card */
-
     .contributor-page .feed_card {
         grid-template-columns: 1fr;
     }
@@ -2299,8 +2159,6 @@ body.contributor-page {
     .contributor-page .feed_info {
         padding: 20px;
     }
-
-    /* Useful Information */
 
     .contributor-page .plant_information {
         display: block;
@@ -2324,8 +2182,6 @@ body.contributor-page {
         text-align: left;
     }
 
-    /* Definition list */
-
     .contributor-page .plant-details {
         display: block;
     }
@@ -2338,8 +2194,6 @@ body.contributor-page {
     .contributor-page .plant-details dd {
         padding-top: 5px;
     }
-
-    /* Sidebar */
 
     .contributor-page .sidebar {
         display: block;
@@ -2354,10 +2208,6 @@ body.contributor-page {
         font-size: 23px;
     }
 }
-
-/* =========================================================
-   21. SMALL MOBILE
-   ========================================================= */
 
 @media (max-width: 430px) {
 
@@ -2393,10 +2243,6 @@ body.contributor-page {
     }
 }
 
-/* =========================================================
-   22. ACCESSIBILITY / REDUCED MOTION
-   ========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
 
     .contributor-page *,
@@ -2410,7 +2256,7 @@ body.contributor-page {
 }
 
 
-/* EXPLORER PAGE DESIGN */
+/* explorer.html, explorer-family.html, explorer-genus.html, explorer-species.html, login.html, register.html */
 
 body.explorer-page {
     background: var(--paper);
@@ -3921,15 +3767,15 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
 .cta-text-box {
     background-color: var(--paper-card, #FFFFFF);
     border: 2px solid var(--ink, #2B3323);
-    /* 深色实线边框 */
+
     border-radius: 4px;
     padding: 40px 30px;
     text-align: center;
     max-width: 700px;
-    /* 控制文本框的最大宽度，让它居中 */
+
     margin: 40px auto 0 auto;
     box-shadow: 4px 5px 0 var(--shadow, rgba(43, 51, 35, 0.14));
-    /* 采用你其他卡片的投影风格 */
+
 }
 
 .explorer-page .species-cta-wrap {
@@ -4007,7 +3853,7 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
     transform: translateY(-2px);
 }
 
-/* IDENTIFY PAGE DESIGN*/
+/* identify.html */
 
 body.identify-page {
     margin: 0;
@@ -4076,7 +3922,6 @@ body.identify-page {
     margin: 0 auto;
 }
 
-/* --- How It Works / Upload Card --- */
 .identify-page .how-it-works {
     background: var(--paper-card);
     border: 1px solid var(--line);
@@ -4157,7 +4002,6 @@ body.identify-page {
     background: var(--sage);
 }
 
-/* --- Figures --- */
 .identify-page .figures-container {
     display: flex;
     gap: 20px;
@@ -4204,7 +4048,6 @@ body.identify-page {
     margin-bottom: 6px;
 }
 
-/* --- Aside --- */
 .identify-page aside {
     float: none;
     width: 100%;
@@ -4245,7 +4088,7 @@ body.identify-page {
     }
 }
 
-/* ABOUT US / INDIVIDUAL MEMBER PROFILE */
+/* aboutus-bryan.html, aboutus-joshua.html, aboutus-sean.html, aboutus-terry.html */
 body.about-page {
     margin: 0;
     background: #F3EFE2;
@@ -4315,7 +4158,6 @@ body.about-page {
     border-bottom: 1px solid #E1E4DA;
 }
 
-/* Assignment: the member name is centred, bold and exactly 200%. */
 .about-page .about-name {
     margin: 0;
     text-align: center;
@@ -4335,7 +4177,6 @@ body.about-page {
     vertical-align: top;
 }
 
-/* Assignment: floating portrait, groove border and 20px padding. */
 .about-page .about-portrait {
     float: left;
     width: 240px;
@@ -4438,7 +4279,7 @@ body.about-page {
     color: #8F4F2C;
 }
 
-/* Sean's profile */
+
 .about-page .about-profile-sean {
     margin-top: 32px;
 }
@@ -4809,7 +4650,7 @@ body.about-page {
     }
 }
 
-/* Shared contribution-page theme */
+/* contribution.html, contributor.html */
 body.contrib-page,
 body.contributor-page {
     background: var(--paper);
@@ -5004,7 +4845,7 @@ body.contributor-page {
     color: var(--paper);
 }
 
-/* Shared navigation drawer controlled entirely by HTML and CSS. */
+/* Shared styles */
 .site-header .nav-state,
 .site-header .nav-toggle,
 .site-header .nav-close,
@@ -5230,6 +5071,7 @@ body.contributor-page {
     }
 }
 
+/* index.html */
 .home-page .category_card h3 a {
     text-decoration: none;
 }
@@ -5243,6 +5085,7 @@ body.contributor-page {
     font-weight: 700;
 }
 
+/* Shared styles */
 .cta-wrap {
     margin-bottom: 50px;
 }
@@ -5289,6 +5132,7 @@ body.contributor-page {
     font-size: 0.9rem;
 }
 
+/* Shared styles */
 .plant_card img,
 .category_card img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -5328,9 +5172,9 @@ a.back-to-top {
 .back-to-top:hover {
     background-color: #1b5e20;
     transform: translateY(-3px);
-    /* 悬停时微微上浮 */
 }
 
+/* contributor.html */
 .contributor-page .plant_table {
     width: 100%;
     border-collapse: collapse;
@@ -5532,6 +5376,9 @@ body.about-terry-page .about-pagination-link:hover .about-pagination-arrow {
     margin-top: 30px;
 }
 
+/* aboutus-terry.html */
+
+/* profile.html */
 body.profile-page {
     display: flex;
     flex-direction: column;
@@ -5660,8 +5507,7 @@ body.profile-page {
     }
 }
 
-/* for joshuas */
-
+/* aboutus-joshua.html */
 body.about-joshua {
     background-color: #B8C2AB;
     background-image:
@@ -5671,8 +5517,7 @@ body.about-joshua {
     background-attachment: fixed;
 }
 
-/* ===== PROFILE HUB ===== */
-
+/* profile.html */
 .profile-hub {
     max-width: 1200px;
     margin: auto;
@@ -5698,15 +5543,11 @@ body.about-joshua {
     font-size: 1.05rem;
 }
 
-/* ===== GRID ===== */
-
 .team-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
-
-/* ===== CARD ===== */
 
 .member-card {
     background: white;
@@ -5777,8 +5618,6 @@ body.about-joshua {
     color: #4caf50;
     font-weight: bold;
 }
-
-/* ===== MOBILE ===== */
 
 @media(max-width:768px) {
 
@@ -5859,24 +5698,41 @@ body.about-joshua {
         margin: 0;
     }
 }
-/* Contribution page layout fix */
 
-.contribution-page .page_main{
-    max-width:900px;
-    margin:0 auto;
-    padding:50px 24px;
+/* contribution.html */
+.contribution-page .page_main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 24px;
 }
 
-.contribution-page .page-header{
-    max-width:800px;
-    margin:0 auto 30px;
+.contribution-page .page-header {
+    max-width: 800px;
+    margin: 0 auto 30px;
 }
 
-.contribution-page .record-form{
-    max-width:800px;
-    margin:0 auto;
-    background:var(--paper-card);
-    padding:20px;
-    border:1px solid var(--line);
-    border-radius:8px;
+.contribution-page .record-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper-card);
+}
+
+/* explorer-family.html, explorer-genus.html, explorer-species.html, contributor.html */
+.photo-zoom {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.photo-zoom img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
