@@ -3821,13 +3821,11 @@ body.about-page {
     font-weight: 600;
 }
 
-/* Assignment: Arial with a sans-serif fallback for the student number. */
 .about-page .about-student-number {
     font-family: Arial, sans-serif;
     letter-spacing: 0.06em;
 }
 
-/* Assignment: the course colour is specified as an RGB number. */
 .about-page .about-course {
     color: rgb(55, 91, 65);
 }
@@ -3859,7 +3857,7 @@ body.about-page {
     color: #8F4F2C;
 }
 
-/* Sean's profile: centred photo, followed by his name and details. */
+/* Sean's profile */
 .about-page .about-profile-sean {
     margin-top: 32px;
 }
@@ -4054,7 +4052,6 @@ body.about-page {
     border: 1px solid #D0D5C6;
 }
 
-/* Assignment: centred bold headings; hexadecimal cell backgrounds. */
 .about-page .about-personal-table .about-label-column {
     width: 30%;
 }
@@ -4703,33 +4700,26 @@ body.contributor-page {
     font-size: 0.9rem;
 }
 
-/* 先给图片添加过渡时间，让动画显得平滑，而不是生硬地瞬间变大 */
 .plant_card img,
 .category_card img {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 当鼠标悬停在卡片上时，图片放大 5% 并增加阴影 */
 .plant_card:hover img,
 .category_card:hover img {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* 让整个页面的滚动变得平滑，而不是瞬间跳跃 */
 html {
     scroll-behavior: smooth;
 }
 
-/* 回到顶部按钮的样式和固定位置 */
 a.back-to-top {
     position: fixed;
     bottom: 40px;
-    /* 距离底部 40px */
     right: 40px;
-    /* 距离右侧 40px */
     background-color: #2e7d32;
-    /* 配合你网站的绿色主题 */
     color: white;
     width: 45px;
     height: 45px;
@@ -4737,7 +4727,6 @@ a.back-to-top {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    /* 变成圆形 */
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
@@ -4745,16 +4734,17 @@ a.back-to-top {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 999;
-    /* 确保它不会被其他元素挡住 */
 }
 
-/* 按钮的悬停特效（顺便把 Button Hover enhancement 也应用在这里） */
 .back-to-top:hover {
     background-color: #1b5e20;
-    /* 悬停时颜色变深 */
     transform: translateY(-3px);
-    /* 悬停时微微上浮 */
 }
 
-/* 强制把所有分页箭头和悬浮按钮的颜色覆盖掉 */
-/* 强制修改所有页面中带有 aria-hidden="true" 属性的箭头图标颜色 */
+body.about-joshua {
+    background-color: #F3EFE2;
+    background-image:
+        radial-gradient(circle at -10% 20%, rgba(124, 148, 115, 0.2) 0%, rgba(124, 148, 115, 0.2) 25%, transparent 25.5%),
+        radial-gradient(circle at 110% 70%, rgba(124, 148, 115, 0.15) 0%, rgba(124, 148, 115, 0.15) 30%, transparent 30.5%);
+    background-attachment: fixed;
+}
