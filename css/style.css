@@ -204,6 +204,18 @@ summary:focus-visible {
     background: var(--paper-deep);
 }
 
+.contribution-page .site-header .drop-menu a[aria-current="page"] {
+    border-color: transparent;
+    color: var(--ink);
+    font-weight: inherit;
+    background: transparent;
+}
+
+.contribution-page .site-header .drop-menu a[aria-current="page"]:hover {
+    border-color: var(--line);
+    background: var(--paper-deep);
+}
+
 /* Keep desktop navigation in the same position on every page. */
 @media (min-width: 1000px) {
     html {
