@@ -1886,10 +1886,16 @@ body.contributor-page {
     transform: rotateY(180deg);
 }
 
-.contributor-page .contributor-card-back>img {
+.contributor-page .contributor-card-back>.photo-zoom {
+    display: block;
     width: 100%;
     height: 120px;
+    flex: 0 0 120px;
+}
 
+.contributor-page .contributor-card-back>.photo-zoom img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -2755,6 +2761,89 @@ body.explorer-species-page .specimen-card > p {
     body.explorer-species-page .specimen-card > .plant-photo img {
         aspect-ratio: 16 / 9;
     }
+}
+
+.photo-zoom {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: inherit;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: zoom-in;
+}
+
+.photo-zoom:focus-visible {
+    outline: 3px solid var(--sage-deep);
+    outline-offset: 3px;
+}
+
+.photo-lightbox[popover] {
+    position: fixed;
+    inset: 0;
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: calc(100vw - 24px);
+    max-height: calc(100vh - 24px);
+    margin: auto;
+    padding: 48px 16px 16px;
+    overflow: auto;
+    border: 0;
+    border-radius: 6px;
+    background: #111713;
+    color: white;
+}
+
+.photo-lightbox[popover]:not(:popover-open) {
+    display: none;
+}
+
+.photo-lightbox[popover]::backdrop {
+    background: rgba(12, 16, 13, 0.88);
+}
+
+.photo-lightbox[popover]:popover-open {
+    display: block;
+}
+
+.photo-lightbox > img,
+body.explorer-family-page .family-card .photo-lightbox > img,
+body.explorer-genus-page .genus-card .photo-lightbox > img,
+body.explorer-species-page .specimen-card .photo-lightbox > img {
+    display: block;
+    flex: none;
+    width: auto;
+    height: auto;
+    min-height: 0;
+    max-width: calc(100vw - 56px);
+    max-height: calc(100vh - 88px);
+    aspect-ratio: auto;
+    border: 0;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+.photo-lightbox-close {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+    padding: 7px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 4px;
+    background: transparent;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.photo-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .explorer-page a {

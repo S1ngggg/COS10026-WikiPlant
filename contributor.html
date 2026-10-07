@@ -1135,9 +1135,15 @@
 
                     <div class="contributor-card-back">
 
-                        <img src="images/monstera-deliciosa-flickr.jpg"
-                             alt="Monstera deliciosa plant"
-                             loading="lazy">
+                        <button type="button" class="photo-zoom" popovertarget="contributor-monstera-photo" aria-label="View full-size Monstera deliciosa photo">
+                            <img src="images/monstera-deliciosa-flickr.jpg"
+                                 alt="Monstera deliciosa plant"
+                                 loading="lazy">
+                        </button>
+                        <div class="photo-lightbox" id="contributor-monstera-photo" popover="auto" role="dialog" aria-label="Full-size Monstera deliciosa photo">
+                            <button type="button" class="photo-lightbox-close" popovertarget="contributor-monstera-photo" popovertargetaction="hide">Close</button>
+                            <img src="images/monstera-deliciosa-flickr.jpg" alt="Monstera deliciosa">
+                        </div>
 
 
                         <div class="contribution-copy">
