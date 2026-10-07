@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="explorer-page">
+<body class="explorer-page explorer-family-page">
 
   <header class="site-header">
     <div class="wrap">
@@ -27,7 +27,7 @@
       <nav class="main-nav" aria-label="Primary">
         <ul>
           <li class="nav-drop">
-            <a href="explorer.html" aria-current="page">Explore</a>
+            <a href="explorer.html">Explore</a>
             <ul class="drop-menu">
               <li><a href="explorer-family.html" aria-current="page">By Family</a></li>
               <li><a href="explorer-genus.html">By Genus</a></li>
@@ -61,6 +61,7 @@
     </div>
   </header>
 
+  <main id="main-content">
   <div class="page-header">
     <div class="wrap">
       <span class="kicker">Section A · Rank 1</span>
@@ -97,16 +98,16 @@
       <article class="family-card" id="araceae">
         <h2 class="sci">Araceae</h2>
         <figure class="plant-photo">
-          <img src="images/Monstera_deliciosa.jpg" alt="Monstera deliciosa, representative of the Araceae family">
+          <img src="images/Monstera_deliciosa.jpg" alt="Monstera deliciosa, representative of the Araceae family" loading="lazy" decoding="async">
         </figure>
         <span class="fam-common">The arum family</span>
         <p>Recognised by a flower structure unlike most other families: a spike of tiny flowers (the spadix) wrapped in
           a single petal-like bract (the spathe). Leaves are often glossy and, in climbing genera, develop distinctive
           perforations with age.</p>
         <div class="distribution">Distribution: Widespread, with greatest diversity in tropical regions.</div>
-        <table class="spec-table">
+        <table class="spec-table" aria-label="Logged genera and species">
           <tr>
-            <th>Genera logged</th>
+            <th scope="row">Genera logged</th>
             <td>
               <div class="logged-cell">
                 <span>2</span>
@@ -118,7 +119,7 @@
             </td>
           </tr>
           <tr>
-            <th>Species logged</th>
+            <th scope="row">Species logged</th>
             <td>
               <div class="logged-cell">
                 <span>4</span>
@@ -138,15 +139,15 @@
       <article class="family-card" id="rosaceae">
         <h2 class="sci">Rosaceae</h2>
         <figure class="plant-photo">
-          <img src="images/plants/rosa-canina.jpg" alt="Rosa canina, representative of the Rosaceae family">
+          <img src="images/plants/rosa-canina.jpg" alt="Rosa canina, representative of the Rosaceae family" loading="lazy" decoding="async">
         </figure>
         <span class="fam-common">The rose family</span>
         <p>A large family typically bearing five-petalled flowers with a whorl of stamens, ranging from thorned shrubs
           to fruit-bearing trees. Many of the plants most associated with orchards and hedgerows sit here.</p>
         <div class="distribution">Distribution: Worldwide, especially in temperate regions.</div>
-        <table class="spec-table">
+        <table class="spec-table" aria-label="Logged genera and species">
           <tr>
-            <th>Genera logged</th>
+            <th scope="row">Genera logged</th>
             <td>
               <div class="logged-cell">
                 <span>2</span>
@@ -158,7 +159,7 @@
             </td>
           </tr>
           <tr>
-            <th>Species logged</th>
+            <th scope="row">Species logged</th>
             <td>
               <div class="logged-cell">
                 <span>4</span>
@@ -178,15 +179,15 @@
       <article class="family-card" id="fabaceae">
         <h2 class="sci">Fabaceae</h2>
         <figure class="plant-photo">
-          <img src="images/plants/trifolium-pratense.jpg" alt="Red clover (Trifolium pratense), representative of the Fabaceae family">
+          <img src="images/plants/trifolium-pratense.jpg" alt="Red clover (Trifolium pratense), representative of the Fabaceae family" loading="lazy" decoding="async">
         </figure>
         <span class="fam-common">The legume family</span>
         <p>Identified by pod fruits and, in many genera, compound leaves that fold at night. Roots in this family
           commonly host bacteria that fix nitrogen into the surrounding soil.</p>
         <div class="distribution">Distribution: Nearly worldwide, from tropical forests to temperate regions.</div>
-        <table class="spec-table">
+        <table class="spec-table" aria-label="Logged genera and species">
           <tr>
-            <th>Genera logged</th>
+            <th scope="row">Genera logged</th>
             <td>
               <div class="logged-cell">
                 <span>2</span>
@@ -198,7 +199,7 @@
             </td>
           </tr>
           <tr>
-            <th>Species logged</th>
+            <th scope="row">Species logged</th>
             <td>
               <div class="logged-cell">
                 <span>4</span>
@@ -218,15 +219,15 @@
       <article class="family-card" id="asparagaceae">
         <h2 class="sci">Asparagaceae</h2>
         <figure class="plant-photo">
-          <img src="images/plants/dracaena-trifasciata.jpg" alt="Dracaena trifasciata, representative of the Asparagaceae family">
+          <img src="images/plants/dracaena-trifasciata.jpg" alt="Dracaena trifasciata, representative of the Asparagaceae family" loading="lazy" decoding="async">
         </figure>
         <span class="fam-common">A family redrawn more than once</span>
         <p>A broad family of strap- or blade-shaped leaves with parallel veins, brought together from several older,
           smaller families as classification has been revised. Boundaries here shift more than most.</p>
         <div class="distribution">Distribution: Worldwide, with many species in tropical and subtropical regions.</div>
-        <table class="spec-table"> 
+        <table class="spec-table" aria-label="Logged genera and species">
           <tr>
-            <th>Genera logged</th>
+            <th scope="row">Genera logged</th>
             <td>
               <div class="logged-cell">
                 <span>2</span>
@@ -238,7 +239,7 @@
             </td>
           </tr>
           <tr>
-            <th>Species logged</th>
+            <th scope="row">Species logged</th>
             <td>
               <div class="logged-cell">
                 <span>4</span>
@@ -265,6 +266,7 @@
       <a href="contributor.html" class="cta-btn">Meet Our Contributors</a>
     </div>
   </div>
+  </main>
 
   <footer class="universal-footer">
         <div class="wrap">
