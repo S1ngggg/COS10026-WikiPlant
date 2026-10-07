@@ -1123,7 +1123,11 @@ body.enquiry-page {
 
 /* CONTRIBUTION PAGE DESIGN */
 
-
+body.contribution-page {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+}
 /* CONTRIBUTOR PAGE */
 
 
@@ -1703,18 +1707,12 @@ body.contributor-page {
     color: var(--ink-soft);
 }
 
-.contributor-page .contributor_cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    width: 100%;
-}
 
 .contributor-page .contributor_card {
     position: relative;
 
     min-width: 0;
-    min-height: 330px;
+    height: 330px;
 
     perspective: 1200px;
 }
@@ -3333,7 +3331,7 @@ body.explorer-page {
     }
 }
 
-.explorer-page .record-form {
+.contribution-page .record-form {
     background: var(--paper-card);
     border: 1px solid var(--line);
     border-radius: 3px;
@@ -3341,11 +3339,11 @@ body.explorer-page {
     padding: 30px 28px;
 }
 
-.explorer-page .field-group {
+.contribution-page .field-group {
     margin-bottom: 20px;
 }
 
-.explorer-page .field-row {
+.contribution-page .field-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 14px;
@@ -3353,12 +3351,12 @@ body.explorer-page {
 }
 
 @media (max-width: 620px) {
-    .explorer-page .field-row {
+    .contribution-page .field-row {
         grid-template-columns: 1fr;
     }
 }
 
-.explorer-page label {
+.contribution-page label {
     display: block;
     font-size: 0.88rem;
     font-weight: 600;
@@ -3366,21 +3364,21 @@ body.explorer-page {
     color: var(--ink);
 }
 
-.explorer-page label .req {
+.contribution-page label .req {
     color: var(--clay-deep);
 }
 
-.explorer-page .hint {
+.contribution-page .hint {
     font-size: 0.8rem;
     color: var(--ink-soft);
     margin-top: 4px;
 }
 
-.explorer-page input[type="text"],
-.explorer-page input[type="email"],
-.explorer-page input[type="file"],
-.explorer-page textarea,
-.explorer-page select {
+.contribution-page input[type="text"],
+.contribution-page input[type="email"],
+.contribution-page input[type="file"],
+.contribution-page textarea,
+.contribution-page select {
     width: 100%;
     font-family: 'Work Sans', sans-serif;
     font-size: 0.96rem;
@@ -3391,25 +3389,25 @@ body.explorer-page {
     padding: 10px 12px;
 }
 
-.explorer-page textarea {
+.contribution-page textarea {
     resize: vertical;
     min-height: 100px;
 }
 
-.explorer-page fieldset {
+.contribution-page fieldset {
     border: 1px solid var(--line);
     border-radius: 3px;
     padding: 14px 16px 16px;
     margin: 0 0 20px;
 }
 
-.explorer-page legend {
+.contribution-page legend {
     font-weight: 600;
     font-size: 0.88rem;
     padding: 0 6px;
 }
 
-.explorer-page .radio-row {
+.contribution-page .radio-row {
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
@@ -3418,7 +3416,7 @@ body.explorer-page {
     align-items: center;
 }
 
-.explorer-page .radio-row label {
+.contribution-page .radio-row label {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -3426,41 +3424,41 @@ body.explorer-page {
     margin-bottom: 0;
 }
 
-.explorer-page .radio-row input {
+.contribution-page .radio-row input {
     width: auto;
 }
 
-.explorer-page .guide-card {
+.contribution-page .guide-card {
     background: var(--paper-deep);
     border: 1px solid var(--line);
     border-radius: 3px;
     padding: 24px 22px;
 }
 
-.explorer-page .guide-card h3 {
+.contribution-page .guide-card h3 {
     font-size: 1.1rem;
 }
 
-.explorer-page .guide-card ol {
+.contribution-page .guide-card ol {
     padding-left: 20px;
     margin: 0 0 18px;
 }
 
-.explorer-page .guide-card li {
+.contribution-page .guide-card li {
     margin-bottom: 10px;
 }
 
-.explorer-page .guide-card .tag {
+.contribution-page .guide-card .tag {
     margin-top: 6px;
 }
 
-.explorer-page .page-header {
+.contribution-page .page-header {
     padding: 46px 0 10px;
     border-bottom: 1px solid var(--line);
     margin-bottom: 44px;
 }
 
-.explorer-page .page-header .kicker {
+.contribution-page .page-header .kicker {
     font-family: 'Fraunces', serif;
     font-style: italic;
     color: var(--sage-deep);
@@ -3468,7 +3466,7 @@ body.explorer-page {
     margin-bottom: 8px;
 }
 
-.explorer-page .page-header p {
+.contribution-page .page-header p {
     margin-bottom: 30px;
 }
 
@@ -3487,10 +3485,38 @@ body.explorer-page {
     /* 采用你其他卡片的投影风格 */
 }
 
-.explorer-page .species-cta-wrap {
+.contribution-page .species-cta-wrap {
     margin-bottom: 50px;
 }
+.contribution-page .btn{
+    display:inline-block;
+    padding:12px 22px;
 
+    border:none;
+    border-radius:6px;
+
+    background:var(--sage-deep);
+    color:white;
+
+    font-weight:600;
+    cursor:pointer;
+
+    transition:.2s;
+}
+.contribution-confirmation{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.contribution-page .universal-footer{
+    margin-top:50px;
+}
+.contribution-confirmation label{
+    margin:0;
+}
+.contribution-page .btn:hover{
+    background:var(--ink);
+}
 .cta-text-box h2 {
     font-family: 'Fraunces', serif;
     font-size: 1.8rem;
@@ -5079,13 +5105,15 @@ body.about-terry-page .about-pagination-link:hover .about-pagination-arrow {
 
 .contributor-page .contributor_cards{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3,minmax(0,1fr));
     gap:20px;
+    width:100%;
 }
 .contributor-page .people-section{
-    clear: both;
-    width: 100%;
-    margin-top: 30px;
+    clear:both;
+    width:100%;
+    grid-column:1 / -1;
+    margin-top:30px;
 }
 body.profile-page {
     display: flex;

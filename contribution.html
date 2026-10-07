@@ -13,136 +13,268 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="explorer-page">
+<body class="contribution-page">
 
     <header class="site-header">
         <div class="wrap">
+
             <a class="brand" href="index.html" aria-label="WikiPlant home">
                 <img src="images/logo.png" alt="WikiPlant logo">
                 <span class="brand-motto">Wiki Plant</span>
             </a>
-            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+
+            <input class="nav-state" type="checkbox" id="navigation-toggle"
+                aria-label="Open or close navigation"
+                aria-controls="navigation-panel">
+
             <label class="nav-toggle" for="navigation-toggle">
-                <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="nav-toggle-lines" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
                 <span class="nav-close" aria-hidden="true">&times;</span>
             </label>
+
             <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+
             <div class="nav-drawer-panel" id="navigation-panel">
-                <div class="nav-drawer-topbar"><span>Navigation</span></div>
-            <nav class="main-nav" aria-label="Primary">
-                <ul>
-                    <li class="nav-drop">
-                        <a href="explorer.html">Explore</a>
-                        <ul class="drop-menu">
-                            <li><a href="explorer-family.html">By Family</a></li>
-                            <li><a href="explorer-genus.html">By Genus</a></li>
-                            <li><a href="explorer-species.html">By Species</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="identify.html">Identify</a></li>
-                    <li class="nav-drop">
-                        <a href="contributor.html">Contribute</a>
-                        <ul class="drop-menu">
-                            <li><a href="contribution.html" aria-current="page">Contribution Form</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-drop">
-                        <a href="profile.html">About Us</a>
-                        <ul class="drop-menu">
-                            <li><a href="aboutus-sean.html">Sean</a></li>
-                            <li><a href="aboutus-bryan.html">Bryan</a></li>
-                            <li><a href="aboutus-joshua.html">Joshua</a></li>
-                            <li><a href="aboutus-terry.html">Terry</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="enquiry_form.html">Enquiry</a></li>
-                </ul>
-            </nav>
-            <div class="auth-buttons">
-                <a href="register.html" class="register-btn">Register</a>
-                <a href="login.html" class="login-btn">Login</a>
-            </div>
+
+                <div class="nav-drawer-topbar">
+                    <span>Navigation</span>
+                </div>
+
+                <nav class="main-nav" aria-label="Primary">
+                    <ul>
+
+                        <li class="nav-drop">
+                            <a href="explorer.html">Explore</a>
+                            <ul class="drop-menu">
+                                <li><a href="explorer-family.html">By Family</a></li>
+                                <li><a href="explorer-genus.html">By Genus</a></li>
+                                <li><a href="explorer-species.html">By Species</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="identify.html">Identify</a>
+                        </li>
+
+                        <li class="nav-drop">
+                            <a href="contributor.html">
+                                Contribute
+                            </a>
+
+                            <ul class="drop-menu">
+                                <li>
+                                    <a href="contribution.html" aria-current="page">
+                                        Contribution Form
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-drop">
+                            <a href="profile.html">About Us</a>
+                            <ul class="drop-menu">
+                                <li><a href="aboutus-sean.html">Sean</a></li>
+                                <li><a href="aboutus-bryan.html">Bryan</a></li>
+                                <li><a href="aboutus-joshua.html">Joshua</a></li>
+                                <li><a href="aboutus-terry.html">Terry</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="enquiry_form.html">Enquiry</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="auth-buttons">
+                    <a href="register.html" class="register-btn">Register</a>
+                    <a href="login.html" class="login-btn">Login</a>
+                </div>
+
             </div>
         </div>
-
     </header>
 
 
     <main class="wrap contribution-main">
+
         <div class="page-header">
             <h1>Submit a Contribution</h1>
-            <p>Share a plant observation to help document biodiversity and support conservation research.</p>
-            <p class="hint">Fields marked with <span class="req">*</span> are required.</p>
+            <p>
+                Share a plant observation to help document biodiversity
+                and support conservation research.
+            </p>
+            <p class="hint">
+                Fields marked with <span class="req">*</span> are required.
+            </p>
         </div>
 
         <form action="#" method="post" enctype="multipart/form-data" class="record-form">
-            <p class="hint form-preview-note" id="form-preview-note">This form is for demonstration only. Contributions cannot be submitted yet.</p>
+
+            <p class="hint form-preview-note" id="form-preview-note">
+                This form is for demonstration only. Contributions cannot be submitted yet.
+            </p>
+
             <fieldset>
                 <legend>Contributor Information</legend>
+
                 <div class="field-group">
-                    <label for="fullname">Name of the Contributor <span class="req">*</span></label>
-                    <input type="text" id="fullname" name="fullname" maxlength="25" pattern="[A-Za-z\s]+"
+                    <label for="fullname">
+                        Name of the Contributor <span class="req">*</span>
+                    </label>
+
+                    <input type="text"
+                        id="fullname"
+                        name="fullname"
+                        maxlength="25"
+                        pattern="[A-Za-z\s]+"
                         title="Please enter alphabetical characters only. No numbers or symbols allowed. Maximum 25 characters."
                         required>
                 </div>
             </fieldset>
 
+
             <fieldset>
                 <legend>Plant Information</legend>
+
                 <div class="field-row contribution-field-row">
+
                     <div class="field-group">
-                        <label for="plantname">Plant's Name <span class="req">*</span></label>
-                        <input type="text" id="plantname" name="plantname" maxlength="25" pattern="[A-Za-z\s]+"
+                        <label for="plantname">
+                            Plant's Name <span class="req">*</span>
+                        </label>
+
+                        <input type="text"
+                            id="plantname"
+                            name="plantname"
+                            maxlength="25"
+                            pattern="[A-Za-z\s]+"
                             title="Please enter alphabetical characters only. No numbers or symbols allowed. Maximum 25 characters."
                             required>
                     </div>
+
                     <div class="field-group">
-                        <label for="plant-category">Plant Category <span class="req">*</span></label>
-                        <select id="plant-category" name="plant_category" required>
-                            <option value="" selected disabled>-- Select a category --</option>
+                        <label for="plant-category">
+                            Plant Category <span class="req">*</span>
+                        </label>
+
+                        <select id="plant-category"
+                            name="plant_category"
+                            required>
+
+                            <option value="" selected disabled>
+                                -- Select a category --
+                            </option>
+
                             <option value="Species">Species</option>
                             <option value="Families">Families</option>
                             <option value="Genera">Genera</option>
                             <option value="Others">Others</option>
+
                         </select>
                     </div>
+
                 </div>
+
                 <div class="field-group">
-                    <label for="other-category">If Other, please specify</label>
-                    <input type="text" id="other-category" name="other_category" maxlength="25"
-                        pattern="[A-Za-z\s]+" title="Please enter alphabetical characters only.">
+                    <label for="other-category">
+                        If Other, please specify
+                    </label>
+
+                    <input type="text"
+                        id="other-category"
+                        name="other_category"
+                        maxlength="25"
+                        pattern="[A-Za-z\s]+"
+                        title="Please enter alphabetical characters only.">
                 </div>
+
             </fieldset>
+
 
             <fieldset>
                 <legend>Photo and Observations</legend>
+
                 <div class="field-group">
-                    <label for="photo">Plant Photo <span class="req">*</span></label>
-                    <input type="file" id="photo" name="photo" accept="image/*" required>
-                    <p class="hint">Upload a clear photograph where the plant is easy to see.</p>
+                    <label for="photo">
+                        Plant Photo <span class="req">*</span>
+                    </label>
+
+                    <input type="file"
+                        id="photo"
+                        name="photo"
+                        accept="image/*"
+                        required>
+
+                    <p class="hint">
+                        Upload a clear photograph where the plant is easy to see.
+                    </p>
                 </div>
+
+
                 <div class="field-group">
-                    <label for="comments">Comments / Observations <span class="req">*</span></label>
-                    <textarea id="comments" name="comments" rows="6" maxlength="500"
-                        placeholder="Describe any useful observations about the plant." required></textarea>
-                    <p class="hint">Maximum 500 characters.</p>
+                    <label for="comments">
+                        Comments / Observations <span class="req">*</span>
+                    </label>
+
+                    <textarea id="comments"
+                        name="comments"
+                        rows="6"
+                        maxlength="500"
+                        placeholder="Describe any useful observations about the plant."
+                        required></textarea>
+
+                    <p class="hint">
+                        Maximum 500 characters.
+                    </p>
                 </div>
+
             </fieldset>
+
 
             <fieldset>
                 <legend>Confirmation</legend>
+
                 <div class="field-group contribution-confirmation">
-                    <input type="checkbox" id="accuracy" name="accuracy" value="confirmed" required>
-                    <label for="accuracy">I confirm that the information provided is accurate <span
-                            class="req">*</span></label>
+
+                    <input type="checkbox"
+                        id="accuracy"
+                        name="accuracy"
+                        value="confirmed"
+                        required>
+
+                    <label for="accuracy">
+                        I confirm that the information provided is accurate
+                        <span class="req">*</span>
+                    </label>
+
                 </div>
+
             </fieldset>
 
+
             <div class="contribution-actions">
-                <button type="submit" class="btn" aria-describedby="form-preview-note">Submit Contribution</button>
-                <button type="reset" class="btn btn-outline">Reset Form</button>
+
+                <button type="submit"
+                    class="btn"
+                    aria-describedby="form-preview-note">
+                    Submit Contribution
+                </button>
+
+                <button type="reset"
+                    class="btn btn-outline">
+                    Reset Form
+                </button>
+
             </div>
+
         </form>
+
     </main>
 
 
@@ -151,37 +283,61 @@
          ============================== -->
 
     <footer class="universal-footer">
+
         <div class="wrap">
+
             <nav class="footer-columns" aria-label="Footer navigation">
+
                 <div class="footer-column">
-                    <h2 class="footer-heading"><a href="explorer.html">Explore</a></h2>
+                    <h2 class="footer-heading">
+                        <a href="explorer.html">Explore</a>
+                    </h2>
+
                     <ul>
                         <li><a href="explorer-family.html">Family</a></li>
                         <li><a href="explorer-genus.html">Genus</a></li>
                         <li><a href="explorer-species.html">Species</a></li>
                     </ul>
                 </div>
+
+
                 <div class="footer-column">
                     <h2 class="footer-heading">Identify</h2>
+
                     <ul>
                         <li><a href="identify.html">Identify a plant</a></li>
                     </ul>
                 </div>
+
+
                 <div class="footer-column">
                     <h2 class="footer-heading">Contribution</h2>
+
                     <ul>
                         <li><a href="contributor.html">Contributor</a></li>
-                        <li><a href="contribution.html" aria-current="page">Contribution Form</a></li>
+                        <li>
+                            <a href="contribution.html" aria-current="page">
+                                Contribution Form
+                            </a>
+                        </li>
                     </ul>
                 </div>
+
+
                 <div class="footer-column">
                     <h2 class="footer-heading">Enquiry</h2>
+
                     <ul>
-                        <li><a href="enquiry_form.html">Enquiry Form</a></li>
+                        <li>
+                            <a href="enquiry_form.html">Enquiry Form</a>
+                        </li>
                     </ul>
                 </div>
+
+
                 <div class="footer-column">
                     <h2 class="footer-heading">More</h2>
+
                     <ul>
                         <li><a href="profile.html">About Us</a></li>
                         <li><a href="register.html">Register</a></li>
@@ -190,15 +346,31 @@
                         <li><a href="acknowledgement.html">Acknowledgement</a></li>
                     </ul>
                 </div>
+
             </nav>
+
+
             <div class="footer-bottom">
-                <a class="footer-contact" href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
-                <p class="footer-copyright">&copy; 2026 WikiPlant. All rights reserved.</p>
+
+                <a class="footer-contact"
+                    href="mailto:106764593@students.swinburne.edu.my">
+                    Contact Us
+                </a>
+
+                <p class="footer-copyright">
+                    &copy; 2026 WikiPlant. All rights reserved.
+                </p>
+
             </div>
+
         </div>
+
     </footer>
-<!-- Back to Top Button -->
-<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+
 </body>
 
 </html>
