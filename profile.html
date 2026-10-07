@@ -4,110 +4,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WikiPlant - Individual Contributor Profile" />
-    <meta name="author" content="Joshua Wong Hock Sing" />
-    <title>WikiPlant | Profile</title>
+    <meta name="description" content="Meet the team behind WikiPlant.">
+    <title>WikiPlant | About Us</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="profile-page">
+
     <header class="site-header">
         <div class="wrap">
-            <a class="brand" href="index.html">
+
+            <a class="brand" href="index.html" aria-label="WikiPlant home">
                 <img src="images/logo.png" alt="WikiPlant logo">
                 <span class="brand-motto">Wiki Plant</span>
             </a>
-            <nav class="main-nav" aria-label="Primary">
-                <ul>
-                    <li><a href="index.html">Index</a></li>
-                    <li class="nav-drop">
-                        <a href="explorer.html">Explore</a>
-                        <ul class="drop-menu">
-                            <li><a href="explorer-family.html">By family</a></li>
-                            <li><a href="explorer-genus.html">By genus</a></li>
-                            <li><a href="explorer-species.html">By species</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="identify.html">Identify</a></li>
-                    <li><a href="contributor.html" aria-current="page">Contributor</a></li>
-                    <li><a href="contribution.html">Contribute</a></li>
-                    <li><a href="enquiry_form.html">Enquiry</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="login.html">Login</a></li>
-                </ul>
-            </nav>
+
+            <input class="nav-state"
+                   type="checkbox"
+                   id="navigation-toggle"
+                   aria-label="Open or close navigation"
+                   aria-controls="navigation-panel">
+
+            <label class="nav-toggle" for="navigation-toggle">
+                <span class="nav-toggle-lines" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="nav-close" aria-hidden="true">&times;</span>
+            </label>
+
+            <label class="nav-backdrop"
+                   for="navigation-toggle"
+                   aria-hidden="true"></label>
+
+            <div class="nav-drawer-panel" id="navigation-panel">
+
+                <div class="nav-drawer-topbar">
+                    <span>Navigation</span>
+                </div>
+
+                <nav class="main-nav" aria-label="Primary">
+                    <ul>
+
+                        <!-- Explore -->
+                        <li class="nav-drop">
+                            <a href="explorer.html">Explore</a>
+
+                            <ul class="drop-menu">
+                                <li>
+                                    <a href="explorer-family.html">
+                                        By Family
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="explorer-genus.html">
+                                        By Genus
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="explorer-species.html">
+                                        By Species
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Identify -->
+                        <li>
+                            <a href="identify.html">Identify</a>
+                        </li>
+
+                        <!-- Contribute -->
+                        <li class="nav-drop">
+                            <a href="contributor.html">
+                                Contribute
+                            </a>
+
+                            <ul class="drop-menu">
+                                <li>
+                                    <a href="contribution.html">
+                                        Contribution Form
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- About Us -->
+                        <li class="nav-drop">
+                            <a href="profile.html" aria-current="page">
+                                About Us
+                            </a>
+
+                            <ul class="drop-menu">
+                                <li>
+                                    <a href="aboutus-sean.html">
+                                        Sean
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="aboutus-bryan.html">
+                                        Bryan
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="aboutus-joshua.html">
+                                        Joshua
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="aboutus-terry.html">
+                                        Terry
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Enquiry -->
+                        <li>
+                            <a href="enquiry_form.html">
+                                Enquiry
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <!-- Register and Login -->
+                <div class="auth-buttons">
+                    <a href="register.html" class="register-btn">
+                        Register
+                    </a>
+
+                    <a href="login.html" class="login-btn">
+                        Login
+                    </a>
+                </div>
+
+            </div>
         </div>
     </header>
 
-    <main class="wrap">
-        <section class="profile-section">
+    <main class="profile-hub">
 
-            <div class="personal-details clearfix">
-                <img src="images/yourphoto.jpg" alt="Photo of Me" class="profile-photo" width="180" height="180">
+        <section class="team-intro" aria-labelledby="team-title">
 
-                <div class="profile-text-content">
-                    <p class="profile-name">Joshua Wong Hock Sing</p>
-                    <p class="student-id">Student Number: 106764593</p>
-                    <p class="course-name">Course: Bachelor of Computer Science</p>
+            <p class="profile-eyebrow">
+                The people behind WikiPlant
+            </p>
 
-                    <p class="short-intro">
-                        Hello! I'm a passionate computing student who is very interested in the current tech world. I am
-                        particularly fascinated by the intersection of software development and cybersecurity.
-                    </p>
-                </div>
-            </div>
-            <table class="profile-table">
-                <thead>
-                    <tr>
-                        <th>Demographic Information</th>
-                        <th>My Hometown</th>
-                        <th>Hobbies</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            I am currently an undergraduate student at Swinburne University of Technology Sarawak.
-                            Prior to this, I completed my foundation studies at Multimedia University.
-                            I come from a supportive family and grew up closely with my brothers and sister.
-                        </td>
-                        <td>
-                            I am from Sri Aman, Sarawak, a vibrant city known for its beautiful
-                            surrounding biodiversity and cultural heritage.
-                            Currently, I reside in Kuching to pursue my Computer Science degree.
-                        </td>
-                        <td>
-                            I have many hobbies but the one that stands out the most is badminton. Every weekend, I
-                            would find free time to play badminton with my siblings and it is always a ton of fun!
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3" class="email-container">
-                            <a href="mailto:106764593@students.swinburne.edu.my">Contact Me:
-                                106764593@students.swinburne.edu.my</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <h1 id="team-title">
+                Meet Our Team
+            </h1>
+
+            <p>
+                Get to know the members behind WikiPlant.
+                Select a profile below to learn more about each team member.
+            </p>
+
         </section>
+
+        <section class="team-grid" aria-label="Team member profiles">
+
+            <a href="aboutus-sean.html" class="member-card">
+                <span class="member-number">01</span>
+                <h2>Sean</h2>
+                <p>
+                    View Profile
+                    <span aria-hidden="true">&#8594;</span>
+                </p>
+            </a>
+
+            <a href="aboutus-bryan.html" class="member-card">
+                <span class="member-number">02</span>
+                <h2>Bryan</h2>
+                <p>
+                    View Profile
+                    <span aria-hidden="true">&#8594;</span>
+                </p>
+            </a>
+
+            <a href="aboutus-joshua.html" class="member-card">
+                <span class="member-number">03</span>
+                <h2>Joshua</h2>
+                <p>
+                    View Profile
+                    <span aria-hidden="true">&#8594;</span>
+                </p>
+            </a>
+
+            <a href="aboutus-terry.html" class="member-card">
+                <span class="member-number">04</span>
+                <h2>Terry</h2>
+                <p>
+                    View Profile
+                    <span aria-hidden="true">&#8594;</span>
+                </p>
+            </a>
+
+        </section>
+
     </main>
 
     <footer class="universal-footer">
+
         <div class="wrap">
-            <p><strong>WikiPlant</strong> — a community field index.</p>
-            <nav aria-label="Footer navigation">
-                <button type="button" onclick="location.href='index.html'">Home</button>
-                <button type="button" onclick="location.href='explorer.html'">Explore</button>
-                <button type="button" onclick="location.href='contributor.html'">Contributor</button>
-                <button type="button" onclick="location.href='register.html'">Register</button>
-                <button type="button" onclick="location.href='enquiry_form.html'">Enquiry</button>
-                <button type="button" onclick="location.href='login.html'">Login</button>
-                <button type="button" onclick="location.href='mailto:106764593@students.swinburne.edu.my'">Contact
-                    Us</button>
+
+            <nav class="footer-columns" aria-label="Footer navigation">
+
+                <div class="footer-column">
+                    <h2 class="footer-heading">
+                        <a href="explorer.html">Explore</a>
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="explorer-family.html">Family</a>
+                        </li>
+
+                        <li>
+                            <a href="explorer-genus.html">Genus</a>
+                        </li>
+
+                        <li>
+                            <a href="explorer-species.html">Species</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h2 class="footer-heading">
+                        Identify
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="identify.html">
+                                Identify a plant
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h2 class="footer-heading">
+                        Contribution
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="contributor.html">
+                                Contributor
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contribution.html">
+                                Contribution Form
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h2 class="footer-heading">
+                        Enquiry
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="enquiry_form.html">
+                                Enquiry Form
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h2 class="footer-heading">
+                        More
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <a href="profile.html" aria-current="page">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="register.html">
+                                Register
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="login.html">
+                                Login
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="enhancement.html">
+                                Enhancement
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="acknowledgement.html">
+                                Acknowledgement
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </nav>
-            <p>&copy; 2026 WikiPlant. All rights reserved.</p>
+
+            <div class="footer-bottom">
+
+                <a class="footer-contact"
+                   href="mailto:106764593@students.swinburne.edu.my">
+                    Contact Us
+                </a>
+
+                <p class="footer-copyright">
+                    &copy; 2026 WikiPlant. All rights reserved.
+                </p>
+
+            </div>
+
         </div>
+
     </footer>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        ↑
+    </a>
+
 </body>
 
 </html>
+

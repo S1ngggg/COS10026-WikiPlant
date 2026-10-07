@@ -29,19 +29,34 @@
           <li class="nav-drop">
             <a href="explorer.html" aria-current="page">Explore</a>
             <ul class="drop-menu">
-              <li><a href="explorer-family.html">By family</a></li>
-              <li><a href="explorer-genus.html">By genus</a></li>
-              <li><a href="explorer-species.html">By species</a></li>
+              <li><a href="explorer-family.html">By Family</a></li>
+              <li><a href="explorer-genus.html" aria-current="page">By Genus</a></li>
+              <li><a href="explorer-species.html">By Species</a></li>
             </ul>
           </li>
           <li><a href="identify.html">Identify</a></li>
-          <li><a href="contributor.html">Contributor</a></li>
-          <li><a href="aboutus-sean.html">About Us</a></li>
+          <li class="nav-drop">
+            <a href="contributor.html">Contribute</a>
+            <ul class="drop-menu">
+              <li><a href="contribution.html">Contribution Form</a></li>
+            </ul>
+          </li>
+          <li class="nav-drop">
+            <a href="profile.html">About Us</a>
+            <ul class="drop-menu">
+              <li><a href="aboutus-sean.html">Sean</a></li>
+              <li><a href="aboutus-bryan.html">Bryan</a></li>
+              <li><a href="aboutus-joshua.html">Joshua</a></li>
+              <li><a href="aboutus-terry.html">Terry</a></li>
+            </ul>
+          </li>
           <li><a href="enquiry_form.html">Enquiry</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="login.html">Login</a></li>
         </ul>
       </nav>
+      <div class="auth-buttons">
+        <a href="register.html" class="register-btn">Register</a>
+        <a href="login.html" class="login-btn">Login</a>
+      </div>
       </div>
     </div>
   </header>
@@ -230,7 +245,6 @@
           <h3 class="sci">Trifolium</h3>
           <figure class="plant-photo">
             <img src="images/plants/trifolium-pratense.jpg" alt="Trifolium pratense, representative of the Trifolium genus">
-            <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Bombus_rupestris_-_Trifolium_pratense_-_Keila.jpg">Ivar Leidus / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
           </figure>
           <p>Herbaceous legumes with three-part leaves and rounded flower heads; many species are grown as forage and cover crops.</p>
           <div class="distribution">📍 Native range example: Europe</div>
@@ -261,7 +275,6 @@
           <h3 class="sci">Dracaena</h3>
           <figure class="plant-photo">
             <img src="images/plants/dracaena-cinnabari.jpg" alt="Dracaena cinnabari, representative of the Dracaena genus">
-            <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Socotra_dragon_tree.JPG">Boris Khvostichenko / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
           </figure>
           <p>Rosette or upright plants with stiff, strap-like leaves, several formerly classed under Sansevieria.</p>
           <div class="distribution">📍 Native range example: Socotra Archipelago</div>
@@ -282,7 +295,6 @@
           <h3 class="sci">Chlorophytum</h3>
           <figure class="plant-photo">
             <img src="images/plants/chlorophytum-comosum.jpg" alt="Chlorophytum comosum, representative of the Chlorophytum genus">
-            <figcaption class="photo-credit">Photo: <a href="https://commons.wikimedia.org/wiki/File:Malamadre_(Chlorophytum_comosum).jpg">Juan Carlos Fonseca Mata / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></figcaption>
           </figure>
           <p>Arching, grass-like leaves that send out long runners tipped with plantlets.</p>
           <div class="distribution">📍 Native range example: South Africa</div>
@@ -314,24 +326,52 @@
   </div>
 
   <footer class="universal-footer">
-    <div class="wrap">
-      <p><strong>WikiPlant</strong> — a community field index.</p>
-
-      <nav aria-label="Footer navigation">
-        <a href="explorer.html">Explore</a>
-        <a href="contributor.html">Contributor</a>
-        <a href="aboutus-sean.html">About Us</a>
-        <a href="register.html">Register</a>
-        <a href="enquiry_form.html">Enquiry</a>
-        <a href="login.html">Login</a>
-        <a href="enhancement.html">Enhancement</a>
-        <a href="acknowledgement.html">Acknowledgement</a>
-        <a href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
-      </nav>
-
-      <p>&copy; 2026 WikiPlant. All rights reserved.</p>
-    </div>
-  </footer>
+        <div class="wrap">
+            <nav class="footer-columns" aria-label="Footer navigation">
+                <div class="footer-column">
+                    <h2 class="footer-heading"><a href="explorer.html">Explore</a></h2>
+                    <ul>
+                        <li><a href="explorer-family.html">Family</a></li>
+                        <li><a href="explorer-genus.html" aria-current="page">Genus</a></li>
+                        <li><a href="explorer-species.html">Species</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-heading">Identify</h2>
+                    <ul>
+                        <li><a href="identify.html">Identify a plant</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-heading">Contribution</h2>
+                    <ul>
+                        <li><a href="contributor.html">Contributor</a></li>
+                        <li><a href="contribution.html">Contribution Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-heading">Enquiry</h2>
+                    <ul>
+                        <li><a href="enquiry_form.html">Enquiry Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-heading">More</h2>
+                    <ul>
+                        <li><a href="profile.html">About Us</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="enhancement.html">Enhancement</a></li>
+                        <li><a href="acknowledgement.html">Acknowledgement</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer-bottom">
+                <a class="footer-contact" href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
+                <p class="footer-copyright">&copy; 2026 WikiPlant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 <!-- Back to Top Button -->
 <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>

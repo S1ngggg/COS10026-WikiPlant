@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Meet Sean Liew Shou Tian, a WikiPlant team member.">
+    <meta name="description" content="Meet Sean Liew Shou Tian, a WikiPlant team member.">
 
     <meta name="author" content="Sean Liew Shou Tian">
 
@@ -25,87 +24,163 @@
                 <img src="images/logo.png" alt="WikiPlant logo">
                 <span class="brand-motto">Wiki Plant</span>
             </a>
-            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+
+            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation"
+                aria-controls="navigation-panel">
+
             <label class="nav-toggle" for="navigation-toggle">
-                <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="nav-toggle-lines" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
                 <span class="nav-close" aria-hidden="true">&times;</span>
             </label>
+
             <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+
             <div class="nav-drawer-panel" id="navigation-panel">
-                <div class="nav-drawer-topbar"><span>Navigation</span></div>
-            <nav class="main-nav" aria-label="Primary">
 
-                <ul>
+                <div class="nav-drawer-topbar">
+                    <span>Navigation</span>
+                </div>
 
-                    <li class="nav-drop">
+                <nav class="main-nav" aria-label="Primary">
 
-                        <a href="explorer.html">Explore</a>
+                    <ul>
 
-                        <ul class="drop-menu">
+                        <!-- Explore -->
+                        <li class="nav-drop">
 
-                            <li>
-                                <a href="explorer-family.html">
-                                    By family
-                                </a>
-                            </li>
+                            <a href="explorer.html">
+                                Explore
+                            </a>
 
-                            <li>
-                                <a href="explorer-genus.html">
-                                    By genus
-                                </a>
-                            </li>
+                            <ul class="drop-menu">
 
-                            <li>
-                                <a href="explorer-species.html">
-                                    By species
-                                </a>
-                            </li>
+                                <li>
+                                    <a href="explorer-family.html">
+                                        By Family
+                                    </a>
+                                </li>
 
-                        </ul>
+                                <li>
+                                    <a href="explorer-genus.html">
+                                        By Genus
+                                    </a>
+                                </li>
 
-                    </li>
+                                <li>
+                                    <a href="explorer-species.html">
+                                        By Species
+                                    </a>
+                                </li>
 
-                    <li>
-                        <a href="identify.html">Identify</a>
-                    </li>
+                            </ul>
 
-                    <li>
-                        <a href="contributor.html">Contributor</a>
-                    </li>
+                        </li>
 
-                    <li>
-                        <a href="aboutus-sean.html" aria-current="page">
-                            About Us
-                        </a>
-                    </li>
+                        <!-- Identify -->
+                        <li>
+                            <a href="identify.html">
+                                Identify
+                            </a>
+                        </li>
 
-                    <li>
-                        <a href="enquiry_form.html">Enquiry</a>
-                    </li>
+                        <!-- Contribute -->
+                        <li class="nav-drop">
 
-                    <li>
-                        <a href="register.html">Register</a>
-                    </li>
+                            <a href="contributor.html">
+                                Contribute
+                            </a>
 
-                    <li>
-                        <a href="login.html">Login</a>
-                    </li>
+                            <ul class="drop-menu">
 
-                </ul>
+                                <li>
+                                    <a href="contribution.html">
+                                        Contribution Form
+                                    </a>
+                                </li>
 
-            </nav>
+                            </ul>
+
+                        </li>
+
+                        <!-- About Us -->
+                        <li class="nav-drop">
+
+                            <a href="profile.html" aria-current="page">
+                                About Us
+                            </a>
+
+                            <ul class="drop-menu">
+
+                                <li>
+                                    <a href="aboutus-sean.html">
+                                        Sean
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="aboutus-bryan.html">
+                                        Bryan
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="aboutus-joshua.html">
+                                        Joshua
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="aboutus-terry.html">
+                                        Terry
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+                        <!-- Enquiry -->
+                        <li>
+                            <a href="enquiry_form.html">
+                                Enquiry
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+                <!-- Register and Login -->
+                <div class="auth-buttons">
+
+                    <a href="register.html" class="register-btn">
+                        Register
+                    </a>
+
+                    <a href="login.html" class="login-btn">
+                        Login
+                    </a>
+
+                </div>
+
             </div>
+
         </div>
 
     </header>
 
+
     <main class="about-main">
 
-<!-- =====================================================
+        <!-- =====================================================
              SEAN PROFILE
         ====================================================== -->
 
-        <section class="about-profile about-profile-sean" aria-labelledby="sean">
+        <section class="about-profile about-profile-sean" aria-labelledby="member-name">
 
             <table class="about-profile-table">
 
@@ -121,17 +196,20 @@
                 <tbody>
 
                     <tr>
+
                         <td class="about-portrait-cell" colspan="2">
+
                             <figure class="about-portrait">
+
                                 <!-- Replace the placeholder with Sean's personal photo. -->
-                                <img
-                                    class="about-photo"
-                                    src="images/sean-placeholder.svg"
-                                    alt="Personal photo placeholder for Sean Liew Shou Tian"
-                                    width="240"
-                                    height="280">
+
+                                <img class="about-photo" src="images/sean-placeholder.svg"
+                                    alt="Personal photo placeholder for Sean Liew Shou Tian" width="240" height="280">
+
                             </figure>
+
                         </td>
+
                     </tr>
 
                     <tr>
@@ -151,7 +229,11 @@
                     </tr>
 
                     <tr class="about-info-row">
-                        <th scope="row">Introduction</th>
+
+                        <th scope="row">
+                            Introduction
+                        </th>
+
                         <td class="about-profile-value">
 
                             <div class="about-bio">
@@ -175,13 +257,27 @@
                     </tr>
 
                     <tr class="about-info-row">
-                        <th scope="row">Student number</th>
-                        <td class="about-profile-value about-student-number">106763150</td>
+
+                        <th scope="row">
+                            Student number
+                        </th>
+
+                        <td class="about-profile-value about-student-number">
+                            106763150
+                        </td>
+
                     </tr>
 
                     <tr class="about-info-row">
-                        <th scope="row">Course</th>
-                        <td class="about-profile-value about-course">Bachelor in Computer Science</td>
+
+                        <th scope="row">
+                            Course
+                        </th>
+
+                        <td class="about-profile-value about-course">
+                            Bachelor in Computer Science
+                        </td>
+
                     </tr>
 
                 </tbody>
@@ -189,7 +285,11 @@
                 <tfoot>
 
                     <tr class="about-info-row">
-                        <th scope="row">Email</th>
+
+                        <th scope="row">
+                            Email
+                        </th>
+
                         <td class="about-profile-value about-contact">
 
                             <a href="mailto:106763150@students.swinburne.edu.my">
@@ -212,6 +312,7 @@
 
         </section>
 
+
         <!-- =====================================================
              SEAN PERSONAL INFORMATION
         ====================================================== -->
@@ -233,6 +334,7 @@
                 </div>
 
             </div>
+
 
             <table class="about-personal-table">
 
@@ -257,9 +359,7 @@
 
                         <th scope="row">
 
-                            <span
-                                class="about-row-number"
-                                aria-hidden="true">
+                            <span class="about-row-number" aria-hidden="true">
                                 01
                             </span>
 
@@ -290,15 +390,14 @@
 
                     </tr>
 
+
                     <!-- Sean Hometown -->
 
                     <tr>
 
                         <th scope="row">
 
-                            <span
-                                class="about-row-number"
-                                aria-hidden="true">
+                            <span class="about-row-number" aria-hidden="true">
                                 02
                             </span>
 
@@ -326,15 +425,14 @@
 
                     </tr>
 
+
                     <!-- Sean Hobbies -->
 
                     <tr>
 
                         <th scope="row">
 
-                            <span
-                                class="about-row-number"
-                                aria-hidden="true">
+                            <span class="about-row-number" aria-hidden="true">
                                 03
                             </span>
 
@@ -357,9 +455,7 @@
                                 and relaxation.
                             </p>
 
-                            <ul
-                                class="about-interest-list"
-                                aria-label="Sean's hobbies">
+                            <ul class="about-interest-list" aria-label="Sean's hobbies">
 
                                 <li>
                                     Programming
@@ -389,11 +485,34 @@
 
         </section>
 
+
         <nav class="about-pagination about-pagination-end" aria-label="Member profiles">
-            <a class="about-pagination-link about-pagination-next" href="aboutus-bryan.html" aria-label="Next profile: Bryan" rel="next"><span class="about-pagination-copy"><span class="about-pagination-label">Next profile</span><span class="about-pagination-title">Bryan</span></span><span class="about-pagination-arrow" aria-hidden="true">&rarr;</span></a>
+
+            <a class="about-pagination-link about-pagination-next" href="aboutus-bryan.html"
+                aria-label="Next profile: Bryan" rel="next">
+
+                <span class="about-pagination-copy">
+
+                    <span class="about-pagination-label">
+                        Next profile
+                    </span>
+
+                    <span class="about-pagination-title">
+                        Bryan
+                    </span>
+
+                </span>
+
+                <span class="about-pagination-arrow" aria-hidden="true">
+                    &rarr;
+                </span>
+
+            </a>
+
         </nav>
 
     </main>
+
 
     <!-- =====================================================
          FOOTER
@@ -403,32 +522,172 @@
 
         <div class="wrap">
 
-            <p>
-                <strong>WikiPlant</strong>
-                &mdash; a community field index.
-            </p>
+            <nav class="footer-columns" aria-label="Footer navigation">
 
-            <nav aria-label="Footer navigation">
-                <a href="explorer.html">Explore</a>
-                <a href="contributor.html">Contributor</a>
-                <a href="aboutus-sean.html">About Us</a>
-                <a href="register.html">Register</a>
-                <a href="enquiry_form.html">Enquiry</a>
-                <a href="login.html">Login</a>
-                <a href="enhancement.html">Enhancement</a>
-                <a href="acknowledgement.html">Acknowledgement</a>
-                <a href="mailto:106763150@students.swinburne.edu.my">Contact Us</a>
+                <div class="footer-column">
+
+                    <h2 class="footer-heading">
+                        <a href="explorer.html">
+                            Explore
+                        </a>
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            <a href="explorer-family.html">
+                                Family
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="explorer-genus.html">
+                                Genus
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="explorer-species.html">
+                                Species
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h2 class="footer-heading">
+                        Identify
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            <a href="identify.html">
+                                Identify a plant
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h2 class="footer-heading">
+                        Contribution
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            <a href="contributor.html">
+                                Contributor
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contribution.html">
+                                Contribution Form
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h2 class="footer-heading">
+                        Enquiry
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            <a href="enquiry_form.html">
+                                Enquiry Form
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h2 class="footer-heading">
+                        More
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            <a href="profile.html" aria-current="page">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="register.html">
+                                Register
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="login.html">
+                                Login
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="enhancement.html">
+                                Enhancement
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="acknowledgement.html">
+                                Acknowledgement
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </nav>
 
-            <p>
-                &copy; 2026 WikiPlant. All rights reserved.
-            </p>
+
+            <div class="footer-bottom">
+
+                <a class="footer-contact" href="mailto:106763150@students.swinburne.edu.my">
+                    Contact Us
+                </a>
+
+                <p class="footer-copyright">
+                    &copy; 2026 WikiPlant. All rights reserved.
+                </p>
+
+            </div>
 
         </div>
 
     </footer>
-<!-- Back to Top Button -->
-<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+
+
+    <!-- Back to Top Button -->
+
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        ↑
+    </a>
+
 </body>
 
 </html>
