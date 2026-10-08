@@ -585,11 +585,10 @@ body.home-page {
     position: relative;
     isolation: isolate;
     margin: 0;
-    min-height: 520px;
-    height: calc(100vh - 80px);
-    /* Adjusted to accommodate standard site header */
-    height: calc(100svh - 80px);
-    max-height: 1000px;
+    min-height: 390px;
+    height: calc(75vh - 60px);
+    height: calc(75svh - 60px);
+    max-height: 750px;
     background: var(--home-deep);
     overflow: hidden;
 }
@@ -963,9 +962,9 @@ body.home-page {
 
 @media (max-width: 760px) {
     .home-page .home-hero {
-        min-height: 740px;
-        height: 82vh;
-        height: 82svh;
+        min-height: 555px;
+        height: 61.5vh;
+        height: 61.5svh;
     }
 
     .home-page .home-hero-image {
@@ -1062,7 +1061,7 @@ body.home-page {
 
 @media (max-width: 400px) {
     .home-page .home-hero {
-        min-height: 700px;
+        min-height: 525px;
     }
 
     .home-page .home-hero-copy {
@@ -1429,7 +1428,7 @@ body.contributor-page {
 
     color: var(--sage-deep) !important;
 
-    font-size: 10px !important;
+    font-size: 18px !important;
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1460,7 +1459,7 @@ body.contributor-page {
     margin: 12px 0 0 !important;
 
     color: var(--ink-soft) !important;
-    font-size: 12px !important;
+    font-size: 18px !important;
 }
 
 .contributor-page .feed_meta span {
@@ -1471,7 +1470,7 @@ body.contributor-page {
 
     color: var(--sage-deep) !important;
 
-    font-size: 9px !important;
+    font-size: 16px !important;
     font-weight: 800;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -1482,7 +1481,7 @@ body.contributor-page {
 
     color: var(--ink-soft) !important;
 
-    font-size: 13px !important;
+    font-size: 18px !important;
     line-height: 1.7 !important;
 }
 
@@ -2075,7 +2074,7 @@ body.contributor-page {
 
     color: var(--paper-deep) !important;
 
-    font-size: 11px !important;
+    font-size: 18px !important;
     line-height: 1.6 !important;
 }
 
@@ -3900,6 +3899,47 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
 
 .explorer-page .page-header p {
     margin-bottom: 30px;
+}
+
+/* Shared forest photograph behind the Explorer and classification introductions. */
+.explorer-page .page-header.explorer-index-header {
+    position: relative;
+    isolation: isolate;
+    min-height: 380px;
+    padding: clamp(48px, 5.5vw, 84px) 0;
+    background: var(--ink);
+    color: #FFFFFF;
+    text-shadow: 0 1px 3px rgba(8, 26, 18, 0.4);
+}
+
+.explorer-page .explorer-index-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url('../images/explorer-forest.png');
+    background-size: cover;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.explorer-page .page-header.explorer-index-header h1,
+.explorer-page .page-header.explorer-index-header .kicker,
+.explorer-page .page-header.explorer-index-header p,
+.explorer-page .page-header.explorer-index-header a {
+    color: #FFFFFF;
+}
+
+.explorer-page .explorer-index-header .fam-common {
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+    .explorer-page .page-header.explorer-index-header {
+        min-height: 0;
+    }
 }
 
 
@@ -5917,6 +5957,9 @@ body.about-joshua {
 
 /* 3. 优化输入框、下拉框与文本域 */
 .contribution-page input[type="text"],
+.contribution-page input[type="email"],
+.contribution-page input[type="password"],
+.contribution-page input[type="tel"],
 .contribution-page select,
 .contribution-page textarea {
     width: 100%;
@@ -5931,6 +5974,9 @@ body.about-joshua {
 }
 
 .contribution-page input[type="text"]:focus,
+.contribution-page input[type="email"]:focus,
+.contribution-page input[type="password"]:focus,
+.contribution-page input[type="tel"]:focus,
 .contribution-page select:focus,
 .contribution-page textarea:focus {
     outline: none;
@@ -6027,4 +6073,129 @@ body.about-joshua {
 .acknowledgement-page .ack-list .ack-source-button:focus-visible {
     outline: 2px solid var(--sage-deep);
     outline-offset: 3px;
+}
+
+/* Account and enquiry forms reuse the Contribution form design above. */
+.account-page .account-form fieldset,
+.account-page .account-form .field-group {
+    min-width: 0;
+}
+
+.account-page .account-form .field-row-two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.account-page .account-form .remember-row label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+}
+
+.account-page .account-form input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: var(--sage-deep);
+}
+
+.account-page .account-form .form-prompt {
+    margin: 24px 0 0;
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+}
+
+.account-page .account-form .form-prompt a {
+    color: var(--sage-deep);
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 620px) {
+    .account-page .account-form .field-row,
+    .account-page .account-form .field-row-two {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Site-wide reading hierarchy: content stays larger than footer text. */
+body :is(p, li, dt, dd, td, th, figcaption):not(.site-header *, .universal-footer *) {
+    font-size: 18px !important;
+}
+
+body :is(label, input, select, textarea, button, small, legend):not(.site-header *, .universal-footer *) {
+    font-size: 16px !important;
+}
+
+body :is(a, span):not(.site-header *, .universal-footer *, h1 *, h2 *, h3 *, h4 *, [aria-hidden="true"], .back-to-top) {
+    font-size: 16px !important;
+}
+
+.universal-footer .footer-heading,
+.universal-footer .footer-heading a,
+.universal-footer .footer-column a,
+.universal-footer .footer-contact {
+    font-size: 14px;
+}
+
+.universal-footer .footer-copyright {
+    font-size: 12px;
+}
+
+.home-page .home-collection-item > p {
+    line-height: 1.65;
+    max-width: none;
+}
+
+/* Give the larger hero copy room within the shorter photograph. */
+.home-page .home-hero-copy {
+    width: 540px;
+    padding: 28px 36px;
+}
+
+.home-page .home-hero-copy .home-eyebrow {
+    margin-bottom: 14px;
+}
+
+.home-page .home-hero-copy h1 {
+    margin-bottom: 16px;
+}
+
+.home-page .home-hero-copy .home-text-link {
+    margin-top: 18px;
+}
+
+@media (max-width: 760px) {
+    .home-page .home-hero-copy {
+        width: 480px;
+        padding: 26px;
+    }
+}
+
+/* Sean's email action sits below the profile table. */
+.about-page .about-profile-sean .about-contact .about-email-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 22px;
+    border: 1px solid var(--sage-deep);
+    border-radius: 6px;
+    background: var(--sage-deep);
+    color: var(--paper-card);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.about-page .about-profile-sean .about-contact .about-email-button:hover {
+    border-color: var(--ink);
+    background: var(--ink);
+    color: var(--paper-card);
+}
+
+.about-page .about-profile-sean .about-profile-contact {
+    padding: 20px 28px;
+    background: var(--paper-card);
+    text-align: center;
 }

@@ -62,7 +62,7 @@
   </header>
 
   <main id="main-content">
-  <div class="page-header">
+  <div class="page-header explorer-index-header">
     <div class="wrap">
       <span class="kicker">Section A · Rank 1</span>
       <h1>Families in the index</h1>
@@ -349,17 +349,6 @@
     </footer>
 <!-- Back to Top Button -->
 <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
-<script>
-  const familyFilterBar = document.querySelector('.filter-bar');
-
-  familyFilterBar.addEventListener('change', (event) => {
-    if (event.target.matches('input[type="radio"]')) {
-      requestAnimationFrame(() => {
-        familyFilterBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    }
-  });
-</script>
 </body>
 
 </html>

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="explorer-page">
+<body class="contribution-page account-page account-login">
 
   <header class="site-header">
     <div class="wrap">
@@ -63,45 +63,46 @@
     </div>
   </header>
 
-  <main class="wrap form-page-wrap form-page-wrap-narrow">
-    <div class="page-header form-page-header">
-      <h1>Welcome Back, WikiPlant User!</h1>
-      <p>Login now to contribute to the WikiPlant database!</p>
-    </div>
-
-    <form class="record-form" action="#" method="post">
-      <fieldset>
-        <legend>Account Login</legend>
-
-        <div class="field-group">
-          <label for="loginId">Login ID <span class="req">*</span></label>
-          <input type="text" id="loginId" name="loginId" placeholder="Enter your username" pattern="[A-Za-z]+"
-            maxlength="10" title="Maximum 10 alphabetical characters only" required>
-          <span class="hint">Maximum 10 characters.</span>
+  <main class="page_main contribution-main account-main">
+        <div class="page-header">
+          <h1 id="account-title">Welcome back.</h1>
+          <p>Login now to contribute to the WikiPlant database!</p>
+            <p class="hint">Fields marked with <span class="req">*</span> are required.</p>
         </div>
 
-        <div class="field-group">
-          <label for="loginPassword">Password <span class="req">*</span></label>
-          <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password"
-            pattern="[A-Za-z]+" maxlength="25" title="Maximum 25 alphabetical characters only" required>
-        </div>
+        <form class="record-form account-form" action="#" method="post">
+          <fieldset>
+            <legend>Account Login</legend>
 
-        <div class="radio-row remember-row">
-          <label for="rememberMe">
-            <input type="checkbox" id="rememberMe" name="rememberMe" value="yes">
-            Remember me
-          </label>
-        </div>
-      </fieldset>
+            <div class="field-group">
+              <label for="loginId">Login ID <span class="req">*</span></label>
+              <input type="text" id="loginId" name="loginId" placeholder="Enter your username" pattern="[A-Za-z]+"
+                maxlength="10" title="Maximum 10 alphabetical characters only" required>
+              <span class="hint">Maximum 10 characters.</span>
+            </div>
 
-      <div class="form-actions">
-        <button type="submit" class="btn" disabled>Login</button>
-        <button type="reset" class="btn btn-outline">Reset</button>
-      </div>
+            <div class="field-group">
+              <label for="loginPassword">Password <span class="req">*</span></label>
+              <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password"
+                pattern="[A-Za-z]+" maxlength="25" title="Maximum 25 alphabetical characters only" required>
+            </div>
 
-      <p class="form-prompt">Don't have an account? <a href="register.html">Register here</a>
-      </p>
-    </form>
+            <div class="radio-row remember-row">
+              <label for="rememberMe">
+                <input type="checkbox" id="rememberMe" name="rememberMe" value="yes">
+                Remember me
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-submit" disabled>Login</button>
+            <button type="reset" class="btn btn-reset">Reset</button>
+          </div>
+
+          <p class="form-prompt">Don't have an account? <a href="register.html">Register here</a>
+          </p>
+        </form>
   </main>
 
   <footer class="universal-footer">

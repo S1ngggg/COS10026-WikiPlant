@@ -59,7 +59,7 @@
     </div>
   </header>
 
-  <div class="page-header">
+  <div class="page-header explorer-index-header">
     <div class="wrap">
       <span class="kicker">Section A · Rank 3</span>
       <h1>Species in the index</h1>
@@ -666,16 +666,5 @@
     </footer>
 <!-- Back to Top Button -->
 <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
-<script>
-  const speciesFilterBar = document.querySelector('.filter-bar');
-
-  speciesFilterBar.addEventListener('change', (event) => {
-    if (event.target.matches('input[type="radio"]')) {
-      requestAnimationFrame(() => {
-        speciesFilterBar.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    }
-  });
-</script>
 </body>
 </html>
