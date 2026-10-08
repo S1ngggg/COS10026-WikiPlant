@@ -4033,15 +4033,21 @@ body.identify-page {
 }
 
 .identify-page .cloud-upload {
+    width: 320px;
     max-width: 100%;
     height: auto;
 }
 
 .identify-page .identify-action-row {
-    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 480px;
+    margin: 24px auto 0;
 }
 
-.identify-page .identify-btn {
+.identify-page .identify-btn,
+.identify-page .identify-reset-btn {
     display: block;
     width: 100%;
     max-width: 480px;
@@ -4066,6 +4072,23 @@ body.identify-page {
     opacity: 0.55;
     cursor: not-allowed;
     background: var(--sage);
+}
+
+.identify-page .identify-reset-btn {
+    border: 1px solid var(--line);
+    background: var(--paper-deep);
+    color: var(--ink);
+}
+
+.identify-page .identify-reset-btn:hover {
+    border-color: var(--sage-deep);
+    background: var(--line-soft);
+}
+
+@media (max-width: 400px) {
+    .identify-page .identify-action-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --- Figures --- */
@@ -5771,6 +5794,39 @@ body.about-joshua {
     }
 }
 /* Contribution page layout fix */
+
+/* Image source button on the Acknowledgement page. */
+.acknowledgement-page .ack-source-description {
+    margin: 0 0 12px;
+    line-height: 1.6;
+}
+
+.acknowledgement-page .ack-list .ack-source-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border: 1px solid var(--sage-deep);
+    border-radius: 4px;
+    background: var(--sage-deep);
+    color: var(--paper);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-decoration: none;
+    word-break: normal;
+}
+
+.acknowledgement-page .ack-list .ack-source-button:hover {
+    border-color: var(--ink);
+    background: var(--ink);
+    text-decoration: none;
+}
+
+.acknowledgement-page .ack-list .ack-source-button:focus-visible {
+    outline: 2px solid var(--sage-deep);
+    outline-offset: 3px;
+}
 
 .contribution-page .page_main{
     max-width:900px;
