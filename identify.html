@@ -76,16 +76,17 @@
         </div>
 
         <section class="how-it-works card-container">
-            <div class="static-photo-container">
+            <form class="static-photo-container" aria-label="Plant photo selection">
                 <label class="static-photo upload-box" for="plant-photo" aria-label="Upload a plant photo"
                     title="Upload a plant photo">
-                    <img src="images/cloud-upload.png" alt="Upload icon" class="cloud-upload" id="upload-icon">
+                    <img src="images/identify.png" alt="Upload a plant photo" class="cloud-upload" id="upload-icon">
                     <input id="plant-photo" type="file" accept="image/*">
                 </label>
                 <div class="identify-action-row">
                     <button type="button" class="identify-btn" id="identify-btn" disabled>Identify plant</button>
+                    <button type="reset" class="identify-reset-btn">Reset</button>
                 </div>
-            </div>
+            </form>
         </section>
 
         <section>

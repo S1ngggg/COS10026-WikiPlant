@@ -4226,15 +4226,21 @@ body.identify-page {
 }
 
 .identify-page .cloud-upload {
+    width: 320px;
     max-width: 100%;
     height: auto;
 }
 
 .identify-page .identify-action-row {
-    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 480px;
+    margin: 24px auto 0;
 }
 
-.identify-page .identify-btn {
+.identify-page .identify-btn,
+.identify-page .identify-reset-btn {
     display: block;
     width: 100%;
     max-width: 480px;
@@ -4259,6 +4265,23 @@ body.identify-page {
     opacity: 0.55;
     cursor: not-allowed;
     background: var(--sage);
+}
+
+.identify-page .identify-reset-btn {
+    border: 1px solid var(--line);
+    background: var(--paper-deep);
+    color: var(--ink);
+}
+
+.identify-page .identify-reset-btn:hover {
+    border-color: var(--sage-deep);
+    background: var(--line-soft);
+}
+
+@media (max-width: 400px) {
+    .identify-page .identify-action-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* --- Figures --- */
@@ -6184,6 +6207,7 @@ body.profile-page {
     }
 }
 
+<<<<<<< HEAD
 @media (max-width: 560px) {
     .profile-page .team-grid {
         grid-template-columns: 1fr;
@@ -6195,3 +6219,47 @@ body.profile-page {
         box-sizing: border-box;
     }
 }
+=======
+.contribution-page .btn-reset:hover {
+    background: var(--paper-deep);
+    color: var(--ink);
+}
+
+/* Acknowledgement image source button. */
+.acknowledgement-page .ack-source-description {
+    margin: 0 0 12px;
+    line-height: 1.6;
+}
+
+.acknowledgement-page .ack-list .ack-source-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    max-width: 100%;
+    min-height: 44px;
+    padding: 11px 18px;
+    border: 1px solid var(--sage-deep);
+    border-radius: 6px;
+    background: var(--sage-deep);
+    color: var(--paper);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    word-break: normal;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.acknowledgement-page .ack-list .ack-source-button:hover {
+    border-color: var(--ink);
+    background: var(--ink);
+    text-decoration: none;
+}
+
+.acknowledgement-page .ack-list .ack-source-button:focus-visible {
+    outline: 2px solid var(--sage-deep);
+    outline-offset: 3px;
+}
+>>>>>>> eb02b3292936cc3a84a34f9a1a1f203c20d7c625
