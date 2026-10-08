@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="explorer-page">
+<body class="contribution-page account-page account-login">
 
   <header class="site-header">
     <div class="wrap">
@@ -64,13 +64,14 @@
     </div>
   </header>
 
-  <main class="wrap form-page-wrap form-page-wrap-narrow">
-    <div class="page-header form-page-header">
-      <h1>Welcome Back, WikiPlant User!</h1>
+  <main class="page_main contribution-main account-main">
+    <div class="page-header">
+      <h1 id="account-title">Welcome back.</h1>
       <p>Login now to contribute to the WikiPlant database!</p>
+      <p class="hint">Fields marked with <span class="req">*</span> are required.</p>
     </div>
 
-    <form class="record-form" action="#" method="post">
+    <form class="record-form account-form" action="#" method="post">
       <fieldset>
         <legend>Account Login</legend>
 
@@ -96,8 +97,8 @@
       </fieldset>
 
       <div class="form-actions">
-        <button type="submit" class="btn">Login</button>
-        <button type="reset" class="btn btn-outline">Reset</button>
+        <button type="submit" class="btn btn-submit" disabled>Login</button>
+        <button type="reset" class="btn btn-reset">Reset</button>
       </div>
 
       <p class="form-prompt">Don't have an account? <a href="register.html">Register here</a>
