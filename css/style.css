@@ -1428,7 +1428,7 @@ body.contributor-page {
 
     color: var(--sage-deep) !important;
 
-    font-size: 18px !important;
+    font-size: 10px !important;
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1459,7 +1459,7 @@ body.contributor-page {
     margin: 12px 0 0 !important;
 
     color: var(--ink-soft) !important;
-    font-size: 18px !important;
+    font-size: 12px !important;
 }
 
 .contributor-page .feed_meta span {
@@ -1470,7 +1470,7 @@ body.contributor-page {
 
     color: var(--sage-deep) !important;
 
-    font-size: 16px !important;
+    font-size: 9px !important;
     font-weight: 800;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -1481,7 +1481,7 @@ body.contributor-page {
 
     color: var(--ink-soft) !important;
 
-    font-size: 18px !important;
+    font-size: 13px !important;
     line-height: 1.7 !important;
 }
 
@@ -2074,7 +2074,7 @@ body.contributor-page {
 
     color: var(--paper-deep) !important;
 
-    font-size: 18px !important;
+    font-size: 11px !important;
     line-height: 1.6 !important;
 }
 
@@ -6173,27 +6173,27 @@ body.profile-page {
     }
 }
 
-/* Site-wide reading hierarchy: content stays larger than footer text. */
-body :is(p, li, dt, dd, td, th, figcaption):not(.site-header *, .universal-footer *) {
+/* Homepage reading hierarchy; other pages retain their original font sizes. */
+body.home-page :is(p, li, dt, dd, td, th, figcaption):not(.site-header *, .universal-footer *) {
     font-size: 18px !important;
 }
 
-body :is(label, input, select, textarea, button, small, legend):not(.site-header *, .universal-footer *) {
+body.home-page :is(label, input, select, textarea, button, small, legend):not(.site-header *, .universal-footer *) {
     font-size: 16px !important;
 }
 
-body :is(a, span):not(.site-header *, .universal-footer *, h1 *, h2 *, h3 *, h4 *, [aria-hidden="true"], .back-to-top) {
+body.home-page :is(a, span):not(.site-header *, .universal-footer *, h1 *, h2 *, h3 *, h4 *, [aria-hidden="true"], .back-to-top) {
     font-size: 16px !important;
 }
 
-.universal-footer .footer-heading,
-.universal-footer .footer-heading a,
-.universal-footer .footer-column a,
-.universal-footer .footer-contact {
+.home-page .universal-footer .footer-heading,
+.home-page .universal-footer .footer-heading a,
+.home-page .universal-footer .footer-column a,
+.home-page .universal-footer .footer-contact {
     font-size: 14px;
 }
 
-.universal-footer .footer-copyright {
+.home-page .universal-footer .footer-copyright {
     font-size: 12px;
 }
 
