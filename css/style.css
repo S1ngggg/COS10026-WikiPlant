@@ -1139,21 +1139,6 @@ body.contribution-page {
 /* CONTRIBUTOR PAGE */
 
 
-
-/* =========================================================
-   4. Main Content Layout
-   ========================================================= */
-/* =========================================================
-   WikiPlant - Contributor Page
-   Author: Bryan Tan
-   Description: Contributor page styling
-   ========================================================= */
-
-
-/* =========================================================
-   1. PAGE LAYOUT
-   ========================================================= */
-
 body.contributor-page {
     background: var(--paper);
     color: var(--ink);
@@ -1886,10 +1871,16 @@ body.contributor-page {
     transform: rotateY(180deg);
 }
 
-.contributor-page .contributor-card-back>img {
+.contributor-page .contributor-card-back>.photo-zoom {
+    display: block;
     width: 100%;
     height: 120px;
+    flex: 0 0 120px;
+}
 
+.contributor-page .contributor-card-back>.photo-zoom img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -2755,6 +2746,89 @@ body.explorer-species-page .specimen-card > p {
     body.explorer-species-page .specimen-card > .plant-photo img {
         aspect-ratio: 16 / 9;
     }
+}
+
+.photo-zoom {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: inherit;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: zoom-in;
+}
+
+.photo-zoom:focus-visible {
+    outline: 3px solid var(--sage-deep);
+    outline-offset: 3px;
+}
+
+.photo-lightbox[popover] {
+    position: fixed;
+    inset: 0;
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: calc(100vw - 24px);
+    max-height: calc(100vh - 24px);
+    margin: auto;
+    padding: 48px 16px 16px;
+    overflow: auto;
+    border: 0;
+    border-radius: 6px;
+    background: #111713;
+    color: white;
+}
+
+.photo-lightbox[popover]:not(:popover-open) {
+    display: none;
+}
+
+.photo-lightbox[popover]::backdrop {
+    background: rgba(12, 16, 13, 0.88);
+}
+
+.photo-lightbox[popover]:popover-open {
+    display: block;
+}
+
+.photo-lightbox > img,
+body.explorer-family-page .family-card .photo-lightbox > img,
+body.explorer-genus-page .genus-card .photo-lightbox > img,
+body.explorer-species-page .specimen-card .photo-lightbox > img {
+    display: block;
+    flex: none;
+    width: auto;
+    height: auto;
+    min-height: 0;
+    max-width: calc(100vw - 56px);
+    max-height: calc(100vh - 88px);
+    aspect-ratio: auto;
+    border: 0;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+.photo-lightbox-close {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+    padding: 7px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 4px;
+    background: transparent;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.photo-lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .explorer-page a {
@@ -5794,56 +5868,125 @@ body.about-joshua {
     }
 }
 /* Contribution page layout fix */
-
-/* Image source button on the Acknowledgement page. */
-.acknowledgement-page .ack-source-description {
-    margin: 0 0 12px;
-    line-height: 1.6;
+/* 修改：使用 Flexbox 垂直布局并强制子元素居中对齐 */
+.contribution-page .page_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 确保标题与表单在中轴线上严格对齐 */
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 24px;
+    box-sizing: border-box;
 }
 
-.acknowledgement-page .ack-list .ack-source-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 11px 16px;
-    border: 1px solid var(--sage-deep);
-    border-radius: 4px;
+.contribution-page .page-header {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 0 30px 0;
+}
+
+.contribution-page .record-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    background: var(--paper-card);
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+/* 1. 移除 fieldset 的原生外框与边线 */
+.contribution-page fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+}
+
+/* 2. 重置 legend 样式，使其看起来像干净的子标题 */
+.contribution-page legend {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--sage-deep);
+    padding: 0 0 8px 0;
+    margin-bottom: 16px;
+    border-bottom: 1px dashed var(--line-soft);
+    width: 100%;
+}
+
+/* 3. 优化输入框、下拉框与文本域 */
+.contribution-page input[type="text"],
+.contribution-page select,
+.contribution-page textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background-color: var(--paper);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contribution-page input[type="text"]:focus,
+.contribution-page select:focus,
+.contribution-page textarea:focus {
+    outline: none;
+    border-color: var(--sage-deep);
+    box-shadow: 0 0 0 3px rgba(78, 97, 68, 0.15);
+    background-color: #FFFFFF;
+}
+
+/* 4. 优化提示文字与标签 */
+.contribution-page label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+
+.contribution-page .hint {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-top: 4px;
+}
+
+/* 5. 按钮风格升级 */
+.contribution-page .form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.contribution-page .btn-submit {
     background: var(--sage-deep);
     color: var(--paper);
-    font-family: 'Work Sans', sans-serif;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    text-decoration: none;
-    word-break: normal;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
-.acknowledgement-page .ack-list .ack-source-button:hover {
-    border-color: var(--ink);
+.contribution-page .btn-submit:hover {
     background: var(--ink);
-    text-decoration: none;
 }
 
-.acknowledgement-page .ack-list .ack-source-button:focus-visible {
-    outline: 2px solid var(--sage-deep);
-    outline-offset: 3px;
+.contribution-page .btn-reset {
+    background: transparent;
+    color: var(--ink-soft);
+    padding: 12px 20px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
 }
 
-.contribution-page .page_main{
-    max-width:900px;
-    margin:0 auto;
-    padding:50px 24px;
-}
-
-.contribution-page .page-header{
-    max-width:800px;
-    margin:0 auto 30px;
-}
-
-.contribution-page .record-form{
-    max-width:800px;
-    margin:0 auto;
-    background:var(--paper-card);
-    padding:20px;
-    border:1px solid var(--line);
-    border-radius:8px;
+.contribution-page .btn-reset:hover {
+    background: var(--paper-deep);
+    color: var(--ink);
 }
