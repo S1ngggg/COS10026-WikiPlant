@@ -3605,89 +3605,6 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
     width: 34%;
 }
 
-.explorer-page .filter-bar {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-}
-
-.explorer-page .filter-bar>.groups,
-.explorer-page .filter-bar>.family-grid,
-.explorer-page .filter-bar>.family-section {
-    flex: 1 1 100%;
-    margin-top: 30px;
-    padding-top: 26px;
-    border-top: 1px solid var(--line);
-}
-
-.explorer-page .filter-bar input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    width: 1px;
-    height: 1px;
-}
-
-.explorer-page .filter-bar label {
-    display: inline-flex;
-    align-items: center;
-    min-height: 38px;
-    cursor: pointer;
-    padding: 7px 16px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    font-size: 0.9rem;
-    background: var(--paper-card);
-    color: var(--ink-soft);
-    line-height: 1.2;
-    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-
-.explorer-page .filter-bar label:hover {
-    border-color: var(--sage-deep);
-    color: var(--sage-deep);
-}
-
-.explorer-page .filter-bar .filter-heading {
-    flex: 1 1 100%;
-    margin-top: 12px;
-    padding-top: 14px;
-    border-top: 1px solid var(--line-soft);
-    color: var(--ink);
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.explorer-page .filter-bar .filter-heading:first-child {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: 0;
-}
-
-@media (max-width: 520px) {
-    .explorer-page .filter-bar {
-        gap: 8px;
-    }
-
-    .explorer-page .filter-bar label {
-        min-height: 36px;
-        padding: 7px 12px;
-        font-size: 0.84rem;
-    }
-}
-
-.explorer-page .filter-bar input[type="radio"]:checked+label {
-    background: var(--sage-deep);
-    border-color: var(--sage-deep);
-    color: var(--paper);
-}
-
-.explorer-page .filter-bar input[type="radio"]:focus-visible+label {
-    outline: 2px solid var(--sage-deep);
-    outline-offset: 2px;
-}
-
 .explorer-page .specimen-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -3695,101 +3612,7 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
 }
 
 .explorer-page .group {
-    display: none;
-}
-
-.explorer-page #f-all:checked~.groups .group,
-.explorer-page #f-araceae:checked~.groups .group[data-family="araceae"],
-.explorer-page #f-rosaceae:checked~.groups .group[data-family="rosaceae"],
-.explorer-page #f-fabaceae:checked~.groups .group[data-family="fabaceae"],
-.explorer-page #f-asparagaceae:checked~.groups .group[data-family="asparagaceae"] {
     display: contents;
-}
-
-.explorer-page .filter-bar>.family-grid .family-card,
-.explorer-page .filter-bar>.family-section {
-    display: none;
-}
-
-.explorer-page #f-all:checked~.family-grid .family-card,
-.explorer-page #f-araceae:checked~.family-grid #araceae,
-.explorer-page #f-rosaceae:checked~.family-grid #rosaceae,
-.explorer-page #f-fabaceae:checked~.family-grid #fabaceae,
-.explorer-page #f-asparagaceae:checked~.family-grid #asparagaceae {
-    display: grid;
-}
-
-.explorer-page #f-all:checked~.family-section,
-.explorer-page #f-araceae:checked~#araceae,
-.explorer-page #f-rosaceae:checked~#rosaceae,
-.explorer-page #f-fabaceae:checked~#fabaceae,
-.explorer-page #f-asparagaceae:checked~#asparagaceae {
-    display: block;
-}
-
-.explorer-page #g-monstera:checked~.family-section .genus-card:not(#monstera),
-.explorer-page #g-spathiphyllum:checked~.family-section .genus-card:not(#spathiphyllum),
-.explorer-page #g-rosa:checked~.family-section .genus-card:not(#rosa),
-.explorer-page #g-fragaria:checked~.family-section .genus-card:not(#fragaria),
-.explorer-page #g-lathyrus:checked~.family-section .genus-card:not(#lathyrus),
-.explorer-page #g-trifolium:checked~.family-section .genus-card:not(#trifolium),
-.explorer-page #g-dracaena:checked~.family-section .genus-card:not(#dracaena),
-.explorer-page #g-chlorophytum:checked~.family-section .genus-card:not(#chlorophytum) {
-    display: none;
-}
-
-.explorer-page #g-monstera:checked~#rosaceae,
-.explorer-page #g-monstera:checked~#fabaceae,
-.explorer-page #g-monstera:checked~#asparagaceae,
-.explorer-page #g-spathiphyllum:checked~#rosaceae,
-.explorer-page #g-spathiphyllum:checked~#fabaceae,
-.explorer-page #g-spathiphyllum:checked~#asparagaceae,
-.explorer-page #g-rosa:checked~#araceae,
-.explorer-page #g-rosa:checked~#fabaceae,
-.explorer-page #g-rosa:checked~#asparagaceae,
-.explorer-page #g-fragaria:checked~#araceae,
-.explorer-page #g-fragaria:checked~#fabaceae,
-.explorer-page #g-fragaria:checked~#asparagaceae,
-.explorer-page #g-lathyrus:checked~#araceae,
-.explorer-page #g-lathyrus:checked~#rosaceae,
-.explorer-page #g-lathyrus:checked~#asparagaceae,
-.explorer-page #g-trifolium:checked~#araceae,
-.explorer-page #g-trifolium:checked~#rosaceae,
-.explorer-page #g-trifolium:checked~#asparagaceae,
-.explorer-page #g-dracaena:checked~#araceae,
-.explorer-page #g-dracaena:checked~#rosaceae,
-.explorer-page #g-dracaena:checked~#fabaceae,
-.explorer-page #g-chlorophytum:checked~#araceae,
-.explorer-page #g-chlorophytum:checked~#rosaceae,
-.explorer-page #g-chlorophytum:checked~#fabaceae {
-    display: none;
-}
-
-.explorer-page #g-monstera:checked~.groups .genus-heading:not(#genus-monstera),
-.explorer-page #g-monstera:checked~.groups .specimen-card:not(#monstera):not([id^="monstera-"]),
-.explorer-page #g-monstera:checked~.groups .family-heading:not(#araceae),
-.explorer-page #g-spathiphyllum:checked~.groups .genus-heading:not(#genus-spathiphyllum),
-.explorer-page #g-spathiphyllum:checked~.groups .specimen-card:not(#spathiphyllum):not([id^="spathiphyllum-"]),
-.explorer-page #g-spathiphyllum:checked~.groups .family-heading:not(#araceae),
-.explorer-page #g-rosa:checked~.groups .genus-heading:not(#genus-rosa),
-.explorer-page #g-rosa:checked~.groups .specimen-card:not(#rosa):not([id^="rosa-"]),
-.explorer-page #g-rosa:checked~.groups .family-heading:not(#rosaceae),
-.explorer-page #g-fragaria:checked~.groups .genus-heading:not(#genus-fragaria),
-.explorer-page #g-fragaria:checked~.groups .specimen-card:not(#fragaria):not([id^="fragaria-"]),
-.explorer-page #g-fragaria:checked~.groups .family-heading:not(#rosaceae),
-.explorer-page #g-lathyrus:checked~.groups .genus-heading:not(#genus-lathyrus),
-.explorer-page #g-lathyrus:checked~.groups .specimen-card:not(#lathyrus-oleraceus):not(#lathyrus-fulvus),
-.explorer-page #g-lathyrus:checked~.groups .family-heading:not(#fabaceae),
-.explorer-page #g-trifolium:checked~.groups .genus-heading:not(#genus-trifolium),
-.explorer-page #g-trifolium:checked~.groups .specimen-card:not(#trifolium-pratense):not(#trifolium-repens),
-.explorer-page #g-trifolium:checked~.groups .family-heading:not(#fabaceae),
-.explorer-page #g-dracaena:checked~.groups .genus-heading:not(#genus-dracaena),
-.explorer-page #g-dracaena:checked~.groups .specimen-card:not(#dracaena):not([id^="dracaena-"]),
-.explorer-page #g-dracaena:checked~.groups .family-heading:not(#asparagaceae),
-.explorer-page #g-chlorophytum:checked~.groups .genus-heading:not(#genus-chlorophytum),
-.explorer-page #g-chlorophytum:checked~.groups .specimen-card:not(#chlorophytum):not([id^="chlorophytum-"]),
-.explorer-page #g-chlorophytum:checked~.groups .family-heading:not(#asparagaceae) {
-    display: none;
 }
 
 .explorer-page .family-heading {
@@ -4091,7 +3914,8 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
     line-height: 1.6;
 }
 
-.cta-text-box .cta-btn {
+.cta-text-box .cta-btn,
+.explorer-page .page-header .cta-btn {
     display: inline-block;
     font-family: 'Work Sans', sans-serif;
     font-size: 1.05rem;
@@ -4105,7 +3929,8 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.cta-text-box .cta-btn:hover {
+.cta-text-box .cta-btn:hover,
+.explorer-page .page-header .cta-btn:hover {
     background-color: var(--ink, #2B3323);
     border-color: var(--ink, #2B3323);
     transform: translateY(-2px);
