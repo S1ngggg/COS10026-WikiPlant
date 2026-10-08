@@ -5990,3 +5990,41 @@ body.about-joshua {
     background: var(--paper-deep);
     color: var(--ink);
 }
+
+/* Acknowledgement image source button. */
+.acknowledgement-page .ack-source-description {
+    margin: 0 0 12px;
+    line-height: 1.6;
+}
+
+.acknowledgement-page .ack-list .ack-source-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    max-width: 100%;
+    min-height: 44px;
+    padding: 11px 18px;
+    border: 1px solid var(--sage-deep);
+    border-radius: 6px;
+    background: var(--sage-deep);
+    color: var(--paper);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    word-break: normal;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.acknowledgement-page .ack-list .ack-source-button:hover {
+    border-color: var(--ink);
+    background: var(--ink);
+    text-decoration: none;
+}
+
+.acknowledgement-page .ack-list .ack-source-button:focus-visible {
+    outline: 2px solid var(--sage-deep);
+    outline-offset: 3px;
+}
