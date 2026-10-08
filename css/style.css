@@ -3422,89 +3422,6 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
     width: 34%;
 }
 
-.explorer-page .filter-bar {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-}
-
-.explorer-page .filter-bar>.groups,
-.explorer-page .filter-bar>.family-grid,
-.explorer-page .filter-bar>.family-section {
-    flex: 1 1 100%;
-    margin-top: 30px;
-    padding-top: 26px;
-    border-top: 1px solid var(--line);
-}
-
-.explorer-page .filter-bar input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    width: 1px;
-    height: 1px;
-}
-
-.explorer-page .filter-bar label {
-    display: inline-flex;
-    align-items: center;
-    min-height: 38px;
-    cursor: pointer;
-    padding: 7px 16px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    font-size: 0.9rem;
-    background: var(--paper-card);
-    color: var(--ink-soft);
-    line-height: 1.2;
-    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-}
-
-.explorer-page .filter-bar label:hover {
-    border-color: var(--sage-deep);
-    color: var(--sage-deep);
-}
-
-.explorer-page .filter-bar .filter-heading {
-    flex: 1 1 100%;
-    margin-top: 12px;
-    padding-top: 14px;
-    border-top: 1px solid var(--line-soft);
-    color: var(--ink);
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.explorer-page .filter-bar .filter-heading:first-child {
-    margin-top: 0;
-    padding-top: 0;
-    border-top: 0;
-}
-
-@media (max-width: 520px) {
-    .explorer-page .filter-bar {
-        gap: 8px;
-    }
-
-    .explorer-page .filter-bar label {
-        min-height: 36px;
-        padding: 7px 12px;
-        font-size: 0.84rem;
-    }
-}
-
-.explorer-page .filter-bar input[type="radio"]:checked+label {
-    background: var(--sage-deep);
-    border-color: var(--sage-deep);
-    color: var(--paper);
-}
-
-.explorer-page .filter-bar input[type="radio"]:focus-visible+label {
-    outline: 2px solid var(--sage-deep);
-    outline-offset: 2px;
-}
-
 .explorer-page .specimen-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -3512,101 +3429,7 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
 }
 
 .explorer-page .group {
-    display: none;
-}
-
-.explorer-page #f-all:checked~.groups .group,
-.explorer-page #f-araceae:checked~.groups .group[data-family="araceae"],
-.explorer-page #f-rosaceae:checked~.groups .group[data-family="rosaceae"],
-.explorer-page #f-fabaceae:checked~.groups .group[data-family="fabaceae"],
-.explorer-page #f-asparagaceae:checked~.groups .group[data-family="asparagaceae"] {
     display: contents;
-}
-
-.explorer-page .filter-bar>.family-grid .family-card,
-.explorer-page .filter-bar>.family-section {
-    display: none;
-}
-
-.explorer-page #f-all:checked~.family-grid .family-card,
-.explorer-page #f-araceae:checked~.family-grid #araceae,
-.explorer-page #f-rosaceae:checked~.family-grid #rosaceae,
-.explorer-page #f-fabaceae:checked~.family-grid #fabaceae,
-.explorer-page #f-asparagaceae:checked~.family-grid #asparagaceae {
-    display: grid;
-}
-
-.explorer-page #f-all:checked~.family-section,
-.explorer-page #f-araceae:checked~#araceae,
-.explorer-page #f-rosaceae:checked~#rosaceae,
-.explorer-page #f-fabaceae:checked~#fabaceae,
-.explorer-page #f-asparagaceae:checked~#asparagaceae {
-    display: block;
-}
-
-.explorer-page #g-monstera:checked~.family-section .genus-card:not(#monstera),
-.explorer-page #g-spathiphyllum:checked~.family-section .genus-card:not(#spathiphyllum),
-.explorer-page #g-rosa:checked~.family-section .genus-card:not(#rosa),
-.explorer-page #g-fragaria:checked~.family-section .genus-card:not(#fragaria),
-.explorer-page #g-lathyrus:checked~.family-section .genus-card:not(#lathyrus),
-.explorer-page #g-trifolium:checked~.family-section .genus-card:not(#trifolium),
-.explorer-page #g-dracaena:checked~.family-section .genus-card:not(#dracaena),
-.explorer-page #g-chlorophytum:checked~.family-section .genus-card:not(#chlorophytum) {
-    display: none;
-}
-
-.explorer-page #g-monstera:checked~#rosaceae,
-.explorer-page #g-monstera:checked~#fabaceae,
-.explorer-page #g-monstera:checked~#asparagaceae,
-.explorer-page #g-spathiphyllum:checked~#rosaceae,
-.explorer-page #g-spathiphyllum:checked~#fabaceae,
-.explorer-page #g-spathiphyllum:checked~#asparagaceae,
-.explorer-page #g-rosa:checked~#araceae,
-.explorer-page #g-rosa:checked~#fabaceae,
-.explorer-page #g-rosa:checked~#asparagaceae,
-.explorer-page #g-fragaria:checked~#araceae,
-.explorer-page #g-fragaria:checked~#fabaceae,
-.explorer-page #g-fragaria:checked~#asparagaceae,
-.explorer-page #g-lathyrus:checked~#araceae,
-.explorer-page #g-lathyrus:checked~#rosaceae,
-.explorer-page #g-lathyrus:checked~#asparagaceae,
-.explorer-page #g-trifolium:checked~#araceae,
-.explorer-page #g-trifolium:checked~#rosaceae,
-.explorer-page #g-trifolium:checked~#asparagaceae,
-.explorer-page #g-dracaena:checked~#araceae,
-.explorer-page #g-dracaena:checked~#rosaceae,
-.explorer-page #g-dracaena:checked~#fabaceae,
-.explorer-page #g-chlorophytum:checked~#araceae,
-.explorer-page #g-chlorophytum:checked~#rosaceae,
-.explorer-page #g-chlorophytum:checked~#fabaceae {
-    display: none;
-}
-
-.explorer-page #g-monstera:checked~.groups .genus-heading:not(#genus-monstera),
-.explorer-page #g-monstera:checked~.groups .specimen-card:not(#monstera):not([id^="monstera-"]),
-.explorer-page #g-monstera:checked~.groups .family-heading:not(#araceae),
-.explorer-page #g-spathiphyllum:checked~.groups .genus-heading:not(#genus-spathiphyllum),
-.explorer-page #g-spathiphyllum:checked~.groups .specimen-card:not(#spathiphyllum):not([id^="spathiphyllum-"]),
-.explorer-page #g-spathiphyllum:checked~.groups .family-heading:not(#araceae),
-.explorer-page #g-rosa:checked~.groups .genus-heading:not(#genus-rosa),
-.explorer-page #g-rosa:checked~.groups .specimen-card:not(#rosa):not([id^="rosa-"]),
-.explorer-page #g-rosa:checked~.groups .family-heading:not(#rosaceae),
-.explorer-page #g-fragaria:checked~.groups .genus-heading:not(#genus-fragaria),
-.explorer-page #g-fragaria:checked~.groups .specimen-card:not(#fragaria):not([id^="fragaria-"]),
-.explorer-page #g-fragaria:checked~.groups .family-heading:not(#rosaceae),
-.explorer-page #g-lathyrus:checked~.groups .genus-heading:not(#genus-lathyrus),
-.explorer-page #g-lathyrus:checked~.groups .specimen-card:not(#lathyrus-oleraceus):not(#lathyrus-fulvus),
-.explorer-page #g-lathyrus:checked~.groups .family-heading:not(#fabaceae),
-.explorer-page #g-trifolium:checked~.groups .genus-heading:not(#genus-trifolium),
-.explorer-page #g-trifolium:checked~.groups .specimen-card:not(#trifolium-pratense):not(#trifolium-repens),
-.explorer-page #g-trifolium:checked~.groups .family-heading:not(#fabaceae),
-.explorer-page #g-dracaena:checked~.groups .genus-heading:not(#genus-dracaena),
-.explorer-page #g-dracaena:checked~.groups .specimen-card:not(#dracaena):not([id^="dracaena-"]),
-.explorer-page #g-dracaena:checked~.groups .family-heading:not(#asparagaceae),
-.explorer-page #g-chlorophytum:checked~.groups .genus-heading:not(#genus-chlorophytum),
-.explorer-page #g-chlorophytum:checked~.groups .specimen-card:not(#chlorophytum):not([id^="chlorophytum-"]),
-.explorer-page #g-chlorophytum:checked~.groups .family-heading:not(#asparagaceae) {
-    display: none;
 }
 
 .explorer-page .family-heading {
@@ -4012,7 +3835,8 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
     line-height: 1.6;
 }
 
-.cta-text-box .cta-btn {
+.cta-text-box .cta-btn,
+.explorer-page .page-header .cta-btn {
     display: inline-block;
     font-family: 'Work Sans', sans-serif;
     font-size: 1.05rem;
@@ -4026,7 +3850,8 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.cta-text-box .cta-btn:hover {
+.cta-text-box .cta-btn:hover,
+.explorer-page .page-header .cta-btn:hover {
     background-color: var(--ink, #2B3323);
     border-color: var(--ink, #2B3323);
     transform: translateY(-2px);
@@ -5907,6 +5732,237 @@ body.about-joshua {
         margin: 0;
     }
 }
+.member-details-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.member-details-table th,
+.member-details-table td{
+    border:1px solid #dcdcdc;
+    padding:15px;
+}
+
+.member-details-table th{
+    width:200px;
+    background:#f5f5f5;
+    text-align:left;
+}
+
+.image-cell{
+    width:280px;
+    text-align:center;
+    vertical-align:top;
+}
+
+.image-cell img{
+    width:220px;
+    border-radius:10px;
+}
+/* 适配 Sean 样式的两列表格结构 */
+.about-page .about-profile-bryan .about-profile-table .about-label-column {
+    width: 30%;
+}
+
+.about-page .about-profile-bryan .about-info-row > th {
+    padding: 24px 18px;
+    border-right: 1px solid #D0D5C6;
+    border-top: 1px solid #D0D5C6;
+    background-color: #E8EDE1; /* 左侧浅绿背景色 */
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.85em;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.about-page .about-profile-bryan .about-profile-value {
+    padding: 24px 28px;
+    border-top: 1px solid #D0D5C6;
+    background-color: #FFFEFA; /* 右侧白色背景色 */
+    vertical-align: middle;
+    font-size: 0.9em;
+    overflow-wrap: anywhere;
+}
+
+.about-page .about-profile-bryan .about-contact {
+    text-align: left;
+}
+
+.about-page .about-profile-bryan .about-portrait-cell {
+    padding: 36px 24px 20px;
+    text-align: center;
+}
+
+.about-page .about-profile-bryan .about-portrait {
+    display: flow-root;
+    float: none;
+    width: min(240px, 100%);
+    margin: 0 auto;
+}
+/* ==========================================
+   PROFILE PAGE (MODERN GRADIENT STYLE - OVERRIDE)
+   ========================================== */
+
+/* ==========================================
+   PROFILE PAGE (MATCH SITE BOTANICAL THEME)
+   ========================================== */
+
+/* 1. 恢复页面整体背景为网站原有的米黄色 */
+body.profile-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--paper, #F3EFE2) !important;
+    color: var(--ink, #2B3323);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.profile-page .profile-hub {
+    width: min(100% - 48px, 1100px);
+    margin: 0 auto;
+    padding: 60px 0 40px;
+    flex: 1;
+}
+
+/* 2. 顶部胶囊标题框：改用浅黄纸质卡片与深绿色文字 */
+.profile-page .team-intro {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: none;
+}
+
+.profile-page .team-title-capsule {
+    display: inline-block;
+    background: var(--paper-card, #F8F5EA);
+    color: var(--ink, #2B3323);
+    padding: 18px 60px;
+    border-radius: 20px;
+    border: 1px solid var(--line, #C7BC98);
+    box-shadow: 3px 4px 0 var(--shadow, rgba(43, 51, 35, 0.14));
+}
+
+.profile-page .profile-eyebrow {
+    margin: 0 0 4px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--sage-deep, #4E6144);
+}
+
+.profile-page .team-intro h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--ink, #2B3323);
+    font-family: 'Fraunces', serif;
+}
+
+/* 3. 团队卡片 Grid (单排4个) */
+.profile-page .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    justify-content: center;
+}
+
+/* 卡片整体容器：使用米白背景与泥土色边框 */
+.profile-page .member-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--paper-card, #F8F5EA) !important;
+    border-radius: 24px !important;
+    border: 1px solid var(--line, #C7BC98) !important;
+    padding: 0 !important;
+    min-height: auto !important;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 3px 4px 0 var(--shadow, rgba(43, 51, 35, 0.14));
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.profile-page .member-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 4px 8px 16px rgba(43, 51, 35, 0.15);
+    border-color: var(--sage-deep, #4E6144) !important;
+    background: var(--paper-deep, #EAE2CB) !important;
+}
+
+/* 卡片上半部分：森林绿渐变背景 + 圆形头像框 */
+.profile-page .card-header-bg {
+    height: 120px;
+    background: linear-gradient(180deg, var(--sage-deep, #4E6144) 0%, var(--sage, #7C9473) 100%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.profile-page .avatar-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid var(--paper-card, #F8F5EA);
+    background: var(--paper, #F3EFE2);
+    overflow: hidden;
+    transform: translateY(35px);
+    box-shadow: 0 4px 10px rgba(43, 51, 35, 0.15);
+    flex-shrink: 0;
+}
+
+.profile-page .avatar-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    display: block;
+}
+
+/* 卡片下半部分：衬线体名字与绿色 Student ID */
+.profile-page .card-content {
+    padding: 45px 16px 24px;
+    text-align: center;
+    color: var(--ink, #2B3323);
+}
+
+.profile-page .card-content h2 {
+    margin: 0 0 6px !important;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--ink, #2B3323);
+    font-family: 'Fraunces', serif;
+}
+
+.profile-page .member-id {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--sage-deep, #4E6144);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+/* 响应式适配 */
+@media (max-width: 1000px) {
+    .profile-page .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .profile-page .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-page .team-title-capsule {
+        padding: 14px 24px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 /* Contribution page layout fix */
 /* 修改：使用 Flexbox 垂直布局并强制子元素居中对齐 */
 .contribution-page .page_main {
