@@ -51,6 +51,10 @@ summary:focus-visible {
 }
 
 .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     border-bottom: 1px solid var(--line);
     background: var(--paper);
     font-family: 'Work Sans', sans-serif;
@@ -1485,6 +1489,77 @@ body.contributor-page {
     line-height: 1.7 !important;
 }
 
+.contributor-page .observation-comments {
+    grid-column: 1 / -1;
+    padding: 0 24px;
+    background: var(--paper-card);
+    border-top: 1px solid var(--line-soft);
+}
+
+.contributor-page .observation-comments summary {
+    padding: 10px 0;
+    color: var(--sage-deep);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contributor-page .observation-comments[open] {
+    padding-bottom: 18px;
+}
+
+.contributor-page .comment-form-note {
+    margin: 4px 0 14px;
+    color: var(--ink-soft);
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+}
+
+.contributor-page .observation-comment-form {
+    display: grid;
+    gap: 14px;
+}
+
+.contributor-page .comment-field label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.contributor-page .observation-comment-form input,
+.contributor-page .observation-comment-form select,
+.contributor-page .observation-comment-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--paper-card);
+    color: var(--ink);
+    font: 14px 'Work Sans', sans-serif;
+}
+
+.contributor-page .observation-comment-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contributor-page .comment-submit {
+    justify-self: start;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--sage-deep);
+    color: var(--paper);
+    font: 600 13px 'Work Sans', sans-serif;
+    cursor: pointer;
+}
+
+.contributor-page .comment-submit:hover {
+    background: var(--ink);
+}
+
 /* =========================================================
    8. USEFUL INFORMATION FOR RECORD
    ========================================================= */
@@ -1931,12 +2006,9 @@ body.contributor-page {
 
 .contributor-page .flip-return {
     display: inline-flex;
-
-    margin-top: auto;
+    margin-top: 12px;  /* 原本是 auto */
     padding-top: 12px;
-
     color: var(--paper-deep);
-
     font-size: 11px;
     font-weight: 700;
     cursor: pointer;
@@ -4728,14 +4800,35 @@ body.contributor-page {
     display: grid;
     grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
     gap: 32px;
+    align-items: stretch;
 }
 
 .contributor-page .sidebar {
     min-width: 0;
 }
+.contributor-page .main_content_area,
+.contributor-page .sidebar{
+    display: flex;
+    flex-direction: column;
+}
+.contributor-page .guidance-section{
+    margin-bottom: 0;
+}
+.contributor-page .main_content_area{
+    height: 100%;
+}
 
+.contributor-page .sidebar{
+    height: 100%;
+}
 .contributor-page .main_content_area {
     min-width: 0;
+}
+
+@media (min-width: 1051px) {
+    .contributor-page .sidebar .guidance-section {
+        flex: 1;
+    }
 }
 
 .contrib-page .content_section,
@@ -5267,7 +5360,8 @@ a.back-to-top {
 .contributor-page .people-section {
     clear: both;
     width: 100%;
-    margin-top: 30px;
+    grid-column: 1 / -1;
+    margin-top: 0;
 }
 
 body.about-terry-page {
@@ -5420,6 +5514,20 @@ body.about-terry-page .about-pagination-link:hover .about-pagination-arrow {
     grid-column: 1 / -1;
     margin-top: 30px;
 }
+.contributor-page .observation-section{
+    flex-grow: 1;
+}
+
+/* Fix: Explore plant records links on flip cards */
+.contributor-page .contributor-card-back {
+    overflow-y: auto;
+}
+
+.contributor-page .contribution-copy {
+    position: relative;
+}
+
+
 
 body.profile-page {
     display: flex;
