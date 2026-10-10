@@ -3160,7 +3160,7 @@ body.explorer-species-page .specimen-card .photo-lightbox > img {
 .explorer-page .specimen-card .common-name {
     font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 2px;
+    margin: 0 0 2px;
 }
 
 .explorer-page .specimen-card .sci {
@@ -3934,6 +3934,11 @@ body.identify-page {
     box-shadow: 3px 4px 0 var(--shadow);
     padding: 40px 30px;
     margin-bottom: 30px;
+}
+
+.identify-page .how-it-works > h2 {
+    margin: 0 0 24px;
+    text-align: center;
 }
 
 .identify-page .static-photo-container {

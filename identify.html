@@ -27,7 +27,7 @@
                 <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
                 <span class="nav-close" aria-hidden="true">&times;</span>
             </label>
-            <label class="nav-backdrop" for="navigation-toggle" aria-hidden="true"></label>
+            <label class="nav-backdrop" for="navigation-toggle"></label>
             <div class="nav-drawer-panel" id="navigation-panel">
                 <div class="nav-drawer-topbar"><span>Navigation</span></div>
             <nav class="main-nav" aria-label="Primary">
@@ -75,9 +75,11 @@
                 plant, and here will match it against our reference database to suggest the most likely species.</p>
         </div>
 
-        <section class="how-it-works card-container">
+        <section class="how-it-works card-container"
+            aria-labelledby="photo-upload-heading">
+            <h2 id="photo-upload-heading">Choose a plant photo</h2>
             <form class="static-photo-container" aria-label="Plant photo selection">
-                <label class="static-photo upload-box" for="plant-photo" aria-label="Upload a plant photo"
+                <label class="static-photo upload-box" for="plant-photo"
                     title="Upload a plant photo">
                     <img src="images/identify.png" alt="Upload a plant photo" class="cloud-upload" id="upload-icon">
                     <input id="plant-photo" type="file" accept="image/*">
