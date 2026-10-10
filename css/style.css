@@ -4133,6 +4133,17 @@ body.about-page {
     line-height: 1.7;
 }
 
+body.about-bryan-page {
+    background-color: #F3EFE2;
+    background-image:
+        linear-gradient(rgba(243, 239, 226, 0.55), rgba(243, 239, 226, 0.55)),
+        url("../images/aboutus bryan background.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .about-page .about-main {
     max-width: 1040px;
     margin: 0 auto;
@@ -6232,8 +6243,8 @@ body.home-page :is(a, span):not(.site-header *, .universal-footer *, h1 *, h2 *,
     }
 }
 
-/* Sean's email action sits below the profile table. */
-.about-page .about-profile-sean .about-contact .about-email-button {
+/* Keep member email actions consistent below each profile table. */
+.about-page .about-profile .about-contact .about-email-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -6249,13 +6260,13 @@ body.home-page :is(a, span):not(.site-header *, .universal-footer *, h1 *, h2 *,
     text-decoration: none;
 }
 
-.about-page .about-profile-sean .about-contact .about-email-button:hover {
+.about-page .about-profile .about-contact .about-email-button:hover {
     border-color: var(--ink);
     background: var(--ink);
     color: var(--paper-card);
 }
 
-.about-page .about-profile-sean .about-profile-contact {
+.about-page .about-profile .about-profile-contact {
     padding: 20px 28px;
     background: var(--paper-card);
     text-align: center;
