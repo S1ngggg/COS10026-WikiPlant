@@ -3987,7 +3987,7 @@ body.identify-page {
 }
 
 .identify-page .identifier-intro h1 {
-    font-family: 'Fraunces', serif;
+    font-family: Cambria, Georgia, serif;
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     color: var(--ink);
     margin-bottom: 15px;
@@ -4133,6 +4133,65 @@ body.identify-page {
     display: block;
 }
 
+.identify-page .figures-container .photo-zoom {
+    flex: none;
+    height: auto;
+    border-radius: 6px;
+}
+
+.identify-page .photo-lightbox {
+    overflow: hidden;
+    overscroll-behavior: contain;
+}
+
+.identify-page .photo-detail-viewport {
+    width: min(1120px, calc(100vw - 56px));
+    max-height: calc(100vh - 88px);
+    overflow: auto;
+    overscroll-behavior: contain;
+}
+
+.identify-page .photo-detail-toggle,
+.identify-page .photo-detail-image {
+    width: min(1120px, calc(100vw - 56px));
+}
+
+.identify-page .photo-detail-image {
+    display: block;
+    list-style: none;
+    transform-origin: top left;
+    cursor: zoom-in;
+}
+
+.identify-page .photo-detail-image::-webkit-details-marker {
+    display: none;
+}
+
+.identify-page .photo-detail-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: calc(100vh - 88px);
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+.identify-page .photo-detail-toggle[open] > .photo-detail-image {
+    transform: scale(2);
+    cursor: zoom-out;
+}
+
+.identify-page .photo-detail-image:focus-visible,
+.identify-page .photo-detail-viewport:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: -2px;
+}
+
+.identify-page .photo-lightbox-close {
+    top: 4px;
+}
+
 .identify-page figcaption {
     font-size: 85%;
     color: var(--ink-soft);
@@ -4169,11 +4228,13 @@ body.identify-page {
     background: var(--paper-deep);
 }
 
-.identify-page aside h2 {
+.identify-page aside h2,
+.identify-page aside h3 {
     font-size: 1.05rem;
     color: var(--sage-deep);
     border-bottom: none;
-    margin-bottom: 8px;
+    margin: 0.83em 0 8px;
+    padding-bottom: 8px;
 }
 
 .identify-page main::after {
@@ -6528,5 +6589,200 @@ body.about-sean-page {
 @media (prefers-reduced-motion: reduce) {
     .about-sean-page .sean-ball {
         animation: none;
+    }
+}
+
+/* ===================================================
+   How to Identify — 4-step process flow
+   =================================================== */
+
+.how-to-identify {
+    max-width: var(--max);
+    margin: 0 auto 2.5rem;
+    padding: 2.5rem 32px 2rem;
+    border-top: 2px solid var(--line-soft);
+}
+
+.identify-page .how-to-identify h2 {
+    font-family: Cambria, Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--ink);
+    margin: 0 0 0.4rem;
+    text-align: center;
+}
+
+.how-to-identify__desc {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--ink-soft);
+    text-align: center;
+    margin: 0 0 2rem;
+}
+
+/* Ordered list reset */
+.identify-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+}
+
+/* Each li = card + arrow */
+.identify-step {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex: 1 1 180px;
+    max-width: 240px;
+}
+
+.identify-step:last-child {
+    flex: 1 1 180px;
+    max-width: 240px;
+}
+
+/* The card block */
+.identify-step__card {
+    flex: 1;
+    background: var(--paper-card);
+    border: 1.5px solid var(--line-soft);
+    border-radius: 10px;
+    padding: 1.25rem 1rem 1.1rem;
+    text-align: center;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.identify-step__card:hover {
+    box-shadow: 0 6px 22px var(--shadow);
+    border-color: var(--sage);
+    transform: translateY(-3px);
+}
+
+/* Step number badge */
+.identify-step__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    background: var(--sage-deep);
+    color: var(--paper);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.65rem;
+    line-height: 1;
+}
+
+.identify-step__title {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.93rem;
+    color: var(--ink);
+    margin: 0 0 0.45rem;
+    line-height: 1.3;
+}
+
+.identify-step__body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Arrow connector */
+.identify-step__arrow {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    color: var(--clay);
+    padding: 0 0.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: -1rem;
+}
+
+/* Responsive: stack vertically on narrow screens */
+@media (max-width: 700px) {
+    .identify-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .identify-step {
+        flex-direction: column;
+        align-items: center;
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .identify-step:last-child {
+        max-width: 320px;
+    }
+
+    .identify-step__card {
+        width: 100%;
+    }
+
+    .identify-step__arrow {
+        transform: rotate(90deg);
+        padding: 0.25rem 0;
+        margin-top: 0;
+    }
+}
+
+/* Identify: four-step arrow flow within the existing upload container. */
+.identify-page .how-it-works > .how-to-identify {
+    max-width: none;
+    margin: 34px 0 0;
+    padding: 28px 0 0;
+    border-top: 2px solid var(--line-soft);
+    background: transparent;
+    box-shadow: none;
+}
+
+.identify-page .how-it-works .identify-steps {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    align-items: stretch;
+}
+
+.identify-page .how-it-works .identify-step,
+.identify-page .how-it-works .identify-step:last-child {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+}
+
+.identify-page .how-it-works .identify-step__card {
+    min-width: 0;
+    background: var(--paper);
+}
+
+.identify-page .how-it-works .identify-step__arrow {
+    padding: 0 4px;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 700px) {
+    .identify-page .how-it-works .identify-steps {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .identify-page .how-it-works .identify-step {
+        flex-direction: column;
+    }
+
+    .identify-page .how-it-works .identify-step__arrow {
+        transform: rotate(90deg);
+        margin: 6px 0;
     }
 }

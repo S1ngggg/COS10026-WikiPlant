@@ -1,7 +1,6 @@
 <!-- identify.html - Plant's Notebook - Identify Page -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +10,8 @@
         content="plant identification, herbarium specimen, scientific name, common name, biodiversity">
     <meta name="author" content="Sean Liew">
     <title>Identify - Plant's Notebook</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=identify-title-font-2">
 </head>
-
 <body class="identify-page">
 
     <header class="site-header">
@@ -30,57 +28,54 @@
             <label class="nav-backdrop" for="navigation-toggle"></label>
             <div class="nav-drawer-panel" id="navigation-panel">
                 <div class="nav-drawer-topbar"><span>Navigation</span></div>
-            <nav class="main-nav" aria-label="Primary">
-                <ul>
-                    <li class="nav-drop">
-                        <a href="explorer.html">Explore</a>
-                        <ul class="drop-menu">
-                            <li><a href="explorer-family.html">By Family</a></li>
-                            <li><a href="explorer-genus.html">By Genus</a></li>
-                            <li><a href="explorer-species.html">By Species</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="identify.html" aria-current="page">Identify</a></li>
-                    <li class="nav-drop">
-                        <a href="contributor.html">Contribute</a>
-                        <ul class="drop-menu">
-                            <li><a href="contribution.html">Contribution Form</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-drop">
-                        <a href="profile.html">About Us</a>
-                        <ul class="drop-menu">
-                            <li><a href="aboutus-sean.html">Sean</a></li>
-                            <li><a href="aboutus-bryan.html">Bryan</a></li>
-                            <li><a href="aboutus-joshua.html">Joshua</a></li>
-                            <li><a href="aboutus-terry.html">Terry</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="enquiry_form.html">Enquiry</a></li>
-                </ul>
-            </nav>
-            <div class="auth-buttons">
-                <a href="register.html" class="register-btn">Register</a>
-                <a href="login.html" class="login-btn">Login</a>
-            </div>
+                <nav class="main-nav" aria-label="Primary">
+                    <ul>
+                        <li class="nav-drop">
+                            <a href="explorer.html">Explore</a>
+                            <ul class="drop-menu">
+                                <li><a href="explorer-family.html">By Family</a></li>
+                                <li><a href="explorer-genus.html">By Genus</a></li>
+                                <li><a href="explorer-species.html">By Species</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="identify.html" aria-current="page">Identify</a></li>
+                        <li class="nav-drop">
+                            <a href="contributor.html">Contribute</a>
+                            <ul class="drop-menu">
+                                <li><a href="contribution.html">Contribution Form</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-drop">
+                            <a href="profile.html">About Us</a>
+                            <ul class="drop-menu">
+                                <li><a href="aboutus-sean.html">Sean</a></li>
+                                <li><a href="aboutus-bryan.html">Bryan</a></li>
+                                <li><a href="aboutus-joshua.html">Joshua</a></li>
+                                <li><a href="aboutus-terry.html">Terry</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="enquiry_form.html">Enquiry</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="register.html" class="register-btn">Register</a>
+                    <a href="login.html" class="login-btn">Login</a>
+                </div>
             </div>
         </div>
-
     </header>
 
     <main>
         <div class="identifier-intro">
             <h1>Upload a Photo to Identify a Plant</h1>
             <p>Not sure what plant you're looking at? Simply upload a clear photo of the leaf, flower, or the whole
-                plant, and here will match it against our reference database to suggest the most likely species.</p>
+                plant, and our identification system is intended to compare it with a reference database to suggest the most likely species.</p>
         </div>
 
-        <section class="how-it-works card-container"
-            aria-labelledby="photo-upload-heading">
+        <section class="how-it-works card-container" aria-labelledby="photo-upload-heading">
             <h2 id="photo-upload-heading">Choose a plant photo</h2>
             <form class="static-photo-container" aria-label="Plant photo selection">
-                <label class="static-photo upload-box" for="plant-photo"
-                    title="Upload a plant photo">
+                <label class="static-photo upload-box" for="plant-photo" title="Upload a plant photo">
                     <img src="images/identify.png" alt="Upload a plant photo" class="cloud-upload" id="upload-icon">
                     <input id="plant-photo" type="file" accept="image/*">
                 </label>
@@ -89,89 +84,166 @@
                     <button type="reset" class="identify-reset-btn">Reset</button>
                 </div>
             </form>
-        </section>
-
-        <section>
-            <h2>Plant Information</h2>
-            <p class="para">
-                Plant identification can help users learn more about unfamiliar plants by
-                connecting their appearance with useful botanical information. An identified
-                plant may have both a common name and a scientific name, allowing users to
-                understand how it is classified. For example, basil is commonly known as
-                Basil, while its scientific name is <em>Ocimum basilicum</em>. Learning the
-                scientific name can make it easier to distinguish a plant from other species
-                with similar common names.
-            </p>
-            <p class="para">
-                Identification information can also help users recognise plants in gardens,
-                parks and other environments. Images provide a visual reference, while plant
-                details give users a clearer understanding of the species being presented. The
-                information on this page uses basil as an example of how plant identification
-                results can be organised in a clear and accessible way. The page also provides
-                basic growing instructions, useful tools and care information to help users
-                learn more about the identified plant.
-            </p>
-
-            <h3>Sample Images</h3>
-            <div class="figures-container">
-                <figure>
-                    <img src="images/ocimum-basilicum-le-kstarr3.jpg" alt="Close-up of green basil leaves">
-                </figure>
-                <figure>
-                    <img src="images/ocimumbasilicumthyrsiflora1.jpg" alt="Basil plant growing outdoors">
-                </figure>
+            <div class="how-to-identify" aria-labelledby="how-to-identify-heading">
+                <h2 id="how-to-identify-heading">How to Identify a Plant</h2>
+                <p class="how-to-identify__desc">Follow these simple steps to identify a plant using our website.</p>
+                <ol class="identify-steps" aria-label="Identification steps">
+                    <li class="identify-step">
+                        <div class="identify-step__card">
+                            <span class="identify-step__num" aria-hidden="true">1</span>
+                            <h3 class="identify-step__title">Take a Photo</h3>
+                            <p class="identify-step__body">Capture a clear photo of the plant, focusing on leaves, flowers, or stems.</p>
+                        </div>
+                        <span class="identify-step__arrow" aria-hidden="true">&#8594;</span>
+                    </li>
+                    <li class="identify-step">
+                        <div class="identify-step__card">
+                            <span class="identify-step__num" aria-hidden="true">2</span>
+                            <h3 class="identify-step__title">Upload the Photo</h3>
+                            <p class="identify-step__body">Select the plant image from your device using the upload button.</p>
+                        </div>
+                        <span class="identify-step__arrow" aria-hidden="true">&#8594;</span>
+                    </li>
+                    <li class="identify-step">
+                        <div class="identify-step__card">
+                            <span class="identify-step__num" aria-hidden="true">3</span>
+                            <h3 class="identify-step__title">Identify the Plant</h3>
+                            <p class="identify-step__body">Click the Identify button to begin the identification process.</p>
+                        </div>
+                        <span class="identify-step__arrow" aria-hidden="true">&#8594;</span>
+                    </li>
+                    <li class="identify-step">
+                        <div class="identify-step__card">
+                            <span class="identify-step__num" aria-hidden="true">4</span>
+                            <h3 class="identify-step__title">View Identification Results</h3>
+                            <p class="identify-step__body">Review the plant&#8217;s common name, scientific name, classification, and morphological characteristics.</p>
+                        </div>
+                    </li>
+                </ol>
             </div>
 
-            <h3>Plant Details</h3>
-            <dl>
-                <dt>Name</dt>
-                <dd>Basil</dd>
-                <dt>Scientific Name</dt>
-                <dd><em>Ocimum basilicum</em></dd>
-            </dl>
+        </section>
 
-            <h3>Tutorial</h3>
-            <p class="para">
-                The steps below describe how to grow basil from seed, shown in the order they
-                should be carried out.
-            </p>
-            <ol>
-                <li>Start seeds indoors 6-8 weeks before the last frost.</li>
-                <li>Plant in well-draining soil and water gently.</li>
-                <li>Keep the pot or tray in a sunny spot.</li>
-                <li>Wait for germination, which occurs in 5-10 days.</li>
-            </ol>
+        <section aria-labelledby="sample-result-heading">
 
-            <h3>Tool</h3>
-            <ul>
-                <li>Pruning Shears: for trimming leaves and maintaining plant shape.</li>
-                <li>Potting Soil: rich, well-draining soil to support root growth.</li>
-                <li>Seed Tray: ideal for starting seeds indoors before transplanting.</li>
-            </ul>
-
-            <h3>Care</h3>
-            <ul>
-                <li>Water regularly, keeping the soil evenly moist but not soggy.</li>
-                <li>Provide 6-8 hours of full sunlight daily for optimal growth.</li>
-                <li>Pinch off top leaves regularly to promote bushy growth and prevent flowering.</li>
-                <li>Avoid overwatering, as it can lead to root rot.</li>
-            </ul>
-
-            <aside>
-                <h2>Plant Tip</h2>
+            <article>
+                <h2 id="sample-result-heading">Sample Identification Result</h2>
                 <p class="para">
-                    Basil grows well in warm conditions and needs plenty of sunlight. Regular
-                    trimming can encourage new growth and help the plant remain bushy.
+                    The following example presents the identification details of Dog Rose
+                    (<em>Rosa canina</em>), including its taxonomic classification,
+                    physical characteristics, and habitat information.
                 </p>
-            </aside>
+                <h3>Sample Images</h3>
+                <div class="figures-container">
+                    <figure>
+                        <button type="button" class="photo-zoom" popovertarget="identify-dog-rose-bud-photo"
+                            aria-haspopup="dialog" aria-label="View full-size Dog Rose flower bud photo">
+                            <img src="images/plants/Rosa_noflower.jpg" alt="Unopened flower bud of Dog Rose">
+                        </button>
+                        <figcaption><strong>Figure 1:</strong> Unopened flower bud of Dog Rose (<em>Rosa canina</em>).</figcaption>
+                    </figure>
+                    <figure>
+                        <button type="button" class="photo-zoom" popovertarget="identify-dog-rose-flower-photo"
+                            aria-haspopup="dialog" aria-label="View full-size Dog Rose open flower photo">
+                            <img src="images/plants/rosa-canina.jpg" alt="Fully opened flower of Dog Rose">
+                        </button>
+                        <figcaption><strong>Figure 2:</strong> Fully opened flower of Dog Rose (<em>Rosa canina</em>).</figcaption>
+                    </figure>
+                </div>
+                <div class="photo-lightbox" id="identify-dog-rose-bud-photo" popover="auto"
+                    role="dialog" aria-label="Full-size Dog Rose flower bud photo">
+                    <button type="button" class="photo-lightbox-close" popovertarget="identify-dog-rose-bud-photo"
+                        popovertargetaction="hide" aria-label="Close full-size photo">&times;</button>
+                    <div class="photo-detail-viewport" role="region" aria-label="Scrollable Dog Rose flower bud photo" tabindex="0">
+                        <details class="photo-detail-toggle">
+                            <summary class="photo-detail-image" aria-label="Toggle 2 times zoom for Dog Rose flower bud photo"
+                                title="Click to zoom 2×; click again to fit. Scroll to view details.">
+                                <img src="images/plants/Rosa_noflower.jpg" alt="Unopened flower bud of Dog Rose">
+                            </summary>
+                        </details>
+                    </div>
+                </div>
+                <div class="photo-lightbox" id="identify-dog-rose-flower-photo" popover="auto"
+                    role="dialog" aria-label="Full-size Dog Rose open flower photo">
+                    <button type="button" class="photo-lightbox-close" popovertarget="identify-dog-rose-flower-photo"
+                        popovertargetaction="hide" aria-label="Close full-size photo">&times;</button>
+                    <div class="photo-detail-viewport" role="region" aria-label="Scrollable Dog Rose open flower photo" tabindex="0">
+                        <details class="photo-detail-toggle">
+                            <summary class="photo-detail-image" aria-label="Toggle 2 times zoom for Dog Rose open flower photo"
+                                title="Click to zoom 2×; click again to fit. Scroll to view details.">
+                                <img src="images/plants/rosa-canina.jpg" alt="Fully opened flower of Dog Rose">
+                            </summary>
+                        </details>
+                    </div>
+                </div>
+                <h3>Plant Details</h3>
+                <dl>
+                    <dt>Common Name</dt>
+                    <dd>Dog Rose</dd>
+                    <dt>Scientific Name</dt>
+                    <dd><em>Rosa canina</em> L.</dd>
+                    <dt>Family</dt>
+                    <dd>Rosaceae</dd>
+                    <dt>Genus</dt>
+                    <dd><em>Rosa</em></dd>
+                    <dt>Species</dt>
+                    <dd><em>Rosa canina</em></dd>
+                    <dt>Plant Type</dt>
+                    <dd>Deciduous, perennial flowering shrub with arching, prickly stems.</dd>
+                </dl>
+                <h3>Morphological Characteristics</h3>
+                <dl>
+                    <dt>Growth Habit</dt>
+                    <dd>A vigorous, arching or scrambling shrub that may climb over surrounding vegetation for support.</dd>
+                    <dt>Height</dt>
+                    <dd>Typically 1&ndash;3 m, occasionally taller when supported by other plants.</dd>
+                    <dt>Leaves</dt>
+                    <dd>Pinnately compound leaves, usually consisting of 5&ndash;7 oval to elliptical green leaflets.</dd>
+                    <dt>Leaf Arrangement</dt>
+                    <dd>Alternate, with leaves arranged individually along the stems.</dd>
+                    <dt>Leaf Margin</dt>
+                    <dd>Serrated (toothed), with small, pointed teeth along the edges of each leaflet.</dd>
+                    <dt>Stem</dt>
+                    <dd>Long, arching woody stems bearing sharp, curved or hooked prickles.</dd>
+                    <dt>Flowers</dt>
+                    <dd>Usually pale pink or white, with five petals and numerous yellow stamens surrounding the central reproductive structures.</dd>
+                    <dt>Fruit</dt>
+                    <dd>Oval, red to orange-red rose hips, typically 15&ndash;20 mm long, containing numerous small fruits (achenes).</dd>
+                    <dt>Aroma</dt>
+                    <dd>Flowers generally have a faint, sweet fragrance.</dd>
+                </dl>
+                <h3>Habitat &amp; Distribution</h3>
+                <p class="para">
+                    Dog Rose is native to much of Europe, northwestern Africa, and parts of
+                    western and central Asia. It commonly grows in hedgerows, woodland edges,
+                    scrubland, and open grasslands.
+                </p>
+                <h3>Care Tips</h3>
+                <ul>
+                    <li><strong>Watering:</strong> Water during prolonged dry periods, especially while the plant is becoming established. Avoid waterlogged soil.</li>
+                    <li><strong>Sunlight:</strong> Grow in full sun or partial shade, with sunnier positions generally encouraging better flowering.</li>
+                    <li><strong>Soil:</strong> Use fertile, moist but well-drained soil.</li>
+                    <li><strong>Temperature:</strong> Dog Rose is a hardy temperate shrub that tolerates winter frost and seasonal cold conditions.</li>
+                </ul>
+                <aside aria-labelledby="identification-notes-heading">
+                    <h3 id="identification-notes-heading">Identification Notes</h3>
+                    <p class="para">
+                        Dog Rose can resemble other wild rose species, making identification based
+                        on flower appearance alone unreliable. Examine the combination of leaflets,
+                        hooked prickles, sepals, and rose hips, and compare these characteristics
+                        with reliable botanical references before confirming the species.
+                    </p>
+                </aside>
 
-<div class="wrap cta-wrap">
-    <div class="cta-text-box">
-      <h2>Help Us Grow the Index</h2>
-      <p>WikiPlant is powered by a community of plant enthusiasts. See who is building our database or join us to share your own knowledge.</p>
-      <a href="contributor.html" class="cta-btn">Meet Our Contributors</a>
-    </div>
-  </div>
+            </article>
+            <div class="wrap cta-wrap">
+                <div class="cta-text-box">
+                    <h2>Help Us Grow Our Plant Database</h2>
+                    <p>Discovered a plant that is not yet in our database? Share your findings and help expand our collection of plant species for scientific research and biodiversity conservation.</p>
+                    <a href="contribution.html" class="cta-btn">Contribute a Plant</a>
+                </div>
+            </div>
+
         </section>
     </main>
 
@@ -222,8 +294,8 @@
             </div>
         </div>
     </footer>
-<!-- Back to Top Button -->
-<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
-</body>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+</body>
 </html>
