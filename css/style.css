@@ -6741,3 +6741,82 @@ body.about-sean-page {
         transition: none;
     }
 }
+
+/* acknowledgement page */
+
+.acknowledgement-main {
+    width: min(var(--max), calc(100% - 48px));
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 48px 0 60px;
+}
+
+.acknowledgement-main .page-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 480;
+    color: var(--ink);
+    text-align: center;
+    margin: 0 0 16px;
+}
+
+.acknowledgement-main .intro-text {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+    margin: 0 auto 48px;
+}
+
+.ack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.ack-section {
+    background: var(--paper-card);
+    border: 1px solid var(--line-soft);
+    border-radius: 10px;
+    padding: 32px;
+    box-shadow: 3px 4px 0 var(--shadow);
+}
+
+.ack-section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    color: var(--sage-deep);
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--line);
+}
+
+.ack-page-heading {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clay-deep);
+    margin: 24px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line-soft);
+}
+
+.ack-section>.ack-page-heading:first-of-type {
+    margin-top: 0;
+}
+
+.ack-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 16px;
+}
+
+@media (max-width: 860px) {
+    .ack-grid {
+        grid-template-columns: 1fr;
+    }
+}
