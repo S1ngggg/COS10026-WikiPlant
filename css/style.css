@@ -2705,10 +2705,10 @@ body.explorer-species-page .specimen-card {
     grid-template-areas:
         "photo common"
         "photo scientific"
+        "photo description"
         "photo ranks"
         "photo distribution"
-        "photo map"
-        "photo description";
+        "photo map";
     align-items: start;
     column-gap: 30px;
     row-gap: 10px;
@@ -2798,10 +2798,10 @@ body.explorer-species-page .specimen-card>p {
             "photo"
             "common"
             "scientific"
+            "description"
             "ranks"
             "distribution"
-            "map"
-            "description";
+            "map";
         gap: 12px;
         padding: 18px;
     }
