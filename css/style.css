@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root {
     --paper: #F3EFE2;
     --paper-deep: #EAE2CB;
@@ -2005,7 +2006,8 @@ body.contributor-page {
 
 .contributor-page .flip-return {
     display: inline-flex;
-    margin-top: 12px;  /* 原本是 auto */
+    margin-top: 12px;
+    /* 原本是 auto */
     padding-top: 12px;
     color: var(--paper-deep);
     font-size: 11px;
@@ -2549,7 +2551,7 @@ body.explorer-family-page .family-card-content .btn {
     margin-top: auto;
 }
 
-body.explorer-family-page .family-card > .plant-photo {
+body.explorer-family-page .family-card>.plant-photo {
     width: 100%;
     height: 100%;
     min-height: 320px;
@@ -2558,7 +2560,7 @@ body.explorer-family-page .family-card > .plant-photo {
     border-radius: 9px;
 }
 
-body.explorer-family-page .family-card > .plant-photo img {
+body.explorer-family-page .family-card>.plant-photo img {
     width: 100%;
     height: 100%;
     min-height: 320px;
@@ -2588,13 +2590,13 @@ body.explorer-family-page .family-card .distribution {
         padding: 18px;
     }
 
-    body.explorer-family-page .family-card > .plant-photo,
-    body.explorer-family-page .family-card > .plant-photo img {
+    body.explorer-family-page .family-card>.plant-photo,
+    body.explorer-family-page .family-card>.plant-photo img {
         min-height: 0;
         height: auto;
     }
 
-    body.explorer-family-page .family-card > .plant-photo img {
+    body.explorer-family-page .family-card>.plant-photo img {
         aspect-ratio: 16 / 9;
     }
 }
@@ -2623,19 +2625,19 @@ body.explorer-genus-page .genus-card {
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-body.explorer-genus-page .genus-card > .plant-photo,
-body.explorer-genus-page .genus-card > .plant-photo img {
+body.explorer-genus-page .genus-card>.plant-photo,
+body.explorer-genus-page .genus-card>.plant-photo img {
     aspect-ratio: 4 / 3;
     min-height: 0;
 }
 
-body.explorer-genus-page .genus-card > h3 {
+body.explorer-genus-page .genus-card>h3 {
     grid-area: title;
     margin: 0;
     font-size: clamp(1.8rem, 3vw, 2.4rem);
 }
 
-body.explorer-genus-page .genus-card > .plant-photo {
+body.explorer-genus-page .genus-card>.plant-photo {
     grid-area: photo;
     width: 100%;
     height: 100%;
@@ -2645,7 +2647,7 @@ body.explorer-genus-page .genus-card > .plant-photo {
     border-radius: 9px;
 }
 
-body.explorer-genus-page .genus-card > .plant-photo img {
+body.explorer-genus-page .genus-card>.plant-photo img {
     width: 100%;
     height: 100%;
     min-height: 320px;
@@ -2654,12 +2656,12 @@ body.explorer-genus-page .genus-card > .plant-photo img {
     border-radius: 9px;
 }
 
-body.explorer-genus-page .genus-card > p {
+body.explorer-genus-page .genus-card>p {
     grid-area: description;
     margin: 0;
 }
 
-body.explorer-genus-page .genus-card > .distribution {
+body.explorer-genus-page .genus-card>.distribution {
     grid-area: distribution;
     margin: 0;
     padding: 10px 12px;
@@ -2670,17 +2672,17 @@ body.explorer-genus-page .genus-card > .distribution {
     font-size: 0.9rem;
 }
 
-body.explorer-genus-page .genus-card > .map-frame {
+body.explorer-genus-page .genus-card>.map-frame {
     grid-area: map;
     margin: 0;
 }
 
-body.explorer-genus-page .genus-card > .rank-line {
+body.explorer-genus-page .genus-card>.rank-line {
     grid-area: tags;
     margin: 0;
 }
 
-body.explorer-genus-page .genus-card > .btn {
+body.explorer-genus-page .genus-card>.btn {
     grid-area: action;
     margin: 0;
 }
@@ -2721,7 +2723,7 @@ body.explorer-species-page .genus-heading {
     grid-column: 1 / -1;
 }
 
-body.explorer-species-page .specimen-card > .plant-photo {
+body.explorer-species-page .specimen-card>.plant-photo {
     grid-area: photo;
     width: 100%;
     height: 100%;
@@ -2731,7 +2733,7 @@ body.explorer-species-page .specimen-card > .plant-photo {
     border-radius: 9px;
 }
 
-body.explorer-species-page .specimen-card > .plant-photo img {
+body.explorer-species-page .specimen-card>.plant-photo img {
     width: 100%;
     height: 100%;
     min-height: 320px;
@@ -2740,20 +2742,20 @@ body.explorer-species-page .specimen-card > .plant-photo img {
     border-radius: 9px;
 }
 
-body.explorer-species-page .specimen-card > .common-name {
+body.explorer-species-page .specimen-card>.common-name {
     grid-area: common;
 }
 
-body.explorer-species-page .specimen-card > .sci {
+body.explorer-species-page .specimen-card>.sci {
     grid-area: scientific;
 }
 
-body.explorer-species-page .specimen-card > .rank-line {
+body.explorer-species-page .specimen-card>.rank-line {
     grid-area: ranks;
     margin-bottom: 0;
 }
 
-body.explorer-species-page .specimen-card > .distribution {
+body.explorer-species-page .specimen-card>.distribution {
     grid-area: distribution;
     margin: 0;
     padding: 10px 12px;
@@ -2764,12 +2766,12 @@ body.explorer-species-page .specimen-card > .distribution {
     font-size: 0.9rem;
 }
 
-body.explorer-species-page .specimen-card > .map-frame {
+body.explorer-species-page .specimen-card>.map-frame {
     grid-area: map;
     margin: 0;
 }
 
-body.explorer-species-page .specimen-card > p {
+body.explorer-species-page .specimen-card>p {
     grid-area: description;
     align-self: end;
     margin: 0;
@@ -2804,20 +2806,20 @@ body.explorer-species-page .specimen-card > p {
         padding: 18px;
     }
 
-    body.explorer-genus-page .genus-card > .plant-photo,
-    body.explorer-genus-page .genus-card > .plant-photo img,
-    body.explorer-species-page .specimen-card > .plant-photo,
-    body.explorer-species-page .specimen-card > .plant-photo img {
+    body.explorer-genus-page .genus-card>.plant-photo,
+    body.explorer-genus-page .genus-card>.plant-photo img,
+    body.explorer-species-page .specimen-card>.plant-photo,
+    body.explorer-species-page .specimen-card>.plant-photo img {
         height: auto;
         min-height: 0;
     }
 
-    body.explorer-genus-page .genus-card > .plant-photo img,
-    body.explorer-species-page .specimen-card > .plant-photo img {
+    body.explorer-genus-page .genus-card>.plant-photo img,
+    body.explorer-species-page .specimen-card>.plant-photo img {
         aspect-ratio: 16 / 9;
     }
 
-    body.explorer-genus-page .genus-card > .rank-line {
+    body.explorer-genus-page .genus-card>.rank-line {
         margin-top: 2px;
     }
 }
@@ -2869,10 +2871,10 @@ body.explorer-species-page .specimen-card > p {
     display: block;
 }
 
-.photo-lightbox > img,
-body.explorer-family-page .family-card .photo-lightbox > img,
-body.explorer-genus-page .genus-card .photo-lightbox > img,
-body.explorer-species-page .specimen-card .photo-lightbox > img {
+.photo-lightbox>img,
+body.explorer-family-page .family-card .photo-lightbox>img,
+body.explorer-genus-page .genus-card .photo-lightbox>img,
+body.explorer-species-page .specimen-card .photo-lightbox>img {
     display: block;
     flex: none;
     width: auto;
@@ -4011,7 +4013,7 @@ body.identify-page {
     margin-bottom: 30px;
 }
 
-.identify-page .how-it-works > h2 {
+.identify-page .how-it-works>h2 {
     margin: 0 0 24px;
     text-align: center;
 }
@@ -4809,21 +4811,25 @@ body.contributor-page {
 .contributor-page .sidebar {
     min-width: 0;
 }
+
 .contributor-page .main_content_area,
-.contributor-page .sidebar{
+.contributor-page .sidebar {
     display: flex;
     flex-direction: column;
 }
-.contributor-page .guidance-section{
+
+.contributor-page .guidance-section {
     margin-bottom: 0;
 }
-.contributor-page .main_content_area{
+
+.contributor-page .main_content_area {
     height: 100%;
 }
 
-.contributor-page .sidebar{
+.contributor-page .sidebar {
     height: 100%;
 }
+
 .contributor-page .main_content_area {
     min-width: 0;
 }
@@ -5517,7 +5523,8 @@ body.about-terry-page .about-pagination-link:hover .about-pagination-arrow {
     grid-column: 1 / -1;
     margin-top: 30px;
 }
-.contributor-page .observation-section{
+
+.contributor-page .observation-section {
     flex-grow: 1;
 }
 
@@ -5859,43 +5866,46 @@ body.about-joshua {
         margin: 0;
     }
 }
-.member-details-table{
-    width:100%;
-    border-collapse:collapse;
+
+.member-details-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .member-details-table th,
-.member-details-table td{
-    border:1px solid #dcdcdc;
-    padding:15px;
+.member-details-table td {
+    border: 1px solid #dcdcdc;
+    padding: 15px;
 }
 
-.member-details-table th{
-    width:200px;
-    background:#f5f5f5;
-    text-align:left;
+.member-details-table th {
+    width: 200px;
+    background: #f5f5f5;
+    text-align: left;
 }
 
-.image-cell{
-    width:280px;
-    text-align:center;
-    vertical-align:top;
+.image-cell {
+    width: 280px;
+    text-align: center;
+    vertical-align: top;
 }
 
-.image-cell img{
-    width:220px;
-    border-radius:10px;
+.image-cell img {
+    width: 220px;
+    border-radius: 10px;
 }
+
 /* 适配 Sean 样式的两列表格结构 */
 .about-page .about-profile-bryan .about-profile-table .about-label-column {
     width: 30%;
 }
 
-.about-page .about-profile-bryan .about-info-row > th {
+.about-page .about-profile-bryan .about-info-row>th {
     padding: 24px 18px;
     border-right: 1px solid #D0D5C6;
     border-top: 1px solid #D0D5C6;
-    background-color: #E8EDE1; /* 左侧浅绿背景色 */
+    background-color: #E8EDE1;
+    /* 左侧浅绿背景色 */
     text-align: center;
     vertical-align: middle;
     font-size: 0.85em;
@@ -5906,7 +5916,8 @@ body.about-joshua {
 .about-page .about-profile-bryan .about-profile-value {
     padding: 24px 28px;
     border-top: 1px solid #D0D5C6;
-    background-color: #FFFEFA; /* 右侧白色背景色 */
+    background-color: #FFFEFA;
+    /* 右侧白色背景色 */
     vertical-align: middle;
     font-size: 0.9em;
     overflow-wrap: anywhere;
@@ -5927,6 +5938,7 @@ body.about-joshua {
     width: min(240px, 100%);
     margin: 0 auto;
 }
+
 /* ==========================================
    PROFILE PAGE (MODERN GRADIENT STYLE - OVERRIDE)
    ========================================== */
@@ -6095,7 +6107,8 @@ body.profile-page {
 .contribution-page .page_main {
     display: flex;
     flex-direction: column;
-    align-items: center; /* 确保标题与表单在中轴线上严格对齐 */
+    align-items: center;
+    /* 确保标题与表单在中轴线上严格对齐 */
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
@@ -6119,6 +6132,7 @@ body.profile-page {
     border-radius: 8px;
     box-sizing: border-box;
 }
+
 /* 1. 移除 fieldset 的原生外框与边线 */
 .contribution-page fieldset {
     border: none;
@@ -6294,6 +6308,7 @@ body.profile-page {
 }
 
 @media (max-width: 620px) {
+
     .account-page .account-form .field-row,
     .account-page .account-form .field-row-two {
         grid-template-columns: 1fr;
@@ -6324,7 +6339,7 @@ body.home-page :is(a, span):not(.site-header *, .universal-footer *, h1 *, h2 *,
     font-size: 12px;
 }
 
-.home-page .home-collection-item > p {
+.home-page .home-collection-item>p {
     line-height: 1.65;
     max-width: none;
 }
@@ -6528,5 +6543,201 @@ body.about-sean-page {
 @media (prefers-reduced-motion: reduce) {
     .about-sean-page .sean-ball {
         animation: none;
+    }
+}
+
+
+/* For enhancement page */
+
+
+/* Enhancement Page Specific Styles */
+
+.enhancement-main {
+    background-color: #e8f5e9;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+.enhancement-main .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.enhancement-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.enhancement-section {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 2px dashed #b9d6b9;
+    scroll-margin-top: 100px;
+}
+
+.enhancement-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.enhancement-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.enhancement-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.enhancement-image {
+    flex: 1 1 45%;
+    min-width: 0;
+}
+
+.enhancement-image video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    display: block;
+    border: 1px solid #ccc;
+    background-color: #1b1b1b;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.enhancement-details {
+    flex: 1 1 50%;
+    min-width: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.enhancement-details p {
+    margin: 0 0 25px;
+}
+
+.tags-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.tags-group h3 {
+    flex: 0 0 125px;
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 6px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1;
+}
+
+.tag {
+    border: 1px solid #56604a;
+    border-radius: 4px;
+    padding: 7px 12px;
+    background-color: #f8f5ea;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-decoration: none;
+    color: #2b3323;
+    display: inline-block;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.tag:hover,
+.tag:focus-visible {
+    background-color: #4e6144;
+    color: #fff;
+    border-color: #4e6144;
+}
+
+.tag:focus-visible {
+    outline: 3px solid #8f4f2c;
+    outline-offset: 3px;
+}
+
+.all-pages {
+    margin-top: 5px;
+    padding: 15px;
+    background-color: #f8f5ea;
+    border-left: 4px solid #4e6144;
+    border-radius: 4px;
+}
+
+.all-pages h3 {
+    margin: 0 0 12px;
+    font-size: 1rem;
+}
+
+.all-pages .tags-container {
+    gap: 8px;
+}
+
+.all-pages-note {
+    font-size: 0.9rem;
+    margin: 12px 0 0 !important;
+    color: #56604a;
+}
+
+@media (max-width: 768px) {
+    .enhancement-main {
+        padding: 30px 15px;
+    }
+
+    .intro-title {
+        font-size: 1.5rem;
+    }
+
+    .enhancement-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .enhancement-content {
+        flex-direction: column;
+    }
+
+    .enhancement-image,
+    .enhancement-details {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .tags-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .tags-group h3 {
+        flex-basis: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tag {
+        transition: none;
     }
 }
