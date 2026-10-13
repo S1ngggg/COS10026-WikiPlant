@@ -1,1123 +1,462 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Acknowledgement page for WikiPlant.">
-
-    <title>Acknowledgement | WikiPlant</title>
-
+    <meta name="description" content="Acknowledgement - WikiPlant references and credits.">
+    <meta name="author" content="Joshua Wong">
+    <title>WikiPlant | Acknowledgement</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        /* Acknowledgement Page Specific Styles */
-
-        .acknowledgement-main {
-            background-color: #e8f5e9;
-            padding: 40px 20px;
-            font-family: Arial, sans-serif;
-            color: #000;
-            min-height: 60vh;
-        }
-
-        .acknowledgement-main .wrap {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .page-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-
-        .intro-text {
-            text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            color: #333;
-        }
-
-        .ack-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-            gap: 30px;
-            align-items: start;
-        }
-
-        .ack-section {
-            background: #fff;
-            padding: 25px 30px;
-            border-radius: 8px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
-            border: 1px solid #ccc;
-            min-width: 0;
-        }
-
-        .ack-section h2 {
-            font-size: 1.5rem;
-            margin-top: 0;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #e8f5e9;
-            padding-bottom: 10px;
-        }
-
-        .ack-list {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .ack-list li {
-            margin-bottom: 20px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .ack-list li::before {
-            content: "\2022";
-            position: absolute;
-            left: 0;
-            top: 5px;
-            color: #4e6144;
-            font-size: 1.2rem;
-            line-height: 1.2;
-        }
-
-        .ack-list a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-
-        .ack-list a:hover {
-            text-decoration: underline;
-        }
-
-        /* Source description */
-
-        .ack-source-description {
-            margin: 0 0 8px 0;
-            color: #444;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        /* Source buttons */
-
-        .ack-source-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            width: 100%;
-            box-sizing: border-box;
-            padding: 11px 15px;
-            background-color: #4e6144;
-            color: #ffffff !important;
-            border: 1px solid #4e6144;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-decoration: none !important;
-            overflow-wrap: anywhere;
-            transition:
-                background-color 0.2s ease,
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
-        }
-
-        .ack-source-button span {
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-
-        .ack-source-button:hover {
-            background-color: #2b3323;
-            border-color: #2b3323;
-            color: #ffffff !important;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 12px rgba(43, 51, 35, 0.18);
-        }
-
-        .ack-source-button:focus {
-            outline: 3px solid rgba(78, 97, 68, 0.25);
-            outline-offset: 2px;
-        }
-
-        /* Mobile */
-
-        @media (max-width: 768px) {
-            .ack-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .acknowledgement-main {
-                padding: 30px 15px;
-            }
-
-            .ack-section {
-                padding: 22px 20px;
-            }
-
-            .page-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 
-<body class="acknowledgement-page">
-
-    <!-- Header -->
+<body class="blank-page acknowledgement-page">
 
     <header class="site-header">
         <div class="wrap">
-
             <a class="brand" href="index.html" aria-label="WikiPlant home">
                 <img src="images/logo.png" alt="WikiPlant logo">
                 <span class="brand-motto">Wiki Plant</span>
             </a>
-
-            <!-- Mobile Navigation Toggle -->
-
-            <input
-                class="nav-state"
-                type="checkbox"
-                id="navigation-toggle"
-                aria-label="Open or close navigation"
+            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation"
                 aria-controls="navigation-panel">
-
             <label class="nav-toggle" for="navigation-toggle">
-                <span class="nav-toggle-lines" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-
+                <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
                 <span class="nav-close" aria-hidden="true">&times;</span>
             </label>
-
-            <label
-                class="nav-backdrop"
-                for="navigation-toggle"
-                aria-hidden="true">
-            </label>
-
-            <!-- Navigation Panel -->
-
+            <label class="nav-backdrop" for="navigation-toggle"></label>
             <div class="nav-drawer-panel" id="navigation-panel">
-
-                <div class="nav-drawer-topbar">
-                    <span>Navigation</span>
-                </div>
-
+                <div class="nav-drawer-topbar"><span>Navigation</span></div>
                 <nav class="main-nav" aria-label="Primary">
                     <ul>
-
                         <li class="nav-drop">
-                            <a href="explorer.html" aria-haspopup="true">
-                                Explore
-                            </a>
-
+                            <a href="explorer.html">Explore</a>
                             <ul class="drop-menu">
                                 <li><a href="explorer-family.html">By Family</a></li>
                                 <li><a href="explorer-genus.html">By Genus</a></li>
                                 <li><a href="explorer-species.html">By Species</a></li>
                             </ul>
                         </li>
-
-                        <li>
-                            <a href="identify.html">Identify</a>
-                        </li>
-
+                        <li><a href="identify.html">Identify</a></li>
                         <li class="nav-drop">
-                            <a href="contributor.html" aria-haspopup="true">
-                                Contribute
-                            </a>
-
+                            <a href="contributor.html">Contribute</a>
                             <ul class="drop-menu">
-                                <li>
-                                    <a href="contribution.html">Contribution Form</a>
-                                </li>
+                                <li><a href="contribution.html">Contribution Form</a></li>
                             </ul>
                         </li>
-
                         <li class="nav-drop">
-                            <a href="profile.html" aria-haspopup="true">
-                                About Us
-                            </a>
-
+                            <a href="profile.html">About Us</a>
                             <ul class="drop-menu">
-                                <li><a href="profile.html">Sean</a></li>
+                                <li><a href="aboutus-sean.html">Sean</a></li>
                                 <li><a href="aboutus-bryan.html">Bryan</a></li>
                                 <li><a href="aboutus-joshua.html">Joshua</a></li>
                                 <li><a href="aboutus-terry.html">Terry</a></li>
                             </ul>
                         </li>
-
-                        <li>
-                            <a href="enquiry_form.html">Enquiry</a>
-                        </li>
-
+                        <li><a href="enquiry_form.html">Enquiry</a></li>
                     </ul>
                 </nav>
-
-                <!-- Authentication Buttons -->
-
                 <div class="auth-buttons">
                     <a href="register.html" class="register-btn">Register</a>
                     <a href="login.html" class="login-btn">Login</a>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-
-    <main class="acknowledgement-main" aria-label="Acknowledgement">
+    <main class="blank-main acknowledgement-main" aria-label="Acknowledgement">
         <div class="wrap">
-
-            <h1 class="page-title">Acknowledgement</h1>
-
-            <p class="intro-text">
-                All the website links used for this assignment are credited below.
-            </p>
+            <div class="page-header">
+                <h1 class="page-title">Acknowledgement</h1>
+                <p class="intro-text">All the website links used for this assignment are credited below.</p>
+            </div>
 
             <div class="ack-grid">
 
-                <!-- Photos / Pictures -->
-
+                <!-- 1. PHOTOS / PICTURES -->
                 <section class="ack-section">
-                    <h2>Photos/pictures</h2>
+                    <h2>Photos / pictures</h2>
 
+                    <h3 class="ack-page-heading">All Pages</h3>
                     <ul class="ack-list">
-
                         <li>
-                            <p class="ack-source-description">
-                                "Araceae The arum family On Explore Page"
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://www.flickr.com/photos/47439717@N05/6629764665"
-                               target="_blank" rel="noopener noreferrer">
-                                Flickr – Monstera deliciosa
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">WikiPlant Logo.</p>
+                            <a class="ack-source-button" href="#" style="pointer-events: none;">Custom designed by the
+                                WikiPlant team</a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Upload icon used for the Identify page 
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://www.flaticon.com/free-icon/upload_9479936?term=upload&amp;page=2&amp;position=15&amp;origin=tag&amp;related_id=9479936"
-                               target="_blank" rel="noopener noreferrer">
-                                Flaticon – Identify Upload Icon
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Forest tree vector reference.</p>
+                            <a class="ack-source-button" href="https://www.magnific.com/vectors/forest-trees"
+                                target="_blank" rel="noopener noreferrer">Magnific – Forest Trees <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
+                    </ul>
 
+                    <h3 class="ack-page-heading">index.html</h3>
+                    <ul class="ack-list">
                         <li>
-                            <p class="ack-source-description">
-                                The forest background image used on the Explorer main page
-                            </p>
-
+                            <p class="ack-source-description">Background image for the Index page.</p>
                             <a class="ack-source-button"
-                               href="https://access-ci.org/using-supercomputers-to-better-understand-boreal-forest-changes/"
-                               target="_blank" rel="noopener noreferrer">
-                                ACCESS – Explorer Forest Image
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://unsplash.com/photos/green-trees-on-mountain-under-white-sky-during-daytime-GQRkxNuGq10"
+                                target="_blank" rel="noopener noreferrer">Unsplash – Forest Trees <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Background image for the Index page.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://unsplash.com/photos/green-trees-on-mountain-under-white-sky-during-daytime-GQRkxNuGq10"
-                               target="_blank" rel="noopener noreferrer">
-                                Unsplash – Forest Trees
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Picture of "The WikiPlant story".</p>
+                            <a class="ack-source-button" href="https://roseandferncounseling.com/become-a-client"
+                                target="_blank" rel="noopener noreferrer">Rose &amp; Fern <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Picture of "The WikiPlant story" in Index page.
-                            </p>
-
+                            <p class="ack-source-description">Photo for Explore-family link.</p>
                             <a class="ack-source-button"
-                               href="https://roseandferncounseling.com/become-a-client"
-                               target="_blank" rel="noopener noreferrer">
-                                Rose &amp; Fern – Image Reference
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://unsplash.com/photos/green-leaves-in-close-up-photography-TCh1_-nl0jI"
+                                target="_blank" rel="noopener noreferrer">Unsplash – Green Leaves <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Photo of Explore-family page
-
-                            </p>
-
+                            <p class="ack-source-description">Photo for Explore-Genera link.</p>
                             <a class="ack-source-button"
-                               href="https://unsplash.com/photos/green-leaves-in-close-up-photography-TCh1_-nl0jI"
-                               target="_blank" rel="noopener noreferrer">
-                                Unsplash – Green Leaves
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://unsplash.com/photos/green-ferns-plant-_1UF_3TlKcQ" target="_blank"
+                                rel="noopener noreferrer">Unsplash – Green Ferns <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Photo of Explore-Genera page
-                            </p>
-
+                            <p class="ack-source-description">Photo for Explore-Species link.</p>
                             <a class="ack-source-button"
-                               href="https://unsplash.com/photos/green-ferns-plant-_1UF_3TlKcQ"
-                               target="_blank" rel="noopener noreferrer">
-                                Unsplash – Green Ferns
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://unsplash.com/photos/a-pink-flower-with-a-red-center-in-a-field-nsuW3KEHhm8"
+                                target="_blank" rel="noopener noreferrer">Unsplash – Pink Flower <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
+                    </ul>
 
+                    <h3 class="ack-page-heading">Explorer Pages</h3>
+                    <ul class="ack-list">
                         <li>
-                            <p class="ack-source-description">
-                                Pink flower with a red centre in a field.
-                            </p>
-
+                            <p class="ack-source-description">The forest background image used on the Explorer main
+                                page.</p>
                             <a class="ack-source-button"
-                               href="https://unsplash.com/photos/a-pink-flower-with-a-red-center-in-a-field-nsuW3KEHhm8"
-                               target="_blank" rel="noopener noreferrer">
-                                Unsplash – Pink Flower
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://access-ci.org/using-supercomputers-to-better-understand-boreal-forest-changes/"
+                                target="_blank" rel="noopener noreferrer">ACCESS – Explorer Forest <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Rosa canina .
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://commons.wikimedia.org/wiki/File:Rosa_canina_focus_stacked-20220522-RM-123334.jpg"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikimedia Commons – Rosa canina
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Monstera deliciosa photo.</p>
+                            <a class="ack-source-button" href="https://www.flickr.com/photos/47439717@N05/6629764665"
+                                target="_blank" rel="noopener noreferrer">Flickr – Photo <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                 Trifolium 
-                            </p>
-
+                            <p class="ack-source-description">Rosa canina photo.</p>
                             <a class="ack-source-button"
-                               href="https://commons.wikimedia.org/wiki/File:Bombus_rupestris_-_Trifolium_pratense_-_Keila.jpg"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikimedia Commons – Trifolium pratense
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://commons.wikimedia.org/wiki/File:Rosa_canina_focus_stacked-20220522-RM-123334.jpg"
+                                target="_blank" rel="noopener noreferrer">Wikimedia Commons <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant species reference from the Atlas of Living Australia.
-                            </p>
-
+                            <p class="ack-source-description">Trifolium pratense photo.</p>
                             <a class="ack-source-button"
-                               href="https://bie.ala.org.au/species/https://id.biodiversity.org.au/taxon/apni/51737722"
-                               target="_blank" rel="noopener noreferrer">
-                                Atlas of Living Australia – Plant Reference
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://commons.wikimedia.org/wiki/File:Bombus_rupestris_-_Trifolium_pratense_-_Keila.jpg"
+                                target="_blank" rel="noopener noreferrer">Wikimedia Commons <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Fragaria vesca reference page.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://sco.wikipedia.org/wiki/Fragaria_vesca"
-                               target="_blank" rel="noopener noreferrer">
-                                Scots Wikipedia – Fragaria vesca
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Fragaria vesca photo.</p>
+                            <a class="ack-source-button" href="https://sco.wikipedia.org/wiki/Fragaria_vesca"
+                                target="_blank" rel="noopener noreferrer">Scots Wikipedia <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Pisum sativum reference image.
-                            </p>
-
+                            <p class="ack-source-description">Pisum sativum / Garden Pea photo.</p>
                             <a class="ack-source-button"
-                               href="https://commons.wikimedia.org/wiki/File:Pisum_sativum_MHNT.BOT.2010.12.9.jpg"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikimedia Commons – Pisum sativum
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://commons.wikimedia.org/wiki/File:Pisum_sativum_MHNT.BOT.2010.12.9.jpg"
+                                target="_blank" rel="noopener noreferrer">Wikimedia Commons <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Socotra dragon tree reference image.
-                            </p>
-
+                            <p class="ack-source-description">Dracaena cinnabari / Socotra dragon tree photo.</p>
                             <a class="ack-source-button"
-                               href="https://ms.wikipedia.org/wiki/Fail:Socotra_dragon_tree.JPG"
-                               target="_blank" rel="noopener noreferrer">
-                                Malay Wikipedia – Socotra Dragon Tree
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://ms.wikipedia.org/wiki/Fail:Socotra_dragon_tree.JPG" target="_blank"
+                                rel="noopener noreferrer">Malay Wikipedia <span aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Wikidata reference.
-                            </p>
-
+                            <p class="ack-source-description">Other Species & Genera photos.</p>
                             <a class="ack-source-button"
-                               href="https://www.wikidata.org/wiki/Q1164349"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikidata – Q1164349
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://commons.wikimedia.org/wiki/File:Rosa_banksiae_%285698920967%29.jpg"
+                                target="_blank" rel="noopener noreferrer" style="margin-bottom: 8px;">Wikimedia – Rosa
+                                banksiae</a>
+                            <a class="ack-source-button"
+                                href="https://zh-yue.wikipedia.org/wiki/File:Trifolium_repens_inflorescence_-_Niitv%C3%A4lja.jpg"
+                                target="_blank" rel="noopener noreferrer">Cantonese Wiki – Trifolium repens</a>
                         </li>
+                    </ul>
 
+                    <h3 class="ack-page-heading">identify.html</h3>
+                    <ul class="ack-list">
                         <li>
-                            <p class="ack-source-description">
-                                Monstera acuminata reference page.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Monstera_acuminata"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Monstera acuminata
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Basil close-up photo (ocimum-basilicum-le-kstarr3.jpg)</p>
+                            <a class="ack-source-button" href="#" target="_blank" rel="noopener noreferrer"
+                                style="background-color: #6e8a5f; border-color: #6e8a5f;">[PLACEHOLDER - ADD LINK HERE]
+                                <span aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Rosa banksiae reference image.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://commons.wikimedia.org/wiki/File:Rosa_banksiae_%285698920967%29.jpg"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikimedia Commons – Rosa banksiae
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Basil outdoor photo (ocimumbasilicumthyrsiflora1.jpg)</p>
+                            <a class="ack-source-button" href="#" target="_blank" rel="noopener noreferrer"
+                                style="background-color: #6e8a5f; border-color: #6e8a5f;">[PLACEHOLDER - ADD LINK HERE]
+                                <span aria-hidden="true">&#8599;</span></a>
                         </li>
+                    </ul>
 
+                    <h3 class="ack-page-heading">aboutus-terry.html</h3>
+                    <ul class="ack-list">
                         <li>
-                            <p class="ack-source-description">
-                                Forest tree vector reference.
-                            </p>
-
+                            <p class="ack-source-description">Night sky background reference.</p>
                             <a class="ack-source-button"
-                               href="https://www.magnific.com/vectors/forest-trees"
-                               target="_blank" rel="noopener noreferrer">
-                                Magnific – Forest Trees
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://wallpapers.com/background/night-sky-background-a8b0ia6v7vmd3qs5.html"
+                                target="_blank" rel="noopener noreferrer">Wallpapers.com – Night Sky <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                CAB International plant reference.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://www.cabidigitallibrary.org/doi/abs/10.1079/cabicompendium.36858"
-                               target="_blank" rel="noopener noreferrer">
-                                CABI Digital Library – Plant Reference
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Thai basil plant reference.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://shopee.com.my/Seed-Thai-Basil-Basilicum-Aroma-Wangi-Selasih-Herb-Plant-Benih-Sayur-%E4%B9%9D%E5%B1%82%E5%A1%94-%E7%BD%97%E5%8B%92-%E7%A7%8D%E5%AD%90-i.130323771.10718703232"
-                               target="_blank" rel="noopener noreferrer">
-                                Shopee – Thai Basil
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Musk strawberry reference page.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Musk_strawberry"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Musk Strawberry
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Lathyrus fulvus reference page.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Lathyrus_fulvus"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Lathyrus fulvus
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Trifolium repens reference image.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://zh-yue.wikipedia.org/wiki/File:Trifolium_repens_inflorescence_-_Niitv%C3%A4lja.jpg"
-                               target="_blank" rel="noopener noreferrer">
-                                Cantonese Wikipedia – Trifolium repens
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Night sky background reference.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://wallpapers.com/background/night-sky-background-a8b0ia6v7vmd3qs5.html"
-                               target="_blank" rel="noopener noreferrer">
-                                Wallpapers.com – Night Sky
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Pinterest visual reference.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://es.pinterest.com/pin/2462974793764048/"
-                               target="_blank" rel="noopener noreferrer">
-                                Pinterest – Visual Reference
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
                     </ul>
                 </section>
 
-                <!-- Information -->
 
+                <!-- 2. INFORMATION -->
                 <section class="ack-section">
                     <h2>Information</h2>
 
-                    <p class="ack-source-description">
-                        Plant family, species, plant identification information,
-                        and font resources used for the WikiPlant website.
-                    </p>
-
+                    <h3 class="ack-page-heading">All Pages</h3>
                     <ul class="ack-list">
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant family information: Araceae.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Araceae"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Araceae
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Pinterest visual reference (Inspiration).</p>
+                            <a class="ack-source-button" href="https://es.pinterest.com/pin/2462974793764048/"
+                                target="_blank" rel="noopener noreferrer">Pinterest <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
+                    </ul>
 
+                    <h3 class="ack-page-heading">Explorer Pages</h3>
+                    <ul class="ack-list">
                         <li>
-                            <p class="ack-source-description">
-                                Plant family information: Rosaceae.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Rosaceae"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Rosaceae
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Monstera deliciosa info.</p>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Monstera_deliciosa"
+                                target="_blank" rel="noopener noreferrer">Wikipedia – Info <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant family information: Fabaceae.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Fabaceae"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Fabaceae
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Rosa canina info.</p>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Rosa_canina"
+                                target="_blank" rel="noopener noreferrer">Wikipedia – Info <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant family information: Asparagaceae.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Asparagaceae"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Asparagaceae
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Trifolium pratense info.</p>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Trifolium_pratense"
+                                target="_blank" rel="noopener noreferrer">Wikipedia – Info <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant species information: Monstera deliciosa.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Monstera_deliciosa"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Monstera deliciosa
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Fragaria vesca info.</p>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Fragaria_vesca"
+                                target="_blank" rel="noopener noreferrer">Wikipedia – Info <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant species information: Rhaphidophora hayi.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://www.inaturalist.org/taxa/518856-Rhaphidophora-hayi"
-                               target="_blank" rel="noopener noreferrer">
-                                iNaturalist – Rhaphidophora hayi
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Pisum sativum info.</p>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Pea" target="_blank"
+                                rel="noopener noreferrer">Wikipedia – Info <span aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant genus information: Spathiphyllum.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Spathiphyllum"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Spathiphyllum
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Dracaena cinnabari info.</p>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Dracaena_cinnabari"
+                                target="_blank" rel="noopener noreferrer">Wikipedia – Info <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant species information: Spathiphyllum cannifolium.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Spathiphyllum_cannifolium"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Spathiphyllum cannifolium
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Other Species & Genera Info.</p>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Monstera_acuminata"
+                                target="_blank" rel="noopener noreferrer" style="margin-bottom: 8px;">Wikipedia –
+                                Monstera acuminata</a>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Musk_strawberry"
+                                target="_blank" rel="noopener noreferrer" style="margin-bottom: 8px;">Wikipedia – Musk
+                                strawberry</a>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Lathyrus_fulvus"
+                                target="_blank" rel="noopener noreferrer" style="margin-bottom: 8px;">Wikipedia –
+                                Lathyrus fulvus</a>
+                            <a class="ack-source-button" href="https://www.inaturalist.org/taxa/138681-Pisum-fulvum"
+                                target="_blank" rel="noopener noreferrer" style="margin-bottom: 8px;">iNaturalist –
+                                Pisum fulvum</a>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Spathiphyllum"
+                                target="_blank" rel="noopener noreferrer" style="margin-bottom: 8px;">Wikipedia –
+                                Spathiphyllum</a>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Dracaena_trifasciata"
+                                target="_blank" rel="noopener noreferrer" style="margin-bottom: 8px;">Wikipedia –
+                                Dracaena trifasciata</a>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Chlorophytum_comosum"
+                                target="_blank" rel="noopener noreferrer">Wikipedia – Chlorophytum comosum</a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant species information: Rosa canina.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Rosa_canina"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Rosa canina
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Plant Families Information.</p>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Araceae" target="_blank"
+                                rel="noopener noreferrer" style="margin-bottom: 8px;">Wikipedia - Araceae</a>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Rosaceae" target="_blank"
+                                rel="noopener noreferrer" style="margin-bottom: 8px;">Wikipedia - Rosaceae</a>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Fabaceae" target="_blank"
+                                rel="noopener noreferrer" style="margin-bottom: 8px;">Wikipedia - Fabaceae</a>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Asparagaceae"
+                                target="_blank" rel="noopener noreferrer">Wikipedia - Asparagaceae</a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant species information: Rosa banksiae.
-                            </p>
+                            <p class="ack-source-description">Additional Plant Databases.</p>
                             <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Rosa_banksiae"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Rosa banksiae
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://bie.ala.org.au/species/https://id.biodiversity.org.au/taxon/apni/51737722"
+                                target="_blank" rel="noopener noreferrer" style="margin-bottom: 8px;">Atlas of Living
+                                Australia <span aria-hidden="true">&#8599;</span></a>
+                            <a class="ack-source-button" href="https://www.wikidata.org/wiki/Q1164349" target="_blank"
+                                rel="noopener noreferrer" style="margin-bottom: 8px;">Wikidata <span
+                                    aria-hidden="true">&#8599;</span></a>
+                            <a class="ack-source-button"
+                                href="https://www.cabidigitallibrary.org/doi/abs/10.1079/cabicompendium.36858"
+                                target="_blank" rel="noopener noreferrer">CABI Digital Library <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
+                    </ul>
 
+                    <h3 class="ack-page-heading">identify.html</h3>
+                    <ul class="ack-list">
                         <li>
-                            <p class="ack-source-description">
-                                Plant species information: Fragaria vesca.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Fragaria_vesca"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Fragaria vesca
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">General plant information: Basil.</p>
+                            <a class="ack-source-button" href="https://en.wikipedia.org/wiki/Basil" target="_blank"
+                                rel="noopener noreferrer">Wikipedia – Basil <span aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant species information: Musk strawberry.
-                            </p>
+                            <p class="ack-source-description">Thai basil plant reference.</p>
                             <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Musk_strawberry"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Musk Strawberry
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://shopee.com.my/Seed-Thai-Basil-Basilicum-Aroma-Wangi-Selasih-Herb-Plant-Benih-Sayur-%E4%B9%9D%E5%B1%82%E5%A1%94-%E7%BD%97%E5%8B%92-%E7%A7%8D%E5%AD%90-i.130323771.10718703232"
+                                target="_blank" rel="noopener noreferrer">Shopee – Thai Basil <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant information: Pea.
-                            </p>
+                            <p class="ack-source-description">Research article on modern possibilities for plant
+                                identification keys in biology education.</p>
                             <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Pea"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Pea
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://www.researchgate.net/publication/365685460_Plant_Identification_in_the_21st_Century-What_Possibilities_Do_Modern_Identification_Keys_Offer_for_Biology_Lessons"
+                                target="_blank" rel="noopener noreferrer">ResearchGate – Plant ID <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Plant species information: Pisum fulvum.
-                            </p>
+                            <p class="ack-source-description">Plant identification reference document.</p>
                             <a class="ack-source-button"
-                               href="https://www.inaturalist.org/taxa/138681-Pisum-fulvum"
-                               target="_blank" rel="noopener noreferrer">
-                                iNaturalist – Pisum fulvum
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://www.nrcs.usda.gov/sites/default/files/2022-10/Plant%20Identification.pdf"
+                                target="_blank" rel="noopener noreferrer">USDA NRCS – PDF <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Plant species information: Trifolium pratense.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Trifolium_pratense"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Trifolium pratense
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Plant species information: Trifolium repens.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Trifolium_repens"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Trifolium repens
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Plant species information: Dracaena trifasciata.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Dracaena_trifasciata"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Dracaena trifasciata
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Plant species information: Dracaena cinnabari.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Dracaena_cinnabari"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Dracaena cinnabari
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Plant species information: Chlorophytum comosum.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Chlorophytum_comosum"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Chlorophytum comosum
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Plant species information: Chlorophytum borivilianum.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Chlorophytum_borivilianum"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Chlorophytum borivilianum
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                General plant information: Basil.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://en.wikipedia.org/wiki/Basil"
-                               target="_blank" rel="noopener noreferrer">
-                                Wikipedia – Basil
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Research article on modern possibilities for plant
-                                identification keys in biology education.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://www.researchgate.net/publication/365685460_Plant_Identification_in_the_21st_Century-What_Possibilities_Do_Modern_Identification_Keys_Offer_for_Biology_Lessons"
-                               target="_blank" rel="noopener noreferrer">
-                                ResearchGate – Plant Identification in the 21st Century
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                Plant identification reference document from the
-                                United States Department of Agriculture Natural
-                                Resources Conservation Service.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://www.nrcs.usda.gov/sites/default/files/2022-10/Plant%20Identification.pdf"
-                               target="_blank" rel="noopener noreferrer">
-                                USDA NRCS – Plant Identification PDF
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <!-- Google Fonts: Fraunces and Work Sans -->
-
-                        <li>
-                            <p class="ack-source-description">
-                                Google Fonts – Fraunces and Work Sans font families
-                                used for website typography.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,600;1,0..144,400;1,9..144,500&amp;family=Work+Sans:wght@400;500;600&amp;display=swap"
-                               target="_blank" rel="noopener noreferrer">
-                                Google Fonts – Fraunces &amp; Work Sans
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
-                        <!-- Google Fonts: Inter -->
-
-                        <li>
-                            <p class="ack-source-description">
-                                Google Fonts – Inter font family used for website typography.
-                            </p>
-
-                            <a class="ack-source-button"
-                               href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
-                               target="_blank" rel="noopener noreferrer">
-                                Google Fonts – Inter
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
-                        </li>
-
                     </ul>
                 </section>
 
-                <!-- Icons -->
 
+                <!-- 3. ICONS -->
                 <section class="ack-section">
                     <h2>Icons</h2>
 
-                    <p class="ack-source-description">
-                        The following sources were used for icons and symbols
-                        displayed throughout WikiPlant.
-                    </p>
-
+                    <h3 class="ack-page-heading">All Pages</h3>
                     <ul class="ack-list">
-
                         <li>
-                            <p class="ack-source-description">
-                                Right arrow symbol (→).
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://www.compart.com/en/unicode/U+2192"
-                               target="_blank" rel="noopener noreferrer">
-                                Compart – Right Arrow Symbol
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Right arrow symbol (→).</p>
+                            <a class="ack-source-button" href="https://www.compart.com/en/unicode/U+2192"
+                                target="_blank" rel="noopener noreferrer">Compart – Right Arrow <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Up-right arrow symbol (↗).
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://www.compart.com/en/unicode/U+2197"
-                               target="_blank" rel="noopener noreferrer">
-                                Compart – Up-Right Arrow Symbol
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Up-right arrow symbol (↗).</p>
+                            <a class="ack-source-button" href="https://www.compart.com/en/unicode/U+2197"
+                                target="_blank" rel="noopener noreferrer">Compart – Up-Right Arrow <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Back-to-top arrow icon.
-                            </p>
+                            <p class="ack-source-description">Back-to-top arrow icon.</p>
                             <a class="ack-source-button"
-                               href="https://www.flaticon.com/free-icon/top_3838680?term=upward+arrow&amp;page=1&amp;position=9&amp;origin=search&amp;related_id=3838680"
-                               target="_blank" rel="noopener noreferrer">
-                                Flaticon – Upward Arrow Icon
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://www.flaticon.com/free-icon/top_3838680?term=upward+arrow&amp;page=1&amp;position=9&amp;origin=search&amp;related_id=3838680"
+                                target="_blank" rel="noopener noreferrer">Flaticon – Upward Arrow <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Location pin symbol.
-                            </p>
+                            <p class="ack-source-description">Location pin symbol.</p>
                             <a class="ack-source-button"
-                               href="https://www.flaticon.com/free-icon/pin_18911242?term=location&amp;page=1&amp;position=45&amp;origin=tag&amp;related_id=18911242"
-                               target="_blank" rel="noopener noreferrer">
-                                Flaticon – Location Pin Icon
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://www.flaticon.com/free-icon/pin_18911242?term=location&amp;page=1&amp;position=45&amp;origin=tag&amp;related_id=18911242"
+                                target="_blank" rel="noopener noreferrer">Flaticon – Location Pin <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Down arrow symbol.
-                            </p>
+                            <p class="ack-source-description">Down arrow symbol.</p>
                             <a class="ack-source-button"
-                               href="https://www.flaticon.com/free-icon/down-arrow_2989995?term=down+arrow&amp;page=1&amp;position=8&amp;origin=tag&amp;related_id=2989995"
-                               target="_blank" rel="noopener noreferrer">
-                                Flaticon – Down Arrow Icon
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://www.flaticon.com/free-icon/down-arrow_2989995?term=down+arrow&amp;page=1&amp;position=8&amp;origin=tag&amp;related_id=2989995"
+                                target="_blank" rel="noopener noreferrer">Flaticon – Down Arrow <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Checkmark symbol (✓).
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://wumbo.net/symbols/checkmark/"
-                               target="_blank" rel="noopener noreferrer">
-                                Wumbo – Checkmark Symbol
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Checkmark symbol (✓).</p>
+                            <a class="ack-source-button" href="https://wumbo.net/symbols/checkmark/" target="_blank"
+                                rel="noopener noreferrer">Wumbo – Checkmark <span aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Timeless Play poster reference.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://posterstore.co.uk/p/posters-prints/timeless-play-poster/"
-                               target="_blank" rel="noopener noreferrer">
-                                Poster Store – Timeless Play Poster
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Clockwise open circle arrow symbol (↻).</p>
+                            <a class="ack-source-button" href="https://www.compart.com/en/unicode/U+21BB"
+                                target="_blank" rel="noopener noreferrer">Compart – Clockwise Arrow <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Clockwise open circle arrow symbol (↻).
-                            </p>
+                            <p class="ack-source-description">Red star graphic reference.</p>
                             <a class="ack-source-button"
-                               href="https://www.compart.com/en/unicode/U+21BB"
-                               target="_blank" rel="noopener noreferrer">
-                                Compart – Clockwise Arrow Symbol
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://www.magnific.com/free-photos-vectors/red-star-png" target="_blank"
+                                rel="noopener noreferrer">Magnific – Red Star <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                         <li>
-                            <p class="ack-source-description">
-                                Red star graphic reference.
-                            </p>
-                            <a class="ack-source-button"
-                               href="https://www.magnific.com/free-photos-vectors/red-star-png"
-                               target="_blank" rel="noopener noreferrer">
-                                Magnific – Red Star Graphic
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                            <p class="ack-source-description">Copyright symbol (©) reference.</p>
+                            <a class="ack-source-button" href="https://www.britannica.com/topic/copyright-symbol"
+                                target="_blank" rel="noopener noreferrer">Britannica – Copyright <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
+                    </ul>
 
+                    <h3 class="ack-page-heading">identify.html</h3>
+                    <ul class="ack-list">
                         <li>
-                            <p class="ack-source-description">
-                                Copyright symbol (©) reference.
-                            </p>
+                            <p class="ack-source-description">Upload icon used for the Identify page.</p>
                             <a class="ack-source-button"
-                               href="https://www.britannica.com/topic/copyright-symbol"
-                               target="_blank" rel="noopener noreferrer">
-                                Britannica – Copyright Symbol
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://www.flaticon.com/free-icon/upload_9479936?term=upload&amp;page=2&amp;position=15&amp;origin=tag&amp;related_id=9479936"
+                                target="_blank" rel="noopener noreferrer">Flaticon – Upload Icon <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
-
                     </ul>
                 </section>
 
-                <!-- Buttons -->
 
-                                <!-- Buttons -->
-
+                <!-- 4. BUTTONS -->
                 <section class="ack-section">
                     <h2>Buttons</h2>
 
+                    <h3 class="ack-page-heading">All Pages</h3>
                     <ul class="ack-list">
                         <li>
-                            <p class="ack-source-description">
-                                Most buttons on WikiPlant were designed and
-                                styled by our team using custom CSS. However,
-                                we acknowledge that some button designs may
-                                resemble those found on other websites, as
-                                common design patterns and visual styles are
-                                widely used across the web.
-                            </p>
-                        </li>
-
-                        <li>
-                            <p class="ack-source-description">
-                                The following reference was used to understand
-                                the CSS hover effect applied to the buttons.
-                                This effect changes a button's appearance when
-                                users move their mouse pointer over it.
-                            </p>
-
+                            <p class="ack-source-description">Google Fonts – Fraunces and Work Sans font families.</p>
                             <a class="ack-source-button"
-                               href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover"
-                               target="_blank"
-                               rel="noopener noreferrer">
-                                MDN – CSS Hover Reference
-                                <span aria-hidden="true">&#8599;</span>
-                            </a>
+                                href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,600;1,0..144,400;1,9..144,500&amp;family=Work+Sans:wght@400;500;600&amp;display=swap"
+                                target="_blank" rel="noopener noreferrer">Google Fonts – Fraunces &amp; Work Sans <span
+                                    aria-hidden="true">&#8599;</span></a>
+                        </li>
+                        <li>
+                            <p class="ack-source-description">Google Fonts – Inter font family.</p>
+                            <a class="ack-source-button"
+                                href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+                                target="_blank" rel="noopener noreferrer">Google Fonts – Inter <span
+                                    aria-hidden="true">&#8599;</span></a>
+                        </li>
+                        <li>
+                            <p class="ack-source-description">CSS hover effect reference for buttons.</p>
+                            <a class="ack-source-button" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:hover"
+                                target="_blank" rel="noopener noreferrer">MDN – CSS Hover <span
+                                    aria-hidden="true">&#8599;</span></a>
                         </li>
                     </ul>
                 </section>
@@ -1126,90 +465,56 @@
         </div>
     </main>
 
-    <!-- Footer -->
-
     <footer class="universal-footer">
         <div class="wrap">
-
             <nav class="footer-columns" aria-label="Footer navigation">
-
                 <div class="footer-column">
-                    <h2 class="footer-heading">
-                        <a href="explorer.html">Explore</a>
-                    </h2>
-
+                    <h2 class="footer-heading"><a href="explorer.html">Explore</a></h2>
                     <ul>
                         <li><a href="explorer-family.html">Family</a></li>
                         <li><a href="explorer-genus.html">Genus</a></li>
                         <li><a href="explorer-species.html">Species</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h2 class="footer-heading">Identify</h2>
-
                     <ul>
                         <li><a href="identify.html">Identify a plant</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h2 class="footer-heading">Contribution</h2>
-
                     <ul>
                         <li><a href="contributor.html">Contributor</a></li>
                         <li><a href="contribution.html">Contribution Form</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h2 class="footer-heading">Enquiry</h2>
-
                     <ul>
                         <li><a href="enquiry_form.html">Enquiry Form</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-column">
                     <h2 class="footer-heading">More</h2>
-
                     <ul>
                         <li><a href="profile.html">About Us</a></li>
                         <li><a href="register.html">Register</a></li>
                         <li><a href="login.html">Login</a></li>
                         <li><a href="enhancement.html">Enhancement</a></li>
-                        <li>
-                            <a href="acknowledgement.html" aria-current="page">
-                                Acknowledgement
-                            </a>
-                        </li>
+                        <li><a href="acknowledgement.html" aria-current="page">Acknowledgement</a></li>
                     </ul>
                 </div>
-
             </nav>
-
-            <!-- Footer Bottom -->
-
             <div class="footer-bottom">
-
-                <a class="footer-contact"
-                   href="mailto:106764593@students.swinburne.edu.my">
-                    Contact Us
-                </a>
-
-                <p class="footer-copyright">
-                    &copy; 2026 WikiPlant. All rights reserved.
-                </p>
-
+                <a class="footer-contact" href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
+                <p class="footer-copyright">&copy; 2026 WikiPlant. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top -->
-
-    <a href="#" class="back-to-top" aria-label="Back to top">
-        ↑
-    </a>
-
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>
+
 </html>

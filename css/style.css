@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,480;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root {
     --paper: #F3EFE2;
     --paper-deep: #EAE2CB;
@@ -2005,7 +2006,8 @@ body.contributor-page {
 
 .contributor-page .flip-return {
     display: inline-flex;
-    margin-top: 12px;  /* 原本是 auto */
+    margin-top: 12px;
+    /* 原本是 auto */
     padding-top: 12px;
     color: var(--paper-deep);
     font-size: 11px;
@@ -2549,7 +2551,7 @@ body.explorer-family-page .family-card-content .btn {
     margin-top: auto;
 }
 
-body.explorer-family-page .family-card > .plant-photo {
+body.explorer-family-page .family-card>.plant-photo {
     width: 100%;
     height: 100%;
     min-height: 320px;
@@ -2558,7 +2560,7 @@ body.explorer-family-page .family-card > .plant-photo {
     border-radius: 9px;
 }
 
-body.explorer-family-page .family-card > .plant-photo img {
+body.explorer-family-page .family-card>.plant-photo img {
     width: 100%;
     height: 100%;
     min-height: 320px;
@@ -2588,13 +2590,13 @@ body.explorer-family-page .family-card .distribution {
         padding: 18px;
     }
 
-    body.explorer-family-page .family-card > .plant-photo,
-    body.explorer-family-page .family-card > .plant-photo img {
+    body.explorer-family-page .family-card>.plant-photo,
+    body.explorer-family-page .family-card>.plant-photo img {
         min-height: 0;
         height: auto;
     }
 
-    body.explorer-family-page .family-card > .plant-photo img {
+    body.explorer-family-page .family-card>.plant-photo img {
         aspect-ratio: 16 / 9;
     }
 }
@@ -2623,19 +2625,19 @@ body.explorer-genus-page .genus-card {
     transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-body.explorer-genus-page .genus-card > .plant-photo,
-body.explorer-genus-page .genus-card > .plant-photo img {
+body.explorer-genus-page .genus-card>.plant-photo,
+body.explorer-genus-page .genus-card>.plant-photo img {
     aspect-ratio: 4 / 3;
     min-height: 0;
 }
 
-body.explorer-genus-page .genus-card > h3 {
+body.explorer-genus-page .genus-card>h3 {
     grid-area: title;
     margin: 0;
     font-size: clamp(1.8rem, 3vw, 2.4rem);
 }
 
-body.explorer-genus-page .genus-card > .plant-photo {
+body.explorer-genus-page .genus-card>.plant-photo {
     grid-area: photo;
     width: 100%;
     height: 100%;
@@ -2645,7 +2647,7 @@ body.explorer-genus-page .genus-card > .plant-photo {
     border-radius: 9px;
 }
 
-body.explorer-genus-page .genus-card > .plant-photo img {
+body.explorer-genus-page .genus-card>.plant-photo img {
     width: 100%;
     height: 100%;
     min-height: 320px;
@@ -2654,12 +2656,12 @@ body.explorer-genus-page .genus-card > .plant-photo img {
     border-radius: 9px;
 }
 
-body.explorer-genus-page .genus-card > p {
+body.explorer-genus-page .genus-card>p {
     grid-area: description;
     margin: 0;
 }
 
-body.explorer-genus-page .genus-card > .distribution {
+body.explorer-genus-page .genus-card>.distribution {
     grid-area: distribution;
     margin: 0;
     padding: 10px 12px;
@@ -2670,17 +2672,17 @@ body.explorer-genus-page .genus-card > .distribution {
     font-size: 0.9rem;
 }
 
-body.explorer-genus-page .genus-card > .map-frame {
+body.explorer-genus-page .genus-card>.map-frame {
     grid-area: map;
     margin: 0;
 }
 
-body.explorer-genus-page .genus-card > .rank-line {
+body.explorer-genus-page .genus-card>.rank-line {
     grid-area: tags;
     margin: 0;
 }
 
-body.explorer-genus-page .genus-card > .btn {
+body.explorer-genus-page .genus-card>.btn {
     grid-area: action;
     margin: 0;
 }
@@ -2721,7 +2723,7 @@ body.explorer-species-page .genus-heading {
     grid-column: 1 / -1;
 }
 
-body.explorer-species-page .specimen-card > .plant-photo {
+body.explorer-species-page .specimen-card>.plant-photo {
     grid-area: photo;
     width: 100%;
     height: 100%;
@@ -2731,7 +2733,7 @@ body.explorer-species-page .specimen-card > .plant-photo {
     border-radius: 9px;
 }
 
-body.explorer-species-page .specimen-card > .plant-photo img {
+body.explorer-species-page .specimen-card>.plant-photo img {
     width: 100%;
     height: 100%;
     min-height: 320px;
@@ -2740,20 +2742,20 @@ body.explorer-species-page .specimen-card > .plant-photo img {
     border-radius: 9px;
 }
 
-body.explorer-species-page .specimen-card > .common-name {
+body.explorer-species-page .specimen-card>.common-name {
     grid-area: common;
 }
 
-body.explorer-species-page .specimen-card > .sci {
+body.explorer-species-page .specimen-card>.sci {
     grid-area: scientific;
 }
 
-body.explorer-species-page .specimen-card > .rank-line {
+body.explorer-species-page .specimen-card>.rank-line {
     grid-area: ranks;
     margin-bottom: 0;
 }
 
-body.explorer-species-page .specimen-card > .distribution {
+body.explorer-species-page .specimen-card>.distribution {
     grid-area: distribution;
     margin: 0;
     padding: 10px 12px;
@@ -2764,12 +2766,12 @@ body.explorer-species-page .specimen-card > .distribution {
     font-size: 0.9rem;
 }
 
-body.explorer-species-page .specimen-card > .map-frame {
+body.explorer-species-page .specimen-card>.map-frame {
     grid-area: map;
     margin: 0;
 }
 
-body.explorer-species-page .specimen-card > p {
+body.explorer-species-page .specimen-card>p {
     grid-area: description;
     align-self: end;
     margin: 0;
@@ -2804,20 +2806,20 @@ body.explorer-species-page .specimen-card > p {
         padding: 18px;
     }
 
-    body.explorer-genus-page .genus-card > .plant-photo,
-    body.explorer-genus-page .genus-card > .plant-photo img,
-    body.explorer-species-page .specimen-card > .plant-photo,
-    body.explorer-species-page .specimen-card > .plant-photo img {
+    body.explorer-genus-page .genus-card>.plant-photo,
+    body.explorer-genus-page .genus-card>.plant-photo img,
+    body.explorer-species-page .specimen-card>.plant-photo,
+    body.explorer-species-page .specimen-card>.plant-photo img {
         height: auto;
         min-height: 0;
     }
 
-    body.explorer-genus-page .genus-card > .plant-photo img,
-    body.explorer-species-page .specimen-card > .plant-photo img {
+    body.explorer-genus-page .genus-card>.plant-photo img,
+    body.explorer-species-page .specimen-card>.plant-photo img {
         aspect-ratio: 16 / 9;
     }
 
-    body.explorer-genus-page .genus-card > .rank-line {
+    body.explorer-genus-page .genus-card>.rank-line {
         margin-top: 2px;
     }
 }
@@ -2869,10 +2871,10 @@ body.explorer-species-page .specimen-card > p {
     display: block;
 }
 
-.photo-lightbox > img,
-body.explorer-family-page .family-card .photo-lightbox > img,
-body.explorer-genus-page .genus-card .photo-lightbox > img,
-body.explorer-species-page .specimen-card .photo-lightbox > img {
+.photo-lightbox>img,
+body.explorer-family-page .family-card .photo-lightbox>img,
+body.explorer-genus-page .genus-card .photo-lightbox>img,
+body.explorer-species-page .specimen-card .photo-lightbox>img {
     display: block;
     flex: none;
     width: auto;
@@ -3987,7 +3989,7 @@ body.identify-page {
 }
 
 .identify-page .identifier-intro h1 {
-    font-family: 'Fraunces', serif;
+    font-family: Cambria, Georgia, serif;
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     color: var(--ink);
     margin-bottom: 15px;
@@ -4011,7 +4013,7 @@ body.identify-page {
     margin-bottom: 30px;
 }
 
-.identify-page .how-it-works > h2 {
+.identify-page .how-it-works>h2 {
     margin: 0 0 24px;
     text-align: center;
 }
@@ -4133,6 +4135,65 @@ body.identify-page {
     display: block;
 }
 
+.identify-page .figures-container .photo-zoom {
+    flex: none;
+    height: auto;
+    border-radius: 6px;
+}
+
+.identify-page .photo-lightbox {
+    overflow: hidden;
+    overscroll-behavior: contain;
+}
+
+.identify-page .photo-detail-viewport {
+    width: min(1120px, calc(100vw - 56px));
+    max-height: calc(100vh - 88px);
+    overflow: auto;
+    overscroll-behavior: contain;
+}
+
+.identify-page .photo-detail-toggle,
+.identify-page .photo-detail-image {
+    width: min(1120px, calc(100vw - 56px));
+}
+
+.identify-page .photo-detail-image {
+    display: block;
+    list-style: none;
+    transform-origin: top left;
+    cursor: zoom-in;
+}
+
+.identify-page .photo-detail-image::-webkit-details-marker {
+    display: none;
+}
+
+.identify-page .photo-detail-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: calc(100vh - 88px);
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+.identify-page .photo-detail-toggle[open] > .photo-detail-image {
+    transform: scale(2);
+    cursor: zoom-out;
+}
+
+.identify-page .photo-detail-image:focus-visible,
+.identify-page .photo-detail-viewport:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: -2px;
+}
+
+.identify-page .photo-lightbox-close {
+    top: 4px;
+}
+
 .identify-page figcaption {
     font-size: 85%;
     color: var(--ink-soft);
@@ -4169,11 +4230,13 @@ body.identify-page {
     background: var(--paper-deep);
 }
 
-.identify-page aside h2 {
+.identify-page aside h2,
+.identify-page aside h3 {
     font-size: 1.05rem;
     color: var(--sage-deep);
     border-bottom: none;
-    margin-bottom: 8px;
+    margin: 0.83em 0 8px;
+    padding-bottom: 8px;
 }
 
 .identify-page main::after {
@@ -4809,21 +4872,25 @@ body.contributor-page {
 .contributor-page .sidebar {
     min-width: 0;
 }
+
 .contributor-page .main_content_area,
-.contributor-page .sidebar{
+.contributor-page .sidebar {
     display: flex;
     flex-direction: column;
 }
-.contributor-page .guidance-section{
+
+.contributor-page .guidance-section {
     margin-bottom: 0;
 }
-.contributor-page .main_content_area{
+
+.contributor-page .main_content_area {
     height: 100%;
 }
 
-.contributor-page .sidebar{
+.contributor-page .sidebar {
     height: 100%;
 }
+
 .contributor-page .main_content_area {
     min-width: 0;
 }
@@ -5517,7 +5584,8 @@ body.about-terry-page .about-pagination-link:hover .about-pagination-arrow {
     grid-column: 1 / -1;
     margin-top: 30px;
 }
-.contributor-page .observation-section{
+
+.contributor-page .observation-section {
     flex-grow: 1;
 }
 
@@ -5662,13 +5730,98 @@ body.profile-page {
 
 /* for joshuas */
 
+
 body.about-joshua {
-    background-color: #B8C2AB;
+    background-color: #0A110D;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
-    background-size: 30px 30px;
+        radial-gradient(circle at 15% 20%, rgba(124, 148, 115, 0.35) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(180, 105, 63, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(78, 97, 68, 0.2) 0%, transparent 60%),
+        repeating-linear-gradient(45deg, rgba(124, 148, 115, 0.04) 0px, rgba(124, 148, 115, 0.04) 2px, transparent 2px, transparent 20px),
+        repeating-linear-gradient(-45deg, rgba(124, 148, 115, 0.04) 0px, rgba(124, 148, 115, 0.04) 2px, transparent 2px, transparent 20px);
     background-attachment: fixed;
+}
+
+body.about-joshua .about-main {
+    padding-top: 42px;
+    padding-bottom: 72px;
+}
+
+body.about-joshua .about-profile,
+body.about-joshua .about-personal-table {
+    background-color: var(--paper-card);
+    border: 2px solid var(--sage-deep);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(124, 148, 115, 0.15);
+}
+
+body.about-joshua .about-name-cell,
+body.about-joshua .about-profile-value,
+body.about-joshua .about-personal-table td,
+body.about-joshua .about-contact {
+    background-color: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+}
+
+body.about-joshua .about-info-row>th,
+body.about-joshua .about-personal-table th {
+    background-color: var(--paper-deep);
+    color: var(--ink);
+    border-color: var(--line);
+}
+
+body.about-joshua .about-section-heading h2,
+body.about-joshua .about-section-heading .about-eyebrow,
+body.about-joshua .about-pagination-label,
+body.about-joshua .about-pagination-title {
+    color: #F8F5EA;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+body.about-joshua .about-name-cell .about-eyebrow {
+    color: var(--sage-deep);
+    text-shadow: none;
+}
+
+body.about-joshua .about-student-number,
+body.about-joshua .about-course {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    color: var(--clay-deep);
+    background: var(--paper-deep);
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+}
+
+body.about-joshua .about-interest-list li {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    background-color: var(--paper-deep);
+    border: 1px dashed var(--sage-deep);
+    color: var(--ink);
+}
+
+body.about-joshua .about-photo {
+    border: 4px solid var(--sage-deep);
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.about-joshua .about-pagination {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.about-joshua .about-pagination-arrow {
+    background-color: var(--sage-deep);
+    color: #FFF;
+    border: none;
+}
+
+body.about-joshua .about-pagination-link:hover .about-pagination-arrow {
+    background-color: #FFF;
+    color: var(--sage-deep);
 }
 
 /* ===== PROFILE HUB ===== */
@@ -5859,43 +6012,46 @@ body.about-joshua {
         margin: 0;
     }
 }
-.member-details-table{
-    width:100%;
-    border-collapse:collapse;
+
+.member-details-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .member-details-table th,
-.member-details-table td{
-    border:1px solid #dcdcdc;
-    padding:15px;
+.member-details-table td {
+    border: 1px solid #dcdcdc;
+    padding: 15px;
 }
 
-.member-details-table th{
-    width:200px;
-    background:#f5f5f5;
-    text-align:left;
+.member-details-table th {
+    width: 200px;
+    background: #f5f5f5;
+    text-align: left;
 }
 
-.image-cell{
-    width:280px;
-    text-align:center;
-    vertical-align:top;
+.image-cell {
+    width: 280px;
+    text-align: center;
+    vertical-align: top;
 }
 
-.image-cell img{
-    width:220px;
-    border-radius:10px;
+.image-cell img {
+    width: 220px;
+    border-radius: 10px;
 }
+
 /* 适配 Sean 样式的两列表格结构 */
 .about-page .about-profile-bryan .about-profile-table .about-label-column {
     width: 30%;
 }
 
-.about-page .about-profile-bryan .about-info-row > th {
+.about-page .about-profile-bryan .about-info-row>th {
     padding: 24px 18px;
     border-right: 1px solid #D0D5C6;
     border-top: 1px solid #D0D5C6;
-    background-color: #E8EDE1; /* 左侧浅绿背景色 */
+    background-color: #E8EDE1;
+    /* 左侧浅绿背景色 */
     text-align: center;
     vertical-align: middle;
     font-size: 0.85em;
@@ -5906,7 +6062,8 @@ body.about-joshua {
 .about-page .about-profile-bryan .about-profile-value {
     padding: 24px 28px;
     border-top: 1px solid #D0D5C6;
-    background-color: #FFFEFA; /* 右侧白色背景色 */
+    background-color: #FFFEFA;
+    /* 右侧白色背景色 */
     vertical-align: middle;
     font-size: 0.9em;
     overflow-wrap: anywhere;
@@ -5927,6 +6084,7 @@ body.about-joshua {
     width: min(240px, 100%);
     margin: 0 auto;
 }
+
 /* ==========================================
    PROFILE PAGE (MODERN GRADIENT STYLE - OVERRIDE)
    ========================================== */
@@ -5935,7 +6093,6 @@ body.about-joshua {
    PROFILE PAGE (MATCH SITE BOTANICAL THEME)
    ========================================== */
 
-/* 1. 恢复页面整体背景为网站原有的米黄色 */
 body.profile-page {
     display: flex;
     flex-direction: column;
@@ -5953,7 +6110,6 @@ body.profile-page {
     flex: 1;
 }
 
-/* 2. 顶部胶囊标题框：改用浅黄纸质卡片与深绿色文字 */
 .profile-page .team-intro {
     text-align: center;
     margin-bottom: 50px;
@@ -5986,7 +6142,6 @@ body.profile-page {
     font-family: 'Fraunces', serif;
 }
 
-/* 3. 团队卡片 Grid (单排4个) */
 .profile-page .team-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -5994,7 +6149,6 @@ body.profile-page {
     justify-content: center;
 }
 
-/* 卡片整体容器：使用米白背景与泥土色边框 */
 .profile-page .member-card {
     position: relative;
     display: flex;
@@ -6017,7 +6171,6 @@ body.profile-page {
     background: var(--paper-deep, #EAE2CB) !important;
 }
 
-/* 卡片上半部分：森林绿渐变背景 + 圆形头像框 */
 .profile-page .card-header-bg {
     height: 120px;
     background: linear-gradient(180deg, var(--sage-deep, #4E6144) 0%, var(--sage, #7C9473) 100%);
@@ -6047,7 +6200,6 @@ body.profile-page {
     display: block;
 }
 
-/* 卡片下半部分：衬线体名字与绿色 Student ID */
 .profile-page .card-content {
     padding: 45px 16px 24px;
     text-align: center;
@@ -6070,7 +6222,6 @@ body.profile-page {
     letter-spacing: 0.04em;
 }
 
-/* 响应式适配 */
 @media (max-width: 1000px) {
     .profile-page .team-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -6091,11 +6242,10 @@ body.profile-page {
 }
 
 /* Contribution page layout fix */
-/* 修改：使用 Flexbox 垂直布局并强制子元素居中对齐 */
 .contribution-page .page_main {
     display: flex;
     flex-direction: column;
-    align-items: center; /* 确保标题与表单在中轴线上严格对齐 */
+    align-items: center;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
@@ -6119,14 +6269,13 @@ body.profile-page {
     border-radius: 8px;
     box-sizing: border-box;
 }
-/* 1. 移除 fieldset 的原生外框与边线 */
+
 .contribution-page fieldset {
     border: none;
     padding: 0;
     margin: 0 0 28px 0;
 }
 
-/* 2. 重置 legend 样式，使其看起来像干净的子标题 */
 .contribution-page legend {
     font-family: 'Fraunces', serif;
     font-size: 1.15rem;
@@ -6138,7 +6287,6 @@ body.profile-page {
     width: 100%;
 }
 
-/* 3. 优化输入框、下拉框与文本域 */
 .contribution-page input[type="text"],
 .contribution-page input[type="email"],
 .contribution-page input[type="password"],
@@ -6168,7 +6316,6 @@ body.profile-page {
     background-color: #FFFFFF;
 }
 
-/* 4. 优化提示文字与标签 */
 .contribution-page label {
     display: block;
     font-weight: 600;
@@ -6183,7 +6330,6 @@ body.profile-page {
     margin-top: 4px;
 }
 
-/* 5. 按钮风格升级 */
 .contribution-page .form-actions {
     display: flex;
     gap: 12px;
@@ -6294,6 +6440,7 @@ body.profile-page {
 }
 
 @media (max-width: 620px) {
+
     .account-page .account-form .field-row,
     .account-page .account-form .field-row-two {
         grid-template-columns: 1fr;
@@ -6324,7 +6471,7 @@ body.home-page :is(a, span):not(.site-header *, .universal-footer *, h1 *, h2 *,
     font-size: 12px;
 }
 
-.home-page .home-collection-item > p {
+.home-page .home-collection-item>p {
     line-height: 1.65;
     max-width: none;
 }
@@ -6382,3 +6529,623 @@ body.home-page :is(a, span):not(.site-header *, .universal-footer *, h1 *, h2 *,
     background: var(--paper-card);
     text-align: center;
 }
+
+/* Sean's animated background: HTML and CSS only, scoped to this page. */
+@keyframes sean-background-move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+body.about-sean-page {
+    position: relative;
+    isolation: isolate;
+    background: #0B1026;
+}
+
+.about-sean-page .sean-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 82% 15%, rgba(80, 48, 120, 0.48), transparent 58%),
+        radial-gradient(ellipse at 12% 85%, rgba(34, 69, 125, 0.48), transparent 62%),
+        linear-gradient(145deg, #080F24, #141832 58%, #241839);
+}
+
+.about-sean-page .sean-ball {
+    position: absolute;
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    animation: sean-background-move linear infinite;
+}
+
+.about-sean-page .sean-ball:nth-child(odd) {
+    color: #DFFF80;
+}
+
+.about-sean-page .sean-ball:nth-child(even) {
+    color: #FFF3BE;
+}
+
+.about-sean-page .sean-ball:nth-child(1) {
+    top: 77%;
+    left: 88%;
+    animation-duration: 40s;
+    animation-delay: -3s;
+    transform-origin: 16vw -2vh;
+    box-shadow: 40vmin 0 5.7031vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(2) {
+    top: 42%;
+    left: 2%;
+    animation-duration: 53s;
+    animation-delay: -29s;
+    transform-origin: -19vw 21vh;
+    box-shadow: -40vmin 0 5.1759vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(3) {
+    top: 28%;
+    left: 18%;
+    animation-duration: 49s;
+    animation-delay: -8s;
+    transform-origin: -22vw 3vh;
+    box-shadow: 40vmin 0 5.2482vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(4) {
+    top: 50%;
+    left: 79%;
+    animation-duration: 26s;
+    animation-delay: -21s;
+    transform-origin: -17vw -6vh;
+    box-shadow: 40vmin 0 5.2797vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(5) {
+    top: 46%;
+    left: 15%;
+    animation-duration: 36s;
+    animation-delay: -40s;
+    transform-origin: 4vw 0vh;
+    box-shadow: -40vmin 0 5.9643vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(6) {
+    top: 77%;
+    left: 16%;
+    animation-duration: 31s;
+    animation-delay: -10s;
+    transform-origin: 18vw 4vh;
+    box-shadow: 40vmin 0 5.1785vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(7) {
+    top: 22%;
+    left: 17%;
+    animation-duration: 55s;
+    animation-delay: -6s;
+    transform-origin: 1vw -23vh;
+    box-shadow: -40vmin 0 5.7030vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(8) {
+    top: 41%;
+    left: 47%;
+    animation-duration: 43s;
+    animation-delay: -28s;
+    transform-origin: 25vw -3vh;
+    box-shadow: 40vmin 0 5.1963vmin currentColor;
+}
+
+/* Light text for headings and profile navigation on the dark background. */
+.about-sean-page .about-personal .about-section-heading h2,
+.about-sean-page .about-personal .about-eyebrow,
+.about-sean-page .about-pagination-title,
+.about-sean-page .about-pagination-label {
+    color: #F8F5E8;
+}
+
+.about-sean-page .about-pagination {
+    border-top-color: rgba(243, 239, 226, 0.32);
+}
+
+/* Keep the portrait and content on their original solid paper backgrounds. */
+.about-sean-page .about-profile-sean {
+    background-color: #FBFAF3;
+    background-image: radial-gradient(ellipse at 30% 0%, #E5ECD9, transparent 62%);
+    background-repeat: no-repeat;
+    background-size: 100% 560px;
+    background-position: top center;
+    box-shadow: 0 18px 48px rgba(56, 72, 43, 0.09);
+}
+
+@media (max-width: 700px) {
+    .about-sean-page .about-profile-sean {
+        background-size: 100% 520px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-sean-page .sean-ball {
+        animation: none;
+    }
+}
+
+<<<<<<< HEAD
+/* ===================================================
+   How to Identify — 4-step process flow
+   =================================================== */
+
+.how-to-identify {
+    max-width: var(--max);
+    margin: 0 auto 2.5rem;
+    padding: 2.5rem 32px 2rem;
+    border-top: 2px solid var(--line-soft);
+}
+
+.identify-page .how-to-identify h2 {
+    font-family: Cambria, Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--ink);
+    margin: 0 0 0.4rem;
+    text-align: center;
+}
+
+.how-to-identify__desc {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--ink-soft);
+    text-align: center;
+    margin: 0 0 2rem;
+}
+
+/* Ordered list reset */
+.identify-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+}
+
+/* Each li = card + arrow */
+.identify-step {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex: 1 1 180px;
+    max-width: 240px;
+}
+
+.identify-step:last-child {
+    flex: 1 1 180px;
+    max-width: 240px;
+}
+
+/* The card block */
+.identify-step__card {
+    flex: 1;
+    background: var(--paper-card);
+    border: 1.5px solid var(--line-soft);
+    border-radius: 10px;
+    padding: 1.25rem 1rem 1.1rem;
+    text-align: center;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.identify-step__card:hover {
+    box-shadow: 0 6px 22px var(--shadow);
+    border-color: var(--sage);
+    transform: translateY(-3px);
+}
+
+/* Step number badge */
+.identify-step__num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    background: var(--sage-deep);
+    color: var(--paper);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.65rem;
+    line-height: 1;
+}
+
+.identify-step__title {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.93rem;
+    color: var(--ink);
+    margin: 0 0 0.45rem;
+    line-height: 1.3;
+}
+
+.identify-step__body {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.84rem;
+    color: var(--ink-soft);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Arrow connector */
+.identify-step__arrow {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    color: var(--clay);
+    padding: 0 0.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: -1rem;
+}
+
+/* Responsive: stack vertically on narrow screens */
+@media (max-width: 700px) {
+    .identify-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .identify-step {
+        flex-direction: column;
+        align-items: center;
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .identify-step:last-child {
+        max-width: 320px;
+    }
+
+    .identify-step__card {
+        width: 100%;
+    }
+
+    .identify-step__arrow {
+        transform: rotate(90deg);
+        padding: 0.25rem 0;
+        margin-top: 0;
+    }
+}
+
+/* Identify: four-step arrow flow within the existing upload container. */
+.identify-page .how-it-works > .how-to-identify {
+    max-width: none;
+    margin: 34px 0 0;
+    padding: 28px 0 0;
+    border-top: 2px solid var(--line-soft);
+    background: transparent;
+    box-shadow: none;
+}
+
+.identify-page .how-it-works .identify-steps {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    align-items: stretch;
+}
+
+.identify-page .how-it-works .identify-step,
+.identify-page .how-it-works .identify-step:last-child {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+}
+
+.identify-page .how-it-works .identify-step__card {
+    min-width: 0;
+    background: var(--paper);
+}
+
+.identify-page .how-it-works .identify-step__arrow {
+    padding: 0 4px;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 700px) {
+    .identify-page .how-it-works .identify-steps {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .identify-page .how-it-works .identify-step {
+        flex-direction: column;
+    }
+
+    .identify-page .how-it-works .identify-step__arrow {
+        transform: rotate(90deg);
+        margin: 6px 0;
+    }
+}
+=======
+
+/* For enhancement page */
+
+
+/* Enhancement Page Specific Styles */
+
+.enhancement-main {
+    background-color: #e8f5e9;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+.enhancement-main .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.enhancement-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.enhancement-section {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 2px dashed #b9d6b9;
+    scroll-margin-top: 100px;
+}
+
+.enhancement-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.enhancement-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.enhancement-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.enhancement-image {
+    flex: 1 1 45%;
+    min-width: 0;
+}
+
+.enhancement-image video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    display: block;
+    border: 1px solid #ccc;
+    background-color: #1b1b1b;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.enhancement-details {
+    flex: 1 1 50%;
+    min-width: 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.enhancement-details p {
+    margin: 0 0 25px;
+}
+
+.tags-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.tags-group h3 {
+    flex: 0 0 125px;
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 6px;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1;
+}
+
+.tag {
+    border: 1px solid #56604a;
+    border-radius: 4px;
+    padding: 7px 12px;
+    background-color: #f8f5ea;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-decoration: none;
+    color: #2b3323;
+    display: inline-block;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.tag:hover,
+.tag:focus-visible {
+    background-color: #4e6144;
+    color: #fff;
+    border-color: #4e6144;
+}
+
+.tag:focus-visible {
+    outline: 3px solid #8f4f2c;
+    outline-offset: 3px;
+}
+
+.all-pages {
+    margin-top: 5px;
+    padding: 15px;
+    background-color: #f8f5ea;
+    border-left: 4px solid #4e6144;
+    border-radius: 4px;
+}
+
+.all-pages h3 {
+    margin: 0 0 12px;
+    font-size: 1rem;
+}
+
+.all-pages .tags-container {
+    gap: 8px;
+}
+
+.all-pages-note {
+    font-size: 0.9rem;
+    margin: 12px 0 0 !important;
+    color: #56604a;
+}
+
+@media (max-width: 768px) {
+    .enhancement-main {
+        padding: 30px 15px;
+    }
+
+    .intro-title {
+        font-size: 1.5rem;
+    }
+
+    .enhancement-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .enhancement-content {
+        flex-direction: column;
+    }
+
+    .enhancement-image,
+    .enhancement-details {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .tags-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .tags-group h3 {
+        flex-basis: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tag {
+        transition: none;
+    }
+}
+
+/* acknowledgement page */
+
+.acknowledgement-main {
+    width: min(var(--max), calc(100% - 48px));
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 48px 0 60px;
+}
+
+.acknowledgement-main .page-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 480;
+    color: var(--ink);
+    text-align: center;
+    margin: 0 0 16px;
+}
+
+.acknowledgement-main .intro-text {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 1.1rem;
+    margin: 0 auto 48px;
+}
+
+.ack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.ack-section {
+    background: var(--paper-card);
+    border: 1px solid var(--line-soft);
+    border-radius: 10px;
+    padding: 32px;
+    box-shadow: 3px 4px 0 var(--shadow);
+}
+
+.ack-section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.8rem;
+    color: var(--sage-deep);
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--line);
+}
+
+.ack-page-heading {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clay-deep);
+    margin: 24px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line-soft);
+}
+
+.ack-section>.ack-page-heading:first-of-type {
+    margin-top: 0;
+}
+
+.ack-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 16px;
+}
+
+@media (max-width: 860px) {
+    .ack-grid {
+        grid-template-columns: 1fr;
+    }
+}
+>>>>>>> 1b7ce26b2dcbbd40e348ac32956ed738edd9cbd3

@@ -1,3 +1,306 @@
+<<<<<<< HEAD
+<!-- identify.html - Plant's Notebook - Identify Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn how the Plant's Notebook photo identification feature works and what information it reveals about a plant.">
+    <meta name="keywords"
+        content="plant identification, herbarium specimen, scientific name, common name, biodiversity">
+    <meta name="author" content="Sean Liew">
+    <title>Identify - Plant's Notebook</title>
+    <link rel="stylesheet" href="css/style.css?v=identify-title-font-2">
+</head>
+<body class="identify-page">
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="index.html" aria-label="WikiPlant home">
+                <img src="images/logo.png" alt="WikiPlant logo">
+                <span class="brand-motto">Wiki Plant</span>
+            </a>
+            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+            <label class="nav-toggle" for="navigation-toggle">
+                <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="nav-close" aria-hidden="true">&times;</span>
+            </label>
+            <label class="nav-backdrop" for="navigation-toggle"></label>
+            <div class="nav-drawer-panel" id="navigation-panel">
+                <div class="nav-drawer-topbar"><span>Navigation</span></div>
+                <nav class="main-nav" aria-label="Primary">
+                    <ul>
+                        <li class="nav-drop">
+                            <a href="explorer.html">Explore</a>
+                            <ul class="drop-menu">
+                                <li><a href="explorer-family.html">By Family</a></li>
+                                <li><a href="explorer-genus.html">By Genus</a></li>
+                                <li><a href="explorer-species.html">By Species</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="identify.html" aria-current="page">Identify</a></li>
+                        <li class="nav-drop">
+                            <a href="contributor.html">Contribute</a>
+                            <ul class="drop-menu">
+                                <li><a href="contribution.html">Contribution Form</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-drop">
+                            <a href="profile.html">About Us</a>
+                            <ul class="drop-menu">
+                                <li><a href="aboutus-sean.html">Sean</a></li>
+                                <li><a href="aboutus-bryan.html">Bryan</a></li>
+                                <li><a href="aboutus-joshua.html">Joshua</a></li>
+                                <li><a href="aboutus-terry.html">Terry</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="enquiry_form.html">Enquiry</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="register.html" class="register-btn">Register</a>
+                    <a href="login.html" class="login-btn">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="identifier-intro">
+            <h1>Upload a Photo to Identify a Plant</h1>
+            <p>Not sure what plant you're looking at? Simply upload a clear photo of the leaf, flower, or the whole
+                plant, and our identification system is intended to compare it with a reference database to suggest the most likely species.</p>
+        </div>
+
+        <section class="how-it-works card-container" aria-labelledby="photo-upload-heading">
+            <h2 id="photo-upload-heading">Choose a plant photo</h2>
+            <form class="static-photo-container" aria-label="Plant photo selection">
+                <label class="static-photo upload-box" for="plant-photo" title="Upload a plant photo">
+                    <img src="images/identify.png" alt="Upload a plant photo" class="cloud-upload" id="upload-icon">
+                    <input id="plant-photo" type="file" accept="image/*">
+                </label>
+                <div class="identify-action-row">
+                    <button type="button" class="identify-btn" id="identify-btn" disabled>Identify plant</button>
+                    <button type="reset" class="identify-reset-btn">Reset</button>
+                </div>
+            </form>
+            <div class="how-to-identify" aria-labelledby="how-to-identify-heading">
+                <h2 id="how-to-identify-heading">How to Identify a Plant</h2>
+                <p class="how-to-identify__desc">Follow these simple steps to identify a plant using our website.</p>
+                <ol class="identify-steps" aria-label="Identification steps">
+                    <li class="identify-step">
+                        <div class="identify-step__card">
+                            <span class="identify-step__num" aria-hidden="true">1</span>
+                            <h3 class="identify-step__title">Take a Photo</h3>
+                            <p class="identify-step__body">Capture a clear photo of the plant, focusing on leaves, flowers, or stems.</p>
+                        </div>
+                        <span class="identify-step__arrow" aria-hidden="true">&#8594;</span>
+                    </li>
+                    <li class="identify-step">
+                        <div class="identify-step__card">
+                            <span class="identify-step__num" aria-hidden="true">2</span>
+                            <h3 class="identify-step__title">Upload the Photo</h3>
+                            <p class="identify-step__body">Select the plant image from your device using the upload button.</p>
+                        </div>
+                        <span class="identify-step__arrow" aria-hidden="true">&#8594;</span>
+                    </li>
+                    <li class="identify-step">
+                        <div class="identify-step__card">
+                            <span class="identify-step__num" aria-hidden="true">3</span>
+                            <h3 class="identify-step__title">Identify the Plant</h3>
+                            <p class="identify-step__body">Click the Identify button to begin the identification process.</p>
+                        </div>
+                        <span class="identify-step__arrow" aria-hidden="true">&#8594;</span>
+                    </li>
+                    <li class="identify-step">
+                        <div class="identify-step__card">
+                            <span class="identify-step__num" aria-hidden="true">4</span>
+                            <h3 class="identify-step__title">View Identification Results</h3>
+                            <p class="identify-step__body">Review the plant&#8217;s common name, scientific name, classification, and morphological characteristics.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+        </section>
+
+        <section aria-labelledby="sample-result-heading">
+
+            <article>
+                <h2 id="sample-result-heading">Sample Identification Result</h2>
+                <p class="para">
+                    The following example presents the identification details of Dog Rose
+                    (<em>Rosa canina</em>), including its taxonomic classification,
+                    physical characteristics, and habitat information.
+                </p>
+                <h3>Sample Images</h3>
+                <div class="figures-container">
+                    <figure>
+                        <button type="button" class="photo-zoom" popovertarget="identify-dog-rose-bud-photo"
+                            aria-haspopup="dialog" aria-label="View full-size Dog Rose flower bud photo">
+                            <img src="images/plants/Rosa_noflower.jpg" alt="Unopened flower bud of Dog Rose">
+                        </button>
+                        <figcaption><strong>Figure 1:</strong> Unopened flower bud of Dog Rose (<em>Rosa canina</em>).</figcaption>
+                    </figure>
+                    <figure>
+                        <button type="button" class="photo-zoom" popovertarget="identify-dog-rose-flower-photo"
+                            aria-haspopup="dialog" aria-label="View full-size Dog Rose open flower photo">
+                            <img src="images/plants/rosa-canina.jpg" alt="Fully opened flower of Dog Rose">
+                        </button>
+                        <figcaption><strong>Figure 2:</strong> Fully opened flower of Dog Rose (<em>Rosa canina</em>).</figcaption>
+                    </figure>
+                </div>
+                <div class="photo-lightbox" id="identify-dog-rose-bud-photo" popover="auto"
+                    role="dialog" aria-label="Full-size Dog Rose flower bud photo">
+                    <button type="button" class="photo-lightbox-close" popovertarget="identify-dog-rose-bud-photo"
+                        popovertargetaction="hide" aria-label="Close full-size photo">&times;</button>
+                    <div class="photo-detail-viewport" role="region" aria-label="Scrollable Dog Rose flower bud photo" tabindex="0">
+                        <details class="photo-detail-toggle">
+                            <summary class="photo-detail-image" aria-label="Toggle 2 times zoom for Dog Rose flower bud photo"
+                                title="Click to zoom 2×; click again to fit. Scroll to view details.">
+                                <img src="images/plants/Rosa_noflower.jpg" alt="Unopened flower bud of Dog Rose">
+                            </summary>
+                        </details>
+                    </div>
+                </div>
+                <div class="photo-lightbox" id="identify-dog-rose-flower-photo" popover="auto"
+                    role="dialog" aria-label="Full-size Dog Rose open flower photo">
+                    <button type="button" class="photo-lightbox-close" popovertarget="identify-dog-rose-flower-photo"
+                        popovertargetaction="hide" aria-label="Close full-size photo">&times;</button>
+                    <div class="photo-detail-viewport" role="region" aria-label="Scrollable Dog Rose open flower photo" tabindex="0">
+                        <details class="photo-detail-toggle">
+                            <summary class="photo-detail-image" aria-label="Toggle 2 times zoom for Dog Rose open flower photo"
+                                title="Click to zoom 2×; click again to fit. Scroll to view details.">
+                                <img src="images/plants/rosa-canina.jpg" alt="Fully opened flower of Dog Rose">
+                            </summary>
+                        </details>
+                    </div>
+                </div>
+                <h3>Plant Details</h3>
+                <dl>
+                    <dt>Common Name</dt>
+                    <dd>Dog Rose</dd>
+                    <dt>Scientific Name</dt>
+                    <dd><em>Rosa canina</em> L.</dd>
+                    <dt>Family</dt>
+                    <dd>Rosaceae</dd>
+                    <dt>Genus</dt>
+                    <dd><em>Rosa</em></dd>
+                    <dt>Species</dt>
+                    <dd><em>Rosa canina</em></dd>
+                    <dt>Plant Type</dt>
+                    <dd>Deciduous, perennial flowering shrub with arching, prickly stems.</dd>
+                </dl>
+                <h3>Morphological Characteristics</h3>
+                <dl>
+                    <dt>Growth Habit</dt>
+                    <dd>A vigorous, arching or scrambling shrub that may climb over surrounding vegetation for support.</dd>
+                    <dt>Height</dt>
+                    <dd>Typically 1&ndash;3 m, occasionally taller when supported by other plants.</dd>
+                    <dt>Leaves</dt>
+                    <dd>Pinnately compound leaves, usually consisting of 5&ndash;7 oval to elliptical green leaflets.</dd>
+                    <dt>Leaf Arrangement</dt>
+                    <dd>Alternate, with leaves arranged individually along the stems.</dd>
+                    <dt>Leaf Margin</dt>
+                    <dd>Serrated (toothed), with small, pointed teeth along the edges of each leaflet.</dd>
+                    <dt>Stem</dt>
+                    <dd>Long, arching woody stems bearing sharp, curved or hooked prickles.</dd>
+                    <dt>Flowers</dt>
+                    <dd>Usually pale pink or white, with five petals and numerous yellow stamens surrounding the central reproductive structures.</dd>
+                    <dt>Fruit</dt>
+                    <dd>Oval, red to orange-red rose hips, typically 15&ndash;20 mm long, containing numerous small fruits (achenes).</dd>
+                    <dt>Aroma</dt>
+                    <dd>Flowers generally have a faint, sweet fragrance.</dd>
+                </dl>
+                <h3>Habitat &amp; Distribution</h3>
+                <p class="para">
+                    Dog Rose is native to much of Europe, northwestern Africa, and parts of
+                    western and central Asia. It commonly grows in hedgerows, woodland edges,
+                    scrubland, and open grasslands.
+                </p>
+                <h3>Care Tips</h3>
+                <ul>
+                    <li><strong>Watering:</strong> Water during prolonged dry periods, especially while the plant is becoming established. Avoid waterlogged soil.</li>
+                    <li><strong>Sunlight:</strong> Grow in full sun or partial shade, with sunnier positions generally encouraging better flowering.</li>
+                    <li><strong>Soil:</strong> Use fertile, moist but well-drained soil.</li>
+                    <li><strong>Temperature:</strong> Dog Rose is a hardy temperate shrub that tolerates winter frost and seasonal cold conditions.</li>
+                </ul>
+                <aside aria-labelledby="identification-notes-heading">
+                    <h3 id="identification-notes-heading">Identification Notes</h3>
+                    <p class="para">
+                        Dog Rose can resemble other wild rose species, making identification based
+                        on flower appearance alone unreliable. Examine the combination of leaflets,
+                        hooked prickles, sepals, and rose hips, and compare these characteristics
+                        with reliable botanical references before confirming the species.
+                    </p>
+                </aside>
+
+            </article>
+            <div class="wrap cta-wrap">
+                <div class="cta-text-box">
+                    <h2>Help Us Grow Our Plant Database</h2>
+                    <p>Discovered a plant that is not yet in our database? Share your findings and help expand our collection of plant species for scientific research and biodiversity conservation.</p>
+                    <a href="contribution.html" class="cta-btn">Contribute a Plant</a>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="universal-footer">
+        <div class="wrap">
+            <nav class="footer-columns" aria-label="Footer navigation">
+                <div class="footer-column">
+                    <h2 class="footer-heading"><a href="explorer.html">Explore</a></h2>
+                    <ul>
+                        <li><a href="explorer-family.html">Family</a></li>
+                        <li><a href="explorer-genus.html">Genus</a></li>
+                        <li><a href="explorer-species.html">Species</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-heading">Identify</h2>
+                    <ul>
+                        <li><a href="identify.html" aria-current="page">Identify a plant</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-heading">Contribution</h2>
+                    <ul>
+                        <li><a href="contributor.html">Contributor</a></li>
+                        <li><a href="contribution.html">Contribution Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-heading">Enquiry</h2>
+                    <ul>
+                        <li><a href="enquiry_form.html">Enquiry Form</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h2 class="footer-heading">More</h2>
+                    <ul>
+                        <li><a href="profile.html">About Us</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="enhancement.html">Enhancement</a></li>
+                        <li><a href="acknowledgement.html">Acknowledgement</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="footer-bottom">
+                <a class="footer-contact" href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
+                <p class="footer-copyright">&copy; 2026 WikiPlant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+</body>
+</html>
+=======
 <!-- identify.html - Plant's Notebook - Identify Page -->
 <!DOCTYPE html>
 <html lang="en">
@@ -22,52 +325,52 @@
                 <img src="images/logo.png" alt="WikiPlant logo">
                 <span class="brand-motto">Wiki Plant</span>
             </a>
-            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation"
+                aria-controls="navigation-panel">
             <label class="nav-toggle" for="navigation-toggle">
-                <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="nav-toggle-lines" aria-hidden="true"></span><span></span><span></span><span></span></span>
                 <span class="nav-close" aria-hidden="true">&times;</span>
             </label>
             <label class="nav-backdrop" for="navigation-toggle"></label>
             <div class="nav-drawer-panel" id="navigation-panel">
                 <div class="nav-drawer-topbar"><span>Navigation</span></div>
-            <nav class="main-nav" aria-label="Primary">
-                <ul>
-                    <li class="nav-drop">
-                        <a href="explorer.html">Explore</a>
-                        <ul class="drop-menu">
-                            <li><a href="explorer-family.html">By Family</a></li>
-                            <li><a href="explorer-genus.html">By Genus</a></li>
-                            <li><a href="explorer-species.html">By Species</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="identify.html" aria-current="page">Identify</a></li>
-                    <li class="nav-drop">
-                        <a href="contributor.html">Contribute</a>
-                        <ul class="drop-menu">
-                            <li><a href="contribution.html">Contribution Form</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-drop">
-                        <a href="profile.html">About Us</a>
-                        <ul class="drop-menu">
-                            <li><a href="aboutus-sean.html">Sean</a></li>
-                            <li><a href="aboutus-bryan.html">Bryan</a></li>
-                            <li><a href="aboutus-joshua.html">Joshua</a></li>
-                            <li><a href="aboutus-terry.html">Terry</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="enquiry_form.html">Enquiry</a></li>
-                </ul>
-            </nav>
-            <div class="auth-buttons">
-                <a href="register.html" class="register-btn">Register</a>
-                <a href="login.html" class="login-btn">Login</a>
-            </div>
+                <nav class="main-nav" aria-label="Primary">
+                    <ul>
+                        <li class="nav-drop">
+                            <a href="explorer.html">Explore</a>
+                            <ul class="drop-menu">
+                                <li><a href="explorer-family.html">By Family</a></li>
+                                <li><a href="explorer-genus.html">By Genus</a></li>
+                                <li><a href="explorer-species.html">By Species</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="identify.html" aria-current="page">Identify</a></li>
+                        <li class="nav-drop">
+                            <a href="contributor.html">Contribute</a>
+                            <ul class="drop-menu">
+                                <li><a href="contribution.html">Contribution Form</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-drop">
+                            <a href="profile.html">About Us</a>
+                            <ul class="drop-menu">
+                                <li><a href="aboutus-sean.html">Sean</a></li>
+                                <li><a href="aboutus-bryan.html">Bryan</a></li>
+                                <li><a href="aboutus-joshua.html">Joshua</a></li>
+                                <li><a href="aboutus-terry.html">Terry</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="enquiry_form.html">Enquiry</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="register.html" class="register-btn">Register</a>
+                    <a href="login.html" class="login-btn">Login</a>
+                </div>
             </div>
         </div>
 
     </header>
-
     <main>
         <div class="identifier-intro">
             <h1>Upload a Photo to Identify a Plant</h1>
@@ -75,12 +378,10 @@
                 plant, and here will match it against our reference database to suggest the most likely species.</p>
         </div>
 
-        <section class="how-it-works card-container"
-            aria-labelledby="photo-upload-heading">
+        <section class="how-it-works card-container" aria-labelledby="photo-upload-heading">
             <h2 id="photo-upload-heading">Choose a plant photo</h2>
             <form class="static-photo-container" aria-label="Plant photo selection">
-                <label class="static-photo upload-box" for="plant-photo"
-                    title="Upload a plant photo">
+                <label class="static-photo upload-box" for="plant-photo" title="Upload a plant photo">
                     <img src="images/identify.png" alt="Upload a plant photo" class="cloud-upload" id="upload-icon">
                     <input id="plant-photo" type="file" accept="image/*">
                 </label>
@@ -165,16 +466,18 @@
                 </p>
             </aside>
 
-<div class="wrap cta-wrap">
-    <div class="cta-text-box">
-      <h2>Help Us Grow the Index</h2>
-      <p>WikiPlant is powered by a community of plant enthusiasts. See who is building our database or join us to share your own knowledge.</p>
-      <a href="contributor.html" class="cta-btn">Meet Our Contributors</a>
-    </div>
-  </div>
+            <div class="wrap cta-wrap">
+                <div class="cta-text-box">
+                    <h2>Help Us Grow the Index</h2>
+                    <p>WikiPlant is powered by a community of plant enthusiasts. See who is building our database or
+                        join us to share your own knowledge.</p>
+                    <a href="contributor.html" class="cta-btn">Meet Our Contributors</a>
+                </div>
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="universal-footer">
         <div class="wrap">
             <nav class="footer-columns" aria-label="Footer navigation">
@@ -189,7 +492,7 @@
                 <div class="footer-column">
                     <h2 class="footer-heading">Identify</h2>
                     <ul>
-                        <li><a href="identify.html" aria-current="page">Identify a plant</a></li>
+                        <li><a href="identify.html">Identify a plant</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -222,8 +525,10 @@
             </div>
         </div>
     </footer>
-<!-- Back to Top Button -->
-<a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>
 
 </html>
+>>>>>>> 1b7ce26b2dcbbd40e348ac32956ed738edd9cbd3
