@@ -2610,8 +2610,8 @@ body.explorer-genus-page .genus-card {
     grid-template-areas:
         "photo title"
         "photo description"
-        "photo distribution"
         "photo tags"
+        "photo distribution"
         "photo map"
         "photo action";
     align-items: start;
@@ -2782,8 +2782,8 @@ body.explorer-species-page .specimen-card > p {
             "photo"
             "title"
             "description"
-            "distribution"
             "tags"
+            "distribution"
             "map"
             "action";
         gap: 14px;
