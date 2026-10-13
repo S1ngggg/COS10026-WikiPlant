@@ -2611,9 +2611,8 @@ body.explorer-genus-page .genus-card {
         "photo title"
         "photo description"
         "photo distribution"
+        "photo tags"
         "photo map"
-        "photo family"
-        "photo species"
         "photo action";
     align-items: start;
     column-gap: 30px;
@@ -2622,6 +2621,12 @@ body.explorer-genus-page .genus-card {
     padding: 22px;
     box-shadow: 0 6px 20px rgba(43, 51, 35, 0.08);
     transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+body.explorer-genus-page .genus-card > .plant-photo,
+body.explorer-genus-page .genus-card > .plant-photo img {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
 }
 
 body.explorer-genus-page .genus-card > h3 {
@@ -2670,12 +2675,8 @@ body.explorer-genus-page .genus-card > .map-frame {
     margin: 0;
 }
 
-body.explorer-genus-page .genus-card > .tag {
-    grid-area: family;
-}
-
-body.explorer-genus-page .genus-card > .species-tags {
-    grid-area: species;
+body.explorer-genus-page .genus-card > .rank-line {
+    grid-area: tags;
     margin: 0;
 }
 
@@ -2782,9 +2783,8 @@ body.explorer-species-page .specimen-card > p {
             "title"
             "description"
             "distribution"
+            "tags"
             "map"
-            "family"
-            "species"
             "action";
         gap: 14px;
         padding: 18px;
@@ -2815,6 +2815,10 @@ body.explorer-species-page .specimen-card > p {
     body.explorer-genus-page .genus-card > .plant-photo img,
     body.explorer-species-page .specimen-card > .plant-photo img {
         aspect-ratio: 16 / 9;
+    }
+
+    body.explorer-genus-page .genus-card > .rank-line {
+        margin-top: 2px;
     }
 }
 
