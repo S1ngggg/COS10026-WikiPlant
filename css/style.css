@@ -6378,3 +6378,151 @@ body.home-page :is(a, span):not(.site-header *, .universal-footer *, h1 *, h2 *,
     background: var(--paper-card);
     text-align: center;
 }
+
+/* Sean's animated background: HTML and CSS only, scoped to this page. */
+@keyframes sean-background-move {
+    100% {
+        transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+}
+
+body.about-sean-page {
+    position: relative;
+    isolation: isolate;
+    background: #0B1026;
+}
+
+.about-sean-page .sean-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background:
+        radial-gradient(ellipse at 82% 15%, rgba(80, 48, 120, 0.48), transparent 58%),
+        radial-gradient(ellipse at 12% 85%, rgba(34, 69, 125, 0.48), transparent 62%),
+        linear-gradient(145deg, #080F24, #141832 58%, #241839);
+}
+
+.about-sean-page .sean-ball {
+    position: absolute;
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    animation: sean-background-move linear infinite;
+}
+
+.about-sean-page .sean-ball:nth-child(odd) {
+    color: #DFFF80;
+}
+
+.about-sean-page .sean-ball:nth-child(even) {
+    color: #FFF3BE;
+}
+
+.about-sean-page .sean-ball:nth-child(1) {
+    top: 77%;
+    left: 88%;
+    animation-duration: 40s;
+    animation-delay: -3s;
+    transform-origin: 16vw -2vh;
+    box-shadow: 40vmin 0 5.7031vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(2) {
+    top: 42%;
+    left: 2%;
+    animation-duration: 53s;
+    animation-delay: -29s;
+    transform-origin: -19vw 21vh;
+    box-shadow: -40vmin 0 5.1759vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(3) {
+    top: 28%;
+    left: 18%;
+    animation-duration: 49s;
+    animation-delay: -8s;
+    transform-origin: -22vw 3vh;
+    box-shadow: 40vmin 0 5.2482vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(4) {
+    top: 50%;
+    left: 79%;
+    animation-duration: 26s;
+    animation-delay: -21s;
+    transform-origin: -17vw -6vh;
+    box-shadow: 40vmin 0 5.2797vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(5) {
+    top: 46%;
+    left: 15%;
+    animation-duration: 36s;
+    animation-delay: -40s;
+    transform-origin: 4vw 0vh;
+    box-shadow: -40vmin 0 5.9643vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(6) {
+    top: 77%;
+    left: 16%;
+    animation-duration: 31s;
+    animation-delay: -10s;
+    transform-origin: 18vw 4vh;
+    box-shadow: 40vmin 0 5.1785vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(7) {
+    top: 22%;
+    left: 17%;
+    animation-duration: 55s;
+    animation-delay: -6s;
+    transform-origin: 1vw -23vh;
+    box-shadow: -40vmin 0 5.7030vmin currentColor;
+}
+
+.about-sean-page .sean-ball:nth-child(8) {
+    top: 41%;
+    left: 47%;
+    animation-duration: 43s;
+    animation-delay: -28s;
+    transform-origin: 25vw -3vh;
+    box-shadow: 40vmin 0 5.1963vmin currentColor;
+}
+
+/* Light text for headings and profile navigation on the dark background. */
+.about-sean-page .about-personal .about-section-heading h2,
+.about-sean-page .about-personal .about-eyebrow,
+.about-sean-page .about-pagination-title,
+.about-sean-page .about-pagination-label {
+    color: #F8F5E8;
+}
+
+.about-sean-page .about-pagination {
+    border-top-color: rgba(243, 239, 226, 0.32);
+}
+
+/* Keep the portrait and content on their original solid paper backgrounds. */
+.about-sean-page .about-profile-sean {
+    background-color: #FBFAF3;
+    background-image: radial-gradient(ellipse at 30% 0%, #E5ECD9, transparent 62%);
+    background-repeat: no-repeat;
+    background-size: 100% 560px;
+    background-position: top center;
+    box-shadow: 0 18px 48px rgba(56, 72, 43, 0.09);
+}
+
+@media (max-width: 700px) {
+    .about-sean-page .about-profile-sean {
+        background-size: 100% 520px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-sean-page .sean-ball {
+        animation: none;
+    }
+}
