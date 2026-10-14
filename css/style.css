@@ -7152,3 +7152,246 @@ body.about-sean-page {
         grid-template-columns: 1fr;
     }
 }
+
+/* Login and Register: botanical welcome and a shared account form. */
+.account-page .account-main {
+    max-width: none;
+    min-height: calc(100svh - 80px);
+    padding: 44px 24px 72px;
+    background-color: var(--paper);
+    background-image:
+        linear-gradient(90deg,
+            rgba(243, 239, 226, 0.28),
+            rgba(243, 239, 226, 0.91) 34%,
+            rgba(243, 239, 226, 0.91) 66%,
+            rgba(243, 239, 226, 0.28)),
+        url('../images/plants/Hutan-hujan-tropis.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.account-page .account-intro {
+    max-width: 640px;
+    padding: 0;
+    margin: 0 auto 26px;
+    border: 0;
+    text-align: center;
+}
+
+.account-page .account-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(400px, 78vw);
+    aspect-ratio: 18 / 5;
+    margin: 0 auto 18px;
+    overflow: hidden;
+}
+
+.account-page .account-logo img {
+    display: block;
+    flex: none;
+    width: 100%;
+    height: auto;
+    max-width: none;
+}
+
+.account-page .account-intro h1 {
+    margin: 0 0 12px;
+    font-family: Cambria, Georgia, serif;
+    font-size: clamp(2.25rem, 4.2vw, 3.7rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+}
+
+.account-page .account-intro > p {
+    max-width: 560px;
+    margin: 0 auto;
+    font-size: 1.02rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+}
+
+.account-page .account-divider {
+    display: grid;
+    grid-template-columns: 84px 16px 84px;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    margin: 20px auto 0;
+}
+
+.account-page .account-divider::before,
+.account-page .account-divider::after {
+    content: "";
+    height: 1px;
+    background: rgba(78, 97, 68, 0.45);
+}
+
+.account-page .account-divider > span {
+    width: 14px;
+    height: 23px;
+    border-radius: 90% 0 90% 0;
+    background:
+        linear-gradient(125deg, transparent 46%, rgba(248, 245, 234, 0.6) 49%, rgba(248, 245, 234, 0.6) 52%, transparent 55%),
+        var(--sage);
+    transform: rotate(24deg);
+}
+
+.account-page .account-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    padding: 30px 38px 24px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: rgba(248, 245, 234, 0.97);
+    box-shadow: 0 18px 50px rgba(24, 43, 27, 0.16), 0 2px 6px rgba(24, 43, 27, 0.07);
+}
+
+.account-page .account-form fieldset {
+    margin: 0 0 24px;
+}
+
+.account-page .account-form legend {
+    margin-bottom: 19px;
+    padding-bottom: 12px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ink);
+    border-bottom-color: var(--line);
+}
+
+.account-page .account-form label {
+    margin-bottom: 8px;
+    font-size: 0.92rem;
+}
+
+.account-page .account-form .field-group {
+    margin-bottom: 22px;
+}
+
+.account-page .account-form .field-row {
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.account-page .account-form .field-row .field-group {
+    margin-bottom: 0;
+}
+
+.account-page .account-form :is(input[type="text"], input[type="email"], input[type="password"], input[type="tel"], select) {
+    min-height: 46px;
+    padding: 11px 14px;
+    font-size: 0.98rem;
+    background-color: var(--paper);
+}
+
+.account-page .account-form input::placeholder {
+    color: #8A8D81;
+    opacity: 1;
+}
+
+.account-page .account-form .hint {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.account-page .account-form .remember-row label {
+    display: inline-flex;
+    margin: 0;
+    gap: 10px;
+}
+
+.account-page .account-form input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.account-page .account-form .form-actions {
+    margin-top: 10px;
+    gap: 14px;
+}
+
+.account-page .account-form .btn {
+    min-height: 48px;
+    padding: 12px 26px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.account-page .account-form .btn-submit {
+    min-width: 144px;
+}
+
+.account-page .account-form .btn-reset {
+    min-width: 114px;
+    color: var(--sage-deep);
+}
+
+.account-page .account-form .form-prompt {
+    margin: 28px 0 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.account-page .account-form .form-prompt a {
+    font-weight: 500;
+}
+
+.account-page .universal-footer {
+    margin-top: 0;
+}
+
+@media (max-width: 620px) {
+    .account-page .account-main {
+        padding: 32px 20px 48px;
+    }
+
+    .account-page .account-intro {
+        margin-bottom: 24px;
+    }
+
+    .account-page .account-form {
+        padding: 26px 24px 22px;
+    }
+
+    .account-page .account-form legend {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .account-page .account-main {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .account-page .account-form {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .account-page .account-form .form-actions {
+        gap: 10px;
+    }
+
+    .account-page .account-form .btn {
+        min-width: 0;
+        flex: 1;
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+}

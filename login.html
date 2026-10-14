@@ -7,7 +7,7 @@
   <meta name="description" content="Login to your WikiPlant account.">
   <meta name="author" content="Joshua Wong">
   <title>Login - WikiPlant</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=account-forest-1">
 </head>
 
 <body class="contribution-page account-page account-login">
@@ -21,7 +21,7 @@
       <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation"
         aria-controls="navigation-panel">
       <label class="nav-toggle" for="navigation-toggle">
-        <span class="nav-toggle-lines" aria-hidden="true"></span><span></span><span></span><span></span></span>
+        <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
         <span class="nav-close" aria-hidden="true">&times;</span>
       </label>
       <label class="nav-backdrop" for="navigation-toggle"></label>
@@ -65,10 +65,13 @@
   </header>
 
   <main class="page_main contribution-main account-main">
-    <div class="page-header">
-      <h1 id="account-title">Welcome back.</h1>
-      <p>Login now to contribute to the WikiPlant database!</p>
-      <p class="hint">Fields marked with <span class="req">*</span> are required.</p>
+    <div class="page-header account-intro">
+      <a class="account-logo" href="index.html" aria-label="WikiPlant home">
+        <img src="images/logo.png" alt="WikiPlant logo">
+      </a>
+      <h1 id="account-title">Welcome Back.</h1>
+      <p>Login to continue contributing to the WikiPlant database.</p>
+      <div class="account-divider" aria-hidden="true"><span></span></div>
     </div>
 
     <form class="record-form account-form" action="#" method="post">
