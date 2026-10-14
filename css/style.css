@@ -74,33 +74,39 @@ summary:focus-visible {
     margin: 0 auto;
 }
 
+/* Show the logo artwork at a readable size, cropping its transparent padding. */
 .brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    flex: 0 0 160px;
+    width: 160px;
+    height: 44px;
+    overflow: hidden;
     text-decoration: none;
 }
 
 .brand img {
-    height: 40px;
-    width: auto;
+    width: 160px;
+    height: auto;
+    max-width: none;
+    flex: none;
     display: block;
 }
 
 .brand .brand-motto {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: 0.82rem;
-    color: var(--ink-soft);
-    border-left: 1px solid var(--line);
-    padding-left: 10px;
-    margin-left: 2px;
     display: none;
 }
 
-@media (min-width: 640px) {
-    .brand .brand-motto {
-        display: inline;
+/* Keep room for the desktop links near the navigation drawer breakpoint. */
+@media (1000px <= width < 1100px) {
+    .brand {
+        flex-basis: 136px;
+        width: 136px;
+    }
+
+    .brand img {
+        width: 136px;
     }
 }
 
@@ -6678,7 +6684,6 @@ body.about-sean-page {
     }
 }
 
-<<<<<<< HEAD
 /* ===================================================
    How to Identify — 4-step process flow
    =================================================== */
@@ -6873,7 +6878,6 @@ body.about-sean-page {
         margin: 6px 0;
     }
 }
-=======
 
 /* For enhancement page */
 
@@ -7148,4 +7152,3 @@ body.about-sean-page {
         grid-template-columns: 1fr;
     }
 }
->>>>>>> 1b7ce26b2dcbbd40e348ac32956ed738edd9cbd3
