@@ -99,7 +99,7 @@ summary:focus-visible {
 }
 
 /* Keep room for the desktop links near the navigation drawer breakpoint. */
-@media (1000px <= width < 1100px) {
+@media (1000px <=width < 1100px) {
     .brand {
         flex-basis: 136px;
         width: 136px;
@@ -3823,7 +3823,7 @@ body.explorer-species-page .specimen-card .photo-lightbox>img {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background-image: url('../images/explorer-forest.png');
+    background-image: url('images/explorer-forest.png');
     background-size: cover;
     background-position: center 60%;
     background-repeat: no-repeat;
@@ -4185,7 +4185,7 @@ body.identify-page {
     border-radius: 3px;
 }
 
-.identify-page .photo-detail-toggle[open] > .photo-detail-image {
+.identify-page .photo-detail-toggle[open]>.photo-detail-image {
     transform: scale(2);
     cursor: zoom-out;
 }
@@ -6854,7 +6854,7 @@ body.about-sean-page {
 }
 
 /* Identify: four-step arrow flow within the existing upload container. */
-.identify-page .how-it-works > .how-to-identify {
+.identify-page .how-it-works>.how-to-identify {
     max-width: none;
     margin: 34px 0 0;
     padding: 28px 0 0;
@@ -7223,7 +7223,7 @@ body.about-sean-page {
     color: var(--ink);
 }
 
-.account-page .account-intro > p {
+.account-page .account-intro>p {
     max-width: 560px;
     margin: 0 auto;
     font-size: 1.02rem;
@@ -7247,7 +7247,7 @@ body.about-sean-page {
     background: rgba(78, 97, 68, 0.45);
 }
 
-.account-page .account-divider > span {
+.account-page .account-divider>span {
     width: 14px;
     height: 23px;
     border-radius: 90% 0 90% 0;
