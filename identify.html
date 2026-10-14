@@ -1,6 +1,7 @@
 <!-- identify.html - Plant's Notebook - Identify Page -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <title>Identify - Plant's Notebook</title>
     <link rel="stylesheet" href="css/style.css?v=identify-conflict-fix-1">
 </head>
+
 <body class="identify-page">
 
     <header class="site-header">
@@ -20,7 +22,8 @@
                 <img src="images/logo.png" alt="WikiPlant logo">
                 <span class="brand-motto">Wiki Plant</span>
             </a>
-            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation" aria-controls="navigation-panel">
+            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation"
+                aria-controls="navigation-panel">
             <label class="nav-toggle" for="navigation-toggle">
                 <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
                 <span class="nav-close" aria-hidden="true">&times;</span>
@@ -69,7 +72,8 @@
         <div class="identifier-intro">
             <h1>Upload a Photo to Identify a Plant</h1>
             <p>Not sure what plant you're looking at? Simply upload a clear photo of the leaf, flower, or the whole
-                plant, and our identification system is intended to compare it with a reference database to suggest the most likely species.</p>
+                plant, and our identification system is intended to compare it with a reference database to suggest the
+                most likely species.</p>
         </div>
 
         <section class="how-it-works card-container" aria-labelledby="photo-upload-heading">
@@ -92,7 +96,8 @@
                         <div class="identify-step__card">
                             <span class="identify-step__num" aria-hidden="true">1</span>
                             <h3 class="identify-step__title">Take a Photo</h3>
-                            <p class="identify-step__body">Capture a clear photo of the plant, focusing on leaves, flowers, or stems.</p>
+                            <p class="identify-step__body">Capture a clear photo of the plant, focusing on leaves,
+                                flowers, or stems.</p>
                         </div>
                         <span class="identify-step__arrow" aria-hidden="true">&#8594;</span>
                     </li>
@@ -100,7 +105,8 @@
                         <div class="identify-step__card">
                             <span class="identify-step__num" aria-hidden="true">2</span>
                             <h3 class="identify-step__title">Upload the Photo</h3>
-                            <p class="identify-step__body">Select the plant image from your device using the upload button.</p>
+                            <p class="identify-step__body">Select the plant image from your device using the upload
+                                button.</p>
                         </div>
                         <span class="identify-step__arrow" aria-hidden="true">&#8594;</span>
                     </li>
@@ -108,7 +114,8 @@
                         <div class="identify-step__card">
                             <span class="identify-step__num" aria-hidden="true">3</span>
                             <h3 class="identify-step__title">Identify the Plant</h3>
-                            <p class="identify-step__body">Click the Identify button to begin the identification process.</p>
+                            <p class="identify-step__body">Click the Identify button to begin the identification
+                                process.</p>
                         </div>
                         <span class="identify-step__arrow" aria-hidden="true">&#8594;</span>
                     </li>
@@ -116,7 +123,8 @@
                         <div class="identify-step__card">
                             <span class="identify-step__num" aria-hidden="true">4</span>
                             <h3 class="identify-step__title">View Identification Results</h3>
-                            <p class="identify-step__body">Review the plant&#8217;s common name, scientific name, classification, and morphological characteristics.</p>
+                            <p class="identify-step__body">Review the plant&#8217;s common name, scientific name,
+                                classification, and morphological characteristics.</p>
                         </div>
                     </li>
                 </ol>
@@ -140,36 +148,42 @@
                             aria-haspopup="dialog" aria-label="View full-size Dog Rose flower bud photo">
                             <img src="images/Rosa_noflower.jpg" alt="Unopened flower bud of Dog Rose">
                         </button>
-                        <figcaption><strong>Figure 1:</strong> Unopened flower bud of Dog Rose (<em>Rosa canina</em>).</figcaption>
+                        <figcaption><strong>Figure 1:</strong> Unopened flower bud of Dog Rose (<em>Rosa canina</em>).
+                        </figcaption>
                     </figure>
                     <figure>
                         <button type="button" class="photo-zoom" popovertarget="identify-dog-rose-flower-photo"
                             aria-haspopup="dialog" aria-label="View full-size Dog Rose open flower photo">
                             <img src="images/rosa-canina.jpg" alt="Fully opened flower of Dog Rose">
                         </button>
-                        <figcaption><strong>Figure 2:</strong> Fully opened flower of Dog Rose (<em>Rosa canina</em>).</figcaption>
+                        <figcaption><strong>Figure 2:</strong> Fully opened flower of Dog Rose (<em>Rosa canina</em>).
+                        </figcaption>
                     </figure>
                 </div>
-                <div class="photo-lightbox" id="identify-dog-rose-bud-photo" popover="auto"
-                    role="dialog" aria-label="Full-size Dog Rose flower bud photo">
+                <div class="photo-lightbox" id="identify-dog-rose-bud-photo" popover="auto" role="dialog"
+                    aria-label="Full-size Dog Rose flower bud photo">
                     <button type="button" class="photo-lightbox-close" popovertarget="identify-dog-rose-bud-photo"
                         popovertargetaction="hide" aria-label="Close full-size photo">&times;</button>
-                    <div class="photo-detail-viewport" role="region" aria-label="Scrollable Dog Rose flower bud photo" tabindex="0">
+                    <div class="photo-detail-viewport" role="region" aria-label="Scrollable Dog Rose flower bud photo"
+                        tabindex="0">
                         <details class="photo-detail-toggle">
-                            <summary class="photo-detail-image" aria-label="Toggle 2 times zoom for Dog Rose flower bud photo"
+                            <summary class="photo-detail-image"
+                                aria-label="Toggle 2 times zoom for Dog Rose flower bud photo"
                                 title="Click to zoom 2×; click again to fit. Scroll to view details.">
                                 <img src="images/Rosa_noflower.jpg" alt="Unopened flower bud of Dog Rose">
                             </summary>
                         </details>
                     </div>
                 </div>
-                <div class="photo-lightbox" id="identify-dog-rose-flower-photo" popover="auto"
-                    role="dialog" aria-label="Full-size Dog Rose open flower photo">
+                <div class="photo-lightbox" id="identify-dog-rose-flower-photo" popover="auto" role="dialog"
+                    aria-label="Full-size Dog Rose open flower photo">
                     <button type="button" class="photo-lightbox-close" popovertarget="identify-dog-rose-flower-photo"
                         popovertargetaction="hide" aria-label="Close full-size photo">&times;</button>
-                    <div class="photo-detail-viewport" role="region" aria-label="Scrollable Dog Rose open flower photo" tabindex="0">
+                    <div class="photo-detail-viewport" role="region" aria-label="Scrollable Dog Rose open flower photo"
+                        tabindex="0">
                         <details class="photo-detail-toggle">
-                            <summary class="photo-detail-image" aria-label="Toggle 2 times zoom for Dog Rose open flower photo"
+                            <summary class="photo-detail-image"
+                                aria-label="Toggle 2 times zoom for Dog Rose open flower photo"
                                 title="Click to zoom 2×; click again to fit. Scroll to view details.">
                                 <img src="images/rosa-canina.jpg" alt="Fully opened flower of Dog Rose">
                             </summary>
@@ -194,11 +208,13 @@
                 <h3>Morphological Characteristics</h3>
                 <dl>
                     <dt>Growth Habit</dt>
-                    <dd>A vigorous, arching or scrambling shrub that may climb over surrounding vegetation for support.</dd>
+                    <dd>A vigorous, arching or scrambling shrub that may climb over surrounding vegetation for support.
+                    </dd>
                     <dt>Height</dt>
                     <dd>Typically 1&ndash;3 m, occasionally taller when supported by other plants.</dd>
                     <dt>Leaves</dt>
-                    <dd>Pinnately compound leaves, usually consisting of 5&ndash;7 oval to elliptical green leaflets.</dd>
+                    <dd>Pinnately compound leaves, usually consisting of 5&ndash;7 oval to elliptical green leaflets.
+                    </dd>
                     <dt>Leaf Arrangement</dt>
                     <dd>Alternate, with leaves arranged individually along the stems.</dd>
                     <dt>Leaf Margin</dt>
@@ -206,9 +222,11 @@
                     <dt>Stem</dt>
                     <dd>Long, arching woody stems bearing sharp, curved or hooked prickles.</dd>
                     <dt>Flowers</dt>
-                    <dd>Usually pale pink or white, with five petals and numerous yellow stamens surrounding the central reproductive structures.</dd>
+                    <dd>Usually pale pink or white, with five petals and numerous yellow stamens surrounding the central
+                        reproductive structures.</dd>
                     <dt>Fruit</dt>
-                    <dd>Oval, red to orange-red rose hips, typically 15&ndash;20 mm long, containing numerous small fruits (achenes).</dd>
+                    <dd>Oval, red to orange-red rose hips, typically 15&ndash;20 mm long, containing numerous small
+                        fruits (achenes).</dd>
                     <dt>Aroma</dt>
                     <dd>Flowers generally have a faint, sweet fragrance.</dd>
                 </dl>
@@ -220,10 +238,13 @@
                 </p>
                 <h3>Care Tips</h3>
                 <ul>
-                    <li><strong>Watering:</strong> Water during prolonged dry periods, especially while the plant is becoming established. Avoid waterlogged soil.</li>
-                    <li><strong>Sunlight:</strong> Grow in full sun or partial shade, with sunnier positions generally encouraging better flowering.</li>
+                    <li><strong>Watering:</strong> Water during prolonged dry periods, especially while the plant is
+                        becoming established. Avoid waterlogged soil.</li>
+                    <li><strong>Sunlight:</strong> Grow in full sun or partial shade, with sunnier positions generally
+                        encouraging better flowering.</li>
                     <li><strong>Soil:</strong> Use fertile, moist but well-drained soil.</li>
-                    <li><strong>Temperature:</strong> Dog Rose is a hardy temperate shrub that tolerates winter frost and seasonal cold conditions.</li>
+                    <li><strong>Temperature:</strong> Dog Rose is a hardy temperate shrub that tolerates winter frost
+                        and seasonal cold conditions.</li>
                 </ul>
                 <aside aria-labelledby="identification-notes-heading">
                     <h3 id="identification-notes-heading">Identification Notes</h3>
@@ -239,7 +260,8 @@
             <div class="wrap cta-wrap">
                 <div class="cta-text-box">
                     <h2>Help Us Grow Our Plant Database</h2>
-                    <p>Discovered a plant that is not yet in our database? Share your findings and help expand our collection of plant species for scientific research and biodiversity conservation.</p>
+                    <p>Discovered a plant that is not yet in our database? Share your findings and help expand our
+                        collection of plant species for scientific research and biodiversity conservation.</p>
                     <a href="contribution.html" class="cta-btn">Contribute a Plant</a>
                 </div>
             </div>
@@ -298,4 +320,5 @@
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
 </body>
+
 </html>
