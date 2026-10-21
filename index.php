@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +16,7 @@
 <body class="home-page">
     <header class="site-header">
         <div class="wrap">
-            <a class="brand" href="index.html" aria-label="WikiPlant home" aria-current="page">
+            <a class="brand" href="index.php" aria-label="WikiPlant home" aria-current="page">
                 <img src="images/logo.png" alt="WikiPlant logo">
                 <span class="brand-motto">Wiki Plant</span>
             </a>
@@ -31,35 +32,35 @@
                 <nav class="main-nav" aria-label="Primary">
                     <ul>
                         <li class="nav-drop">
-                            <a href="explorer.html">Explore</a>
+                            <a href="explorer.php">Explore</a>
                             <ul class="drop-menu">
-                                <li><a href="explorer-family.html">By Family</a></li>
-                                <li><a href="explorer-genus.html">By Genus</a></li>
-                                <li><a href="explorer-species.html">By Species</a></li>
+                                <li><a href="explorer-family.php">By Family</a></li>
+                                <li><a href="explorer-genus.php">By Genus</a></li>
+                                <li><a href="explorer-species.php">By Species</a></li>
                             </ul>
                         </li>
-                        <li><a href="identify.html">Identify</a></li>
+                        <li><a href="identify.php">Identify</a></li>
                         <li class="nav-drop">
-                            <a href="contributor.html">Contribute</a>
+                            <a href="contributor.php">Contribute</a>
                             <ul class="drop-menu">
-                                <li><a href="contribution.html">Contribution Form</a></li>
+                                <li><a href="contribution.php">Contribution Form</a></li>
                             </ul>
                         </li>
                         <li class="nav-drop">
-                            <a href="profile.html">About Us</a>
+                            <a href="profile.php">About Us</a>
                             <ul class="drop-menu">
-                                <li><a href="aboutus-sean.html">Sean</a></li>
-                                <li><a href="aboutus-bryan.html">Bryan</a></li>
-                                <li><a href="aboutus-joshua.html">Joshua</a></li>
-                                <li><a href="aboutus-terry.html">Terry</a></li>
+                                <li><a href="aboutus-sean.php">Sean</a></li>
+                                <li><a href="aboutus-bryan.php">Bryan</a></li>
+                                <li><a href="aboutus-joshua.php">Joshua</a></li>
+                                <li><a href="aboutus-terry.php">Terry</a></li>
                             </ul>
                         </li>
-                        <li><a href="enquiry_form.html">Enquiry</a></li>
+                        <li><a href="enquiry_form.php">Enquiry</a></li>
                     </ul>
                 </nav>
                 <div class="auth-buttons">
-                    <a href="register.html" class="register-btn">Register</a>
-                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="register.php" class="register-btn">Register</a>
+                    <a href="login.php" class="login-btn">Login</a>
                 </div>
             </div>
         </div>
@@ -76,7 +77,7 @@
                 <h1 id="home-title">A living world,<br><em>closer to you.</em></h1>
                 <p>Explore the remarkable plants around us. Share a discovery, follow your curiosity, and help grow our
                     understanding of Malaysia's biodiversity.</p>
-                <a class="home-text-link" href="explorer.html">Explore the collection now!<span
+                <a class="home-text-link" href="explorer.php">Explore the collection now!<span
                         aria-hidden="true">&#8594;</span></a>
             </div>
         </section>
@@ -98,7 +99,7 @@
                 <p>Browse the relationships between plants, learn what makes each one different, and contribute
                     observations from your own surroundings. Each record is a small step towards a richer picture of the
                     biodiversity we share.</p>
-                <a class="home-text-link" href="contributor.html">Meet the community <span
+                <a class="home-text-link" href="contributor.php">Meet the community <span
                         aria-hidden="true">&#8594;</span></a>
             </div>
         </section>
@@ -113,7 +114,7 @@
                     </div>
                 </div>
                 <div class="home-collection-grid">
-                    <a class="home-collection-item" href="explorer-family.html">
+                    <a class="home-collection-item" href="explorer-family.php">
                         <div class="home-collection-image"><img src="images/families.jpg" alt="families" loading="lazy"
                                 width="1254" height="1254"></div>
                         <div class="home-collection-label"><span class="home-collection-number">01</span>
@@ -121,7 +122,7 @@
                         </div>
                         <p>Begin with the broader relationships that bring plants together.</p>
                     </a>
-                    <a class="home-collection-item" href="explorer-genus.html">
+                    <a class="home-collection-item" href="explorer-genus.php">
                         <div class="home-collection-image"><img src="images/ferndark.jpg" alt="genus." loading="lazy"
                                 width="1024" height="1536"></div>
                         <div class="home-collection-label"><span class="home-collection-number">02</span>
@@ -129,7 +130,7 @@
                         </div>
                         <p>Look closer at groups of plants with shared characteristics.</p>
                     </a>
-                    <a class="home-collection-item" href="explorer-species.html">
+                    <a class="home-collection-item" href="explorer-species.php">
                         <div class="home-collection-image"><img src="images/species.jpg" alt="a flower" loading="lazy"
                                 width="1254" height="1254"></div>
                         <div class="home-collection-label"><span class="home-collection-number">03</span>
@@ -150,9 +151,9 @@
                     first time or perhaps a second time, there is a place for your discovery in WikiPlant!
                 </p>
                 <div class="home-actions">
-                    <a class="home-solid-link" href="contribution.html">Contribute a plant <span
+                    <a class="home-solid-link" href="contribution.php">Contribute a plant <span
                             aria-hidden="true">&#8599;</span></a>
-                    <a class="home-text-link" href="identify.html">Identify a plant <span
+                    <a class="home-text-link" href="identify.php">Identify a plant <span
                             aria-hidden="true">&#8594;</span></a>
                 </div>
             </div>
@@ -194,40 +195,40 @@
         <div class="wrap">
             <nav class="footer-columns" aria-label="Footer navigation">
                 <div class="footer-column">
-                    <h2 class="footer-heading"><a href="explorer.html">Explore</a></h2>
+                    <h2 class="footer-heading"><a href="explorer.php">Explore</a></h2>
                     <ul>
-                        <li><a href="explorer-family.html">Family</a></li>
-                        <li><a href="explorer-genus.html">Genus</a></li>
-                        <li><a href="explorer-species.html">Species</a></li>
+                        <li><a href="explorer-family.php">Family</a></li>
+                        <li><a href="explorer-genus.php">Genus</a></li>
+                        <li><a href="explorer-species.php">Species</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h2 class="footer-heading">Identify</h2>
                     <ul>
-                        <li><a href="identify.html">Identify a plant</a></li>
+                        <li><a href="identify.php">Identify a plant</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h2 class="footer-heading">Contribution</h2>
                     <ul>
-                        <li><a href="contributor.html">Contributor</a></li>
-                        <li><a href="contribution.html">Contribution Form</a></li>
+                        <li><a href="contributor.php">Contributor</a></li>
+                        <li><a href="contribution.php">Contribution Form</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h2 class="footer-heading">Enquiry</h2>
                     <ul>
-                        <li><a href="enquiry_form.html">Enquiry Form</a></li>
+                        <li><a href="enquiry_form.php">Enquiry Form</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h2 class="footer-heading">More</h2>
                     <ul>
-                        <li><a href="profile.html">About Us</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="enhancement.html">Enhancement</a></li>
-                        <li><a href="acknowledgement.html">Acknowledgement</a></li>
+                        <li><a href="profile.php">About Us</a></li>
+                        <li><a href="register.php">Register</a></li>
+                        <li><a href="login.php">Login</a></li>
+                        <li><a href="enhancement.php">Enhancement</a></li>
+                        <li><a href="acknowledgement.php">Acknowledgement</a></li>
                     </ul>
                 </div>
             </nav>

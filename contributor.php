@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,138 +6,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="Meet the WikiPlant community and explore sample plant observations from Malaysia.">
+          content="Meet the WikiPlant community and explore sample plant observations from Malaysia.">
     <meta name="keywords" content="WikiPlant, contributors, plants, biodiversity, citizen science">
     <meta name="author" content="Bryan">
     <title>Community contributors | WikiPlant</title>
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="contributor-page">
 
-    <!-- Header and Navigation -->
-
-    <header class="site-header">
-
-        <div class="wrap">
-            <!-- WikiPlant Logo -->
-            <a class="brand" href="index.html" aria-label="WikiPlant home">
-
-                <img src="images/logo.png" alt="WikiPlant logo">
-
-                <span class="brand-motto">Wiki Plant</span>
-            </a>
-
-            <!-- Mobile Navigation Toggle -->
-            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Toggle navigation"
-                aria-controls="navigation-panel">
-
-            <label class="nav-toggle" for="navigation-toggle">
-
-                <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
-                <span class="nav-close" aria-hidden="true">
-                    &times;
-                </span>
-
-            </label>
-
-            <!-- Mobile Navigation Background -->
-            <label class="nav-backdrop" for="navigation-toggle"></label>
-
-            <!-- Navigation Panel -->
-            <div class="nav-drawer-panel" id="navigation-panel">
-                <div class="nav-drawer-topbar">
-                    <span>Navigation</span>
-                </div>
-
-                <!-- Main Navigation -->
-                <nav class="main-nav" aria-label="Primary navigation">
-                    <ul>
-                        <!-- Explore -->
-                        <li class="nav-drop">
-
-                            <a href="explorer.html">Explore</a>
-
-                            <ul class="drop-menu">
-                                <li>
-                                    <a href="explorer-family.html">By Family</a>
-                                </li>
-                                <li>
-                                    <a href="explorer-genus.html">By Genus</a>
-                                </li>
-                                <li>
-                                    <a href="explorer-species.html">By Species</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <!-- Identify -->
-                        <li>
-                            <a href="identify.html">Identify</a>
-                        </li>
-
-                        <!-- Contribute -->
-                        <li class="nav-drop">
-                            <a href="contributor.html" aria-current="page">
-                                Contribute
-                            </a>
-
-                            <ul class="drop-menu">
-                                <li>
-                                    <a href="contribution.html">
-                                        Contribution Form
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <!-- About Us -->
-                        <li class="nav-drop">
-
-                            <a href="profile.html">About Us</a>
-
-                            <ul class="drop-menu">
-                                <li>
-                                    <a href="aboutus-sean.html">Sean</a>
-                                </li>
-                                <li>
-                                    <a href="aboutus-bryan.html">Bryan</a>
-                                </li>
-                                <li>
-                                    <a href="aboutus-joshua.html">Joshua</a>
-                                </li>
-                                <li>
-                                    <a href="aboutus-terry.html">Terry</a>
-                                </li>
-                            </ul>
-
-                        </li>
-
-                        <!-- Enquiry -->
-                        <li>
-                            <a href="enquiry_form.html">Enquiry</a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-
-                <!-- Register and Login -->
-                <div class="auth-buttons">
-                    <a href="register.html" class="register-btn">Register</a>
-                    <a href="login.html" class="login-btn">Login</a>
-                </div>
-
-            </div>
-
-        </div>
-
-    </header>
-
+    <?php include __DIR__ . '/includes/header.php'; ?>
 
     <!-- Main Content -->
-
     <main id="main" class="page_main">
 
         <!-- Page Introduction -->
@@ -154,7 +35,7 @@
 
             <div class="intro-actions">
 
-                <a class="intro-button" href="contribution.html">
+                <a class="intro-button" href="contribution.php">
                     Share an observation
                     <span aria-hidden="true">→</span>
                 </a>
@@ -168,16 +49,15 @@
 
         </section>
 
-
         <!-- Main Content Grid -->
-
         <div class="content_grid">
 
             <!-- Main Content Area -->
             <div class="main_content_area">
 
                 <!-- About Section -->
-                <section class="content_section about-section" aria-labelledby="about-title">
+                <section class="content_section about-section"
+                         aria-labelledby="about-title">
 
                     <div class="section-kicker">
                         A shared field guide
@@ -208,37 +88,41 @@
 
                 </section>
 
-
                 <!-- Recent Observations -->
-
-                <section id="recent-observations" class="content_section observation-section"
-                    aria-labelledby="observations-title">
+                <section id="recent-observations"
+                         class="content_section observation-section"
+                         aria-labelledby="observations-title">
 
                     <div class="section-heading">
-
                         <div>
                             <div class="section-kicker">From the field</div>
-
                             <h2 id="observations-title">
                                 Recent plant observations
                             </h2>
                         </div>
-
                     </div>
 
                     <div class="contribution_feed">
+
                         <!-- Observation 1 - Bryan Tan -->
                         <article class="feed_card">
+
                             <figure class="feed_img_box">
-                                <img src="images/fragaria-vesca.jpg" alt="Wild strawberry (Fragaria vesca)"
-                                    class="feed_img" width="900" height="600" loading="lazy">
+                                <img src="images/fragaria-vesca.jpg"
+                                     alt="Wild strawberry (Fragaria vesca)"
+                                     class="feed_img"
+                                     width="900"
+                                     height="600"
+                                     loading="lazy">
                                 <figcaption>Contributor photo</figcaption>
                             </figure>
 
                             <div class="feed_info">
+
                                 <p class="record-type">
                                     COMMUNITY OBSERVATION
                                 </p>
+
                                 <h2>
                                     Wild strawberry
                                     <i>(Fragaria vesca)</i>
@@ -261,6 +145,7 @@
 
                             <details class="observation-comments">
                                 <summary>Write a comment</summary>
+
                                 <p class="comment-form-note">
                                     Your comment will be sent to the WikiPlant
                                     team by email and will not appear on this
@@ -268,47 +153,58 @@
                                 </p>
 
                                 <form class="observation-comment-form"
-                                    action="mailto:105806889@students.swinburne.edu.my" method="post"
-                                    enctype="text/plain">
-                                    <input type="hidden" name="Observation"
-                                        value="Wild strawberry (Fragaria vesca) — Bryan Tan">
+                                      action="mailto:105806889@students.swinburne.edu.my"
+                                      method="post"
+                                      enctype="text/plain">
+
+                                    <input type="hidden"
+                                           name="Observation"
+                                           value="Wild strawberry (Fragaria vesca) — Bryan Tan">
 
                                     <div class="comment-field">
                                         <label for="comment-name-strawberry">
                                             Your name
                                         </label>
-                                        <input id="comment-name-strawberry" name="Name" type="text" maxlength="80"
-                                            autocomplete="name" required>
+                                        <input id="comment-name-strawberry"
+                                               name="Name"
+                                               type="text"
+                                               maxlength="80"
+                                               autocomplete="name"
+                                               required>
                                     </div>
 
                                     <div class="comment-field">
                                         <label for="comment-strawberry">
                                             Comment
                                         </label>
-                                        <textarea id="comment-strawberry" name="Comment" rows="3" maxlength="1000"
-                                            placeholder="Share a helpful thought about this observation."
-                                            required></textarea>
+                                        <textarea id="comment-strawberry"
+                                                  name="Comment"
+                                                  rows="3"
+                                                  maxlength="1000"
+                                                  placeholder="Share a helpful thought about this observation."
+                                                  required></textarea>
                                     </div>
 
                                     <button class="comment-submit" type="submit">
                                         Send comment
                                     </button>
+
                                 </form>
                             </details>
 
                         </article>
 
-
                         <!-- Observation 2 - Sarah Lim -->
                         <article class="feed_card">
 
                             <figure class="feed_img_box">
-
-                                <img src="images/spathiphyllum-wallisii.jpg" alt="Peace lily (Spathiphyllum wallisii)"
-                                    class="feed_img" width="1000" height="750" loading="lazy">
-
+                                <img src="images/spathiphyllum-wallisii.jpg"
+                                     alt="Peace lily (Spathiphyllum wallisii)"
+                                     class="feed_img"
+                                     width="1000"
+                                     height="750"
+                                     loading="lazy">
                                 <figcaption>Contributor photo</figcaption>
-
                             </figure>
 
                             <div class="feed_info">
@@ -339,6 +235,7 @@
 
                             <details class="observation-comments">
                                 <summary>Write a comment</summary>
+
                                 <p class="comment-form-note">
                                     Your comment will be sent to the WikiPlant
                                     team by email and will not appear on this
@@ -346,31 +243,42 @@
                                 </p>
 
                                 <form class="observation-comment-form"
-                                    action="mailto:106764593@students.swinburne.edu.my" method="post"
-                                    enctype="text/plain">
-                                    <input type="hidden" name="Observation"
-                                        value="Peace lily (Spathiphyllum wallisii) — Sarah Lim">
+                                      action="mailto:106764593@students.swinburne.edu.my"
+                                      method="post"
+                                      enctype="text/plain">
+
+                                    <input type="hidden"
+                                           name="Observation"
+                                           value="Peace lily (Spathiphyllum wallisii) — Sarah Lim">
 
                                     <div class="comment-field">
                                         <label for="comment-name-peace-lily">
                                             Your name
                                         </label>
-                                        <input id="comment-name-peace-lily" name="Name" type="text" maxlength="80"
-                                            autocomplete="name" required>
+                                        <input id="comment-name-peace-lily"
+                                               name="Name"
+                                               type="text"
+                                               maxlength="80"
+                                               autocomplete="name"
+                                               required>
                                     </div>
 
                                     <div class="comment-field">
                                         <label for="comment-peace-lily">
                                             Comment
                                         </label>
-                                        <textarea id="comment-peace-lily" name="Comment" rows="3" maxlength="1000"
-                                            placeholder="Share a helpful thought about this observation."
-                                            required></textarea>
+                                        <textarea id="comment-peace-lily"
+                                                  name="Comment"
+                                                  rows="3"
+                                                  maxlength="1000"
+                                                  placeholder="Share a helpful thought about this observation."
+                                                  required></textarea>
                                     </div>
 
                                     <button class="comment-submit" type="submit">
                                         Send comment
                                     </button>
+
                                 </form>
                             </details>
 
@@ -382,13 +290,12 @@
 
             </div>
 
-
-            <!--  Sidebar -->
-
+            <!-- Sidebar -->
             <aside class="sidebar" aria-label="Contribution information">
 
                 <!-- Join WikiPlant -->
-                <section class="sidebar_box green_box" aria-labelledby="join-title">
+                <section class="sidebar_box green_box"
+                         aria-labelledby="join-title">
 
                     <p class="section-kicker">
                         Have a plant observation?
@@ -404,47 +311,39 @@
                         about Malaysia’s plant diversity.
                     </p>
 
-                    <a href="contribution.html" class="brutal_btn">
+                    <a href="contribution.php" class="brutal_btn">
                         Open contribution form
                         <span aria-hidden="true">→</span>
                     </a>
 
                     <p class="login-note">
                         New to WikiPlant?
-                        <a href="register.html">Create an account</a>
+                        <a href="register.php">Create an account</a>
                         before contributing.
                     </p>
 
                 </section>
 
-
                 <!-- Before You Submit -->
-                <section class="sidebar_box white_box" aria-labelledby="quick-guidelines-title">
+                <section class="sidebar_box white_box"
+                         aria-labelledby="quick-guidelines-title">
 
                     <h2 id="quick-guidelines-title">
                         Before you submit
                     </h2>
 
                     <ul class="styled_ul">
-
                         <li>Use clear, relevant photographs.</li>
-
                         <li>Include the plant name if known.</li>
-
                         <li>Describe the habitat and observation date.</li>
-
-                        <li>
-                            Do not disturb the plant or its surroundings.
-                        </li>
-
+                        <li>Do not disturb the plant or its surroundings.</li>
                     </ul>
 
                 </section>
 
-
-                <!-- How Contributions Help Section -->
-
-                <section class="content_section guidance-section" aria-labelledby="guidance-title">
+                <!-- How Contributions Help -->
+                <section class="content_section guidance-section"
+                         aria-labelledby="guidance-title">
 
                     <div class="section-kicker">
                         A useful record
@@ -453,6 +352,7 @@
                     <h2 id="guidance-title">
                         How contributions help
                     </h2>
+
                     <p>
                         Good observations are specific, respectful and easy
                         for another person to review. Before submitting a
@@ -460,12 +360,11 @@
                     </p>
 
                     <ol class="steps-list">
+
                         <li>
                             <span>01</span>
                             <div>
-                                <strong>
-                                    Observe without disturbance
-                                </strong>
+                                <strong>Observe without disturbance</strong>
                                 <p>
                                     Leave the plant and its habitat as you
                                     found them.
@@ -476,17 +375,15 @@
                         <li>
                             <span>02</span>
                             <div>
-                                <strong>
-                                    Photograph useful details
-                                </strong>
+                                <strong>Photograph useful details</strong>
                                 <p>
                                     Capture the whole plant, then close views
                                     of leaves, flowers or fruit.
                                 </p>
                             </div>
                         </li>
-                        <li>
 
+                        <li>
                             <span>03</span>
                             <div>
                                 <strong>Add field context</strong>
@@ -495,15 +392,12 @@
                                     the habitat where it was growing.
                                 </p>
                             </div>
-
                         </li>
-                        <li>
 
+                        <li>
                             <span>04</span>
                             <div>
-                                <strong>
-                                    Review before submitting
-                                </strong>
+                                <strong>Review before submitting</strong>
                                 <p>
                                     Check that your information is accurate
                                     and your photograph is clear before
@@ -511,26 +405,26 @@
                                 </p>
                             </div>
                         </li>
+
                     </ol>
+
                 </section>
+
             </aside>
+
         </div>
 
-
-        <!-- Contributors= -->
-
-        <section class="content_section people-section" aria-labelledby="people-title">
+        <!-- Contributors -->
+        <section class="content_section people-section"
+                 aria-labelledby="people-title">
 
             <div class="section-heading">
-
                 <div>
                     <div class="section-kicker">
                         The people behind the records
                     </div>
-
                     <h2 id="people-title">Meet the contributors</h2>
                 </div>
-
             </div>
 
             <p class="people-intro">
@@ -544,8 +438,10 @@
                 <!-- Bryan Tan - Wild strawberry -->
                 <article class="contributor_card">
 
-                    <input class="contributor-card-toggle" type="checkbox" id="bryan-card"
-                        aria-label="Flip Bryan Tan's contribution card">
+                    <input class="contributor-card-toggle"
+                           type="checkbox"
+                           id="bryan-card"
+                           aria-label="Flip Bryan Tan's contribution card">
 
                     <label class="contributor-card-front" for="bryan-card">
 
@@ -555,9 +451,7 @@
 
                         <span class="profile-copy">
 
-                            <span class="contributor-name">
-                                Bryan Tan
-                            </span>
+                            <span class="contributor-name">Bryan Tan</span>
 
                             <span class="contributor-role">
                                 Community Contributor
@@ -577,7 +471,9 @@
                     <div class="contributor-card-back">
 
                         <div class="photo-zoom">
-                            <img src="images/fragaria-vesca.jpg" alt="Wild strawberry (Fragaria vesca)" loading="lazy">
+                            <img src="images/fragaria-vesca.jpg"
+                                 alt="Wild strawberry (Fragaria vesca)"
+                                 loading="lazy">
                         </div>
 
                         <div class="contribution-copy">
@@ -600,7 +496,7 @@
                                 ↻ Back to contributor
                             </label>
 
-                            <a href="explorer-species.html#fragaria">
+                            <a href="explorer-species.php#fragaria">
                                 Explore plant records
                             </a>
 
@@ -610,12 +506,13 @@
 
                 </article>
 
-
                 <!-- Sarah Lim - Peace lily -->
                 <article class="contributor_card">
 
-                    <input class="contributor-card-toggle" type="checkbox" id="sarah-card"
-                        aria-label="Flip Sarah Lim's contribution card">
+                    <input class="contributor-card-toggle"
+                           type="checkbox"
+                           id="sarah-card"
+                           aria-label="Flip Sarah Lim's contribution card">
 
                     <label class="contributor-card-front" for="sarah-card">
 
@@ -625,9 +522,7 @@
 
                         <span class="profile-copy">
 
-                            <span class="contributor-name">
-                                Sarah Lim
-                            </span>
+                            <span class="contributor-name">Sarah Lim</span>
 
                             <span class="contributor-role">
                                 Community Contributor
@@ -647,8 +542,9 @@
                     <div class="contributor-card-back">
 
                         <div class="photo-zoom">
-                            <img src="images/spathiphyllum-wallisii.jpg" alt="Peace lily (Spathiphyllum wallisii)"
-                                loading="lazy">
+                            <img src="images/spathiphyllum-wallisii.jpg"
+                                 alt="Peace lily (Spathiphyllum wallisii)"
+                                 loading="lazy">
                         </div>
 
                         <div class="contribution-copy">
@@ -671,7 +567,7 @@
                                 ↻ Back to contributor
                             </label>
 
-                            <a href="explorer-species.html#spathiphyllum">
+                            <a href="explorer-species.php#spathiphyllum">
                                 Explore plant records
                             </a>
 
@@ -681,12 +577,13 @@
 
                 </article>
 
-
                 <!-- Daniel Wong - Garden pea -->
                 <article class="contributor_card">
 
-                    <input class="contributor-card-toggle" type="checkbox" id="daniel-card"
-                        aria-label="Flip Daniel Wong's contribution card">
+                    <input class="contributor-card-toggle"
+                           type="checkbox"
+                           id="daniel-card"
+                           aria-label="Flip Daniel Wong's contribution card">
 
                     <label class="contributor-card-front" for="daniel-card">
 
@@ -696,9 +593,7 @@
 
                         <span class="profile-copy">
 
-                            <span class="contributor-name">
-                                Daniel Wong
-                            </span>
+                            <span class="contributor-name">Daniel Wong</span>
 
                             <span class="contributor-role">
                                 Community Contributor
@@ -718,7 +613,9 @@
                     <div class="contributor-card-back">
 
                         <div class="photo-zoom">
-                            <img src="images/pisum-sativum.jpg" alt="Garden pea (Lathyrus oleraceus)" loading="lazy">
+                            <img src="images/pisum-sativum.jpg"
+                                 alt="Garden pea (Lathyrus oleraceus)"
+                                 loading="lazy">
                         </div>
 
                         <div class="contribution-copy">
@@ -741,7 +638,7 @@
                                 ↻ Back to contributor
                             </label>
 
-                            <a href="explorer-species.html#lathyrus-oleraceus">
+                            <a href="explorer-species.php#lathyrus-oleraceus">
                                 Explore plant records
                             </a>
 
@@ -757,63 +654,7 @@
 
     </main>
 
-
-    <!-- Footer -->
-
-    <footer class="universal-footer">
-        <div class="wrap">
-            <nav class="footer-columns" aria-label="Footer navigation">
-                <div class="footer-column">
-                    <h2 class="footer-heading"><a href="explorer.html" aria-current="page">Explore</a></h2>
-                    <ul>
-                        <li><a href="explorer-family.html">Family</a></li>
-                        <li><a href="explorer-genus.html">Genus</a></li>
-                        <li><a href="explorer-species.html">Species</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h2 class="footer-heading">Identify</h2>
-                    <ul>
-                        <li><a href="identify.html">Identify a plant</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h2 class="footer-heading">Contribution</h2>
-                    <ul>
-                        <li><a href="contributor.html">Contributor</a></li>
-                        <li><a href="contribution.html">Contribution Form</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h2 class="footer-heading">Enquiry</h2>
-                    <ul>
-                        <li><a href="enquiry_form.html">Enquiry Form</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h2 class="footer-heading">More</h2>
-                    <ul>
-                        <li><a href="profile.html">About Us</a></li>
-                        <li><a href="register.html">Register</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="enhancement.html">Enhancement</a></li>
-                        <li><a href="acknowledgement.html">Acknowledgement</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="footer-bottom">
-                <a class="footer-contact" href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
-                <p class="footer-copyright">&copy; 2026 WikiPlant. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top" aria-label="Back to top">
-        ↑
-    </a>
+    <?php include __DIR__ . '/includes/footer.php'; ?>
 
 </body>
-
 </html>
