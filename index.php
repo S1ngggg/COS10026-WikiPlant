@@ -14,57 +14,7 @@
 <!-- navigation part at the top -->
 
 <body class="home-page">
-    <header class="site-header">
-        <div class="wrap">
-            <a class="brand" href="index.php" aria-label="WikiPlant home" aria-current="page">
-                <img src="images/logo.png" alt="WikiPlant logo">
-                <span class="brand-motto">Wiki Plant</span>
-            </a>
-            <input class="nav-state" type="checkbox" id="navigation-toggle" aria-label="Open or close navigation"
-                aria-controls="navigation-panel">
-            <label class="nav-toggle" for="navigation-toggle">
-                <span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
-                <span class="nav-close" aria-hidden="true">&times;</span>
-            </label>
-            <label class="nav-backdrop" for="navigation-toggle"></label>
-            <div class="nav-drawer-panel" id="navigation-panel">
-                <div class="nav-drawer-topbar"><span>Navigation</span></div>
-                <nav class="main-nav" aria-label="Primary">
-                    <ul>
-                        <li class="nav-drop">
-                            <a href="explorer.php">Explore</a>
-                            <ul class="drop-menu">
-                                <li><a href="explorer-family.php">By Family</a></li>
-                                <li><a href="explorer-genus.php">By Genus</a></li>
-                                <li><a href="explorer-species.php">By Species</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="identify.php">Identify</a></li>
-                        <li class="nav-drop">
-                            <a href="contributor.php">Contribute</a>
-                            <ul class="drop-menu">
-                                <li><a href="contribution.php">Contribution Form</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-drop">
-                            <a href="profile.php">About Us</a>
-                            <ul class="drop-menu">
-                                <li><a href="aboutus-sean.php">Sean</a></li>
-                                <li><a href="aboutus-bryan.php">Bryan</a></li>
-                                <li><a href="aboutus-joshua.php">Joshua</a></li>
-                                <li><a href="aboutus-terry.php">Terry</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="enquiry_form.php">Enquiry</a></li>
-                    </ul>
-                </nav>
-                <div class="auth-buttons">
-                    <a href="register.php" class="register-btn">Register</a>
-                    <a href="login.php" class="login-btn">Login</a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <?php include __DIR__ . '/includes/header.php'; ?>
 
     <!-- Hero banner part -->
     <main id="home-main">
@@ -191,56 +141,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="universal-footer">
-        <div class="wrap">
-            <nav class="footer-columns" aria-label="Footer navigation">
-                <div class="footer-column">
-                    <h2 class="footer-heading"><a href="explorer.php">Explore</a></h2>
-                    <ul>
-                        <li><a href="explorer-family.php">Family</a></li>
-                        <li><a href="explorer-genus.php">Genus</a></li>
-                        <li><a href="explorer-species.php">Species</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h2 class="footer-heading">Identify</h2>
-                    <ul>
-                        <li><a href="identify.php">Identify a plant</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h2 class="footer-heading">Contribution</h2>
-                    <ul>
-                        <li><a href="contributor.php">Contributor</a></li>
-                        <li><a href="contribution.php">Contribution Form</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h2 class="footer-heading">Enquiry</h2>
-                    <ul>
-                        <li><a href="enquiry_form.php">Enquiry Form</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h2 class="footer-heading">More</h2>
-                    <ul>
-                        <li><a href="profile.php">About Us</a></li>
-                        <li><a href="register.php">Register</a></li>
-                        <li><a href="login.php">Login</a></li>
-                        <li><a href="enhancement.php">Enhancement</a></li>
-                        <li><a href="acknowledgement.php">Acknowledgement</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="footer-bottom">
-                <a class="footer-contact" href="mailto:106764593@students.swinburne.edu.my">Contact Us</a>
-                <p class="footer-copyright">&copy; 2026 WikiPlant. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" aria-label="Back to top">↑</a>
+    <?php include __DIR__ . '/includes/footer.php'; ?>
 </body>
 
 </html>
