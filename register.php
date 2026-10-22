@@ -77,22 +77,6 @@ $cssVersion = 'account-paper-1';
 
             </div>
 
-            <div class="field-group">
-                <label for="logUser">
-                    Username <span class="req">*</span>
-                </label>
-
-                <input
-                    type="text"
-                    id="logUser"
-                    name="logUser"
-                    pattern="[A-Za-z\s]+"
-                    maxlength="10"
-                    title="Maximum 10 alphabetical characters only"
-                    required
-                >
-            </div>
-
             <div class="field-row field-row-two">
 
                 <div class="field-group">
@@ -207,6 +191,22 @@ $cssVersion = 'account-paper-1';
 
         <fieldset>
             <legend>Account Security</legend>
+
+            <div class="field-group">
+                <label for="logUser">
+                    Username <span class="req">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="logUser"
+                    name="logUser"
+                    pattern="[A-Za-z\s]+"
+                    maxlength="10"
+                    title="Maximum 10 alphabetical characters only"
+                    required
+                >
+            </div>
 
             <div class="field-row field-row-two">
 
