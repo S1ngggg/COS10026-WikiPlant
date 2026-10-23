@@ -588,7 +588,6 @@
                         </li>
                     </ul>
                 </section>
-s
             </div>
         </div>
     </main>
