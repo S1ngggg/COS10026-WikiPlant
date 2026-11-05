@@ -19,6 +19,7 @@ $cssVersion = 'account-paper-1';
 <body class="<?= htmlspecialchars($bodyClass, ENT_QUOTES, 'UTF-8') ?>">
 
 <?php include __DIR__ . '/includes/header.php'; ?>
+<?php include __DIR__ . '/includes/db_connect.inc.php';?>
 
 <main class="page_main contribution-main account-main">
 
@@ -36,11 +37,12 @@ $cssVersion = 'account-paper-1';
         </div>
     </div>
 
-    <form class="record-form account-form" action="#" method="post">
+    <form class="record-form account-form" action="process.php" method="post">
 
         <fieldset>
             <legend>Personal Details</legend>
 
+            
             <div class="field-row field-row-two">
 
                 <div class="field-group">

@@ -7242,6 +7242,84 @@ body.about-sean-page {
     transform: rotate(24deg);
 }
 
+.account-page .registration-table {
+    display: table;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 640px;
+    margin: 28px auto 0;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+    background: rgba(248, 245, 234, 0.97);
+    box-shadow: 0 12px 30px rgba(24, 43, 27, 0.1);
+    text-align: left;
+}
+
+.account-page .registration-table caption {
+    margin-bottom: 12px;
+    font-family: Cambria, Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-align: center;
+}
+
+.account-page .registration-table th,
+.account-page .registration-table td {
+    padding: 13px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    line-height: 1.45;
+}
+
+.account-page .registration-table thead th {
+    background: var(--sage);
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.account-page .registration-table thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.account-page .registration-table thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.account-page .registration-table tbody th {
+    width: 38%;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.account-page .registration-table tbody td {
+    color: var(--ink-soft);
+    overflow-wrap: anywhere;
+}
+
+.account-page .registration-table tr:last-child th,
+.account-page .registration-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.account-page .registration-table tbody tr:last-child th:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.account-page .registration-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.account-page .registration-table th:last-child,
+.account-page .registration-table td:last-child {
+    border-right: 0;
+}
+
 .account-page .account-form {
     width: 100%;
     max-width: 600px;
@@ -7332,6 +7410,22 @@ body.about-sean-page {
 
 .account-page .account-form .btn-submit {
     min-width: 144px;
+}
+
+.account-page .return-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 190px;
+    margin-top: 8px;
+    color: var(--paper);
+    background: var(--sage-deep);
+    text-decoration: none;
+}
+
+.account-page .return-button:hover {
+    color: var(--paper);
+    background: var(--ink);
 }
 
 .account-page .account-form .btn-reset {
