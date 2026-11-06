@@ -1,8 +1,9 @@
+
 <?php
 // XAMPP MySQL Configuration
 $db_host = "localhost";
-$db_user = "root";       
-$db_pass = "";           
+$db_user = "root";
+$db_pass = "";
 $db_name = "wikiplant_db";
 
 // 1. Connect to MySQL Server first
@@ -13,14 +14,16 @@ if (!$conn) {
 }
 
 // 2. Auto-create database if missing
-$sql_create_db = "CREATE DATABASE IF NOT EXISTS `$db_name` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
+$sql_create_db = "CREATE DATABASE IF NOT EXISTS `$db_name`
+                  DEFAULT CHARACTER SET utf8mb4
+                  COLLATE utf8mb4_unicode_ci";
 mysqli_query($conn, $sql_create_db);
 
 // 3. Select database
 mysqli_select_db($conn, $db_name);
 mysqli_set_charset($conn, "utf8mb4");
 
-//auto creates table, and for the admin have their own defauly username and password
+// Auto-create tables
 
 // Table: admin
 mysqli_query($conn, "CREATE TABLE IF NOT EXISTS `admin` (
@@ -30,10 +33,18 @@ mysqli_query($conn, "CREATE TABLE IF NOT EXISTS `admin` (
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;");
 
-// Seed default Admin account (Admin / Admin) if missing
-$check_admin = mysqli_query($conn, "SELECT * FROM `admin` WHERE `username` = 'Admin'");
-if (mysqli_num_rows($check_admin) == 0) {
-    mysqli_query($conn, "INSERT INTO `admin` (`username`, `password`) VALUES ('Admin', 'Admin')");
+// Seed default Admin account if missing
+$check_admin = mysqli_query(
+    $conn,
+    "SELECT * FROM `admin` WHERE `username` = 'Admin'"
+);
+
+if ($check_admin && mysqli_num_rows($check_admin) == 0) {
+    mysqli_query(
+        $conn,
+        "INSERT INTO `admin` (`username`, `password`)
+         VALUES ('Admin', 'Admin')"
+    );
 }
 
 // Table: user
@@ -69,11 +80,40 @@ mysqli_query($conn, "CREATE TABLE IF NOT EXISTS `contribute` (
     `contributor_name` VARCHAR(50) NOT NULL,
     `plant_name` VARCHAR(50) NOT NULL,
     `plant_category` VARCHAR(30) DEFAULT 'Species',
+    `other_category` VARCHAR(25) DEFAULT NULL,
     `photo_path` VARCHAR(255) DEFAULT NULL,
     `comments` TEXT DEFAULT NULL,
+    `accuracy` VARCHAR(20) DEFAULT NULL,
     `status` ENUM('pending', 'approved', 'rejected') DEFAULT 'pending',
     `submitted_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;");
+
+// Migration: Add missing columns to existing contribute table
+$check = mysqli_query(
+    $conn,
+    "SHOW COLUMNS FROM `contribute` LIKE 'other_category'"
+);
+
+if ($check && mysqli_num_rows($check) === 0) {
+    mysqli_query(
+        $conn,
+        "ALTER TABLE `contribute`
+         ADD `other_category` VARCHAR(25) DEFAULT NULL"
+    );
+}
+
+$check = mysqli_query(
+    $conn,
+    "SHOW COLUMNS FROM `contribute` LIKE 'accuracy'"
+);
+
+if ($check && mysqli_num_rows($check) === 0) {
+    mysqli_query(
+        $conn,
+        "ALTER TABLE `contribute`
+         ADD `accuracy` VARCHAR(20) DEFAULT NULL"
+    );
+}
 
 // Table: enquiry
 mysqli_query($conn, "CREATE TABLE IF NOT EXISTS `enquiry` (
@@ -98,4 +138,5 @@ mysqli_query($conn, "CREATE TABLE IF NOT EXISTS `plant` (
     `description` TEXT DEFAULT NULL,
     `photo_path` VARCHAR(255) DEFAULT NULL
 ) ENGINE=InnoDB;");
+
 ?>
