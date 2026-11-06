@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/includes/session.php'; ?>
 
 <?php
 $pageTitle = 'Enquiry - WikiPlant';
@@ -49,7 +50,7 @@ $cssVersion = 'account-paper-1';
     <form
         class="record-form account-form"
         method="post"
-        action="mailto:106757438@students.swinburne.edu.my"
+        action="enquiry_process.php"
     >
         <fieldset>
             <legend>User Information</legend>

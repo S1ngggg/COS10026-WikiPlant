@@ -1,4 +1,9 @@
 <?php
+ob_start();
+include __DIR__ . '/account-menu.php';
+$headerAccountMenu = ob_get_clean();
+$headerGuestButtons = empty($_SESSION['user_id']) ? $headerAccountMenu : '';
+$headerMemberMenu = empty($_SESSION['user_id']) ? '' : $headerAccountMenu;
 $headerHomeCurrent = basename($_SERVER['SCRIPT_FILENAME'] ?? "") === "index.php"
     ? " aria-current='page'"
     : "";
@@ -71,12 +76,10 @@ echo "
                 </ul>
             </nav>
 
-            <div class='auth-buttons'>
-                <a href='register.php' class='register-btn'>Register</a>
-                <a href='login.php' class='login-btn'>Login</a>
-            </div>
+            {$headerGuestButtons}
 
         </div>
+        {$headerMemberMenu}
     </div>
 </header>
 ";

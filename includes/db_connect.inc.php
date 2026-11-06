@@ -98,4 +98,4 @@ mysqli_query($conn, "CREATE TABLE IF NOT EXISTS `plant` (
     `description` TEXT DEFAULT NULL,
     `photo_path` VARCHAR(255) DEFAULT NULL
 ) ENGINE=InnoDB;");
-?>e
+?>
