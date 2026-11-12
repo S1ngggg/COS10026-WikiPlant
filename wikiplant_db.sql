@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 
 -- Insert default admin creds 
 INSERT INTO `admin` (`username`, `password`) 
-VALUES ('Admin', 'Admin') 
+VALUES ('Admin', '$2y$10$HsqyYnQ7MhfQPpjSbConROSdTfWGNh2WOmbKK2G6DCl4a15NbhK.S')
 ON DUPLICATE KEY UPDATE `username`=`username`; 
 
 -- User table 

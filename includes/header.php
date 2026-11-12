@@ -2,8 +2,9 @@
 ob_start();
 include __DIR__ . '/account-menu.php';
 $headerAccountMenu = ob_get_clean();
-$headerGuestButtons = empty($_SESSION['user_id']) ? $headerAccountMenu : '';
-$headerMemberMenu = empty($_SESSION['user_id']) ? '' : $headerAccountMenu;
+$headerSignedIn = !empty($_SESSION['user_id']) || !empty($_SESSION['admin_id']);
+$headerGuestButtons = $headerSignedIn ? '' : $headerAccountMenu;
+$headerMemberMenu = $headerSignedIn ? $headerAccountMenu : '';
 $headerHomeCurrent = basename($_SERVER['SCRIPT_FILENAME'] ?? "") === "index.php"
     ? " aria-current='page'"
     : "";
@@ -55,7 +56,7 @@ echo "
                         <a href='contributor.php'>Contribute</a>
                         <ul class='drop-menu'>
                             <li>
-                                <a href='contribution.php'>Contribution Form</a>
+                                <a href='contribute.php'>Contribution Form</a>
                             </li>
                         </ul>
                     </li>

@@ -272,7 +272,7 @@ $cssVersion = "identify-conflict-fix-2";
                     Discovered a plant that is not yet in our database? Share your findings and help expand our
                     collection of plant species for scientific research and biodiversity conservation.
                 </p>
-                <a href="contribution.php" class="cta-btn">Contribute a Plant</a>
+                <a href="contribute.php" class="cta-btn">Contribute a Plant</a>
             </div>
         </div>
     </section>

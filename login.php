@@ -11,62 +11,140 @@ $username = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once __DIR__ . '/includes/db_connect.inc.php';
 
-    $username = trim($_POST['loginId'] ?? '');
-    $password = $_POST['loginPassword'] ?? '';
+    $usernameInput = $_POST['loginId'] ?? '';
+    $passwordInput = $_POST['loginPassword'] ?? '';
+    $username = is_string($usernameInput) ? trim($usernameInput) : '';
+    $password = is_string($passwordInput) ? $passwordInput : '';
 
     if ($username === '' || $password === '') {
         $loginError = 'Please enter your username and password.';
     } else {
-        $sql = 'SELECT user_id, username, password
-                FROM `user`
-                WHERE username = ?
-                LIMIT 1';
+        $adminSql = 'SELECT admin_id, username, password
+                     FROM `admin`
+                     WHERE username = ?
+                     LIMIT 1';
+        $adminStmt = mysqli_prepare($conn, $adminSql);
 
-        $stmt = mysqli_prepare($conn, $sql);
-
-        if ($stmt === false) {
-            error_log('Unable to prepare login query: ' . mysqli_error($conn));
+        if ($adminStmt === false) {
+            error_log('Unable to prepare admin login query: ' . mysqli_error($conn));
             $loginError = 'Login is unavailable. Please try again.';
         } else {
-            mysqli_stmt_bind_param($stmt, 's', $username);
+            mysqli_stmt_bind_param($adminStmt, 's', $username);
 
-            if (!mysqli_stmt_execute($stmt)) {
-                error_log('Unable to execute login query: ' . mysqli_stmt_error($stmt));
+            if (!mysqli_stmt_execute($adminStmt)) {
+                error_log('Unable to execute admin login query: ' . mysqli_stmt_error($adminStmt));
                 $loginError = 'Login is unavailable. Please try again.';
+                mysqli_stmt_close($adminStmt);
             } else {
-                $userId = 0;
-                $dbUsername = '';
-                $passwordHash = '';
+                $adminId = 0;
+                $adminUsername = '';
+                $adminPassword = '';
 
                 mysqli_stmt_bind_result(
-                    $stmt,
-                    $userId,
-                    $dbUsername,
-                    $passwordHash
+                    $adminStmt,
+                    $adminId,
+                    $adminUsername,
+                    $adminPassword
                 );
 
-                $validLogin = false;
+                $validAdminLogin = false;
+                $adminPasswordIsHashed = false;
 
-                if (mysqli_stmt_fetch($stmt) && is_string($passwordHash)) {
-                    $validLogin = password_verify($password, $passwordHash);
+                if (mysqli_stmt_fetch($adminStmt) && is_string($adminPassword)) {
+                    $adminPasswordIsHashed = !empty(password_get_info($adminPassword)['algo']);
+                    $validAdminLogin = $adminPasswordIsHashed
+                        ? password_verify($password, $adminPassword)
+                        : hash_equals($adminPassword, $password);
+                }
+                mysqli_stmt_close($adminStmt);
+
+                if ($validAdminLogin && !$adminPasswordIsHashed) {
+                    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+                    $upgradeStmt = mysqli_prepare(
+                        $conn,
+                        'UPDATE `admin` SET password = ? WHERE admin_id = ?'
+                    );
+
+                    if ($upgradeStmt === false) {
+                        error_log('Unable to prepare admin password upgrade: ' . mysqli_error($conn));
+                        $loginError = 'Login is unavailable. Please try again.';
+                    } else {
+                        mysqli_stmt_bind_param($upgradeStmt, 'si', $passwordHash, $adminId);
+                        if (!mysqli_stmt_execute($upgradeStmt)) {
+                            error_log('Unable to upgrade admin password: ' . mysqli_stmt_error($upgradeStmt));
+                            $loginError = 'Login is unavailable. Please try again.';
+                        }
+                        mysqli_stmt_close($upgradeStmt);
+                    }
                 }
 
-                if ($validLogin) {
-                    mysqli_stmt_close($stmt);
+                if ($validAdminLogin && $loginError === '') {
                     mysqli_close($conn);
 
                     session_regenerate_id(true);
-                    $_SESSION['user_id'] = $userId;
-                    $_SESSION['username'] = $dbUsername;
+                    unset($_SESSION['user_id']);
+                    $_SESSION['admin_id'] = $adminId;
+                    $_SESSION['username'] = $adminUsername;
 
-                    header('Location: index.php');
+                    header('Location: admin.php');
                     exit;
                 }
-
-                $loginError = 'Incorrect username or password.';
             }
+        }
 
-            mysqli_stmt_close($stmt);
+        if ($loginError === '') {
+            $sql = 'SELECT user_id, username, password
+                    FROM `user`
+                    WHERE username = ?
+                    LIMIT 1';
+
+            $stmt = mysqli_prepare($conn, $sql);
+
+            if ($stmt === false) {
+                error_log('Unable to prepare login query: ' . mysqli_error($conn));
+                $loginError = 'Login is unavailable. Please try again.';
+            } else {
+                mysqli_stmt_bind_param($stmt, 's', $username);
+
+                if (!mysqli_stmt_execute($stmt)) {
+                    error_log('Unable to execute login query: ' . mysqli_stmt_error($stmt));
+                    $loginError = 'Login is unavailable. Please try again.';
+                } else {
+                    $userId = 0;
+                    $dbUsername = '';
+                    $passwordHash = '';
+
+                    mysqli_stmt_bind_result(
+                        $stmt,
+                        $userId,
+                        $dbUsername,
+                        $passwordHash
+                    );
+
+                    $validLogin = false;
+
+                    if (mysqli_stmt_fetch($stmt) && is_string($passwordHash)) {
+                        $validLogin = password_verify($password, $passwordHash);
+                    }
+
+                    if ($validLogin) {
+                        mysqli_stmt_close($stmt);
+                        mysqli_close($conn);
+
+                        session_regenerate_id(true);
+                        unset($_SESSION['admin_id']);
+                        $_SESSION['user_id'] = $userId;
+                        $_SESSION['username'] = $dbUsername;
+
+                        header('Location: index.php');
+                        exit;
+                    }
+
+                    $loginError = 'Incorrect username or password.';
+                }
+
+                mysqli_stmt_close($stmt);
+            }
         }
     }
 
@@ -100,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <h1 id="account-title">Welcome Back.</h1>
 
-        <p>Login to continue contributing to the WikiPlant database.</p>
+        <p>Login to continue to your WikiPlant account. Admins can sign in here too.</p>
 
         <div class="account-divider" aria-hidden="true">
             <span></span>

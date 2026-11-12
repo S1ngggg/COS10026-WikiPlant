@@ -60,7 +60,7 @@ $cssVersion = 'account-paper-1';
                             <a href="explorer-species.php" class="tag">Explorer Species</a>
                             <a href="identify.php" class="tag">Identify</a>
                             <a href="contributor.php" class="tag">Contributor</a>
-                            <a href="contribution.php" class="tag">Contribution Form</a>
+                            <a href="contribute.php" class="tag">Contribution Form</a>
                             <a href="profile.php" class="tag">About Us</a>
                             <a href="aboutus-sean.php" class="tag">Sean</a>
                             <a href="aboutus-bryan.php" class="tag">Bryan</a>
@@ -121,7 +121,7 @@ $cssVersion = 'account-paper-1';
                             <a href="explorer-species.php" class="tag">Explorer Species</a>
                             <a href="identify.php" class="tag">Identify</a>
                             <a href="contributor.php" class="tag">Contributor</a>
-                            <a href="contribution.php" class="tag">Contribution Form</a>
+                            <a href="contribute.php" class="tag">Contribution Form</a>
                             <a href="profile.php" class="tag">About Us</a>
                             <a href="aboutus-sean.php" class="tag">Sean</a>
                             <a href="aboutus-bryan.php" class="tag">Bryan</a>
@@ -250,7 +250,7 @@ $cssVersion = 'account-paper-1';
                 <h3>Contributions and Team Profiles</h3>
                 <div class="tags-container">
                     <a href="contributor.php" class="tag">Contributor</a>
-                    <a href="contribution.php" class="tag">Contribution Form</a>
+                    <a href="contribute.php" class="tag">Contribution Form</a>
                     <a href="profile.php" class="tag">About Us</a>
                     <a href="aboutus-sean.php" class="tag">Sean</a>
                     <a href="aboutus-bryan.php" class="tag">Bryan</a>

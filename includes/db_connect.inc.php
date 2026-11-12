@@ -36,15 +36,29 @@ mysqli_query($conn, "CREATE TABLE IF NOT EXISTS `admin` (
 // Seed default Admin account if missing
 $check_admin = mysqli_query(
     $conn,
-    "SELECT * FROM `admin` WHERE `username` = 'Admin'"
+    "SELECT `admin_id` FROM `admin` WHERE `username` = 'Admin' LIMIT 1"
 );
 
-if ($check_admin && mysqli_num_rows($check_admin) == 0) {
-    mysqli_query(
+if (!$check_admin) {
+    die("Unable to check for the default admin account: " . mysqli_error($conn));
+}
+
+if (mysqli_num_rows($check_admin) === 0) {
+    $default_admin_password = password_hash('Admin', PASSWORD_DEFAULT);
+    $insert_admin = mysqli_prepare(
         $conn,
-        "INSERT INTO `admin` (`username`, `password`)
-         VALUES ('Admin', 'Admin')"
+        "INSERT INTO `admin` (`username`, `password`) VALUES ('Admin', ?)"
     );
+
+    if (!$insert_admin) {
+        die("Unable to prepare the default admin account: " . mysqli_error($conn));
+    }
+
+    mysqli_stmt_bind_param($insert_admin, 's', $default_admin_password);
+    if (!mysqli_stmt_execute($insert_admin)) {
+        die("Unable to create the default admin account: " . mysqli_stmt_error($insert_admin));
+    }
+    mysqli_stmt_close($insert_admin);
 }
 
 // Table: user

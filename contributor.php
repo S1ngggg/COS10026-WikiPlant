@@ -36,7 +36,7 @@
 
             <div class="intro-actions">
 
-                <a class="intro-button" href="contribution.php">
+                <a class="intro-button" href="contribute.php">
                     Share an observation
                     <span aria-hidden="true">→</span>
                 </a>
@@ -312,7 +312,7 @@
                         about Malaysia’s plant diversity.
                     </p>
 
-                    <a href="contribution.php" class="brutal_btn">
+                    <a href="contribute.php" class="brutal_btn">
                         Open contribution form
                         <span aria-hidden="true">→</span>
                     </a>

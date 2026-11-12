@@ -168,7 +168,7 @@ try {
                 <h3>Your field notes start here.</h3>
                 <p>No plant records are linked to your account yet.</p>
                 <p class="member-help">The contribution form is currently a preview. Personal records will be available when submissions are enabled.</p>
-                <a href="contribution.php" class="member-primary">Explore the contribution form &#8594;</a>
+                <a href="contribute.php" class="member-primary">Explore the contribution form &#8594;</a>
             </div>
             <?php endif; ?>
         </section>

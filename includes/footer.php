@@ -27,7 +27,7 @@ echo "
                 <h2 class='footer-heading'>Contribution</h2>
                 <ul>
                     <li><a href='contributor.php'>Contributor</a></li>
-                    <li><a href='contribution.php'>Contribution Form</a></li>
+                    <li><a href='contribute.php'>Contribution Form</a></li>
                 </ul>
             </div>
 
