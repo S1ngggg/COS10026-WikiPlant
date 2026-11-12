@@ -1,3 +1,184 @@
-<?php
-header('Location: contribute.php', true, 302);
-exit;
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Submit plant observations to support biodiversity monitoring and conservation research.">
+    <meta name="author" content="Bryan">
+    <title>WikiPlant | Contribute</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="contribution-page">
+
+    <?php include __DIR__ . '/includes/header.php'; ?>
+
+    <main class="page_main contribution-main">
+
+        <div class="page-header">
+            <h1>Submit a Contribution</h1>
+            <p>
+                Share a plant observation to help document biodiversity
+                and support conservation research.
+            </p>
+            <p class="hint">
+                Fields marked with <span class="req">*</span> are required.
+            </p>
+        </div>
+
+        <form action="contribute_process.php"
+              method="post"
+              enctype="multipart/form-data"
+              class="record-form">
+
+            <fieldset>
+                <legend>Contributor Information</legend>
+
+                <div class="field-group">
+                    <label for="fullname">
+                        Name of the Contributor <span class="req">*</span>
+                    </label>
+
+                    <input type="text"
+                           id="fullname"
+                           name="fullname"
+                           maxlength="25"
+                           title="Maximum 25 characters."
+                           required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Plant Information</legend>
+
+                <div class="field-row contribution-field-row">
+
+                    <div class="field-group">
+                        <label for="plantname">
+                            Plant's Name <span class="req">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="plantname"
+                               name="plantname"
+                               maxlength="25"
+                               title="Maximum 25 characters."
+                               required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="plant-category">
+                            Plant Category <span class="req">*</span>
+                        </label>
+
+                        <select id="plant-category"
+                                name="plant_category"
+                                required>
+
+                            <option value="" selected disabled>
+                                -- Select a category --
+                            </option>
+
+                            <option value="Species">Species</option>
+                            <option value="Families">Families</option>
+                            <option value="Genera">Genera</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="field-group">
+                    <label for="other-category">
+                        If Other, please specify
+                    </label>
+
+                    <input type="text"
+                           id="other-category"
+                           name="other_category"
+                           maxlength="25"
+                           title="Maximum 25 characters.">
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Photo and Observations</legend>
+
+                <div class="field-group">
+                    <label for="photo">
+                        Plant Photo <span class="req">*</span>
+                    </label>
+
+                    <input type="file"
+                           id="photo"
+                           name="photo"
+                           accept=".jpg,.jpeg,.png,.gif,.webp"
+                           required>
+
+                    <p class="hint">
+                        Upload a clear photograph where the plant is easy to see.
+                    </p>
+                </div>
+
+                <div class="field-group">
+                    <label for="comments">
+                        Comments / Observations <span class="req">*</span>
+                    </label>
+
+                    <textarea id="comments"
+                              name="comments"
+                              rows="6"
+                              maxlength="500"
+                              placeholder="Describe any useful observations about the plant."
+                              required></textarea>
+
+                    <p class="hint">
+                        Maximum 500 characters.
+                    </p>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Confirmation</legend>
+
+                <div class="field-group contribution-confirmation">
+
+                    <input type="checkbox"
+                           id="accuracy"
+                           name="accuracy"
+                           value="confirmed"
+                           required>
+
+                    <label for="accuracy">
+                        I confirm that the information provided is accurate
+                        <span class="req">*</span>
+                    </label>
+
+                </div>
+            </fieldset>
+
+            <div class="contribution-actions">
+
+                <button type="submit" class="btn">
+                    Submit Contribution
+                </button>
+
+                <button type="reset" class="btn btn-outline">
+                    Reset Form
+                </button>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <?php include __DIR__ . '/includes/footer.php'; ?>
+
+</body>
+</html>
